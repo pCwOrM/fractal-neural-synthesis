@@ -38,10 +38,11 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 | Platform / Belge | Tür | Hedef Kitle | Doğrudan Canlı Bağlantı |
 | :--- | :--- | :--- | :--- |
 | ⚡ **Paper 7: Werracle On-Chain AI Refleks Oracle'ı** | Kuruş-Altı Blok-İçi EVM Karar Motoru & Flash-Loan Devre Kesici | DeFi Mimarları, Akıllı Kontrat Denetçileri & MEV Araştırmacıları | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**arXiv PDF**](https://arxiv.org/pdf/2609.30719) &bull; [**Zenodo: 10.5281/zenodo.22942598**](https://doi.org/10.5281/zenodo.22942598) &bull; [**Canlı EVM Simülatörü**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
-| 🧬 **Paper 6: Biyo-Sentetik Nöromorfik Arayüz (WerrSoma)** | Tüm Beyin Drosophila Konnektomu (158 Bin Nöron) & Sıfır-Bellek Refleks Yayı | Nörobiyologlar, BCI Mühendisleri & Otonom Sistemler | [**Zenodo: 10.5281/zenodo.22996626**](https://doi.org/10.5281/zenodo.22996626) &bull; [**Canlı 3D Portal**](https://werrsoma.answerr.me/) &bull; [**FlyWire Konnektom Laboratuvarı**](https://werrsoma.answerr.me/neuramap_werr_3d.html) &bull; [**3D Uçuş Simülatörü**](https://werrsoma.answerr.me/fly_bioneural_flight_sim.html) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) &bull; **TÜRKPATENT Patent Başvurusu: TR 2026/016633** |
+| 🧬 **Paper 6: Biyo-Sentetik Nöromorfik Arayüz (WerrSoma)** | Tüm Beyin Drosophila Konnektomu (158 Bin Nöron) & Sıfır-Bellek Refleks Yayı | Nörobiyologlar, BCI Mühendisleri & Otonom Sistemler | [**Zenodo: 10.5281/zenodo.23072929 (v1.1)**](https://doi.org/10.5281/zenodo.23072929) (Konsept: [10.5281/zenodo.22996625](https://doi.org/10.5281/zenodo.22996625)) &bull; [**Canlı 3D Portal**](https://werrsoma.answerr.me/) &bull; [**FlyWire Konnektom Laboratuvarı**](https://werrsoma.answerr.me/neuramap_werr_3d.html) &bull; [**3D Uçuş Simülatörü**](https://werrsoma.answerr.me/fly_bioneural_flight_sim.html) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) &bull; **TÜRKPATENT Patent Başvurusu: TR 2026/016633** |
 | 📐 **GAP → Lean 4 Doğrulanmış Port** | Çekirdek Cebir & Hesaplamalı Grup Teorisi | Hesaplamalı Cebirciler & Mantıkçılar | [**arXiv:2609.38492 [cs.LO]**](https://arxiv.org/abs/2609.38492) &bull; [**Zenodo: 10.5281/zenodo.23045504**](https://doi.org/10.5281/zenodo.23045504) &bull; [**GitHub: pCwOrM/gap-lean4-port**](https://github.com/pCwOrM/gap-lean4-port) &bull; [**Sürüm: v0.2.0**](https://github.com/pCwOrM/gap-lean4-port/releases/tag/v0.2.0) &bull; [**Show & Tell: gap#6624**](https://github.com/gap-system/gap/discussions/6624) &bull; [**Tartışma: gap#6613**](https://github.com/gap-system/gap/discussions/6613) &bull; **35 Teorem (0 sorry)** |
 | 📜 **Paper 5: Lean 4 Formel Doğrulama & 40-Çekirdek Gauntlet** | Formel Makine İspatları & Bare-Metal Gauntlet | Mantıkçılar, Web3 Mimarları & Çekirdek AI | [**arXiv:2609.33066 [cs.AI, cs.LO]**](https://arxiv.org/abs/2609.33066) &bull; [**arXiv PDF**](https://arxiv.org/pdf/2609.33066) &bull; [**Zenodo: 10.5281/zenodo.22983889 (v2)**](https://doi.org/10.5281/zenodo.22983889) &bull; [**Replikasyon Paketi**](https://zenodo.org/records/22983889/files/zenodo_bundle_lean4_oed_verification_v2.zip) |
-| 🌌 **Paper 4: Kara Delik Page Eğrisi ve Solucan Deliği Hata Çekirdeği** | Kuantum Kütleçekimi & Termodinamik | Fizikçiler, Matematikçiler & Açık Bilim | [**Zenodo: 10.5281/zenodo.22978460 (v2)**](https://zenodo.org/records/22978460) &bull; [**Konsept DOI: 10.5281/zenodo.22961999**](https://doi.org/10.5281/zenodo.22961999) &bull; [**Dokümantasyon**](docs/BLACKHOLE_PAGE_CURVE_WORMHOLE_RESEARCH_TR.md) &bull; [**Preprint PDF**](https://zenodo.org/records/22978460/files/Dagli_2026_Wormhole_Error-Kernel_Page_Curve_preprint_v2.pdf/content) |
+| 🌌 **Paper 4: Kara Delik Page Eğrisi (Kanonik Sentez v5.0)** | Kuantum Kütleçekimi, Orbifoldlar & GKP Stabilizatörleri | Fizikçiler, Matematikçiler & Açık Bilim | [**Zenodo: Kanonik Konsept 10.5281/zenodo.22961999**](https://doi.org/10.5281/zenodo.22961999) &bull; [**v4: 10.5281/zenodo.23049254**](https://doi.org/10.5281/zenodo.23049254) &bull; [**Dokümantasyon**](docs/BLACKHOLE_PAGE_CURVE_WORMHOLE_RESEARCH_TR.md) |
+| 🎓 **Paper 3: Prosedürel Fraktal Pedagoji (WerreduR)** | Sıfır-Bellek Mandelbrot Refleks İskelesi & 1PL Rasch AIED Motoru | Eğitimciler, AIED Araştırmacıları & Bilişsel Bilimciler | [**Zenodo: 10.5281/zenodo.23128224 (v4.0)**](https://doi.org/10.5281/zenodo.23128224) (Konsept: [10.5281/zenodo.22999420](https://doi.org/10.5281/zenodo.22999420)) &bull; [**GitHub: jesmaat/WerreduR**](https://github.com/jesmaat/WerreduR) &bull; *Hedef: Q1 AIED Dergisi (Elsevier CAEAI)* &bull; **TÜRKPATENT Öncelik: TR 2026/016285** |
 | 🏛️ **Paper 2: Yörünge Hata Dinamikleri (OED)** | Resmi Ön Baskı & Patent | Küresel / Yapay Zeka & Fizik | [**arXiv:2609.30115 [cs.NE]**](https://arxiv.org/abs/2609.30115) &bull; [**Zenodo: 10.5281/zenodo.22900465 (v3)**](https://doi.org/10.5281/zenodo.22900465) &bull; **Patent No: TR 2026/016285** |
 | ⚔️ **The Zero-VRAM Gauntlet** | Kıyaslama Duvarı & Meydan Okuma | Araştırmacılar, Mühendisler & Meydan Okuyanlar | [**Kıyaslama Duvarını Aç (The Gauntlet)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html) |
 | 🌐 **Resmi Canlı Web Portalı** | Ana Vitrin & Galeri | Genel / Akademik | [**Portalı Başlat (GitHub Pages)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/) |
@@ -51,6 +52,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 | 🗣️ **Halka Sunum ve Teorik Rehber** | Çift Katmanlı Kılavuz | Konuşmacılar & Eğitimciler | [**Sunum Rehberini Aç (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/Halka_Sunum_ve_Teorik_Rehber.html) |
 | 🏛️ **Paper 1: Fraktal Nöron Sentezi** | Dergi İncelemesinde | Açık Bilim | [**Zenodo: 10.5281/zenodo.22867037**](https://zenodo.org/records/22867037) &bull; *Chaos, Solitons & Fractals (Elsevier)* |
 | ⚡ **Kardeş Makale: WERR (Uç Triyaj)** | Uç Doğal Dil & Görsel İşleme | Küresel / Uygulamalı Yapay Zeka | [**Zenodo: 10.5281/zenodo.22939253**](https://doi.org/10.5281/zenodo.22939253) &bull; [**arXiv: 2609.25498**](https://arxiv.org/abs/2609.25498) &bull; [**GitHub: pCwOrM/werr**](https://github.com/pCwOrM/werr) |
+| 🤗 **Evrensel Fraktal Karar Veri Seti** | Dünyanın İlk Fraktal Doğal Dil Karar Haritası | Yapay Zekâ / ML Kıyaslama Araştırmacıları | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) |
 | 🧠 **Canlı İkili Bilişsel Platform (answerr)** | Üretim Platformu & API | Geliştiriciler & Son Kullanıcılar | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
 | 🌐 **On-Chain AI Karar Oracle'ı (werracle)** | EVM 32-Bayt Slot Motoru | Blokzincir & DeFi Geliştiricileri | [**arXiv:2609.30719 [cs.CR]**](https://arxiv.org/abs/2609.30719) &bull; [**Canlı Simülatörü Aç**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
 | 🔬 **OED Simülasyon ve Deney Raporu** | Matematiksel Analiz & Kanıt | Araştırmacılar & Matematikçiler | [**Simülasyon Raporu (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/simulation_report.html) &bull; [**PDF Rapor**](docs/OED_SIMULASYON_VE_DENEY_RAPORU.pdf) |
@@ -60,13 +62,13 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 ## 👥 Yazarlar ve Akademik Kurumlar
 
 * **Volkan Dağlı** *(Sorumlu Yazar / Corresponding Author)*  
-  Anadolu Üniversitesi, Eskişehir, Türkiye & ITouch Systems, Mersin, Türkiye &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
+  Anadolu Üniversitesi, Eskişehir, Türkiye & ITouch Systems, Çukurova Teknokent, Mersin, Türkiye &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
 * **Zerrin Dağlı**  
   Mersin Üniversitesi, Mersin, Türkiye &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
 
 * **Dağhan Dağlı**  
-  Toros Fen Lisesi (Toros Science College), Mersin, Türkiye &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
+  Toros Fen Lisesi, MEV (Toros Üniversitesi), Mersin, Türkiye &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
 *Yazışma & İletişim:* Volkan Dağlı ([GitHub Araştırma Deposu](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis) / [Zenodo Çatı](https://doi.org/10.5281/zenodo.22774934)).
 
@@ -475,14 +477,14 @@ Bu araştırmayı, prosedürel ağırlık üretim yöntemini veya interaktif lab
 }
 
 @article{dagli2026werrsoma,
-  title        = {Bio-Synthetic Neuromorphic Interfacing: In Silico Integration of the Princeton FlyWire Drosophila Whole-Brain Connectome (158K Neurons) with a Zero-Memory Fractal System-One Decision Engine (WERR)},
+  title        = {Bio-Synthetic Neuromorphic Interfacing: Integration of a Zero-Memory Fractal Decision Engine with the Whole-Brain Drosophila Melanogaster Connectome},
   author       = {Da{\u{g}}l{\i}, Da{\u{g}}han and Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin},
   journal      = {Zenodo Open Science Archive},
   year         = {2026},
   month        = {September},
-  doi          = {10.5281/zenodo.22996626},
-  url          = {https://doi.org/10.5281/zenodo.22996626},
-  note         = {158.169 nöron, 3.99M sinaps. Sub-4ms refleks gecikmesi, 0 VRAM. TÜRKPATENT Başvuru: TR 2026/016633. Canlı 3D Portal: https://werrsoma.answerr.me/}
+  doi          = {10.5281/zenodo.23072929},
+  url          = {https://doi.org/10.5281/zenodo.23072929},
+  note         = {158.262 nöron, 3.99M sinaps. Sub-4ms refleks gecikmesi, 0 VRAM. TÜRKPATENT Başvuru: TR 2026/016633. Konsept DOI: 10.5281/zenodo.22996625. Canlı 3D Portal: https://werrsoma.answerr.me/}
 }
 
 @article{dagli2026werracle_arxiv,
@@ -521,6 +523,26 @@ Bu araştırmayı, prosedürel ağırlık üretim yöntemini veya interaktif lab
   version      = {v0.2.0},
   doi          = {10.5281/zenodo.23045504},
   url          = {https://doi.org/10.5281/zenodo.23045504}
+}
+
+@misc{werredur2026package,
+  author       = {Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{WerreduR}: Procedural Fractal Pedagogy ({PFP}) Client-Side Engine and Replication Suite (Version 4.0)},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v4.0},
+  doi          = {10.5281/zenodo.23128224},
+  url          = {https://doi.org/10.5281/zenodo.23128224},
+  note         = {Concept DOI: 10.5281/zenodo.22999420. Target: Computers & Education: Artificial Intelligence (Elsevier). Priority Patent: TR 2026/016285.}
+}
+
+@misc{dagli2026werrdataset,
+  author       = {Da{\u{g}}l{\i}, Volkan},
+  title        = {{WERR Open Decisions}: World's First Universal Fractal Natural Language Decision Map Dataset},
+  year         = {2026},
+  publisher    = {Hugging Face},
+  howpublished = {\url{https://huggingface.co/datasets/pCwOrM/werr_open_decisions}},
+  note         = {Açık erişimli evrensel fraktal sınır karar eşleme kıyaslama veri seti.}
 }
 ```
 

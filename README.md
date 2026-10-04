@@ -38,10 +38,11 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 
 | Platform / Document | Type | Target Audience | Direct Live Link |
 | :--- | :--- | :--- | :--- |
-| 🧬 **Paper 6: Bio-Synthetic Neuromorphic Interfacing (WerrSoma)** | Whole-Brain Drosophila Connectome (158K Neurons) & Zero-Memory Reflex Arc | Neurobiologists, BCI Engineers & Autonomous Systems | [**Zenodo: 10.5281/zenodo.22996626**](https://doi.org/10.5281/zenodo.22996626) &bull; [**Live 3D Portal**](https://werrsoma.answerr.me/) &bull; [**FlyWire Connectome Lab**](https://werrsoma.answerr.me/neuramap_werr_3d.html) &bull; [**3D Flight Sim**](https://werrsoma.answerr.me/fly_bioneural_flight_sim.html) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) &bull; **TÜRKPATENT Priority: TR 2026/016633** |
+| 🧬 **Paper 6: Bio-Synthetic Neuromorphic Interfacing (WerrSoma)** | Whole-Brain Drosophila Connectome (158K Neurons) & Zero-Memory Reflex Arc | Neurobiologists, BCI Engineers & Autonomous Systems | [**Zenodo: 10.5281/zenodo.23072929 (v1.1)**](https://doi.org/10.5281/zenodo.23072929) (Concept: [10.5281/zenodo.22996625](https://doi.org/10.5281/zenodo.22996625)) &bull; [**Live 3D Portal**](https://werrsoma.answerr.me/) &bull; [**FlyWire Connectome Lab**](https://werrsoma.answerr.me/neuramap_werr_3d.html) &bull; [**3D Flight Sim**](https://werrsoma.answerr.me/fly_bioneural_flight_sim.html) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) &bull; **TÜRKPATENT Priority: TR 2026/016633** |
 | 📐 **GAP → Lean 4 Formally Verified Port** | Core Algebra & Computational Group Theory | Computational Algebraists & Logicians | [**arXiv:2609.38492 [cs.LO]**](https://arxiv.org/abs/2609.38492) &bull; [**Zenodo: 10.5281/zenodo.23045504**](https://doi.org/10.5281/zenodo.23045504) &bull; [**GitHub: pCwOrM/gap-lean4-port**](https://github.com/pCwOrM/gap-lean4-port) &bull; [**Release: v0.2.0**](https://github.com/pCwOrM/gap-lean4-port/releases/tag/v0.2.0) &bull; [**Show & Tell: gap#6624**](https://github.com/gap-system/gap/discussions/6624) &bull; [**Discussion: gap#6613**](https://github.com/gap-system/gap/discussions/6613) &bull; **35 Theorems (0 sorry)** |
 | 📜 **Paper 5: Lean 4 Formal Verification & 40-Core Gauntlet** | Formal Machine Proofs & Bare-Metal Gauntlet | Logicians, Web3 Architects & Core AI | [**arXiv:2609.33066 [cs.AI, cs.LO]**](https://arxiv.org/abs/2609.33066) &bull; [**arXiv PDF**](https://arxiv.org/pdf/2609.33066) &bull; [**Zenodo: 10.5281/zenodo.22983889 (v2)**](https://doi.org/10.5281/zenodo.22983889) &bull; [**Replication Bundle**](https://zenodo.org/records/22983889/files/zenodo_bundle_lean4_oed_verification_v2.zip) |
-| 🌌 **Paper 4: Black Hole Page Curve & Wormhole Error-Kernel** | Quantum Gravity & Thermodynamics | Physicists, Mathematicians & Open Science | [**Zenodo: 10.5281/zenodo.22978460 (v2)**](https://zenodo.org/records/22978460) &bull; [**Concept DOI: 10.5281/zenodo.22961999**](https://doi.org/10.5281/zenodo.22961999) &bull; [**Documentation**](docs/BLACKHOLE_PAGE_CURVE_WORMHOLE_RESEARCH.md) &bull; [**Preprint PDF**](https://zenodo.org/records/22978460/files/Dagli_2026_Wormhole_Error-Kernel_Page_Curve_preprint_v2.pdf/content) |
+| 🌌 **Paper 4: Black Hole Page Curve (Canonical Synthesis v5.0)** | Quantum Gravity, Orbifolds & GKP Stabilizers | Physicists, Mathematicians & Open Science | [**Zenodo: Canonical Concept 10.5281/zenodo.22961999**](https://doi.org/10.5281/zenodo.22961999) &bull; [**v4: 10.5281/zenodo.23049254**](https://doi.org/10.5281/zenodo.23049254) &bull; [**Documentation**](docs/BLACKHOLE_PAGE_CURVE_WORMHOLE_RESEARCH.md) |
+| 🎓 **Paper 3: Procedural Fractal Pedagogy (WerreduR)** | Zero-Storage Mandelbrot Reflex Scaffolding & 1PL Rasch AIED Engine | Educators, AIED Researchers & Cognitive Scientists | [**Zenodo: 10.5281/zenodo.23128224 (v4.0)**](https://doi.org/10.5281/zenodo.23128224) (Concept: [10.5281/zenodo.22999420](https://doi.org/10.5281/zenodo.22999420)) &bull; [**GitHub: jesmaat/WerreduR**](https://github.com/jesmaat/WerreduR) &bull; *Target: Q1 AIED Journal (Elsevier CAEAI)* &bull; **TÜRKPATENT Priority: TR 2026/016285** |
 | 🏛️ **Paper 2: Orbital Error Dynamics (OED)** | Official Preprint & Patent | Global / AI & Physics | [**arXiv:2609.30115 [cs.NE]**](https://arxiv.org/abs/2609.30115) &bull; [**Zenodo: 10.5281/zenodo.22900465 (v3)**](https://doi.org/10.5281/zenodo.22900465) &bull; **Patent Pending: TR 2026/016285** |
 | ⚔️ **The Zero-VRAM Gauntlet** | Master Benchmark Wall | Researchers, Engineers & Challengers | [**Launch The Gauntlet (Benchmarks)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html) |
 | 🌐 **Official Web Portal** | Showcase | Global / Academic | [**Launch Web Portal**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/) |
@@ -52,6 +53,7 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 | 🗣️ **Halka Sunum ve Teorik Rehber** | Dual-Layer Guide | Presenters & Educators | [**Open Presentation Guide (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/Halka_Sunum_ve_Teorik_Rehber.html) |
 | 🏛️ **Paper 1: Fractal Neural Synthesis** | Journal Under Review | Open Science | [**Zenodo: 10.5281/zenodo.22867037**](https://zenodo.org/records/22867037) &bull; *Chaos, Solitons & Fractals (Elsevier)* |
 | ⚡ **Companion Paper: WERR (Edge Triage)** | Applied Edge NLP & Vision | Global / Applied AI | [**Zenodo: 10.5281/zenodo.22939253**](https://doi.org/10.5281/zenodo.22939253) &bull; [**arXiv: 2609.25498**](https://arxiv.org/abs/2609.25498) &bull; [**GitHub: pCwOrM/werr**](https://github.com/pCwOrM/werr) |
+| 🤗 **Universal Fractal Decision Dataset** | World's First Fractal NLP Decision Map | AI / ML Benchmark Researchers | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) |
 | 🧠 **Live Dual-Cognition AI (answerr)** | Production Platform & API | Developers & End Users | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
 | 🌐 **Paper 7: On-Chain AI Oracle (werracle)** | EVM 32-Byte Slot Engine & Flash-Loan Shield | Blockchain & DeFi Developers | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**DOI: 10.48550/arXiv.2609.30719**](https://doi.org/10.48550/arXiv.2609.30719) &bull; [**Live Simulator**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) &bull; [**Zenodo: 10.5281/zenodo.22942598**](https://doi.org/10.5281/zenodo.22942598) |
 | 🔬 **OED Simulation & Experiment Report** | Mathematical Report | Researchers & Mathematicians | [**Simulation Report (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/simulation_report.html) &bull; [**PDF Report**](docs/OED_SIMULASYON_VE_DENEY_RAPORU.pdf) |
@@ -61,13 +63,13 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 ## 👥 Authors & Affiliations
 
 * **Volkan Dağlı** *(Corresponding Author)*  
-  Anadolu University, Eskişehir, Turkey & ITouch Systems, Mersin, Turkey &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
+  Anadolu University, Eskişehir, Turkey & ITouch Systems, Çukurova Teknokent, Mersin, Turkey &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
 * **Zerrin Dağlı**  
   Mersin University, Mersin, Turkey &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
 
 * **Dağhan Dağlı**  
-  Toros Science College, Mersin, Turkey &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
+  Toros Science High School, MEV (Toros University), Mersin, Turkey &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
 *Correspondence:* Volkan Dağlı ([GitHub Repository](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis) / [Zenodo Concept](https://doi.org/10.5281/zenodo.22774934)).
 
@@ -463,14 +465,14 @@ If you utilize this research, procedural weight generation methodology, or inter
 }
 
 @article{dagli2026werrsoma,
-  title        = {Bio-Synthetic Neuromorphic Interfacing: In Silico Integration of the Princeton FlyWire Drosophila Whole-Brain Connectome (158K Neurons) with a Zero-Memory Fractal System-One Decision Engine (WERR)},
+  title        = {Bio-Synthetic Neuromorphic Interfacing: Integration of a Zero-Memory Fractal Decision Engine with the Whole-Brain Drosophila Melanogaster Connectome},
   author       = {Da{\u{g}}l{\i}, Da{\u{g}}han and Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin},
   journal      = {Zenodo Open Science Archive},
   year         = {2026},
   month        = {September},
-  doi          = {10.5281/zenodo.22996626},
-  url          = {https://doi.org/10.5281/zenodo.22996626},
-  note         = {158,169 neurons, 3.99M synapses. Sub-4ms latency, zero VRAM. TÜRKPATENT Priority: TR 2026/016633. Live 3D Portal: https://werrsoma.answerr.me/}
+  doi          = {10.5281/zenodo.23072929},
+  url          = {https://doi.org/10.5281/zenodo.23072929},
+  note         = {158,262 neurons, 3.99M synapses. Sub-4ms latency, zero VRAM. TÜRKPATENT Priority: TR 2026/016633. Concept DOI: 10.5281/zenodo.22996625. Live 3D Portal: https://werrsoma.answerr.me/}
 }
 
 @article{dagli2026werracle,
@@ -507,6 +509,26 @@ If you utilize this research, procedural weight generation methodology, or inter
   version      = {v0.2.0},
   doi          = {10.5281/zenodo.23045504},
   url          = {https://doi.org/10.5281/zenodo.23045504}
+}
+
+@misc{werredur2026package,
+  author       = {Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{WerreduR}: Procedural Fractal Pedagogy ({PFP}) Client-Side Engine and Replication Suite (Version 4.0)},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v4.0},
+  doi          = {10.5281/zenodo.23128224},
+  url          = {https://doi.org/10.5281/zenodo.23128224},
+  note         = {Concept DOI: 10.5281/zenodo.22999420. Target: Computers & Education: Artificial Intelligence (Elsevier). Priority Patent: TR 2026/016285.}
+}
+
+@misc{dagli2026werrdataset,
+  author       = {Da{\u{g}}l{\i}, Volkan},
+  title        = {{WERR Open Decisions}: World's First Universal Fractal Natural Language Decision Map Dataset},
+  year         = {2026},
+  publisher    = {Hugging Face},
+  howpublished = {\url{https://huggingface.co/datasets/pCwOrM/werr_open_decisions}},
+  note         = {Open-access benchmark dataset for continuous fractal boundary decision mappings.}
 }
 ```
 
