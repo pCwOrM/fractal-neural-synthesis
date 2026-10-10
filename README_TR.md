@@ -22,6 +22,9 @@
 [![On-Chain AI Oracle: werracle](https://img.shields.io/badge/Web3%20Oracle-werracle-f59e0b.svg?logo=ethereum&logoColor=white)](https://github.com/pCwOrM/werracle)
 [![The Gauntlet Kıyaslamaları](https://img.shields.io/badge/The%20Gauntlet-Sıfır--VRAM%20Liderliği-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)
 [![Lisans: BSL 1.1](https://img.shields.io/badge/Lisans-BSL%201.1-red.svg)](./LICENSE)
+[![Schönhage Tensör Dünya Rekoru: Zenodo](https://img.shields.io/badge/Tensör%20Rekoru%20DOI-10.5281%2Fzenodo.23268580-024dad.svg)](https://doi.org/10.5281/zenodo.23268580)
+[![arXiv: submit/8207241](https://img.shields.io/badge/arXiv-submit%2F8207241%20(Tensör%20Sınırı)-b31b1b.svg)](https://arxiv.org/submit/8207241)
+[![Tamsayı Çarpım Sınırları: PR 226](https://img.shields.io/badge/CrocSwap%20PR%20%23226-W%3D176%2C906%2C915-brightgreen.svg)](https://github.com/CrocSwap/integer-mult-bounds/pull/226)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&logoColor=white)](https://github.com/sponsors/pCwOrM)
 [![Support on USDT TRC20](https://img.shields.io/badge/Destek-USDT%20TRC20-009393?logo=tether&logoColor=white)](#-sponsorluk-ve-hibe-destekleri)
@@ -37,6 +40,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 
 | Platform / Belge | Tür | Hedef Kitle | Doğrudan Canlı Bağlantı |
 | :--- | :--- | :--- | :--- |
+| 🏆 **Paper 8: Schönhage Tensör Taşıyıcı Sıkıştırma (Dünya Rekoru)** | Makine Onaylı Tamsayı Çarpımı Sınırları ($W = 176.906.915$, $\kappa \approx 4,1310765 \times 10^{-5}$) | Karmaşıklık Teorisyenleri, Ayrık Matematikçiler & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23268580**](https://doi.org/10.5281/zenodo.23268580) (Konsept: [10.5281/zenodo.23268579](https://doi.org/10.5281/zenodo.23268579)) &bull; [**arXiv: submit/8207241**](https://arxiv.org/submit/8207241) &bull; [**CrocSwap PR #226**](https://github.com/CrocSwap/integer-mult-bounds/pull/226) &bull; [**Çatallama: pCwOrM/integer-mult-bounds**](https://github.com/pCwOrM/integer-mult-bounds) &bull; **Lean 4 Doğrulanmış (0 sorry)** |
 | ⚡ **Paper 7: Werracle On-Chain AI Refleks Oracle'ı** | Kuruş-Altı Blok-İçi EVM Karar Motoru & Flash-Loan Devre Kesici | DeFi Mimarları, Akıllı Kontrat Denetçileri & MEV Araştırmacıları | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**arXiv PDF**](https://arxiv.org/pdf/2609.30719) &bull; [**Zenodo: 10.5281/zenodo.22942598**](https://doi.org/10.5281/zenodo.22942598) &bull; [**Canlı EVM Simülatörü**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
 | 🧬 **Paper 6: Biyo-Sentetik Nöromorfik Arayüz (WerrSoma)** | Tüm Beyin Drosophila Konnektomu (158 Bin Nöron) & Sıfır-Bellek Refleks Yayı | Nörobiyologlar, BCI Mühendisleri & Otonom Sistemler | [**Zenodo: 10.5281/zenodo.23072929 (v1.1)**](https://doi.org/10.5281/zenodo.23072929) (Konsept: [10.5281/zenodo.22996625](https://doi.org/10.5281/zenodo.22996625)) &bull; [**Canlı 3D Portal**](https://werrsoma.answerr.me/) &bull; [**FlyWire Konnektom Laboratuvarı**](https://werrsoma.answerr.me/neuramap_werr_3d.html) &bull; [**3D Uçuş Simülatörü**](https://werrsoma.answerr.me/fly_bioneural_flight_sim.html) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) &bull; **TÜRKPATENT Patent Başvurusu: TR 2026/016633** |
 | 📐 **GAP → Lean 4 Doğrulanmış Port** | Çekirdek Cebir & Hesaplamalı Grup Teorisi | Hesaplamalı Cebirciler & Mantıkçılar | [**arXiv:2609.38492 [cs.LO]**](https://arxiv.org/abs/2609.38492) &bull; [**Zenodo: 10.5281/zenodo.23045504**](https://doi.org/10.5281/zenodo.23045504) &bull; [**GitHub: pCwOrM/gap-lean4-port**](https://github.com/pCwOrM/gap-lean4-port) &bull; [**Sürüm: v0.2.0**](https://github.com/pCwOrM/gap-lean4-port/releases/tag/v0.2.0) &bull; [**Show & Tell: gap#6624**](https://github.com/gap-system/gap/discussions/6624) &bull; [**Tartışma: gap#6613**](https://github.com/gap-system/gap/discussions/6613) &bull; **35 Teorem (0 sorry)** |
@@ -543,6 +547,17 @@ Bu araştırmayı, prosedürel ağırlık üretim yöntemini veya interaktif lab
   publisher    = {Hugging Face},
   howpublished = {\url{https://huggingface.co/datasets/pCwOrM/werr_open_decisions}},
   note         = {Açık erişimli evrensel fraktal sınır karar eşleme kıyaslama veri seti.}
+}
+
+@article{dagli2026schonhage_tensor,
+  author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{Bipartite Carrier Compression and Machine-Certified Bounds in Sch{\"o}nhage Trilinear Multiplication Tensors}},
+  journal      = {arXiv preprint (submit/8207241) [cs.CC, math.CO, cs.DS]},
+  year         = {2026},
+  month        = oct,
+  doi          = {10.5281/zenodo.23268580},
+  url          = {https://doi.org/10.5281/zenodo.23268580},
+  note         = {Zenodo Version DOI: 10.5281/zenodo.23268580; Concept DOI: 10.5281/zenodo.23268579. Machine-verified in Lean 4 (0 sorry). Upstream CrocSwap/integer-mult-bounds PR #226; Certified W = 176,906,915, kappa = 826,215,307/20,000,000,000,000.}
 }
 ```
 

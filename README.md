@@ -23,6 +23,9 @@
 [![The Gauntlet Benchmarks](https://img.shields.io/badge/The%20Gauntlet-Zero--VRAM%20Supremacy-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)
 [![GitHub Education](https://img.shields.io/badge/GitHub%20Education-Community%20Exchange-2ea44f?logo=github&logoColor=white)](https://education.github.com/globalcampus/exchange)
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red.svg)](./LICENSE)
+[![Schönhage Tensor World Record: Zenodo](https://img.shields.io/badge/Tensor%20Record%20DOI-10.5281%2Fzenodo.23268580-024dad.svg)](https://doi.org/10.5281/zenodo.23268580)
+[![arXiv: submit/8207241](https://img.shields.io/badge/arXiv-submit%2F8207241%20(Tensor%20Bound)-b31b1b.svg)](https://arxiv.org/submit/8207241)
+[![Integer Mult Bounds: PR 226](https://img.shields.io/badge/CrocSwap%20PR%20%23226-W%3D176%2C906%2C915-brightgreen.svg)](https://github.com/CrocSwap/integer-mult-bounds/pull/226)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&logoColor=white)](https://github.com/sponsors/pCwOrM)
 [![Support on USDT TRC20](https://img.shields.io/badge/Support-USDT%20TRC20-009393?logo=tether&logoColor=white)](#-sponsor--grant-funding)
@@ -38,6 +41,7 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 
 | Platform / Document | Type | Target Audience | Direct Live Link |
 | :--- | :--- | :--- | :--- |
+| 🏆 **Paper 8: Schönhage Tensor Carrier Compression (World Record)** | Machine-Certified Integer Multiplication Bounds ($W = 176,906,915$, $\kappa \approx 4.1310765 \times 10^{-5}$) | Complexity Theorists, Discrete Mathematicians & Logicians | [**Zenodo: 10.5281/zenodo.23268580**](https://doi.org/10.5281/zenodo.23268580) (Concept: [10.5281/zenodo.23268579](https://doi.org/10.5281/zenodo.23268579)) &bull; [**arXiv: submit/8207241**](https://arxiv.org/submit/8207241) &bull; [**CrocSwap PR #226**](https://github.com/CrocSwap/integer-mult-bounds/pull/226) &bull; [**Fork: pCwOrM/integer-mult-bounds**](https://github.com/pCwOrM/integer-mult-bounds) &bull; **Lean 4 Certified (0 sorry)** |
 | 🧬 **Paper 6: Bio-Synthetic Neuromorphic Interfacing (WerrSoma)** | Whole-Brain Drosophila Connectome (158K Neurons) & Zero-Memory Reflex Arc | Neurobiologists, BCI Engineers & Autonomous Systems | [**Zenodo: 10.5281/zenodo.23072929 (v1.1)**](https://doi.org/10.5281/zenodo.23072929) (Concept: [10.5281/zenodo.22996625](https://doi.org/10.5281/zenodo.22996625)) &bull; [**Live 3D Portal**](https://werrsoma.answerr.me/) &bull; [**FlyWire Connectome Lab**](https://werrsoma.answerr.me/neuramap_werr_3d.html) &bull; [**3D Flight Sim**](https://werrsoma.answerr.me/fly_bioneural_flight_sim.html) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) &bull; **TÜRKPATENT Priority: TR 2026/016633** |
 | 📐 **GAP → Lean 4 Formally Verified Port** | Core Algebra & Computational Group Theory | Computational Algebraists & Logicians | [**arXiv:2609.38492 [cs.LO]**](https://arxiv.org/abs/2609.38492) &bull; [**Zenodo: 10.5281/zenodo.23045504**](https://doi.org/10.5281/zenodo.23045504) &bull; [**GitHub: pCwOrM/gap-lean4-port**](https://github.com/pCwOrM/gap-lean4-port) &bull; [**Release: v0.2.0**](https://github.com/pCwOrM/gap-lean4-port/releases/tag/v0.2.0) &bull; [**Show & Tell: gap#6624**](https://github.com/gap-system/gap/discussions/6624) &bull; [**Discussion: gap#6613**](https://github.com/gap-system/gap/discussions/6613) &bull; **35 Theorems (0 sorry)** |
 | 📜 **Paper 5: Lean 4 Formal Verification & 40-Core Gauntlet** | Formal Machine Proofs & Bare-Metal Gauntlet | Logicians, Web3 Architects & Core AI | [**arXiv:2609.33066 [cs.AI, cs.LO]**](https://arxiv.org/abs/2609.33066) &bull; [**arXiv PDF**](https://arxiv.org/pdf/2609.33066) &bull; [**Zenodo: 10.5281/zenodo.22983889 (v2)**](https://doi.org/10.5281/zenodo.22983889) &bull; [**Replication Bundle**](https://zenodo.org/records/22983889/files/zenodo_bundle_lean4_oed_verification_v2.zip) |
@@ -529,6 +533,17 @@ If you utilize this research, procedural weight generation methodology, or inter
   publisher    = {Hugging Face},
   howpublished = {\url{https://huggingface.co/datasets/pCwOrM/werr_open_decisions}},
   note         = {Open-access benchmark dataset for continuous fractal boundary decision mappings.}
+}
+
+@article{dagli2026schonhage_tensor,
+  author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{Bipartite Carrier Compression and Machine-Certified Bounds in Sch{\"o}nhage Trilinear Multiplication Tensors}},
+  journal      = {arXiv preprint (submit/8207241) [cs.CC, math.CO, cs.DS]},
+  year         = {2026},
+  month        = oct,
+  doi          = {10.5281/zenodo.23268580},
+  url          = {https://doi.org/10.5281/zenodo.23268580},
+  note         = {Zenodo Version DOI: 10.5281/zenodo.23268580; Concept DOI: 10.5281/zenodo.23268579. Machine-verified in Lean 4 (0 sorry). Upstream CrocSwap/integer-mult-bounds PR #226; Certified W = 176,906,915, kappa = 826,215,307/20,000,000,000,000.}
 }
 ```
 
