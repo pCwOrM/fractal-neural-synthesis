@@ -10,7 +10,8 @@ Machine-certified formalization of the **General Divisor Theorem (GDT)**: exact 
 
 Based on the monograph by **thinkthoughts** (Dan, [@Precedent_Vice](https://x.com/Precedent_Vice)):
 > *The General Divisor Theorem: Exact Density Correction under Residue Conditioning* (Draft v3.3)  
-> Paper: [https://antiviolence.ai/gdt.pdf](https://antiviolence.ai/gdt.pdf)  
+> Paper: [https://antiviolence.ai/gdt.pdf](https://antiviolence.ai/gdt.pdf) (Permanent Mirror: [docs/gdt.pdf](docs/gdt.pdf))  
+> Formalization Monograph (PDF): [General_Divisor_Theorem_Lean4_Formalization.pdf](General_Divisor_Theorem_Lean4_Formalization.pdf)  
 > Mathematical Basis: [https://github.com/thinkthoughts/mathematical-basis](https://github.com/thinkthoughts/mathematical-basis)
 
 ---

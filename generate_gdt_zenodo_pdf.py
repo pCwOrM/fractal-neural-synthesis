@@ -61,7 +61,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setLineWidth(0.5)
         self.line(54, 42, 558, 42)
         
-        self.drawString(54, 30, "Zenodo Archive Preprint | pCwOrM Research Initiative | Apache-2.0")
+        self.drawString(54, 30, "Preprint Monograph | ITouch Systems Research & Development | Apache-2.0")
         page_str = f"Page {self._pageNumber} of {page_count}"
         self.drawRightString(558, 30, page_str)
         self.restoreState()
@@ -117,7 +117,7 @@ def build_pdf(filename):
         'Affiliations',
         parent=styles['Normal'],
         fontName=MAIN_FONT,
-        fontSize=8,
+        fontSize=7.8,
         leading=11.5,
         textColor=colors.HexColor("#475569"),
         alignment=1,
@@ -152,33 +152,33 @@ def build_pdf(filename):
         'Heading1',
         parent=styles['Normal'],
         fontName=MAIN_BOLD,
-        fontSize=11.5,
-        leading=15,
+        fontSize=11,
+        leading=14.5,
         textColor=colors.HexColor("#0f172a"),
-        spaceBefore=10,
-        spaceAfter=4
+        spaceBefore=9,
+        spaceAfter=3
     )
 
     h2_style = ParagraphStyle(
         'Heading2',
         parent=styles['Normal'],
         fontName=MAIN_BOLD,
-        fontSize=9.5,
-        leading=13,
+        fontSize=9.2,
+        leading=12.5,
         textColor=colors.HexColor("#1e3a8a"),
-        spaceBefore=7,
-        spaceAfter=3
+        spaceBefore=6,
+        spaceAfter=2
     )
 
     body_style = ParagraphStyle(
         'Body',
         parent=styles['Normal'],
         fontName=MAIN_FONT,
-        fontSize=8.8,
-        leading=12.8,
+        fontSize=8.6,
+        leading=12.5,
         textColor=colors.HexColor("#1e293b"),
         alignment=4,
-        spaceAfter=6
+        spaceAfter=5
     )
 
     code_style = ParagraphStyle(
@@ -198,15 +198,16 @@ def build_pdf(filename):
     story.append(Paragraph("Machine-Certified Lean 4 Formalization of the General Divisor Theorem:<br/>Exact Density Correction under Residue Conditioning", title_style))
     story.append(Paragraph("A Formalization Monograph & Machine Proof Report", subtitle_style))
     
-    # Strictly Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı
-    authors_text = "<b>Volkan Dağlı</b><sup>1,2</sup> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Zerrin Dağlı</b><sup>3</sup> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Dağhan Dağlı</b><sup>4</sup>"
+    # Canonical Institutional Künye
+    authors_text = "<b>Volkan Dağlı</b><sup>1,2</sup> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Zerrin Dağlı</b><sup>3,4</sup> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Dağhan Dağlı</b><sup>5</sup>"
     story.append(Paragraph(authors_text, authors_style))
     
     affils_text = (
-        "<sup>1</sup>Anadolu University, Eskişehir, Turkey &nbsp;&nbsp; "
-        "<sup>2</sup>ITouch Systems & pCwOrM Research Initiative, Turkey (ORCID: 0009-0000-1587-8703)<br/>"
-        "<sup>3</sup>Mersin University, Mersin, Turkey (ORCID: 0000-0001-9490-6425)<br/>"
-        "<sup>4</sup>Toros Science College, Mersin, Turkey (ORCID: 0009-0003-2492-8313)"
+        "<sup>1</sup>Anadolu University, Eskişehir, Türkiye &nbsp;&nbsp; "
+        "<sup>2</sup>ITouch Systems, Adana, Türkiye (ORCID: 0009-0000-1587-8703)<br/>"
+        "<sup>3</sup>Mersin University, Mersin, Türkiye (ORCID: 0000-0001-9490-6425) &nbsp;&nbsp; "
+        "<sup>4</sup>Yusuf Kalkavan Anadolu Lisesi, Mersin, Türkiye<br/>"
+        "<sup>5</sup>Toros Science High School, MEV (Toros University), Mersin, Türkiye (ORCID: 0009-0003-2492-8313)"
     )
     story.append(Paragraph(affils_text, affil_style))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#cbd5e1"), spaceAfter=8))
@@ -281,12 +282,12 @@ def build_pdf(filename):
         body_style
     ))
 
-    # Add Infographic figure (scaled to fit neatly)
+    # Add Infographic figure
     infographic_path = "docs/general_divisor_theorem/gdt_twitter_infographic.png"
     if os.path.exists(infographic_path):
         story.append(Spacer(1, 4))
         story.append(Image(infographic_path, width=490, height=275.6))
-        fig_cap = ParagraphStyle('FigCap', parent=styles['Normal'], fontName=MAIN_ITALIC, fontSize=7.5, leading=10, textColor=colors.HexColor("#475569"), alignment=1, spaceAfter=8)
+        fig_cap = ParagraphStyle('FigCap', parent=styles['Normal'], fontName=MAIN_ITALIC, fontSize=7.5, leading=10, textColor=colors.HexColor("#475569"), alignment=1, spaceAfter=6)
         story.append(Paragraph("Figure 1: Architectural Overview and Machine Certification Telemetry for the General Divisor Theorem in Lean 4.", fig_cap))
 
     # Section 3: Lean 4 Formal Architecture & 0-Sorry Proofs
@@ -321,13 +322,13 @@ end GeneralDivisorTheorem"""
     t_callout.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#f8fafc")),
         ('BOX', (0,0), (-1,-1), 0.75, colors.HexColor("#cbd5e1")),
-        ('TOPPADDING', (0,0), (-1,-1), 4),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+        ('TOPPADDING', (0,0), (-1,-1), 3),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
         ('LEFTPADDING', (0,0), (-1,-1), 6),
         ('RIGHTPADDING', (0,0), (-1,-1), 6),
     ]))
     story.append(t_callout)
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
 
     # Section 4: Benchmark Table & Distinguishing Cases
     story.append(Paragraph("4. Benchmark Instances & Boundary Distinctions", h1_style))
@@ -356,11 +357,11 @@ end GeneralDivisorTheorem"""
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, colors.HexColor("#f1f5f9")]),
         ('FONTNAME', (0,1), (-1,-1), MAIN_FONT),
         ('FONTSIZE', (0,1), (-1,-1), 7.5),
-        ('TOPPADDING', (0,0), (-1,-1), 3),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+        ('TOPPADDING', (0,0), (-1,-1), 2.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 2.5),
     ]))
     story.append(t_bench)
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
 
     # Section 5: Exhaustive Verification
     story.append(Paragraph("5. Exhaustive Empirical Verification Suite", h1_style))
@@ -379,20 +380,28 @@ end GeneralDivisorTheorem"""
         "supplying Mathlib with exact density conditioning tools for coprime progressions. The complete source tree, Lean 4 package, "
         "build configuration, and test harnesses are published openly under the Apache-2.0 license:<br/>"
         "&nbsp;&nbsp;• <b>GitHub Repository:</b> https://github.com/pCwOrM/general-divisor-theorem<br/>"
-        "&nbsp;&nbsp;• <b>Lean Workers Union Lodge Task:</b> <code>GDT-GENERAL-DIVISOR-THEOREM</code>",
+        "&nbsp;&nbsp;• <b>Persistent Monograph Mirror:</b> https://github.com/pCwOrM/general-divisor-theorem/blob/main/docs/gdt.pdf",
+        body_style
+    ))
+
+    # Acknowledgments
+    story.append(Paragraph("Acknowledgments", h1_style))
+    story.append(Paragraph(
+        "Dedicated bare-metal computing infrastructure and verification cluster resources were provided by "
+        "<b>Bekirhan Dağlı</b> (Managing Partner, ITouch Systems Research & Development).",
         body_style
     ))
 
     # References
-    story.append(Spacer(1, 4))
+    story.append(Spacer(1, 3))
     story.append(Paragraph("References", h1_style))
     refs = [
-        "[1] thinkthoughts (2026). <i>The General Divisor Theorem: Exact Density Correction under Residue Conditioning</i>. Monograph Draft v3.3, https://antiviolence.ai/gdt.pdf",
+        "[1] thinkthoughts (2026). <i>The General Divisor Theorem: Exact Density Correction under Residue Conditioning</i>. Monograph Draft v3.3. Primary: https://antiviolence.ai/gdt.pdf | Mirror: https://github.com/pCwOrM/general-divisor-theorem/blob/main/docs/gdt.pdf",
         "[2] Dağlı, V., Dağlı, Z., & Dağlı, D. (2026). <i>Mandelbrot Fractal Neural Synthesis & Discrete Harmonic Modular Closures</i>. CERN Zenodo, DOI: 10.5281/zenodo.23072120.",
         "[3] The Lean Community (2026). <i>The Lean 4 Interactive Theorem Prover and Mathlib4 Mathematical Library</i>. https://leanprover.github.io/"
     ]
     for r in refs:
-        story.append(Paragraph(r, ParagraphStyle('Ref', parent=styles['Normal'], fontName=MAIN_FONT, fontSize=7.5, leading=10, textColor=colors.HexColor("#334155"), spaceAfter=3)))
+        story.append(Paragraph(r, ParagraphStyle('Ref', parent=styles['Normal'], fontName=MAIN_FONT, fontSize=7.2, leading=9.5, textColor=colors.HexColor("#334155"), spaceAfter=2.5)))
 
     doc.build(story, canvasmaker=NumberedCanvas)
     print(f"PDF successfully built: {filename}")
