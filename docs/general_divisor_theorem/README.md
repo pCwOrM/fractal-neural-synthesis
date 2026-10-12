@@ -16,40 +16,70 @@ Based on the monograph by **thinkthoughts** (Dan, [@Precedent_Vice](https://x.co
 ## 1. Overview & Mathematical Formulation
 
 Let $N, m \in \mathbb{N}^+$ and $a \in \mathbb{Z}$. Consider the counting problem:
-$$S(N, L, m, a) = \{1 \le n \le L : n \equiv a \pmod m, \gcd(n, N) = 1\}$$
+
+$$
+S(N, L, m, a) = \{1 \le n \le L : n \equiv a \pmod{m}, \gcd(n, N) = 1\}
+$$
 
 A naive independent-density heuristic predicts:
-$$|S(N, L, m, a)| \approx \frac{\phi(N)}{N} \frac{L}{m}$$
+
+$$
+|S(N, L, m, a)| \approx \frac{\phi(N)}{N} \frac{L}{m}
+$$
 
 This naive heuristic double-counts restrictions whenever $m$ and $N$ share prime factors. The General Divisor Theorem isolates this shared-prime structure directly via:
-$$d = \operatorname{rad}(\gcd(m, N)), \qquad R = \frac{\operatorname{rad}(N)}{d}$$
+
+$$
+d = \mathrm{rad}(\gcd(m, N)), \qquad R = \frac{\mathrm{rad}(N)}{d}
+$$
 
 ### The Exact Dichotomy
-1. **Inadmissible Branch ($\gcd(a, d) > 1$):**  
-   The accepted set is identically empty for every $L$:
-   $$S(N, L, m, a) = \emptyset, \quad \forall L$$
 
-2. **Admissible Branch ($\gcd(a, d) = 1$):**  
+1. **Inadmissible Branch** ($\gcd(a, d) > 1$):  
+   The accepted set is identically empty for every $L$:
+
+   $$
+   S(N, L, m, a) = \emptyset, \quad \forall L
+   $$
+
+2. **Admissible Branch** ($\gcd(a, d) = 1$):  
    The indicator function has an **exact minimal period**:
-   $$T_{\min} = m R = \operatorname{lcm}(m, \operatorname{rad}(N))$$
+
+   $$
+   T_{\min} = m R = \mathrm{lcm}(m, \mathrm{rad}(N))
+   $$
+
    with **exactly $\phi(R)$ accepted values per full period**.
    
    Relative to the naive prediction, the exact correction factor is:
-   $$C(N, m) = \frac{d}{\phi(d)} = \prod_{p \mid \gcd(m, N)} \frac{p}{p - 1}$$
+
+   $$
+   C(N, m) = \frac{d}{\phi(d)} = \prod_{p \mid \gcd(m, N)} \frac{p}{p - 1}
+   $$
+
    strictly independent of the admissible residue $a$.
 
 ---
 
 ## 2. Specializations Formally Covered
 
-- **Theorem 2 ($m \mid N$):**
-  $$d = \operatorname{rad}(m), \quad R = \frac{\operatorname{rad}(N)}{\operatorname{rad}(m)}, \quad T_{\min} = m \frac{\operatorname{rad}(N)}{\operatorname{rad}(m)}, \quad C(N, m) = \frac{m}{\phi(m)}$$
+- **Theorem 2** ($m \mid N$):
 
-- **Theorem 1' (Unitary Divisor $\gcd(m, N/m) = 1$):**
-  $$R = \operatorname{rad}(N/m), \quad T_{\min} = m \operatorname{rad}(N/m)$$
+  $$
+  d = \mathrm{rad}(m), \quad R = \frac{\mathrm{rad}(N)}{\mathrm{rad}(m)}, \quad T_{\min} = m \frac{\mathrm{rad}(N)}{\mathrm{rad}(m)}, \quad C(N, m) = \frac{m}{\phi(m)}
+  $$
 
-- **Theorem 1 (Primorial Specialization $N = P_k$ squarefree, $m \mid P_k$):**
-  $$d = m, \quad R = \frac{P_k}{m}, \quad T_{\min} = P_k, \quad C(m) = \frac{m}{\phi(m)}$$
+- **Theorem 1'** (Unitary Divisor $\gcd(m, N/m) = 1$):
+
+  $$
+  R = \mathrm{rad}(N/m), \quad T_{\min} = m \cdot \mathrm{rad}(N/m)
+  $$
+
+- **Theorem 1** (Primorial Specialization $N = P_k$ squarefree, $m \mid P_k$):
+
+  $$
+  d = m, \quad R = \frac{P_k}{m}, \quad T_{\min} = P_k, \quad C(m) = \frac{m}{\phi(m)}
+  $$
 
 - **Distinguishing Examples:**
   - $N=18, m=2$: Minimal period $T_{\min} = 6 \neq 18$.
@@ -99,4 +129,5 @@ lake build
   note = {Draft v3.3}
 }
 ```
+
 Formalized by [pCwOrM](https://github.com/pCwOrM) under Apache-2.0.
