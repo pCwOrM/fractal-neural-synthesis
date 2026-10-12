@@ -160,7 +160,7 @@ def build_pdf(filename):
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#0284c7"), spaceBefore=2, spaceAfter=8))
 
     authors_text = (
-        "<b>Volkan Dağlı</b><sup>1,*</sup>, <b>Dr. Zerrin Dağlı</b><sup>2</sup>, <b>Dağhan Dağlı</b><sup>3</sup><br/>"
+        "<b>Volkan Dağlı</b><sup>1,*</sup>, <b>Zerrin Dağlı</b><sup>2</sup>, <b>Dağhan Dağlı</b><sup>3</sup><br/>"
         "<sup>1</sup> Anadolu University, Eskişehir & ITouch Systems Research Group, Mersin, Türkiye (ORCID: 0009-0000-1587-8703)<br/>"
         "<sup>2</sup> Mersin University & Yusuf Kalkavan Anatolian High School, Mersin, Türkiye (ORCID: 0000-0001-9490-6425)<br/>"
         "<sup>3</sup> Toros Science High School, MEV (Toros University), Mersin, Türkiye (ORCID: 0009-0003-2492-8313)<br/>"
