@@ -27,6 +27,11 @@
 [![Güneş Dili Portalı](https://img.shields.io/badge/Güneş%20Dili-pcworm.github.io%2Fgunes--dili-eab308.svg)](https://pcworm.github.io/gunes-dili/)
 [![arXiv: submit/8207241](https://img.shields.io/badge/arXiv-submit%2F8207241%20(Tensör%20Sınırı)-b31b1b.svg)](https://arxiv.org/submit/8207241)
 [![Tamsayı Çarpım Sınırları: PR 226](https://img.shields.io/badge/CrocSwap%20PR%20%23226-W%3D176%2C906%2C915-brightgreen.svg)](https://github.com/CrocSwap/integer-mult-bounds/pull/226)
+[![Paper 10: GDT Lean 4 DOI](https://img.shields.io/badge/Paper%2010%20DOI-10.5281%2Fzenodo.23316070-024dad.svg)](https://doi.org/10.5281/zenodo.23316070)
+[![GDT: Lean 4 Formel](https://img.shields.io/badge/GDT-Lean%204%20(2%2C287%20Denetim%20GE%C3%87T%C4%B0)-brightgreen.svg)](https://github.com/pCwOrM/general-divisor-theorem)
+[![Paper 11: Niemeier Moonshine DOI](https://img.shields.io/badge/Paper%2011%20DOI-10.5281%2Fzenodo.23324066-024dad.svg)](https://doi.org/10.5281/zenodo.23324066)
+[![Niemeier Moonshine Kayıt](https://img.shields.io/badge/Zenodo-Kay%C4%B1t%2023324067-024dad.svg)](https://zenodo.org/records/23324067)
+[![Niemeier Moonshine GitHub](https://img.shields.io/badge/Niemeier%20A8%5E3-Lean%204%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&logoColor=white)](https://github.com/sponsors/pCwOrM)
 [![Support on USDT TRC20](https://img.shields.io/badge/Destek-USDT%20TRC20-009393?logo=tether&logoColor=white)](#-sponsorluk-ve-hibe-destekleri)
@@ -42,6 +47,8 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 
 | Platform / Belge | Tür | Hedef Kitle | Doğrudan Canlı Bağlantı |
 | :--- | :--- | :--- | :--- |
+| 🌌 **Paper 11: 24D Niemeier Kafesi $A_8^3$, K3 Hodge Dualitesi & Umbral Moonshine** | Makine Onaylı Kafes Biçimselleştirmesi, $\mathbb{Z}/9\mathbb{Z}$ Şasisi, Coxeter $h=9$, Üçlü Yapıştırıcı $\|g\|^2=4$, Sahte Modüler Form & Gölge | Cebirsel Geometrisyenler, Sicim Teorisyenleri & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23324066**](https://doi.org/10.5281/zenodo.23324066) (Kayıt: [`23324067`](https://zenodo.org/records/23324067)) &bull; [**GitHub: pCwOrM/niemeier-a8-umbral-moonshine**](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine) &bull; **Lean 4 Onaylı (0 sorry, 0 aksiyom)** |
+| 🔢 **Paper 10: Genel Bölen Teoremi (GDT) Lean 4 Formelleştirmesi** | Kalan Koşullandırması Altında Kesin Yoğunluk Düzeltmesi, Minimal Periyodiklik $T_{\min} = \mathrm{lcm}(m, \mathrm{rad}(N))$, VolkanBridge Çift Yönlü Doğrulama | Analitik Sayılar Teorisyenleri, Elek Teorisyenleri & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23316070**](https://doi.org/10.5281/zenodo.23316070) &bull; [**GitHub: pCwOrM/general-divisor-theorem**](https://github.com/pCwOrM/general-divisor-theorem) &bull; **2.287 Denetim GEÇTİ &bull; Lean 4 Onaylı** |
 | ☀️ **Paper 9: Güneş Dili (Deterministik Morfoloji & Lean 4)** | Formel Dil Teorisi, 53 Hölder Komması & Biyo-Sentetik Rezonans | Hesaplamalı Dilbilimciler, NLP Mühendisleri & Nörobilimciler | [**Zenodo: 10.5281/zenodo.23273006**](https://doi.org/10.5281/zenodo.23273006) (Konsept: [10.5281/zenodo.23273005](https://doi.org/10.5281/zenodo.23273005)) &bull; [**Canlı Simülatör Portalı**](https://pcworm.github.io/gunes-dili/) &bull; [**GitHub: pCwOrM/gunes-dili**](https://github.com/pCwOrM/gunes-dili) &bull; **TÜRKPATENT Öncelik: TR 2026/016285 & TR 2026/016633** &bull; **Lean 4 Onaylı (0 sorry)** |
 | 🏆 **Paper 8: Schönhage Tensör Taşıyıcı Sıkıştırma (Dünya Rekoru)** | Makine Onaylı Tamsayı Çarpımı Sınırları ($W = 176.906.915$, $\kappa \approx 4,1310765 \times 10^{-5}$) | Karmaşıklık Teorisyenleri, Ayrık Matematikçiler & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23268580**](https://doi.org/10.5281/zenodo.23268580) (Konsept: [10.5281/zenodo.23268579](https://doi.org/10.5281/zenodo.23268579)) &bull; [**arXiv: submit/8207241**](https://arxiv.org/submit/8207241) &bull; [**CrocSwap PR #226**](https://github.com/CrocSwap/integer-mult-bounds/pull/226) &bull; [**Çatallama: pCwOrM/integer-mult-bounds**](https://github.com/pCwOrM/integer-mult-bounds) &bull; **Lean 4 Doğrulanmış (0 sorry)** |
 | ⚡ **Paper 7: Werracle On-Chain AI Refleks Oracle'ı** | Kuruş-Altı Blok-İçi EVM Karar Motoru & Flash-Loan Devre Kesici | DeFi Mimarları, Akıllı Kontrat Denetçileri & MEV Araştırmacıları | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**arXiv PDF**](https://arxiv.org/pdf/2609.30719) &bull; [**Zenodo: 10.5281/zenodo.22942598**](https://doi.org/10.5281/zenodo.22942598) &bull; [**Canlı EVM Simülatörü**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
@@ -561,6 +568,28 @@ Bu araştırmayı, prosedürel ağırlık üretim yöntemini veya interaktif lab
   doi          = {10.5281/zenodo.23268580},
   url          = {https://doi.org/10.5281/zenodo.23268580},
   note         = {Zenodo Version DOI: 10.5281/zenodo.23268580; Concept DOI: 10.5281/zenodo.23268579. Machine-verified in Lean 4 (0 sorry). Upstream CrocSwap/integer-mult-bounds PR #226; Certified W = 176,906,915, kappa = 826,215,307/20,000,000,000,000.}
+}
+
+@article{dagli2026general_divisor_theorem,
+  author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{General Divisor Theorem (GDT): Machine-Certified Density Correction and VolkanBridge Formalization in Lean 4}},
+  journal      = {Zenodo Open Science Archive},
+  year         = {2026},
+  month        = oct,
+  doi          = {10.5281/zenodo.23316070},
+  url          = {https://doi.org/10.5281/zenodo.23316070},
+  note         = {Machine-verified in Lean 4 (2,287 automated checks PASS, 0 sorry). Upstream thinkthoughts/general-divisor-theorem; Concept DOI: 10.5281/zenodo.23316070.}
+}
+
+@article{dagli2026niemeier_a8_k3_moonshine,
+  author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{Machine-Certified Formalization of the 24-Dimensional Niemeier Lattice $A_8^3$, K3 Hodge Duality and Umbral Moonshine in Lean 4}},
+  journal      = {CERN Zenodo Open Science Repository},
+  year         = {2026},
+  month        = oct,
+  doi          = {10.5281/zenodo.23324066},
+  url          = {https://zenodo.org/records/23324067},
+  note         = {Concept DOI: 10.5281/zenodo.23324066, Record: 23324067. Machine-verified in Lean 4 (0 sorry, 0 axioms). Contributor: Bekirhan Da{\u{g}}l{\i} (ITouch Systems).}
 }
 ```
 

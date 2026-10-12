@@ -33,6 +33,11 @@
 [![Paper 9: Güneş Dili Zenodo DOI](https://img.shields.io/badge/Paper%209%20DOI-10.5281%2Fzenodo.23273006-eab308.svg)](https://doi.org/10.5281/zenodo.23273006)
 [![Güneş Dili Portal](https://img.shields.io/badge/Güneş%20Dili-pcworm.github.io%2Fgunes--dili-eab308.svg)](https://pcworm.github.io/gunes-dili/)
 [![Integer Mult Bounds: PR 226](https://img.shields.io/badge/CrocSwap%20PR%20%23226-W%3D176%2C906%2C915-brightgreen.svg)](https://github.com/CrocSwap/integer-mult-bounds/pull/226)
+[![Paper 10: GDT Lean 4 DOI](https://img.shields.io/badge/Paper%2010%20DOI-10.5281%2Fzenodo.23316070-024dad.svg)](https://doi.org/10.5281/zenodo.23316070)
+[![GDT: Lean 4 Formalization](https://img.shields.io/badge/GDT-Lean%204%20(2%2C287%20Checks%20PASS)-brightgreen.svg)](https://github.com/pCwOrM/general-divisor-theorem)
+[![Paper 11: Niemeier Moonshine DOI](https://img.shields.io/badge/Paper%2011%20DOI-10.5281%2Fzenodo.23324066-024dad.svg)](https://doi.org/10.5281/zenodo.23324066)
+[![Niemeier Moonshine Record](https://img.shields.io/badge/Zenodo-Record%2023324067-024dad.svg)](https://zenodo.org/records/23324067)
+[![Niemeier Moonshine GitHub](https://img.shields.io/badge/Niemeier%20A8%5E3-Lean%204%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&logoColor=white)](https://github.com/sponsors/pCwOrM)
 [![Support on USDT TRC20](https://img.shields.io/badge/Support-USDT%20TRC20-009393?logo=tether&logoColor=white)](#-sponsor--grant-funding)
@@ -48,6 +53,8 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 
 | Platform / Document | Type | Target Audience | Direct Live Link |
 | :--- | :--- | :--- | :--- |
+| 🌌 **Paper 11: 24D Niemeier Lattice $A_8^3$, K3 Hodge Duality & Umbral Moonshine** | Machine-Certified Lattice Formalization, $\mathbb{Z}/9\mathbb{Z}$ Chassis, Coxeter $h=9$, Ternary Glue $\|g\|^2=4$, Mock Modular Form & Shadow | Algebraic Geometers, String Theorists & Logicians | [**Zenodo: 10.5281/zenodo.23324066**](https://doi.org/10.5281/zenodo.23324066) (Record: [`23324067`](https://zenodo.org/records/23324067)) &bull; [**GitHub: pCwOrM/niemeier-a8-umbral-moonshine**](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine) &bull; **Lean 4 Certified (0 sorry, 0 axioms)** |
+| 🔢 **Paper 10: General Divisor Theorem (GDT) Lean 4 Formalization** | Exact Density Correction under Residue Conditioning, Minimal Periodicity $T_{\min} = \mathrm{lcm}(m, \mathrm{rad}(N))$, VolkanBridge Two-Way Formalization | Analytic Number Theorists, Sieve Theorists & Logicians | [**Zenodo: 10.5281/zenodo.23316070**](https://doi.org/10.5281/zenodo.23316070) &bull; [**GitHub: pCwOrM/general-divisor-theorem**](https://github.com/pCwOrM/general-divisor-theorem) &bull; **2,287 Checks PASS &bull; Lean 4 Certified** |
 | ☀️ **Paper 9: Güneş Dili (Deterministic Morphology & Lean 4)** | Formal Language Theory, 53 Holder Comma & Bio-Synthetic Resonance | Computational Linguists, NLP Engineers & Neuroscientists | [**Zenodo: 10.5281/zenodo.23273006**](https://doi.org/10.5281/zenodo.23273006) (Concept: [`10.5281/zenodo.23273005`](https://doi.org/10.5281/zenodo.23273005)) &bull; [**Live Simulator Portal**](https://pcworm.github.io/gunes-dili/) &bull; [**GitHub: pCwOrM/gunes-dili**](https://github.com/pCwOrM/gunes-dili) &bull; **TÜRKPATENT Priority: TR 2026/016285 & TR 2026/016633** &bull; **Lean 4 Certified (0 sorry)** |
 | 🏆 **Paper 8: Schönhage Tensor Carrier Compression (World Record)** | Machine-Certified Integer Multiplication Bounds ($W = 176,906,915$, $\kappa \approx 4.1310765 \times 10^{-5}$) | Complexity Theorists, Discrete Mathematicians & Logicians | [**Zenodo: 10.5281/zenodo.23268580**](https://doi.org/10.5281/zenodo.23268580) (Concept: [`10.5281/zenodo.23268579`](https://doi.org/10.5281/zenodo.23268579)) &bull; [**arXiv: submit/8207241 [submitted]**](https://arxiv.org/submit/8207241) &bull; [**CrocSwap PR #226**](https://github.com/CrocSwap/integer-mult-bounds/pull/226) &bull; [**Fork: pCwOrM/integer-mult-bounds**](https://github.com/pCwOrM/integer-mult-bounds) &bull; **Lean 4 Certified (0 sorry)** |
 | 🧬 **Paper 6: Bio-Synthetic Neuromorphic Interfacing (WerrSoma)** | Whole-Brain Drosophila Connectome (158K Neurons) & Zero-Memory Reflex Arc | Neurobiologists, BCI Engineers & Autonomous Systems | [**Zenodo: 10.5281/zenodo.23072929 (v1.1)**](https://doi.org/10.5281/zenodo.23072929) (Concept: [`10.5281/zenodo.22996625`](https://doi.org/10.5281/zenodo.22996625)) &bull; `arXiv: submit/8161759 [on hold]` &bull; [**Live 3D Portal**](https://werrsoma.answerr.me/) &bull; [**GitHub: Lexovian/WerrSoma**](https://github.com/Lexovian/WerrSoma) (Mirror: [`pCwOrM/WerrSoma`](https://github.com/pCwOrM/WerrSoma)) &bull; **TÜRKPATENT Priority: TR 2026/016633** |
@@ -552,6 +559,28 @@ If you utilize this research, procedural weight generation methodology, or inter
   doi          = {10.5281/zenodo.23268580},
   url          = {https://doi.org/10.5281/zenodo.23268580},
   note         = {Zenodo Version DOI: 10.5281/zenodo.23268580; Concept DOI: 10.5281/zenodo.23268579. Machine-verified in Lean 4 (0 sorry). Upstream CrocSwap/integer-mult-bounds PR #226; Certified W = 176,906,915, kappa = 826,215,307/20,000,000,000,000.}
+}
+
+@article{dagli2026general_divisor_theorem,
+  author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{General Divisor Theorem (GDT): Machine-Certified Density Correction and VolkanBridge Formalization in Lean 4}},
+  journal      = {Zenodo Open Science Archive},
+  year         = {2026},
+  month        = oct,
+  doi          = {10.5281/zenodo.23316070},
+  url          = {https://doi.org/10.5281/zenodo.23316070},
+  note         = {Machine-verified in Lean 4 (2,287 automated checks PASS, 0 sorry). Upstream thinkthoughts/general-divisor-theorem; Concept DOI: 10.5281/zenodo.23316070.}
+}
+
+@article{dagli2026niemeier_a8_k3_moonshine,
+  author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  title        = {{Machine-Certified Formalization of the 24-Dimensional Niemeier Lattice $A_8^3$, K3 Hodge Duality and Umbral Moonshine in Lean 4}},
+  journal      = {CERN Zenodo Open Science Repository},
+  year         = {2026},
+  month        = oct,
+  doi          = {10.5281/zenodo.23324066},
+  url          = {https://zenodo.org/records/23324067},
+  note         = {Concept DOI: 10.5281/zenodo.23324066, Record: 23324067. Machine-verified in Lean 4 (0 sorry, 0 axioms). Contributor: Bekirhan Da{\u{g}}l{\i} (ITouch Systems).}
 }
 ```
 
