@@ -1,0 +1,9 @@
+[package]
+name = "niemeier-a8-umbral-moonshine"
+version = "0.1.0"
+keywords = ["math", "geometry", "lattice", "moonshine"]
+defaultTargets = ["NiemeierA8UmbralMoonshine"]
+
+[lean_lib]
+name = "NiemeierA8UmbralMoonshine"
+srcDir = "."
