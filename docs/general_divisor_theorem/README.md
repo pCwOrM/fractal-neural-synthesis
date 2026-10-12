@@ -1,6 +1,7 @@
 # General Divisor Theorem (GDT): Lean 4 Formalization
 
 [![Lean 4](https://img.shields.io/badge/Lean_4-v4.21.0-blue.svg)](https://github.com/leanprover/lean4)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23316070.svg)](https://doi.org/10.5281/zenodo.23316070)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
 [![Verification](https://img.shields.io/badge/Verification-2287_Checks_PASS-brightgreen.svg)](scripts/verify_gdt.py)
 
@@ -12,6 +13,7 @@ Based on the monograph by **thinkthoughts** (Dan, [@Precedent_Vice](https://x.co
 > *The General Divisor Theorem: Exact Density Correction under Residue Conditioning* (Draft v3.3)  
 > Paper: [https://antiviolence.ai/gdt.pdf](https://antiviolence.ai/gdt.pdf) (Permanent Mirror: [docs/gdt.pdf](docs/gdt.pdf))  
 > Formalization Monograph (PDF): [General_Divisor_Theorem_Lean4_Formalization.pdf](General_Divisor_Theorem_Lean4_Formalization.pdf)  
+> Zenodo Permanent Archive: [10.5281/zenodo.23316070](https://doi.org/10.5281/zenodo.23316070)  
 > Upstream Challenge Repository: [https://github.com/thinkthoughts/general-divisor-theorem](https://github.com/thinkthoughts/general-divisor-theorem)  
 > Mathematical Basis: [https://github.com/thinkthoughts/mathematical-basis](https://github.com/thinkthoughts/mathematical-basis)
 
@@ -131,12 +133,22 @@ lake build
 ## 5. Citation & Attribution
 
 ```bibtex
+@misc{dagli2026gdt_lean4,
+  author    = {Da\u{g}l\i, Volkan and Da\u{g}l\i, Zerrin and Da\u{g}l\i, Da\u{g}han},
+  title     = {Machine-Certified Lean 4 Formalization of the General Divisor Theorem: Exact Density Correction under Residue Conditioning},
+  year      = {2026},
+  month     = {October},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23316070},
+  url       = {https://doi.org/10.5281/zenodo.23316070}
+}
+
 @misc{thinkthoughts2026gdt,
-  author = {thinkthoughts},
-  title = {The General Divisor Theorem: Exact Density Correction under Residue Conditioning},
-  year = {2026},
+  author       = {thinkthoughts},
+  title        = {The General Divisor Theorem: Exact Density Correction under Residue Conditioning},
+  year         = {2026},
   howpublished = {\url{https://antiviolence.ai/gdt.pdf}},
-  note = {Draft v3.3}
+  note         = {Draft v3.3}
 }
 ```
 
