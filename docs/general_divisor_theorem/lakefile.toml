@@ -1,0 +1,13 @@
+name = "GeneralDivisorTheorem"
+defaultTargets = ["GeneralDivisorTheorem", "VolkanBridge"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.21.0"
+
+[[lean_lib]]
+name = "GeneralDivisorTheorem"
+
+[[lean_lib]]
+name = "VolkanBridge"

@@ -4,6 +4,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23316070.svg)](https://doi.org/10.5281/zenodo.23316070)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
 [![Verification](https://img.shields.io/badge/Verification-2287_Checks_PASS-brightgreen.svg)](scripts/verify_gdt.py)
+[![VolkanBridge](https://img.shields.io/badge/VolkanBridge-Two--Way_Validated-blueviolet.svg)](docs/VOLKAN_BRIDGE_SPEC.md)
 
 ![General Divisor Theorem Lean 4 Infographic](gdt_twitter_infographic.png)
 
@@ -114,13 +115,24 @@ theorem instance_m10_C : C_factor 10 = 5 / 2 := by unfold C_factor; norm_num
 theorem instance_m30_C : C_factor 30 = 15 / 4 := by unfold C_factor; norm_num
 ```
 
+### Two-Way Cross-Validation Bridge (`VolkanBridge.lean`)
+
+Per Dan Hawkley's ([@Precedent_Vice](https://x.com/Precedent_Vice)) architectural roadmap, [`VolkanBridge.lean`](VolkanBridge.lean) establishes a two-way cross-validation bridge between Volkan's functional API and Dan's prime-support reading-point specification:
+- **Parameter Isomorphism:** Maps `rad`, `d_param`, `R_param`, `T_min`, `C_factor`, and `S_indicator` to Dan's `radN`, `d`, `R`, `Tmin`, `correctionFactor`, and `Good`.
+- **Axiom Discharge:** Connects Dan's proved theorems (`empty_of_not_admissible`, `good_residuePoint_iff_coprime_R`, `good_add_Tmin_iff`, `goodCount_eq_totient_R`) directly to Volkan's theorem statements.
+- **Specification Dossier:** See [`docs/VOLKAN_BRIDGE_SPEC.md`](docs/VOLKAN_BRIDGE_SPEC.md).
+
 ---
 
 ## 4. Verification & Testing
 
-Run the exhaustive Python verifier (over 2,200 parameter instances verified with 0 defects):
+Run the exhaustive Python verifiers:
 ```bash
+# 1. Core General Divisor Theorem verifier (2,287 checks)
 python scripts/verify_gdt.py
+
+# 2. Two-Way Cross-Validation Bridge verifier (6,670+ checks)
+python scripts/verify_bridge.py
 ```
 
 Build the Lean 4 package with Lake:
