@@ -59,6 +59,12 @@
       "scheme": "url"
     },
     {
+      "identifier": "https://github.com/thinkthoughts/general-divisor-theorem",
+      "relation": "isDerivedFrom",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
       "identifier": "https://github.com/thinkthoughts/mathematical-basis",
       "relation": "references",
       "resource_type": "software",

@@ -12,6 +12,7 @@ Based on the monograph by **thinkthoughts** (Dan, [@Precedent_Vice](https://x.co
 > *The General Divisor Theorem: Exact Density Correction under Residue Conditioning* (Draft v3.3)  
 > Paper: [https://antiviolence.ai/gdt.pdf](https://antiviolence.ai/gdt.pdf) (Permanent Mirror: [docs/gdt.pdf](docs/gdt.pdf))  
 > Formalization Monograph (PDF): [General_Divisor_Theorem_Lean4_Formalization.pdf](General_Divisor_Theorem_Lean4_Formalization.pdf)  
+> Upstream Challenge Repository: [https://github.com/thinkthoughts/general-divisor-theorem](https://github.com/thinkthoughts/general-divisor-theorem)  
 > Mathematical Basis: [https://github.com/thinkthoughts/mathematical-basis](https://github.com/thinkthoughts/mathematical-basis)
 
 ---

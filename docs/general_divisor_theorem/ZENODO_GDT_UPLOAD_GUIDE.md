@@ -85,6 +85,7 @@ Lean 4, General Divisor Theorem, Formal Mathematics, Number Theory, Residue Cond
 | Identifier | Relationship | Resource Type |
 | :--- | :--- | :--- |
 | `https://github.com/pCwOrM/general-divisor-theorem` | `isSupplementTo` | Software |
+| `https://github.com/thinkthoughts/general-divisor-theorem` | `isDerivedFrom` | Software |
 | `https://antiviolence.ai/gdt.pdf` | `isDerivedFrom` | Publication / Preprint |
 | `https://github.com/thinkthoughts/mathematical-basis` | `references` | Software |
 | `10.5281/zenodo.23072120` | `references` | Publication / Preprint |
