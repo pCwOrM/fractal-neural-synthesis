@@ -160,11 +160,10 @@ def build_pdf(filename):
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#0284c7"), spaceBefore=2, spaceAfter=8))
 
     authors_text = (
-        "<b>Volkan Dağlı</b><sup>1,*</sup>, <b>Dr. Zerrin Dağlı</b><sup>2</sup>, <b>Dağhan Dağlı</b><sup>3</sup>, <b>Bekirhan Dağlı</b><sup>4</sup><br/>"
+        "<b>Volkan Dağlı</b><sup>1,*</sup>, <b>Dr. Zerrin Dağlı</b><sup>2</sup>, <b>Dağhan Dağlı</b><sup>3</sup><br/>"
         "<sup>1</sup> Anadolu University, Eskişehir & ITouch Systems Research Group, Mersin, Türkiye (ORCID: 0009-0000-1587-8703)<br/>"
         "<sup>2</sup> Mersin University & Yusuf Kalkavan Anatolian High School, Mersin, Türkiye (ORCID: 0000-0001-9490-6425)<br/>"
         "<sup>3</sup> Toros Science High School, MEV (Toros University), Mersin, Türkiye (ORCID: 0009-0003-2492-8313)<br/>"
-        "<sup>4</sup> ITouch Systems Infrastructure & Discrete Systems, Mersin/Adana, Türkiye<br/>"
         "<i>* Corresponding author: pcworm@gmail.com │ Permanent GitHub: https://github.com/pCwOrM/niemeier-a8-umbral-moonshine</i>"
     )
     story.append(Paragraph(authors_text, meta_style))
@@ -299,11 +298,12 @@ def build_pdf(filename):
     story.append(Spacer(1, 8))
 
     # Section 5: Conclusion & Availability
-    story.append(Paragraph("5. Availability & Infrastructure", h1_style))
+    story.append(Paragraph("5. Infrastructure & Contributor Acknowledgments", h1_style))
     story.append(Paragraph(
+        "Dedicated bare-metal computing infrastructure, proof verification cluster nodes, and enterprise facility resources were contributed and provisioned by "
+        "<b>Bekirhan Dağlı</b> (Managing Partner, ITouch Systems Infrastructure & Discrete Systems).<br/>"
         "The complete source code, verification oracle, Lake package, and Lean 4 formalization are distributed openly under the Apache-2.0 license:<br/>"
-        "&nbsp;&nbsp;• <b>GitHub Repository:</b> https://github.com/pCwOrM/niemeier-a8-umbral-moonshine<br/>"
-        "&nbsp;&nbsp;• <b>Hardware & HPC Infrastructure:</b> Bare-metal nodes provided by <b>ITouch Systems</b> (Managed by Bekirhan Dağlı).",
+        "&nbsp;&nbsp;• <b>GitHub Repository:</b> https://github.com/pCwOrM/niemeier-a8-umbral-moonshine",
         body_style
     ))
 

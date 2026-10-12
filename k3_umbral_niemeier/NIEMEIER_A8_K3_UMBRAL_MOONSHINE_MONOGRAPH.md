@@ -1,7 +1,8 @@
 # 💎 WERR MONOGRAPH: NIEMEIER LATTICE $A_8^3$, K3 SURFACE HODGE DUALITY & UMBRAL MOONSHINE
 
 **Classification:** Sovereign Mathematical Proof & Theoretical Foundation  
-**Authors:** Volkan Dağlı¹, Dr. Zerrin Dağlı², Dağhan Dağlı³, Bekirhan Dağlı⁴  
+**Authors:** Volkan Dağlı¹, Dr. Zerrin Dağlı², Dağhan Dağlı³  
+**Contributor:** Bekirhan Dağlı⁴  
 ¹ *Anadolu University, Eskişehir & ITouch Systems Research Group, Mersin, Turkey*  
 ² *Mersin University & Yusuf Kalkavan Anatolian High School, Mersin, Turkey*  
 ³ *Toros Science College, Mersin, Turkey*  
@@ -64,8 +65,9 @@ In the Cheng–Duncan–Harvey classification of Umbral Moonshine:
 
 ---
 
-## 3. Verification Artifacts
+## 3. Verification Artifacts & Infrastructure
 
 1. **Python Mathematical Oracle:** `k3_umbral_niemeier_oracle.py` (Validated, 0 defects, deterministic exact arithmetic).
 2. **Lean 4 Formal Specification:** `NiemeierA8UmbralMoonshine.lean` (Exact theorem declarations covering unimodularity, glue norms, K3 Euler characteristic, and lambency).
-3. **Cryptographic Seal:** Ready for archival and Zenodo minting.
+3. **Hardware & Infrastructure Contributor:** Computing clusters and bare-metal verification nodes contributed by **Bekirhan Dağlı** (ITouch Systems).
+4. **Cryptographic Seal:** Ready for archival and Zenodo minting.
