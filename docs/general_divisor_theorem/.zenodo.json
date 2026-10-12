@@ -1,0 +1,50 @@
+{
+  "title": "Machine-Certified Lean 4 Formalization of the General Divisor Theorem (GDT): Exact Density Correction under Residue Conditioning",
+  "description": "Standalone machine-checked Lean 4 formalization of the General Divisor Theorem (GDT). Proves exact minimal period T_min = lcm(m, rad(N)), sharp admissibility gcd(a, d) = 1, and the Euler product correction factor C(N, m) = d / phi(d) with 0 sorry. Includes an exhaustive 2,287-parameter Python verification suite. Based on the theoretical monograph by thinkthoughts (Dan, @Precedent_Vice).",
+  "creators": [
+    {
+      "name": "Dağlı, Volkan",
+      "affiliation": "Anadolu University & ITouch Systems, pCwOrM Research",
+      "orcid": "0009-0000-1587-8703"
+    },
+    {
+      "name": "thinkthoughts",
+      "affiliation": "Discrete Mathematics Research / AntiViolence.ai",
+      "orcid": ""
+    }
+  ],
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Lean 4",
+    "General Divisor Theorem",
+    "Formal Mathematics",
+    "Number Theory",
+    "Residue Conditioning",
+    "Coprimality",
+    "Euler Totient",
+    "Mathlib",
+    "Interactive Theorem Proving",
+    "Machine-Certified Proofs"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/pCwOrM/general-divisor-theorem",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://antiviolence.ai/gdt.pdf",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-preprint",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/thinkthoughts/mathematical-basis",
+      "relation": "references",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}
