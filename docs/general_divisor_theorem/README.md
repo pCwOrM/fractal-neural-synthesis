@@ -35,55 +35,61 @@ $$
 
 ### The Exact Dichotomy
 
-1. **Inadmissible Branch** ($\gcd(a, d) > 1$):  
-   The accepted set is identically empty for every $L$:
+#### 1. Inadmissible Branch ($\gcd(a, d) > 1$)
+The accepted set is identically empty for every $L$:
 
-   $$
-   S(N, L, m, a) = \emptyset, \quad \forall L
-   $$
+$$
+S(N, L, m, a) = \emptyset, \quad \forall L
+$$
 
-2. **Admissible Branch** ($\gcd(a, d) = 1$):  
-   The indicator function has an **exact minimal period**:
+#### 2. Admissible Branch ($\gcd(a, d) = 1$)
+The indicator function has an **exact minimal period**:
 
-   $$
-   T_{\min} = m R = \mathrm{lcm}(m, \mathrm{rad}(N))
-   $$
+$$
+T_{\min} = m R = \mathrm{lcm}(m, \mathrm{rad}(N))
+$$
 
-   with **exactly $\phi(R)$ accepted values per full period**.
-   
-   Relative to the naive prediction, the exact correction factor is:
+with **exactly $\phi(R)$ accepted values per full period**.
 
-   $$
-   C(N, m) = \frac{d}{\phi(d)} = \prod_{p \mid \gcd(m, N)} \frac{p}{p - 1}
-   $$
+Relative to the naive prediction, the exact correction factor is:
 
-   strictly independent of the admissible residue $a$.
+$$
+C(N, m) = \frac{d}{\phi(d)} = \prod_{p \mid \gcd(m, N)} \frac{p}{p - 1}
+$$
+
+strictly independent of the admissible residue $a$.
 
 ---
 
 ## 2. Specializations Formally Covered
 
-- **Theorem 2** ($m \mid N$):
+### Theorem 2 ($m \mid N$)
+When $m$ divides $N$:
 
-  $$
-  d = \mathrm{rad}(m), \quad R = \frac{\mathrm{rad}(N)}{\mathrm{rad}(m)}, \quad T_{\min} = m \frac{\mathrm{rad}(N)}{\mathrm{rad}(m)}, \quad C(N, m) = \frac{m}{\phi(m)}
-  $$
+$$
+d = \mathrm{rad}(m), \quad R = \frac{\mathrm{rad}(N)}{\mathrm{rad}(m)}, \quad T_{\min} = m \frac{\mathrm{rad}(N)}{\mathrm{rad}(m)}, \quad C(N, m) = \frac{m}{\phi(m)}
+$$
 
-- **Theorem 1'** (Unitary Divisor $\gcd(m, N/m) = 1$):
+### Theorem 1' (Unitary Divisor: $\gcd(m, N/m) = 1$)
+When $m$ is a unitary divisor:
 
-  $$
-  R = \mathrm{rad}(N/m), \quad T_{\min} = m \cdot \mathrm{rad}(N/m)
-  $$
+$$
+R = \mathrm{rad}(N/m), \quad T_{\min} = m \cdot \mathrm{rad}(N/m)
+$$
 
-- **Theorem 1** (Primorial Specialization $N = P_k$ squarefree, $m \mid P_k$):
+### Theorem 1 (Primorial Specialization: squarefree $N = P_k$, $m \mid P_k$)
+When $N = P_k$ is squarefree and $m \mid P_k$:
 
-  $$
-  d = m, \quad R = \frac{P_k}{m}, \quad T_{\min} = P_k, \quad C(m) = \frac{m}{\phi(m)}
-  $$
+$$
+d = m, \quad R = \frac{P_k}{m}, \quad T_{\min} = P_k, \quad C(m) = \frac{m}{\phi(m)}
+$$
 
-- **Distinguishing Examples:**
-  - $N=18, m=2$: Minimal period $T_{\min} = 6 \neq 18$.
-  - $N=5, m=6, a=2$: $\gcd(a, m) = 2 > 1$, but $d=1 \implies \gcd(2, 1) = 1$ (admissible under GDT!). $C(5, 6) = 1$.
+### Distinguishing Test Instances
+
+- **Minimal Period Test ($N=18, m=2$):**  
+  Coarser period is $N=18$, but minimal period is $T_{\min} = 6 \neq 18$.
+- **Sharp Admissibility Test ($N=5, m=6, a=2$):**  
+  Naive check fails ($\gcd(a, m) = \gcd(2, 6) = 2 > 1$), but GDT yields $d = \mathrm{rad}(\gcd(6, 5)) = 1 \implies \gcd(2, 1) = 1$ (admissible under GDT!). Exact correction $C(5, 6) = 1$.
 
 ---
 
