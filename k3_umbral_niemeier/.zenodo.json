@@ -1,0 +1,70 @@
+{
+  "title": "Machine-Certified Formalization of the 24-Dimensional Niemeier Lattice A_8^3, K3 Hodge Duality and Umbral Moonshine",
+  "description": "Formal specification and exact machine verification of the 24-dimensional even unimodular Niemeier lattice A_8^3, its ternary glue code of order 27, du Val A_8 singularity resolutions on complex K3 surfaces, and Umbral Moonshine lambency l = 9. Includes a complete Lean 4 formal specification and an exact Python algebraic verification oracle confirming 216 roots, Coxeter number h = 9, unimodularity det(N) = 1, and even integer glue norms ||g||^2 = 4 with zero defects. Formulated in direct response to the K3 Hodge cycle retractions in the openai/math repository.",
+  "creators": [
+    {
+      "name": "Dağlı, Volkan",
+      "affiliation": "Anadolu University, Eskişehir, Türkiye & ITouch Systems, Mersin/Adana, Türkiye",
+      "orcid": "0009-0000-1587-8703"
+    },
+    {
+      "name": "Dağlı, Zerrin",
+      "affiliation": "Mersin University, Mersin, Türkiye & Yusuf Kalkavan Anadolu Lisesi, Mersin, Türkiye",
+      "orcid": "0000-0001-9490-6425"
+    },
+    {
+      "name": "Dağlı, Dağhan",
+      "affiliation": "Toros Science High School, MEV (Toros University), Mersin, Türkiye",
+      "orcid": "0009-0003-2492-8313"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Dağlı, Bekirhan",
+      "affiliation": "ITouch Systems, Mersin/Adana, Türkiye",
+      "type": "Other"
+    }
+  ],
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Niemeier Lattice",
+    "A8 Root System",
+    "K3 Surfaces",
+    "Umbral Moonshine",
+    "Hodge Cycles",
+    "Lean 4",
+    "Formal Mathematics",
+    "Even Unimodular Lattice",
+    "Mock Modular Forms",
+    "WERR Research Framework"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/pCwOrM/niemeier-a8-umbral-moonshine",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.23316070",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.22978460",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "zenodo"
+    }
+  ],
+  "upload_type": "software",
+  "publication_date": "2026-10-12",
+  "version": "1.0.0"
+}
