@@ -139,4 +139,10 @@ lake build
 }
 ```
 
-Formalized by [pCwOrM](https://github.com/pCwOrM) under Apache-2.0.
+---
+
+## 6. Acknowledgments & Computing Infrastructure
+
+Dedicated bare-metal computing clusters, proof verification environments, and enterprise development resources were provided by **Bekirhan Dağlı** (Managing Partner) and **ITouch Systems Research & Development**.
+
+Formalized under Apache-2.0.

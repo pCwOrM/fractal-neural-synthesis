@@ -384,11 +384,11 @@ end GeneralDivisorTheorem"""
         body_style
     ))
 
-    # Acknowledgments
-    story.append(Paragraph("Acknowledgments", h1_style))
+    # Acknowledgments & Infrastructure
+    story.append(Paragraph("Acknowledgments & Infrastructure", h1_style))
     story.append(Paragraph(
-        "Dedicated bare-metal computing infrastructure and verification cluster resources were provided by "
-        "<b>Bekirhan Dağlı</b> (Managing Partner, ITouch Systems Research & Development).",
+        "Dedicated bare-metal computing infrastructure, proof verification cluster nodes, and enterprise facility resources were provided by "
+        "<b>Bekirhan Dağlı</b> (Managing Partner) and <b>ITouch Systems Research & Development</b>.",
         body_style
     ))
 

@@ -25,6 +25,15 @@ Zenodo yükleme ekranında yazarlar **yalnızca** şu şekilde girilecektir:
 
 > **Önemli Not:** Dan (`thinkthoughts`), bu kanıtın yazarı **değildir**. Kendisi teorinin ilk fikir babası ve makalenin yazarı olarak atıf / referanslar kısmında (`References` ve `Related identifiers`) yer almaktadır.
 
+### 1.1. Contributors (Katkıda Bulunanlar — Bekirhan Dağlı & ITouch Systems)
+
+Zenodo sayfasında aşağı kaydırıp **"Contributors"** (veya **"Add contributor"**) kutusuna gelin:
+
+- **Family name, given names:** `Dağlı, Bekirhan`
+- **Affiliation:** `ITouch Systems, Adana, Türkiye`
+- **ORCID:** *(Boş bırakın)*
+- **Role / Contributor Type:** **`Other`** *(veya `HostingInstitution` / `Sponsor`)*
+
 ---
 
 ## 2. Temel Yayın Üstverileri (Metadata)

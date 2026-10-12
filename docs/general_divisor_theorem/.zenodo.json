@@ -1,21 +1,28 @@
 {
-  "title": "Machine-Certified Lean 4 Formalization of the General Divisor Theorem (GDT): Exact Density Correction under Residue Conditioning",
+  "title": "Machine-Certified Lean 4 Formalization of the General Divisor Theorem: Exact Density Correction under Residue Conditioning",
   "description": "Standalone machine-checked Lean 4 formalization of the General Divisor Theorem (GDT). Proves exact minimal period T_min = lcm(m, rad(N)), sharp admissibility gcd(a, d) = 1, and the Euler product correction factor C(N, m) = d / phi(d) with 0 sorry. Includes an exhaustive 2,287-parameter Python verification suite. Based on the theoretical monograph by thinkthoughts (Dan, @Precedent_Vice).",
   "creators": [
     {
       "name": "Dağlı, Volkan",
-      "affiliation": "Anadolu University & ITouch Systems, Turkey",
+      "affiliation": "Anadolu University, Eskişehir, Türkiye & ITouch Systems, Adana, Türkiye",
       "orcid": "0009-0000-1587-8703"
     },
     {
       "name": "Dağlı, Zerrin",
-      "affiliation": "Mersin University, Mersin, Turkey",
+      "affiliation": "Mersin University, Mersin, Türkiye & Yusuf Kalkavan Anadolu Lisesi, Mersin, Türkiye",
       "orcid": "0000-0001-9490-6425"
     },
     {
       "name": "Dağlı, Dağhan",
-      "affiliation": "Toros Science College, Mersin, Turkey",
+      "affiliation": "Toros Science High School, MEV (Toros University), Mersin, Türkiye",
       "orcid": "0009-0003-2492-8313"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Dağlı, Bekirhan",
+      "affiliation": "ITouch Systems, Adana, Türkiye",
+      "type": "Other"
     }
   ],
   "access_right": "open",
@@ -46,10 +53,22 @@
       "scheme": "url"
     },
     {
+      "identifier": "https://github.com/pCwOrM/general-divisor-theorem/blob/main/docs/gdt.pdf",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "url"
+    },
+    {
       "identifier": "https://github.com/thinkthoughts/mathematical-basis",
       "relation": "references",
       "resource_type": "software",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23072120",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
     }
   ]
 }
