@@ -24,6 +24,8 @@
 [![arXiv: 2609.25498](https://img.shields.io/badge/arXiv-2609.25498%20(WERR)-b31b1b.svg)](https://arxiv.org/abs/2609.25498)
 [![arXiv: 2609.30719](https://img.shields.io/badge/arXiv-2609.30719%20(Werracle)-b31b1b.svg)](https://arxiv.org/abs/2609.30719)
 [![arXiv: submit/8161759](https://img.shields.io/badge/arXiv-submit%2F8161759%20(on%20hold)-orange.svg)](https://info.arxiv.org/help/submit_status.html#on_hold)
+[![arXiv:2610.14263](https://img.shields.io/badge/arXiv-2610.14263%20%5Bcs.CC%5D-b31b1b.svg)](https://arxiv.org/abs/2610.14263)
+[![arXiv DOI: 10.48550/arXiv.2610.14263](https://img.shields.io/badge/DOI-10.48550%2FarXiv.2610.14263-b31b1b.svg)](https://doi.org/10.48550/arXiv.2610.14263)
 [![arXiv: submit/8207241](https://img.shields.io/badge/arXiv-submit%2F8207241%20(submitted)-blue.svg)](https://arxiv.org/submit/8207241)
 [![The Gauntlet Benchmarks](https://img.shields.io/badge/The%20Gauntlet-Zero--VRAM%20Supremacy-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)
 [![GitHub Education](https://img.shields.io/badge/GitHub%20Education-Community%20Exchange-2ea44f?logo=github&logoColor=white)](https://education.github.com/globalcampus/exchange)
@@ -555,12 +557,15 @@ If you utilize this research, procedural weight generation methodology, or inter
 @article{dagli2026schonhage_tensor,
   author       = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
   title        = {{Bipartite Carrier Compression and Machine-Certified Bounds in Sch{\"o}nhage Trilinear Multiplication Tensors}},
-  journal      = {arXiv preprint (submit/8207241) [cs.CC, math.CO, cs.DS]},
+  journal      = {arXiv preprint arXiv:2610.14263 (submit/8207241) [cs.CC, math.CO, cs.DS]},
+  eprint       = {2610.14263},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CC},
   year         = {2026},
   month        = oct,
   doi          = {10.5281/zenodo.23268580},
   url          = {https://doi.org/10.5281/zenodo.23268580},
-  note         = {Zenodo Version DOI: 10.5281/zenodo.23268580; Concept DOI: 10.5281/zenodo.23268579. Machine-verified in Lean 4 (0 sorry). Officially incorporated on upstream CrocSwap/integer-mult-bounds main (PR #226, commit 50d768818f579d4e165b4c257c6ee25bca300802, CONTRIBUTORS.md & pr-ledger.md status: incorporated); Certified W = 176,906,915, kappa = 826,215,307/20,000,000,000,000.}
+  note         = {arXiv:2610.14263 (https://arxiv.org/abs/2610.14263, DOI: 10.48550/arXiv.2610.14263); Zenodo Version DOI: 10.5281/zenodo.23268580; Concept DOI: 10.5281/zenodo.23268579. Machine-verified in Lean 4 (0 sorry). Officially incorporated on upstream CrocSwap/integer-mult-bounds main (PR #226, commit 50d768818f579d4e165b4c257c6ee25bca300802, CONTRIBUTORS.md & pr-ledger.md status: incorporated); Certified W = 176,906,915, kappa = 826,215,307/20,000,000,000,000.}
 }
 
 @article{dagli2026general_divisor_theorem,
