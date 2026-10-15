@@ -32,6 +32,7 @@
 [![Paper 11: Niemeier Moonshine DOI](https://img.shields.io/badge/Paper%2011%20DOI-10.5281%2Fzenodo.23324066-024dad.svg)](https://doi.org/10.5281/zenodo.23324066)
 [![Niemeier Moonshine Kayıt](https://img.shields.io/badge/Zenodo-Kay%C4%B1t%2023324067-024dad.svg)](https://zenodo.org/records/23324067)
 [![Niemeier Moonshine GitHub](https://img.shields.io/badge/Niemeier%20A8%5E3-Lean%204%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)
+[![Ekosistem: WERRobotics](https://img.shields.io/badge/WERRobotics-Arduino%20%26%20Edge%20AI-ff9100.svg?logo=arduino&logoColor=white)](https://github.com/pCwOrM/WERRobotics)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&logoColor=white)](https://github.com/sponsors/pCwOrM)
 [![Support on USDT TRC20](https://img.shields.io/badge/Destek-USDT%20TRC20-009393?logo=tether&logoColor=white)](#-sponsorluk-ve-hibe-destekleri)
@@ -69,6 +70,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 | 🤗 **Evrensel Fraktal Karar Veri Seti** | Dünyanın İlk Fraktal Doğal Dil Karar Haritası | Yapay Zekâ / ML Kıyaslama Araştırmacıları | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) |
 | 🧠 **Canlı İkili Bilişsel Platform (answerr)** | Üretim Platformu & API | Geliştiriciler & Son Kullanıcılar | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
 | 🌐 **On-Chain AI Karar Oracle'ı (werracle)** | EVM 32-Bayt Slot Motoru | Blokzincir & DeFi Geliştiricileri | [**arXiv:2609.30719 [cs.CR]**](https://arxiv.org/abs/2609.30719) &bull; [**Canlı Simülatörü Aç**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
+| 🤖 **Gömülü Robotik & Arduino Edge AI (WERRobotics)** | Sıfır-Bellekli C/C++11 Arduino & MCU Refleks Çekirdeği (`v0.5.1`) | Robotik & Gömülü Sistem Mühendisleri | [**GitHub: pCwOrM/WERRobotics**](https://github.com/pCwOrM/WERRobotics) &bull; ATmega328P (2 KB SRAM) üzerinde `0 Byte Heap` &bull; **TÜRKPATENT Öncelik: TR 2026/016633** |
 | 🔬 **OED Simülasyon ve Deney Raporu** | Matematiksel Analiz & Kanıt | Araştırmacılar & Matematikçiler | [**Simülasyon Raporu (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/simulation_report.html) &bull; [**PDF Rapor**](docs/OED_SIMULASYON_VE_DENEY_RAPORU.pdf) |
 
 ---
