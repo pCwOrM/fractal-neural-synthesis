@@ -42,6 +42,7 @@
 [![Paper 11: Niemeier Moonshine DOI](https://img.shields.io/badge/Paper%2011%20DOI-10.5281%2Fzenodo.23324066-024dad.svg)](https://doi.org/10.5281/zenodo.23324066)
 [![Niemeier Moonshine Record](https://img.shields.io/badge/Zenodo-Record%2023324067-024dad.svg)](https://zenodo.org/records/23324067)
 [![Niemeier Moonshine GitHub](https://img.shields.io/badge/Niemeier%20A8%5E3-Lean%204%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)
+[![Ecosystem: WERRobotics](https://img.shields.io/badge/WERRobotics-Arduino%20%26%20Edge%20AI-ff9100.svg?logo=arduino&logoColor=white)](https://github.com/pCwOrM/WERRobotics)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&logoColor=white)](https://github.com/sponsors/pCwOrM)
 [![Support on USDT TRC20](https://img.shields.io/badge/Support-USDT%20TRC20-009393?logo=tether&logoColor=white)](#-sponsor--grant-funding)
@@ -79,6 +80,7 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 | 🤗 **Universal Fractal Decision Dataset** | World's First Fractal NLP Decision Map | AI / ML Benchmark Researchers | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) (230 likes / downloads) |
 | 🧠 **Live Dual-Cognition AI (answerr)** | Production Platform & API | Developers & End Users | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
 | 🌐 **Paper 7: On-Chain AI Oracle (werracle)** | EVM 32-Byte Slot Engine & Flash-Loan Shield | Blockchain & DeFi Developers | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**Hugging Face Paper**](https://huggingface.co/papers/2609.30719) &bull; [**Zenodo: 10.5281/zenodo.22942599 (v1.0)**](https://doi.org/10.5281/zenodo.22942599) (Concept: [`10.5281/zenodo.22942598`](https://doi.org/10.5281/zenodo.22942598)) &bull; [**Live Simulator**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
+| 🤖 **Bare-Metal Edge Robotics (WERRobotics)** | Zero-Memory C/C++11 Arduino & MCU Reflex Kernel (`v0.5.1`) | Robotics & Embedded Systems Engineers | [**GitHub: pCwOrM/WERRobotics**](https://github.com/pCwOrM/WERRobotics) &bull; `0 Bytes Heap` on ATmega328P (2 KB SRAM) &bull; **TÜRKPATENT Priority: TR 2026/016633** |
 | 🔬 **OED Simulation & Experiment Report** | Mathematical Report | Researchers & Mathematicians | [**Simulation Report (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/simulation_report.html) &bull; [**PDF Report**](docs/OED_SIMULASYON_VE_DENEY_RAPORU.pdf) |
 
 ---
