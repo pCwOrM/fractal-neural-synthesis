@@ -38,7 +38,7 @@
 [![CrocSwap PR #226: Incorporated](https://img.shields.io/badge/CrocSwap%20Main-PR%20%23226%20Incorporated%20(50d76881)-brightgreen.svg)](https://github.com/CrocSwap/integer-mult-bounds/blob/50d768818f579d4e165b4c257c6ee25bca300802/docs/research/community-reconciliation-next100-review.md)
 [![CrocSwap Contributors: @pCwOrM](https://img.shields.io/badge/CrocSwap%20Contributors-Volkan%20Dagli%20(%40pCwOrM)-024dad.svg)](https://github.com/CrocSwap/integer-mult-bounds/blob/50d768818f579d4e165b4c257c6ee25bca300802/CONTRIBUTORS.md)
 [![Paper 10: GDT Lean 4 DOI](https://img.shields.io/badge/Paper%2010%20DOI-10.5281%2Fzenodo.23316070-024dad.svg)](https://doi.org/10.5281/zenodo.23316070)
-[![GDT: Lean 4 Formalization](https://img.shields.io/badge/GDT-Lean%204%20(2%2C287%20Checks%20PASS)-brightgreen.svg)](https://github.com/pCwOrM/general-divisor-theorem)
+[![GDT: Lean 4 Formalization](https://img.shields.io/badge/GDT-Lean%204%20(39%20Theorems%20%7C%200%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/general-divisor-theorem)
 [![Paper 11: Niemeier Moonshine DOI](https://img.shields.io/badge/Paper%2011%20DOI-10.5281%2Fzenodo.23324066-024dad.svg)](https://doi.org/10.5281/zenodo.23324066)
 [![Niemeier Moonshine Record](https://img.shields.io/badge/Zenodo-Record%2023324067-024dad.svg)](https://zenodo.org/records/23324067)
 [![Niemeier Moonshine GitHub](https://img.shields.io/badge/Niemeier%20A8%5E3-Lean%204%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)
