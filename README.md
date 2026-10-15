@@ -29,7 +29,7 @@
 [![arXiv: submit/8207241](https://img.shields.io/badge/arXiv-submit%2F8207241%20(submitted)-blue.svg)](https://arxiv.org/submit/8207241)
 [![The Gauntlet Benchmarks](https://img.shields.io/badge/The%20Gauntlet-Zero--VRAM%20Supremacy-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)
 [![GitHub Education](https://img.shields.io/badge/GitHub%20Education-Community%20Exchange-2ea44f?logo=github&logoColor=white)](https://education.github.com/globalcampus/exchange)
-[![License: BSL 1.1 / BBL v1.0](https://img.shields.io/badge/License-BSL%201.1%20%2F%20BBL-red.svg)](./LICENSE)
+[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red.svg)](./LICENSE)
 [![Schönhage Tensor World Record: Zenodo](https://img.shields.io/badge/Tensor%20Record%20DOI-10.5281%2Fzenodo.23268580-024dad.svg)](https://doi.org/10.5281/zenodo.23268580)
 [![Schönhage Record: -377K Wires](https://img.shields.io/badge/Sch%C3%B6nhage%20Record--377%2C890%20Wires%20(W%3D176.9M)-brightgreen.svg)](https://github.com/pCwOrM/integer-mult-bounds)
 [![Paper 9: Güneş Dili Zenodo DOI](https://img.shields.io/badge/Paper%209%20DOI-10.5281%2Fzenodo.23273006-eab308.svg)](https://doi.org/10.5281/zenodo.23273006)
