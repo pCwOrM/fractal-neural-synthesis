@@ -29,7 +29,7 @@ Açık kaynak bilimin ruhuna uygun olarak, rakip çatallar oluşturmak yerine ik
 • 6.670'den fazla parametre üçlüsü ve 6.552 tam periyot simülasyonu çalıştıran bağımsız test orakılı %100 başarıyla (0 hata) doğrulandı.
 
 🏛️ Akademik Künye ve Altyapı Tescili:
-• Yazarlar: Volkan Dağlı (Anadolu Üniversitesi & ITouch Systems), Zerrin Dağlı (Mersin Üniversitesi), Dağhan Dağlı (Toros Fen Lisesi / Toros Üniversitesi)
+• Yazarlar: Volkan Dağlı (Anadolu Üniversitesi & ITouch Systems), Dr. Zerrin Dağlı (Mersin Üniversitesi), Dağhan Dağlı (Toros Fen Lisesi / Toros Üniversitesi)
 • Hesaplama & Donanım Altyapısı: ITouch Systems R&D & Bekirhan Dağlı (Yönetici Ortak)
 • Kalıcı DOI: 10.5281/zenodo.23316070 (CC-BY-4.0 / Apache-2.0)
 • Açık Kaynak Kodlar: github.com/pCwOrM/general-divisor-theorem
@@ -62,7 +62,7 @@ Rather than creating competing formalizations, we established a genuine two-way 
 • Automated verification oracle passing 6,670+ parameter triples and 6,552 exact counting simulations with 100% PASS (0 defects).
 
 🏛️ Citation & Infrastructure:
-• Authors: Volkan Dağlı (Anadolu Univ & ITouch Systems), Zerrin Dağlı (Mersin Univ), Dağhan Dağlı (Toros Science High School)
+• Authors: Volkan Dağlı (Anadolu Univ & ITouch Systems), Dr. Zerrin Dağlı (Mersin Univ), Dağhan Dağlı (Toros Science High School)
 • Computing Clusters & Infrastructure: ITouch Systems R&D & Bekirhan Dağlı (Managing Partner)
 • Permanent DOI: 10.5281/zenodo.23316070 (Apache-2.0 / CC-BY-4.0)
 • Repository: github.com/pCwOrM/general-divisor-theorem

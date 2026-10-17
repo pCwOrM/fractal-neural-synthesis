@@ -1,6 +1,6 @@
 # 🌌 WERR QUANTUM GRAVITY RAPORU: KARA DELİK BİLGİ PARADOKSU VE PAGE EĞRİSİ SİMÜLASYONU
 **Tarih:** 25 Eylül 2026 | **Donanım Platformu:** Dual Intel Xeon E5-2630 v4 (40 Çekirdek, 256GB RAM)  
-**Araştırmacılar:** Volkan Dağlı (`pcworm`), Zerrin Dağlı, Dağhan Dağlı | ITouch Systems  
+**Araştırmacılar:** Volkan Dağlı (`pcworm`), Dr. Zerrin Dağlı, Dağhan Dağlı | ITouch Systems  
 **Veri Kütüğü:** `_isolated_test_vault/data/BLACKHOLE_PAGE_CURVE_SIMULATION_REPORT.json`
 
 ---

@@ -1,6 +1,6 @@
 # 📜 LEAN 4 FORMAL VERIFICATION CERTIFICATE (VERSION 2.0)
 **Machine-Verified Z/9Z Ideal Closure, Q16.16 Overflow Safety, Non-Constant Quadrant Sensitivity, Halting Invariants, and Parametric EVM Gas Bounds**  
-*Authors: Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı*  
+*Authors: Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı*  
 *Affiliations: Anadolu University, Türkiye · ITouch Systems, Türkiye · Mersin University, Türkiye · Toros Science College, Türkiye*  
 *Proof Environment: Lean 4 (`v4.34.1`) & Lake (`v5.0.0`) · Mathlib4 Verified (`rev d13f23b723b8`)*  
 *Hardware Node: Dual Intel Xeon E5-2630 v4 (40 Hardware Threads, 256 GB DDR4 ECC RAM · Ubuntu 24.04.5 LTS)*  

@@ -20,7 +20,7 @@ Zenodo yükleme ekranında yazarlar **yalnızca** şu şekilde girilecektir:
    - **Affiliation:** `Anadolu University & ITouch Systems, Turkey`
    - **ORCID:** `0009-0000-1587-8703`
 
-2. **Zerrin Dağlı**
+2. **Dr. Zerrin Dağlı**
    - **Family name, given names:** `Dağlı, Zerrin`
    - **Affiliation:** `Mersin University, Mersin, Turkey`
    - **ORCID:** `0000-0001-9490-6425`
@@ -105,7 +105,7 @@ Zenodo'ya yüklenecek ana dosya seçenekleri:
 
 1. **Monografi PDF (Öncelikli & Görünür Yayın):**
    - [`General_Divisor_Theorem_Lean4_Formalization.pdf`](General_Divisor_Theorem_Lean4_Formalization.pdf) (221 KB)
-   - *Yazarlar: Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı*
+   - *Yazarlar: Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı*
    - *3 sayfalık eksiksiz akademik makale, infografik ve teorem tablosu içerir.*
 
 2. **Kaynak Kod ve Kanıt Arşivi (Zip):**
@@ -119,7 +119,7 @@ Zenodo'ya yüklenecek ana dosya seçenekleri:
 1. Tarayıcıda [https://zenodo.org/deposit/new](https://zenodo.org/deposit/new) adresine gidin ve giriş yapın.
 2. Yukarıdaki 2 dosyayı (`General_Divisor_Theorem_Lean4_Formalization.pdf` ve `zenodo_gdt_package_v1.0.0.zip`) sürükleyip bırakın.
 3. PDF dosyasını **Main file / Preview** olarak işaretleyin.
-4. Bölüm 1'deki yazar bilgilerini (Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı) eksiksiz girin.
+4. Bölüm 1'deki yazar bilgilerini (Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı) eksiksiz girin.
 5. Bölüm 2, 3, 4 ve 5'teki başlık, özet ve anahtar kelimeleri yapıştırın.
 6. Lisans olarak **Apache License 2.0** seçin.
 7. **Save** ve ardından **Publish** butonuna tıklayın.

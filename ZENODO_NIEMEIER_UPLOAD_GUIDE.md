@@ -1,7 +1,7 @@
 # 🚀 CERN ZENODO YÜKLEME VE YAYIN KILAVUZU
 ## Niemeier Kafesi $A_8^3$, K3 Hodge Dualitesi & Umbral Moonshine
 
-**Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Yazarlar:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Altyapı Katkısı:** Bekirhan Dağlı (ITouch Systems)  
 **Tarih:** 12 Ekim 2026  
 **Hedef Platform:** CERN Zenodo ([https://zenodo.org](https://zenodo.org))  

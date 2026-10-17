@@ -3,7 +3,7 @@
 **Ana Başlık:** Machine-Certified Lean 4 Formalization of the General Divisor Theorem  
 **Resmi Zenodo DOI:** [`10.5281/zenodo.23316070`](https://doi.org/10.5281/zenodo.23316070)  
 **Tarih:** 12 Ekim 2026  
-**Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Yazarlar:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Altyapı & Hesaplama:** Bekirhan Dağlı (ITouch Systems Research & Development)  
 
 ---
@@ -53,7 +53,7 @@ Official preprint & package permanently registered on CERN Zenodo:
 📄 DOI: 10.5281/zenodo.23316070
 🔗 https://zenodo.org/records/23316070
 
-Authors: Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı
+Authors: Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı
 Computing & Infrastructure: Bekirhan Dağlı (@ITouchSystems)
 License: Apache-2.0 / CC-BY-4.0 [5/5]
 ```

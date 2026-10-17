@@ -80,7 +80,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 * **Volkan Dağlı** *(Sorumlu Yazar / Corresponding Author)*  
   Anadolu Üniversitesi, Eskişehir, Türkiye & ITouch Systems, Çukurova Teknokent, Mersin, Türkiye &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
-* **Zerrin Dağlı**  
+* **Dr. Zerrin Dağlı**  
   Mersin Üniversitesi, Mersin, Türkiye &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
 
 * **Dağhan Dağlı**  
@@ -227,7 +227,7 @@ Bu projede temelleri atılan sıfır-bellekli fraktal parametre türetme mimaris
 
 > **Resmi Araştırma Ön-Baskısı ve Ulusal Patent Başvurusu:**  
 > **Başlık:** *Orbital Error Dynamics: Self-Organized Criticality, Ephemeral Parameter Resonance, and Non-Linear Biological Ontologies in Zero-Storage Neural Synthesis*  
-> **Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+> **Yazarlar:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 > **Kalıcı Zenodo Kaydı:** [https://doi.org/10.5281/zenodo.22896856](https://doi.org/10.5281/zenodo.22896856) &bull; **Çatı DOI:** [10.5281/zenodo.22896855](https://doi.org/10.5281/zenodo.22896855)  
 > **Resmi Ulusal Patent Başvurusu:** Türk Patent ve Marka Kurumu (TÜRKPATENT), Başvuru No: **`TR 2026/016285`**, Rüçhan Tarihi: **22 Eylül 2026 (14:42:15 TSI)**.
 

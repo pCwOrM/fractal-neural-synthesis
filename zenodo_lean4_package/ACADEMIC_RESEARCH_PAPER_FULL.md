@@ -1,8 +1,8 @@
 # Zero-Storage Procedural Neural Synthesis via Boundary Dynamics: Formal Verification in Lean 4, Biomimetic Quantum-Resonant Dynamics, and Bare-Metal Gauntlet Validation
 
-**Volkan Dağlı**$^{1,2}$, **Zerrin Dağlı**$^3$, **Dağhan Dağlı**$^4$  
+**Volkan Dağlı**$^{1,2}$, **Dr. Zerrin Dağlı**$^3$, **Dağhan Dağlı**$^4$  
 *$^1$Anadolu University, Turkey • $^2$ITouch Systems, Turkey • $^3$Mersin University, Turkey • $^4$Toros Science College, Turkey*  
-*ORCIDs: Volkan Dağlı: 0009-0000-1587-8703 | Zerrin Dağlı: 0000-0001-9490-6425 | Dağhan Dağlı: 0009-0003-2492-8313*  
+*ORCIDs: Volkan Dağlı: 0009-0000-1587-8703 | Dr. Zerrin Dağlı: 0000-0001-9490-6425 | Dağhan Dağlı: 0009-0003-2492-8313*  
 *TÜRKPATENT Patent Application: TR 2026/016285 (Priority Date: 22 September 2026)*  
 *Permanent Archival Preprints: arXiv:2609.25498 & arXiv:2609.30115 | CERN Zenodo: 10.5281/zenodo.22896856, 10.5281/zenodo.22774934*  
 *Hardware Verification Node: `pcworm.net:8560` (Dual Intel Xeon E5-2630 v4, 40 Cores, 256GB RAM)*  

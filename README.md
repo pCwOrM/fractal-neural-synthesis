@@ -93,7 +93,7 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 * **Volkan Dağlı** *(Corresponding Author)*  
   Anadolu University, Eskişehir, Turkey & ITouch Systems, Çukurova Teknokent, Mersin, Turkey &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
-* **Zerrin Dağlı**  
+* **Dr. Zerrin Dağlı**  
   Mersin University, Mersin, Turkey &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
 
 * **Dağhan Dağlı**  
@@ -240,7 +240,7 @@ Building upon the foundational zero-storage fractal parameter synthesis introduc
 
 > **Official Research Preprint & National Patent Application:**  
 > **Title:** *Orbital Error Dynamics: Self-Organized Criticality, Ephemeral Parameter Resonance, and Non-Linear Biological Ontologies in Zero-Storage Neural Synthesis*  
-> **Authors:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+> **Authors:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 > **Permanent Zenodo Record:** [https://doi.org/10.5281/zenodo.22896856](https://doi.org/10.5281/zenodo.22896856) &bull; **Çatı DOI:** [10.5281/zenodo.22896855](https://doi.org/10.5281/zenodo.22896855)  
 > **Official Patent Pending:** Turkish Patent and Trademark Office (TÜRKPATENT), Application No: **`TR 2026/016285`**, Priority Date: **September 22, 2026 (14:42:15 UTC+3)**.
 

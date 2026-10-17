@@ -62,7 +62,7 @@ The procedural weight derivation architectures, the adaptive CD4+ immune gating 
 • <b>Application Number:</b> 2026/016285<br>
 • <b>Official Priority Timestamp:</b> September 22, 2026 (14:42:15 UTC+3)<br>
 • <b>Applicant:</b> Volkan Dağlı<br>
-• <b>Inventors:</b> Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı<br>
+• <b>Inventors:</b> Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı<br>
 • <b>Official Repository:</b> <a href="https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis">https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis</a></p>
 ```
 

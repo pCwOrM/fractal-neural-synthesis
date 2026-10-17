@@ -64,7 +64,7 @@ Geometric Duality & Umbral Moonshine:
 ```text
 Discrete modular reduction locks the continuum.
 
-Authored by Volkan Dagli (@pCwOrM), Zerrin Dagli & Daghan Dagli.
+Authored by Volkan Dagli (@pCwOrM), Dr. Zerrin Dagli & Daghan Dagli.
 HPC verification nodes & infrastructure contributed by Bekirhan Dagli (@ITouchSys).
 
 Machine-certified in @leanprover 4 (0 sorry). [5/6]

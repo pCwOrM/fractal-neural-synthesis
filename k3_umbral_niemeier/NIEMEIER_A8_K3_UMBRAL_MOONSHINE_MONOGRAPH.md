@@ -1,7 +1,7 @@
 # 💎 WERR MONOGRAPH: NIEMEIER LATTICE $A_8^3$, K3 SURFACE HODGE DUALITY & UMBRAL MOONSHINE
 
 **Classification:** Sovereign Mathematical Proof & Theoretical Foundation  
-**Authors:** Volkan Dağlı¹, Zerrin Dağlı², Dağhan Dağlı³  
+**Authors:** Volkan Dağlı¹, Dr. Zerrin Dağlı², Dağhan Dağlı³  
 **Contributor:** Bekirhan Dağlı⁴  
 ¹ *Anadolu University, Eskişehir & ITouch Systems Research Group, Mersin, Turkey*  
 ² *Mersin University & Yusuf Kalkavan Anatolian High School, Mersin, Turkey*  

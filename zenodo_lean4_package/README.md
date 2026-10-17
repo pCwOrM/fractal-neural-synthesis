@@ -1,7 +1,7 @@
 # 📜 REPLICATION PACKAGE: ZERO-STORAGE PROCEDURAL NEURAL SYNTHESIS VIA BOUNDARY DYNAMICS
 ### Formal Verification in Lean 4 and Bare-Metal 40-Core Gauntlet Validation
 
-**Authors:** Volkan Dağlı$^{1,2}$, Zerrin Dağlı$^3$, Dağhan Dağlı$^4$  
+**Authors:** Volkan Dağlı$^{1,2}$, Dr. Zerrin Dağlı$^3$, Dağhan Dağlı$^4$  
 **Affiliations:**  
 $^1$Anadolu University, Turkey  
 $^2$ITouch Systems, Turkey (ORCID: 0009-0000-1587-8703)  

@@ -3,7 +3,7 @@
 **Formal Integration Bridge:** Volkan Dağlı Functional API $\longleftrightarrow$ Dan Hawkley Prime-Support Reading Point  
 **Repos:** [`pCwOrM/general-divisor-theorem`](https://github.com/pCwOrM/general-divisor-theorem) $\longleftrightarrow$ [`thinkthoughts/gap-lean4-port-gdt`](https://github.com/thinkthoughts/gap-lean4-port-gdt)  
 **Permanent Zenodo Archive:** [`10.5281/zenodo.23316070`](https://doi.org/10.5281/zenodo.23316070)  
-**Authors:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Authors:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Computing & Infrastructure:** Bekirhan Dağlı (ITouch Systems Research & Development)  
 
 ---

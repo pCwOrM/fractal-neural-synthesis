@@ -1,5 +1,5 @@
 # Fraktal Zeka: Halka Anlatım ve Teorik Derinlik Rehberi
-**Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Yazarlar:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Kurum:** ITouch Systems & Mersin Üniversitesi  
 **Resmi DOI:** [10.5281/zenodo.22802921](https://doi.org/10.5281/zenodo.22802921)  
 **Canlı Laboratuvar:** [pcworm.github.io/mandelbrot-fractal-neural-synthesis](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/)

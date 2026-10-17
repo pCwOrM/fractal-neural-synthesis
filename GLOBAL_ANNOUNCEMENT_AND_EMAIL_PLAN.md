@@ -79,7 +79,7 @@ Dear Lean FRO Team,
 We are pleased to announce the open-source release and permanent CERN Zenodo minting of a standalone Lean 4 formalization:
 
 "Machine-Certified Formalization of the 24-Dimensional Niemeier Lattice A_8^3, K3 Hodge Duality and Umbral Moonshine"
-Authors: Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı; Contributor: Bekirhan Dağlı
+Authors: Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı; Contributor: Bekirhan Dağlı
 
 Highlights:
 - Formalizes the 24D even unimodular Niemeier lattice A_8^3 (Coxeter number h = 9, 216 roots).

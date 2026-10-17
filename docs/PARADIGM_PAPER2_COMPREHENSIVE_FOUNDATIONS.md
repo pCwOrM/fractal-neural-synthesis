@@ -4,7 +4,7 @@
 **Belge Kodu:** `ONTOLOGY-PAPER2-COMPREHENSIVE-MANIFESTO`  
 **Tarih:** 22 Eylül 2026  
 **Durum:** Korunmuş ve Birleştirilmiş Kuramsal Arşiv (Master Theoretical Archive)  
-**Yazarlar & Düşünce Mimarları:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Yazarlar & Düşünce Mimarları:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Bağlı Proje:** Mandelbrot Fractal Neural Synthesis (Zero-Storage AI)  
 **Atıf ve Telif Dayanağı:** Paper 1 (Section V: Escape Horizon Principle & Section VII: Future Horizons)
 

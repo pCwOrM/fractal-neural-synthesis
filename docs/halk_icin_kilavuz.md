@@ -1,7 +1,7 @@
 # Sonsuz Desenden Doğan Zeka: Fraktal Nöron Kılavuzu
 ### *Mandelbrot Geometrisinden Sıfır Bellekle Yapay Zeka Nasıl Üretilir? (Herkes İçin Bilim ve Keşif Rehberi)*
 
-**Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Yazarlar:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Resmi DOI:** [10.5281/zenodo.22802921](https://doi.org/10.5281/zenodo.22802921)  
 **Açık Kaynak Kod Deposu:** [github.com/pCwOrM/mandelbrot-fractal-neural-synthesis](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis)  
 **Canlı Web Laboratuvarı:** [pcworm.github.io/mandelbrot-fractal-neural-synthesis](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/)
@@ -189,5 +189,5 @@ Siz de bu serüvenin bir parçası olmak, kodu incelemek veya tarayıcınızda c
 *Bilim ve merakla kalın!*
 
 **Fraktal Nöron Araştırma Ekibi**  
-Volkan Dağlı &bull; Zerrin Dağlı &bull; Dağhan Dağlı  
+Volkan Dağlı &bull; Dr. Zerrin Dağlı &bull; Dağhan Dağlı  
 *Eylül 2026*

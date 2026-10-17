@@ -2,7 +2,7 @@
 ## Yörüngesel Kaçış Dinamiği, Hata Kümeleri ve Entropik Direnç Teorisi
 **Belge Kodu:** `THEORY-PARADIGM-VOL2`  
 **Durum:** Korunmuş Kuramsal Arşiv (Safekeeping for Paper 2)  
-**Yazarlar & Fikir Mimarları:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
+**Yazarlar & Fikir Mimarları:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Tarih:** 17 Eylül 2026
 
 ---
