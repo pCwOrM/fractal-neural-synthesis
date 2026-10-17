@@ -11,7 +11,7 @@ Lean 4 research tracks (0 custom axioms, 0 sorry):
     DOI:  10.5281/zenodo.23425590 (Concept: 10.5281/zenodo.23316068)
     Theorems: period_Characterization, inadmissible_empty, admissible_unit_bijection,
               gdt_count_per_period, gdt_count_arbitrary_bound (81 theorems;
-              originating with Dan Hawkley / @danhawkley, formalized with VolkanBridge).
+              originating with Dan Hawkley / @thinkthoughts, formalized with VolkanBridge).
 
   * Pillar II  (Layer 2 — 11.69x): 24D Niemeier Lattice A_8^3 Isotropic Glue Code
     Repo: https://github.com/pCwOrM/niemeier-a8-umbral-moonshine
