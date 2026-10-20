@@ -23,6 +23,7 @@
 [![arXiv: 2609.30115](https://img.shields.io/badge/arXiv-2609.30115%20(OED)-b31b1b.svg)](https://arxiv.org/abs/2609.30115)
 [![arXiv: 2609.25498](https://img.shields.io/badge/arXiv-2609.25498%20(WERR)-b31b1b.svg)](https://arxiv.org/abs/2609.25498)
 [![arXiv: 2609.30719](https://img.shields.io/badge/arXiv-2609.30719%20(Werracle)-b31b1b.svg)](https://arxiv.org/abs/2609.30719)
+[![SSRN: 7626279](https://img.shields.io/badge/SSRN-7626279%20(Werracle)-002f6c.svg?logo=elsevier)](https://ssrn.com/abstract=7626279)
 [![arXiv: submit/8161759](https://img.shields.io/badge/arXiv-submit%2F8161759%20(on%20hold)-orange.svg)](https://info.arxiv.org/help/submit_status.html#on_hold)
 [![arXiv:2610.14263](https://img.shields.io/badge/arXiv-2610.14263%20%5Bcs.CC%5D-b31b1b.svg)](https://arxiv.org/abs/2610.14263)
 [![arXiv DOI: 10.48550/arXiv.2610.14263](https://img.shields.io/badge/DOI-10.48550%2FarXiv.2610.14263-b31b1b.svg)](https://doi.org/10.48550/arXiv.2610.14263)
@@ -82,7 +83,7 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 | ⚡ **Companion Paper: WERR (Edge Triage)** | Applied Edge NLP & Vision | Global / Applied AI | [**Zenodo: 10.5281/zenodo.22939253**](https://doi.org/10.5281/zenodo.22939253) (Concept: [`10.5281/zenodo.22867425`](https://doi.org/10.5281/zenodo.22867425)) &bull; [**arXiv: 2609.25498**](https://arxiv.org/abs/2609.25498) &bull; [**Hugging Face Paper**](https://huggingface.co/papers/2609.25498) &bull; [**GitHub: pCwOrM/werr**](https://github.com/pCwOrM/werr) |
 | 🤗 **Universal Fractal Decision Dataset** | World's First Fractal NLP Decision Map | AI / ML Benchmark Researchers | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) (230 likes / downloads) |
 | 🧠 **Live Dual-Cognition AI (answerr)** | Production Platform & API | Developers & End Users | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
-| 🌐 **Paper 7: On-Chain AI Oracle (werracle)** | EVM 32-Byte Slot Engine & Flash-Loan Shield | Blockchain & DeFi Developers | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**Hugging Face Paper**](https://huggingface.co/papers/2609.30719) &bull; [**Zenodo: 10.5281/zenodo.22942599 (v1.0)**](https://doi.org/10.5281/zenodo.22942599) (Concept: [`10.5281/zenodo.22942598`](https://doi.org/10.5281/zenodo.22942598)) &bull; [**Live Simulator**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
+| 🌐 **Paper 7: On-Chain AI Oracle (werracle)** | EVM 32-Byte Slot Engine & Flash-Loan Shield | Blockchain & DeFi Developers | [**arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]**](https://arxiv.org/abs/2609.30719) &bull; [**SSRN: 7626279**](https://ssrn.com/abstract=7626279) &bull; [**Hugging Face Paper**](https://huggingface.co/papers/2609.30719) &bull; [**Zenodo: 10.5281/zenodo.22942599 (v1.0)**](https://doi.org/10.5281/zenodo.22942599) (Concept: [`10.5281/zenodo.22942598`](https://doi.org/10.5281/zenodo.22942598)) &bull; [**Live Simulator**](https://pcworm.github.io/werracle/) &bull; [**GitHub: pCwOrM/werracle**](https://github.com/pCwOrM/werracle) |
 | 🤖 **Bare-Metal Edge Robotics (WERRobotics)** | Zero-Memory C/C++11 Arduino & MCU Reflex Kernel (`v0.5.1`) | Robotics & Embedded Systems Engineers | [**GitHub: pCwOrM/WERRobotics**](https://github.com/pCwOrM/WERRobotics) &bull; `0 Bytes Heap` on ATmega328P (2 KB SRAM) &bull; **TÜRKPATENT Priority: TR 2026/016633** |
 | 🔬 **OED Simulation & Experiment Report** | Mathematical Report | Researchers & Mathematicians | [**Simulation Report (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/simulation_report.html) &bull; [**PDF Report**](docs/OED_SIMULASYON_VE_DENEY_RAPORU.pdf) |
 
@@ -503,8 +504,8 @@ If you utilize this research, procedural weight generation methodology, or inter
   note         = {158,262 neurons, 3.99M synapses. Sub-4ms latency, zero VRAM. TÜRKPATENT Priority: TR 2026/016633. Concept DOI: 10.5281/zenodo.22996625. Live 3D Portal: https://werrsoma.answerr.me/}
 }
 
-@article{dagli2026werracle,
-  title         = {Werracle: EVM 32-Byte Slot Engine & Flash-Loan Shield via Sub-Millisecond Fractal Boundary Arbitrage},
+@article{dagli2026werracle_arxiv,
+  title         = {Werracle: Sub-Cent Intra-Block AI Reflex Oracles and Flash-Loan Circuit Breakers for EVM Smart Contracts},
   author        = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
   journal       = {arXiv preprint arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]},
   year          = {2026},
@@ -512,6 +513,16 @@ If you utilize this research, procedural weight generation methodology, or inter
   doi           = {10.48550/arXiv.2609.30719},
   url           = {https://arxiv.org/abs/2609.30719},
   note          = {Zenodo Record: 10.5281/zenodo.22942598; EVM slot proof validated.}
+}
+
+@article{dagli2026werracle_ssrn,
+  title         = {Werracle: Sub-Cent Intra-Block AI Reflex Oracles and Flash-Loan Circuit Breakers for EVM Smart Contracts},
+  author        = {Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
+  journal       = {Elsevier SSRN Electronic Journal},
+  year          = {2026},
+  month         = {October},
+  note          = {SSRN Abstract ID: 7626279},
+  url           = {https://ssrn.com/abstract=7626279}
 }
 
 @article{dagli2026gap_lean4_arxiv,
