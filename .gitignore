@@ -45,6 +45,9 @@ tests/*
 *id_ed25519*
 *token*
 *.cert
+*WALLET*
+*SOVEREIGN*
+WERRACLE_NEAR_SOVEREIGN_WALLET.json
 
 private_archive_paper2/
 private_archive_rsa/
