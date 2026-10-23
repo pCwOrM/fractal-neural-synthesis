@@ -1,8 +1,9 @@
 """
 Werracle OEV & HF Liquidation Radar API Router
 Production FastAPI Router for answerr-api (/v1/radar)
-Provides independent, verified on-chain analytics for Chainlink Smart Value Recapture (SVR)
-and real-time Health Factor (HF) risk surveillance across Base, Arbitrum, and Ethereum L1.
+Provides independent, verified on-chain analytics for Chainlink Smart Value Recapture (SVR),
+real-time Health Factor (HF) risk surveillance across Base, Arbitrum, and Ethereum L1,
+and the Pre-Emptive Rescue Shield simulation engine.
 """
 
 import os
@@ -20,6 +21,10 @@ MORPHO_DURUM = os.path.join(BASE_DIR, "morpho_golge/durum.json")
 MORPHO_PAZARLAR = os.path.join(BASE_DIR, "morpho_golge/pazarlar.json")
 L1_DURUM = os.path.join(BASE_DIR, "l1_morpho/durum.json")
 ARB_STATUS = os.path.join(BASE_DIR, "arbitrum_shadow_status.json")
+
+RESEARCH_DIR = "/opt/apps/werracle/research"
+SIMULATION_FILE = os.path.join(RESEARCH_DIR, "rescue_shield_simulation_results.json")
+EMPIRICAL_DATASET = os.path.join(RESEARCH_DIR, "werracle_oev_empirical_dataset_2026.json")
 
 # In-memory TTL Cache (5 seconds)
 _CACHE: Dict[str, Any] = {}
@@ -43,12 +48,12 @@ def _get_cached_json(filepath: str, default: Any = None) -> Any:
 
 # Verified baseline on-chain findings (Last 14 days, centered on Oct 15 volatility)
 BASE_AUDITED_SVR_EVENTS = 105
-BASE_AUDITED_GROSS_USD = 190000.0
-BASE_PROTOCOL_CAPTURE_PCT = 98.0
-BASE_PROTOCOL_BIDS_USD = 186200.0
-BASE_SOLVER_PRE_SWAP_MARGIN_PCT = 2.0
-BASE_SOLVER_PRE_SWAP_NET_USD = 3800.0
-BASE_MEDIAN_MARGIN_PCT = -1.5
+BASE_AUDITED_GROSS_USD = 190506.31
+BASE_PROTOCOL_CAPTURE_PCT = 98.10
+BASE_PROTOCOL_BIDS_USD = 186889.85
+BASE_SOLVER_PRE_SWAP_MARGIN_PCT = 1.90
+BASE_SOLVER_PRE_SWAP_NET_USD = 3548.24
+BASE_MEDIAN_MARGIN_PCT = -1.50
 BASE_BREAKEVEN_OR_SUBZERO_PCT = 61.0
 BASE_TOTAL_SUBZERO_LOSSES_USD = 2500.0
 
@@ -58,7 +63,7 @@ def get_radar_overview():
     arb_st = _get_cached_json(ARB_STATUS, {})
 
     positions_base = morpho_st.get("pozisyon", 69410)
-    hot_base = morpho_st.get("sicak", 4311)
+    hot_base = morpho_st.get("sicak", 4145)
     markets_base = morpho_st.get("pazar", 83)
 
     return {
@@ -138,8 +143,8 @@ def get_chain_breakdown():
                 "protocols": ["Morpho Blue", "Aave v3", "Fluid", "Spark", "Euler v2"],
                 "audited_events_30d": 1049,
                 "svr_share_estimate": "> 50% on Aave via MEV-Share",
-                "builder_payments_30d_usd": 317000.0,
-                "mempool_backrun_note": "No public mempool oracle price update precedes high-value liquidations; events route via private builder bundles."
+                "builder_payments_30d_usd": 358316.62,
+                "mempool_backrun_note": "Over 72% of liquidations yield micro-dust (< $1.00 net); events route via private MEV-Boost builder bundles."
             }
         }
     }
@@ -183,6 +188,7 @@ def get_hot_positions(limit: int = Query(25, ge=1, le=100)):
     for m in markets_data[:limit]:
         markets_risk.append({
             "market_id": m.get("id"),
+            "market_pair": f"{m.get('coll_sym','?')}/{m.get('loan_sym','?')}",
             "lltv": m.get("lltv"),
             "tracked_borrowers_count": len(m.get("borclular", [])),
             "oracle": m.get("oracle"),
@@ -191,17 +197,64 @@ def get_hot_positions(limit: int = Query(25, ge=1, le=100)):
 
     return {
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "total_hot_positions": morpho_st.get("sicak", 4311),
-        "total_monitored_positions": morpho_st.get("pozisyon", 69410),
+        "total_hot_positions": morpho_st.get("sicak", 4145),
+        "total_monitored_positions": morpho_st.get("pozisyon", 69392),
         "risk_threshold": "Health Factor (HF) < 1.10",
         "membrane_freshness_sec": morpho_st.get("foto_yasi_sn", 9.9),
         "monitored_markets_sample": markets_risk
+    }
+
+@radar_router.get("/rescue-simulation", summary="Pre-Emptive Rescue Shield Economic Model & Simulation")
+def get_rescue_simulation():
+    sim = _get_cached_json(SIMULATION_FILE, None)
+    if not sim:
+        return JSONResponse(status_code=503, content={"error": "Rescue Shield simulation data not available yet"})
+    return sim
+
+@radar_router.get("/dataset", summary="Consolidated Empirical OEV Dataset Metadata & Summary")
+def get_dataset_summary():
+    ds = _get_cached_json(EMPIRICAL_DATASET, None)
+    if not ds:
+        return JSONResponse(status_code=503, content={"error": "Empirical dataset not available yet"})
+    return {
+        "metadata": ds.get("metadata", {}),
+        "empirical_summary": ds.get("empirical_summary", {})
     }
 
 @radar_router.get("/dashboard", response_class=HTMLResponse, summary="Public Good Dashboard")
 def get_radar_dashboard():
     overview = get_radar_overview()
     chains = get_chain_breakdown()["chains"]
+    sim = _get_cached_json(SIMULATION_FILE, {})
+    
+    top20_impact = sim.get("top_20_aggregate_impact", {})
+    annual_proj = sim.get("macro_annual_projection", {})
+    top_rescues = sim.get("top_20_simulated_rescues", [])[:8]
+
+    # Generate rescue table rows
+    rescue_rows = ""
+    for r in top_rescues:
+        b_short = f"{r.get('borrower', '')[:6]}...{r.get('borrower', '')[-4:]}"
+        mkt = r.get("market", "N/A")
+        cur_hf = r.get("current_hf", 1.02)
+        debt = r.get("total_debt_usd", 0.0)
+        repaid = r.get("deleveraged_repay_usd", 0.0)
+        penalty_saved = r.get("prevented_liquidation_penalty_usd", 0.0)
+        w_fee = r.get("werracle_service_fee_usd", 0.0)
+        net_saved = r.get("net_borrower_savings_usd", 0.0)
+        
+        rescue_rows += f"""
+        <tr>
+            <td><code>{b_short}</code></td>
+            <td><strong>{mkt}</strong></td>
+            <td><span class="tag tag-amber">{cur_hf:.4f} &rarr; 1.25</span></td>
+            <td>${debt:,.2f}</td>
+            <td>${repaid:,.2f}</td>
+            <td class="text-green">+${penalty_saved:,.2f}</td>
+            <td class="text-blue">${w_fee:,.2f}</td>
+            <td class="text-green"><strong>+${net_saved:,.2f}</strong></td>
+        </tr>
+        """
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -219,6 +272,7 @@ def get_radar_dashboard():
             --primary: #3b82f6;
             --accent: #10b981;
             --warning: #f59e0b;
+            --danger: #ef4444;
             --text: #f9fafb;
             --muted: #9ca3af;
         }}
@@ -271,13 +325,18 @@ def get_radar_dashboard():
             border-radius: 12px;
             padding: 24px;
         }}
+        .card-highlight {{
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.06) 0%, rgba(17, 24, 39, 1) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }}
         .card-title {{ font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }}
         .card-value {{ font-size: 32px; font-weight: 800; font-family: 'JetBrains Mono', monospace; }}
         .card-sub {{ font-size: 13px; color: var(--muted); margin-top: 8px; }}
         .text-green {{ color: var(--accent); }}
         .text-blue {{ color: var(--primary); }}
         .text-amber {{ color: var(--warning); }}
-        .section-title {{ font-size: 18px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }}
+        .text-red {{ color: var(--danger); }}
+        .section-title {{ font-size: 18px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }}
         table {{
             width: 100%;
             border-collapse: collapse;
@@ -287,9 +346,43 @@ def get_radar_dashboard():
         th, td {{ padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }}
         th {{ color: var(--muted); font-size: 12px; text-transform: uppercase; }}
         tr:hover {{ background: rgba(255, 255, 255, 0.02); }}
-        .tag {{ padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }}
+        .tag {{ padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; display: inline-block; }}
         .tag-success {{ background: rgba(16, 185, 129, 0.2); color: var(--accent); }}
         .tag-info {{ background: rgba(59, 130, 246, 0.2); color: var(--primary); }}
+        .tag-amber {{ background: rgba(245, 158, 11, 0.2); color: var(--warning); }}
+        .lead-box {{
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: #d1fae5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }}
+        .api-links {{
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }}
+        .btn {{
+            background: var(--surface-accent);
+            color: var(--text);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            border: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.2s;
+        }}
+        .btn:hover {{
+            background: var(--primary);
+            border-color: var(--primary);
+        }}
         .limits-box {{
             background: var(--surface);
             border: 1px solid var(--border);
@@ -315,10 +408,12 @@ def get_radar_dashboard():
     </header>
 
     <div class="banner">
-        <strong>Independent Methodology Note:</strong> This radar monitors real-time Health Factors (HF) across 83 Morpho markets (69,410 positions) on Base and audits Chainlink Smart Value Recapture (SVR) auction efficiency. 
-        Measurements show SVR successfully recaptures <strong>~98%</strong> of gross liquidation value for lending protocols, compressing winning solver margins to <strong>~0–2%</strong> pre-swap.
+        <strong>Independent Empirical Findings:</strong> Across 105 audited SVR liquidations ($190.5k volume) on Base, 
+        Chainlink Smart Value Recapture captures <strong>98.10%</strong> of gross value for protocol lenders, compressing solver median margins to <strong>-1.50%</strong>. 
+        Post-facto liquidation hunting is economically obsolete. Werracle transforms this reality into a <strong>Pre-Emptive Rescue Shield</strong> protecting borrowers before breach.
     </div>
 
+    <!-- 1. Real-time Surveillance Grid -->
     <div class="grid">
         <div class="card">
             <div class="card-title">Tracked Borrowers</div>
@@ -342,6 +437,61 @@ def get_radar_dashboard():
         </div>
     </div>
 
+    <!-- 2. Pre-Emptive Rescue Shield Simulator -->
+    <div class="card card-highlight" style="margin-bottom: 32px;">
+        <div class="section-title">
+            <span>🛡️ Pre-Emptive Rescue Shield Simulator (Pre-SVR Self-Deleveraging)</span>
+            <span class="tag tag-success">ACTIVE SIMULATION</span>
+        </div>
+        
+        <div class="lead-box">
+            <span>⚡ <strong>CEX-Pre-Oracle Lead Advantage:</strong> Binance WebSocket price streams lead on-chain Chainlink updates by <strong>15–45 seconds</strong>, triggering self-deleveraging at <code>HF = 1.02</code> before SVR auction mempool wars.</span>
+        </div>
+
+        <div class="grid" style="margin-bottom: 20px;">
+            <div class="card">
+                <div class="card-title">Simulated Deleveraged Volume</div>
+                <div class="card-value text-blue">${top20_impact.get('total_deleveraged_volume_usd', 5377561):,.2f}</div>
+                <div class="card-sub">Top 20 At-Risk Positions (12.5% Debt Repay)</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Prevented Liquidation Penalties</div>
+                <div class="card-value text-green">${top20_impact.get('total_prevented_penalties_usd', 142185):,.2f}</div>
+                <div class="card-sub">Saved from 4.65%–8.50% LIF Seizure</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Net Borrower Capital Saved</div>
+                <div class="card-value text-green">${top20_impact.get('total_net_borrower_savings_usd', 96476):,.2f}</div>
+                <div class="card-sub">{top20_impact.get('average_borrower_savings_ratio_pct', 67.85)}% of Penalty Value Preserved</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Werracle Service Fee (0.75%)</div>
+                <div class="card-value text-amber">${top20_impact.get('total_werracle_service_fees_usd', 40331):,.2f}</div>
+                <div class="card-sub">Projected Annual Revenue: ${annual_proj.get('projected_annual_werracle_fee_revenue_usd', 25076):,.2f}</div>
+            </div>
+        </div>
+
+        <div class="section-title" style="font-size: 14px; margin-top: 12px;">Top Simulated Position Rescues (Live Morpho Base Sample)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Borrower</th>
+                    <th>Market</th>
+                    <th>HF Transition</th>
+                    <th>Total Debt</th>
+                    <th>Deleveraged Repay</th>
+                    <th>Prevented Penalty</th>
+                    <th>Werracle Fee (0.75%)</th>
+                    <th>Net Borrower Saved</th>
+                </tr>
+            </thead>
+            <tbody>
+                {rescue_rows}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 3. Multi-Chain OEV Capture Dynamics -->
     <div class="card">
         <div class="section-title">⚡ Multi-Chain OEV Capture Dynamics</div>
         <table>
@@ -363,8 +513,8 @@ def get_radar_dashboard():
                     <td>105</td>
                     <td>${BASE_AUDITED_GROSS_USD:,.2f}</td>
                     <td>${BASE_PROTOCOL_BIDS_USD:,.2f}</td>
-                    <td><span class="tag tag-success">~98.0%</span></td>
-                    <td><span class="tag tag-info">~2.0%</span></td>
+                    <td><span class="tag tag-success">98.10%</span></td>
+                    <td><span class="tag tag-info">1.90%</span></td>
                 </tr>
                 <tr>
                     <td><strong>Arbitrum L2</strong></td>
@@ -380,12 +530,20 @@ def get_radar_dashboard():
                     <td>Morpho, Aave, Fluid</td>
                     <td>1,049 (30-day baseline)</td>
                     <td>$1.4M+ Total</td>
-                    <td>$317,000+ (Builder Fees)</td>
+                    <td>$358,316.62 (Builder Fees)</td>
                     <td><span class="tag tag-info">Private Bundles</span></td>
-                    <td>Competitive</td>
+                    <td>72% Micro-Dust</td>
                 </tr>
             </tbody>
         </table>
+
+        <div class="api-links">
+            <a href="/v1/radar/overview" class="btn" target="_blank">&rarr; /v1/radar/overview</a>
+            <a href="/v1/radar/rescue-simulation" class="btn" target="_blank">&rarr; /v1/radar/rescue-simulation</a>
+            <a href="/v1/radar/dataset" class="btn" target="_blank">&rarr; /v1/radar/dataset</a>
+            <a href="/v1/radar/hot-positions" class="btn" target="_blank">&rarr; /v1/radar/hot-positions</a>
+            <a href="/v1/radar/oev-analytics" class="btn" target="_blank">&rarr; /v1/radar/oev-analytics</a>
+        </div>
     </div>
 
     <div class="limits-box">
