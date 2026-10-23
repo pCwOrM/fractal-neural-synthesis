@@ -1,67 +1,53 @@
-# ITOUCH SYSTEMS | WERRACLE RESMİ DUYURU VE LANSMAN POSTU (LINKEDIN)
+# ITOUCH SYSTEMS | WERRACLE OFFICIAL LINKEDIN ANNOUNCEMENT (ENGLISH)
 
-**Hedef:** ITouch Systems LinkedIn Şirket Sayfası  
-**Görsel:** `itouch_linkedin_werracle_launch_card.png` (1920x1080 Yüksek Çözünürlüklü Kurumsal Kart)  
-**Format Seçenekleri:** 
-- **Seçenek A:** Türkçe Odaklı Kurumsal & Teknik Metin (Önerilen)
-- **Seçenek B:** İngilizce / Global Web3 & Kurumsal Metin  
-
----
-
-## 📌 SEÇENEK A: Türkçe Kurumsal Paylaşım Metni (Önerilen)
-
-Blokzincir üzerinde çalışan bir yapay zekâ karar modeli tek bir EVM depolama kelimesine (32 bayt) sığabilir mi?
-
-ITouch Systems olarak, Adana Çukurova Teknokent AR-GE merkezimizde geliştirdiğimiz, EVM için dünyanın ilk sıfır-depolamalı (zero-storage) yapay zekâ karar kâhini ve ampirik OEV risk gözlemevi **Werracle**'ı gururla duyuruyoruz.
-
-### 🔍 Werracle Nedir ve Neyi Çözüyor?
-
-Geleneksel on-chain yapay zekâ ve kâhin (oracle) yaklaşımları ya yüksek depolama maliyetlerine takılmakta ya da zincir dışı güven varsayımlarına dayanmaktadır. Werracle bu paradigmayı kökten değiştiriyor:
-
-1. **32 Bayt Depolama & ~20k Gaz Karar Motoru:**
-   Model hiçbir ağırlık matrisi saklamaz; kararlarını Mandelbrot kümesi dinamiklerinden anında türetir. solc 0.8.20 üzerinde karar başına yalnızca ~20.7k gaz tüketir ve koruduğu DeFi çağrısıyla aynı işlem (intra-block) içinde çalışır.
-
-2. **Lean 4 Çekirdeği ile Makine Onaylı İspat (40 Teorem):**
-   Kaçış döngülerinin her zaman durduğu, Q16.16 sabit noktalı aritmetiğin taşma yapmadığı ve gaz tüketiminin kesin bir tavan altında kaldığı Lean 4 etkileşimli teorem kanıtlayıcısı ile doğrulandı. Sıfır 'sorry', sıfır harici aksiyom.
-
-3. **Canlı OEV & Tasfiye Risk Radarı (radar.werracle.com):**
-   Yalnızca teoride kalmadık; 83 Morpho Blue pazarını ve 69.000'den fazla kredi pozisyonunu 7/24 milisaniyelik telemetriyle izleyen bağımsız bir kamu yararı radarı kurduk. Base L2'deki 105 denetlenmiş Chainlink SVR tasfiyesinde, brüt tasfiye değerinin **%98,10'unun ($186.889)** protokole ve mevduat sahiplerine geri kazandırıldığını bağımsız olarak kanıtladık.
-
-4. **Fikrî Mülkiyet ve Açık Bilim Külliyatı:**
-   - TÜRKPATENT Patent Başvuruları: **TR 2026/016285** & **TR 2026/016633**
-   - arXiv Ön Baskısı: **arXiv:2609.30719** [cs.CR, cs.AI, cs.DC]
-   - Elsevier SSRN & CERN Zenodo arşivlenmiş külliyatı
-
-### 🤝 Ekosistem ve Kurumsal Ortaklıklar
-
-Werracle'ın çekirdek motoru açık kaynak ve denetlenebilir durumdadır. DeFi protokolleri, kasa yöneticileri, akademik laboratuvarlar ve hibe konsorsiyumları ile entegrasyon için hazırız.
-
-🌐 Kurumsal Web: https://werracle.com  
-🛰️ Canlı Radar Panosu: https://radar.werracle.com  
-🔬 Protokol & Simülatör: https://werracle.io  
-📑 Ampirik Araştırma Raporu: https://werracle.io/radar.html  
-
-#ITouchSystems #Werracle #DeepTech #Blockchain #Ethereum #EVM #ArtificialIntelligence #FormalVerification #Lean4 #DeFi #OEV #CyberSecurity #AdanaTeknokent #Web3
+**Organization:** ITouch Systems (Adana Çukurova Technopark, Turkey)  
+**Target Platform:** LinkedIn Company Page (Free Account Optimized)  
+**Visual Asset:** `itouch_linkedin_werracle_en.png` (1920x1080 High-Res, Pixel-Perfect Square Logo Composited)  
+**Character Count:** ~2,640 chars (LinkedIn Limit: 3,000 max)  
+**Mobile Fold ("See More"):** First 200 characters provide an immediate high-signal technical hook  
 
 ---
 
-## 📌 SEÇENEK B: Global / İngilizce Paylaşım Metni
+## 📋 Ready-to-Publish English Post Copy
 
 Can an entire AI decision model live inside a single 32-byte EVM storage slot?
 
-At ITouch Systems, we are excited to unveil **Werracle** — the zero-storage on-chain AI decision oracle and independent OEV risk observatory built at Adana Çukurova Technopark.
+No off-chain coprocessors. No multi-megabyte weights. Sub-cent intra-block execution inside the very same transaction as the call it protects.
 
-### ⚡ Highlights of Werracle Architecture:
+At ITouch Systems, we are proud to introduce Werracle — the zero-storage on-chain AI decision oracle and independent DeFi risk observatory, engineered at Adana Çukurova Technopark.
 
-• **32-Byte Packed Model:** Zero stored weight matrices. Decision boundaries derive deterministically from Mandelbrot dynamics in a single EVM word.  
-• **Intra-Block Execution:** ~20.7k execution gas per decision on solc 0.8.20, protecting calls within the very same transaction.  
-• **Formally Verified in Lean 4:** 40 machine-checked theorems ensuring loop halting, bounded gas consumption, and non-overflowing fixed-point arithmetic. Zero 'sorry'.  
-• **Live OEV Sensory Radar:** Monitoring 83 Morpho Blue markets and 69,000+ positions. Our empirical study across 105 multi-call Base SVR liquidations independently validated that **98.10% ($186.9k)** of liquidation value was recaptured for depositors.  
-• **Intellectual Property & Preprints:** TÜRKPATENT patent filings (TR 2026/016285, TR 2026/016633), arXiv:2609.30719, SSRN, and CERN Zenodo research bundles.
+Here is what makes Werracle a fundamental shift in on-chain intelligence:
 
-Explore our open infrastructure and live telemetry:
-🌐 Corporate: https://werracle.com  
-🛰️ Live Radar: https://radar.werracle.com  
-⚡ Protocol & Simulator: https://werracle.io  
+1️⃣ The Whole Model is One Storage Slot (32 Bytes)
+Traditional on-chain AI relies on external oracles, bloated state, or zk-proof overhead. Werracle stores no weight matrices; it evaluates deterministic decision boundaries derived directly from Mandelbrot set dynamics. On solc 0.8.20, an on-chain verdict costs ~20.7k execution gas (~15.0k for view previews).
 
-#Web3 #AI #FormalVerification #DeFi #SmartContracts #Ethereum #Base #Morpho #Lean4 #ITouchSystems
+2️⃣ Formally Verified in Lean 4 (0 Sorry, Zero Extra Axioms)
+Critical smart contracts require mathematical certainty. The Werracle core is backed by 40 theorems machine-checked by the Lean 4 kernel:
+• Every escape loop provably halts
+• Q16.16 fixed-point arithmetic never overflows int64
+• Gas stays strictly below a deterministic ceiling
+All 560/560 test vectors match the compiled contract and live testnet deployment result-for-result.
+
+3️⃣ Independent OEV & Liquidation Risk Observatory
+We took this architecture directly to production DeFi. At radar.werracle.com, we monitor 83 Morpho Blue markets and 69,000+ positions with sub-second telemetry.
+Through multi-call on-chain decoding of all 105 Chainlink Smart Value Recapture (SVR) liquidations on Base ($190.5k gross), our empirical research proved:
+• 98.10% ($186.9k) of liquidation MEV was recaptured directly for vault depositors
+• Bertrand solver competition compressed median margins to -1.55% pre-DEX slippage
+• 61.9% of transactions concluded at breakeven or subzero margin
+
+4️⃣ Intellectual Property & Academic Output
+• TÜRKPATENT Patent Applications: TR 2026/016285 & TR 2026/016633
+• Research Preprint: arXiv:2609.30719 [cs.CR, cs.AI, cs.DC]
+• Elsevier SSRN & CERN Zenodo research bundles
+
+Whether you are designing lending markets, Uniswap v4 fee hooks, or autonomous vault guards, Werracle enables decisions a blockchain can verify natively in 32 bytes.
+
+Explore our live portals:
+🌐 Corporate & Partnerships: https://werracle.com
+🛰️ Live Risk Observatory: https://radar.werracle.com
+⚡ In-Browser Simulator: https://werracle.io
+📑 Empirical Research Paper: https://werracle.io/radar.html
+
+We welcome collaboration with DeFi protocols, security auditors, and research labs.
+
+#Web3 #FormalVerification #Ethereum #DeFi #SmartContracts
