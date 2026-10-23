@@ -19,6 +19,7 @@
 [![GAP - Lean 4 Doğrulanmış Port](https://img.shields.io/badge/GAP'tan%20Lean%204'e-v0.2.0%20(35%20Teorem)-blue.svg?logo=lean)](https://github.com/pCwOrM/gap-lean4-port)
 [![Patent Başvurusu](https://img.shields.io/badge/Patent%20Başvurusu-TR%202026%2F016285-red.svg)](https://epats.turkpatent.gov.tr)
 [![Paper 1: Zenodo Çatı DOI](https://img.shields.io/badge/Paper%201%20DOI-10.5281%2Fzenodo.22774934-024dad.svg)](https://doi.org/10.5281/zenodo.22774934)
+[![Paper 1: SSRN 7659198](https://img.shields.io/badge/SSRN-7659198%20(Paper%201)-002f6c.svg?logo=elsevier)](https://papers.ssrn.com/abstract=7659198)
 [![Kardeş Makale: WERR](https://img.shields.io/badge/Kardeş%20Makale-WERR-8b5cf6.svg)](https://github.com/pCwOrM/werr)
 [![On-Chain AI Oracle: werracle](https://img.shields.io/badge/Web3%20Oracle-werracle-f59e0b.svg?logo=ethereum&logoColor=white)](https://github.com/pCwOrM/werracle)
 [![The Gauntlet Kıyaslamaları](https://img.shields.io/badge/The%20Gauntlet-Sıfır--VRAM%20Liderliği-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)
@@ -66,7 +67,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 | 🔬 **128×128 4-Quadrant Araştırma Laboratuvarı** | Matematiksel Deney | Araştırmacılar & Mühendisler | [**Araştırma Laboratuvarını Aç**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/demos/quadrant_visualizer.html) |
 | 🐍 **İnteraktif Yılan Yapay Zekası & 1v1 Arena** | Gerçek Zamanlı Refleks & Otopilot | Oyuncular, Mühendisler & Mobil | [**Yılan Arenasını Başlat**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/demos/snake.html) |
 | 🗣️ **Halka Sunum ve Teorik Rehber** | Çift Katmanlı Kılavuz | Konuşmacılar & Eğitimciler | [**Sunum Rehberini Aç (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/Halka_Sunum_ve_Teorik_Rehber.html) |
-| 🏛️ **Paper 1: Fraktal Nöron Sentezi** | Dergi İncelemesinde | Açık Bilim | [**Zenodo: 10.5281/zenodo.22867037**](https://zenodo.org/records/22867037) &bull; *Chaos, Solitons & Fractals (Elsevier)* |
+| 🏛️ **Paper 1: Fraktal Nöron Sentezi** | Açık Bilim Ön-Baskı | Açık Bilim | [**Zenodo: 10.5281/zenodo.22867037**](https://zenodo.org/records/22867037) &bull; *SSRN / Zenodo Açık Bilim* |
 | ⚡ **Kardeş Makale: WERR (Uç Triyaj)** | Uç Doğal Dil & Görsel İşleme | Küresel / Uygulamalı Yapay Zeka | [**Zenodo: 10.5281/zenodo.22939253**](https://doi.org/10.5281/zenodo.22939253) &bull; [**arXiv: 2609.25498**](https://arxiv.org/abs/2609.25498) &bull; [**GitHub: pCwOrM/werr**](https://github.com/pCwOrM/werr) |
 | 🤗 **Evrensel Fraktal Karar Veri Seti** | Dünyanın İlk Fraktal Doğal Dil Karar Haritası | Yapay Zekâ / ML Kıyaslama Araştırmacıları | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) |
 | 🧠 **Canlı İkili Bilişsel Platform (answerr)** | Üretim Platformu & API | Geliştiriciler & Son Kullanıcılar | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
@@ -118,7 +119,7 @@ Bu depo, birbiri üzerine inşa edilen ve kümülatif olarak genişleyen çok a�
 │ • %100 Mantık Kapıları (AND/OR)│ • WindTunnel WebMCP 49/49 (#1) │ • Gözlemci Ufku (`life_view`)  │ • TAMAMe Ufuk Dinamikleri     │ • 12-Nokta Sparse Tripod (12) │
 │ • %100 Doğrusal Olmayan XOR    │ • JevBench Dünya Rekoru (#1)   │ • Çinko Kıvılcımı Tünellemesi  │ • 40 Çekirdekli Xeon Gauntlet │ • Küresel Adım Tavanı (108)   │
 │ • Pareto Çözünürlük (128x128)  │ • Gymnasium Yılan (302 hamle/s)│ • Enterik Çift-Beyin & CD4+    │ • Üniterlik: S_son = 0.0000   │ • On-Chain Gaz <= 22.568 gas  │
-│ • İncelemede: Chaos Solitons   │ • Jevenator 2 (27.8x Görü)     │ • 5-Tohumlu Split: XOR %99.80, │ • Ateş Duvarı 573x Bastırıldı │ • 15.397,4 karar/s (0 Bayt VM)│
+│ • Açık Bilim: Zenodo & SSRN    │ • Jevenator 2 (27.8x Görü)     │ • 5-Tohumlu Split: XOR %99.80, │ • Ateş Duvarı 573x Bastırıldı │ • 15.397,4 karar/s (0 Bayt VM)│
 │ • Zenodo DOI: 22774934         │ • Zenodo DOI: 22867425         │   Two-Moons %99.40, Spirals    │ • Page Eğrisi Uyumu: R^2=0.982│ • %86,9 Cauchy Kaçışı (20us)  │
 │                                │                                │ • PATENT BAŞVURUSU: 2026/016285│ • Konsept DOI: 22961999       │ • 3-Kollu Ablasyon (180 Asal) │
 │                                │                                │ • Zenodo DOI: 22896856         │ • Zenodo Kaydı: 22978460 (v2) │ • Zenodo Kaydı: 22983889 (v2) │
