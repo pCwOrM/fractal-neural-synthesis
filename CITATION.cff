@@ -39,6 +39,8 @@ references:
         given-names: "Dağhan"
     title: "Mandelbrot Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Non-Linear Decision Boundaries"
     doi: "10.5281/zenodo.22774934"
+    url: "https://papers.ssrn.com/abstract=7659198"
+    notes: "Elsevier SSRN Abstract ID: 7659198"
     year: 2026
   - type: article
     authors:
