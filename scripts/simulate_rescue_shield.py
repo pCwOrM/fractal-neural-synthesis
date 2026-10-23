@@ -1,3 +1,11 @@
+"""
+[DEPRECATED / RETIRED SIMULATION SCRIPT - DO NOT RUN]
+This script was retired on October 23, 2026.
+Reason: Candidates included deeply insolvent legacy bad debt (HF ~0.03, e.g. USR/RLP)
+and modeled mechanical debt repayment without borrower delegation (setAuthorization).
+See docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md Section 4 for the theoretical framework.
+"""
+
 import json
 import os
 import sys
