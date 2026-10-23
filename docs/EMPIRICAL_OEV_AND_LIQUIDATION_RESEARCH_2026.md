@@ -154,5 +154,5 @@ Centralized exchanges (CEX) like Binance frequently exhibit price movements prio
 
 The empirical findings from Base Morpho markets confirm that Chainlink SVR has effectively solved the post-facto liquidation MEV leakage problem for lending protocols by recapturing 98.10% of liquidation value. Future protocol innovation lies in permissioned, pre-emptive borrower risk management and collaborative safety mechanisms.
 
-*For live monitoring of Health Factors across 83 Morpho markets, visit:*  
-👉 **[https://pcworm.net/v1/radar/dashboard](https://pcworm.net/v1/radar/dashboard)**
+*For live monitoring of Health Factors across 83 Morpho markets and audited SVR records, visit:*  
+👉 **[https://radar.werracle.com](https://radar.werracle.com)** | **[https://werracle.io/radar.html](https://werracle.io/radar.html)**
