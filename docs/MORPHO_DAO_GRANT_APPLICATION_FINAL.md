@@ -13,9 +13,7 @@
 ---
 
 ### About us + prior experience:
-ITouch Systems Research & Development Desk (headquartered at Adana Çukurova Technopark) is an independent engineering and cryptoeconomic research team specializing in high-throughput on-chain telemetry, formal verification, and empirical protocol mechanics. 
-
-Guided by the timeless scientific principle of **"integritas et scientia" (moral stewardship first, scientific rigor foremost)**, our ethos is to serve the decentralized commons by delivering verified, public-good infrastructure without speculative noise or paywalled barriers.
+ITouch Systems Research & Development Desk (headquartered at Adana Çukurova Technopark) is an independent blockchain engineering and cryptoeconomic research group specializing in high-throughput on-chain telemetry, formal verification, and empirical protocol risk analysis. Our focus is developing reliable, open-source public-good infrastructure for decentralized finance protocols.
 
 **Prior Track Record & Existing Morpho Footprint:**
 Before requesting any grant funding, our desk self-funded, built, and actively deployed a production-grade monitoring suite for the Morpho Blue ecosystem on Base:
@@ -43,7 +41,7 @@ Before requesting any grant funding, our desk self-funded, built, and actively d
 ### Requested budget:
 **15k MORPHO** *(or 15,000 USDC equivalent)*
 
-In strict accordance with MIP 93 guidelines, **100% of this budget is dedicated entirely to forward-looking scope, maintenance, and technical expansion**. All preliminary development (Base Radar, SVR multi-call parser, Zenodo monograph, and 285k+ flashblock ingestion) has already been fully delivered and gifted to the community as a public good.
+In strict accordance with MIP 93 guidelines, **100% of this budget is dedicated entirely to forward-looking scope, maintenance, and technical expansion**. All preliminary development (Base Radar, SVR multi-call parser, Zenodo monograph, and 285k+ flashblock ingestion) has already been fully delivered and open-sourced as a free public good.
 
 Disbursement aligns with the MIP 93 structure:
 - **20% (3,000 MORPHO):** Upfront mobilization upon grant approval.
