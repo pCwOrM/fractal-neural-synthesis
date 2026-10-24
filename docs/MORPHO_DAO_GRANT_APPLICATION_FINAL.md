@@ -1,162 +1,104 @@
-# [MIP-81 / MIP-93 Proposal] Werracle: MetaMorpho Curator Risk Radar & Independent SVR Telemetry Infrastructure
+# [MIP 93 Grant Application] Werracle: MetaMorpho Curator Risk Radar & Independent SVR Telemetry Suite
 
-**Category:** Tooling, Risk Research & Public Good Infrastructure  
-**Target Forum:** Morpho DAO Forum (`forum.morpho.org`)  
-**Status:** FINAL PROPOSAL — READY FOR FORUM SUBMISSION  
-**Applicant:** ITouch Systems / Werracle Research & Security Desk  
-**Contact:** Volkan Dağlı (`pcworm@pcworm.net`) | Adana Çukurova Teknokent, Turkey  
-**Repository:** [https://github.com/pCwOrM/werracle](https://github.com/pCwOrM/werracle)  
-**Live Observatory:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)  
-**Live Telemetry API:** [https://api.werracle.com/v1/radar/overview](https://api.werracle.com/v1/radar/overview) | [/v1/radar/oev-analytics](https://api.werracle.com/v1/radar/oev-analytics)  
-**Citable Empirical Research DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Zenodo Record: [23623589](https://zenodo.org/records/23623589))  
-**Hugging Face Dataset:** [https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
-**Empirical Paper:** [`docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md`](https://github.com/pCwOrM/werracle/blob/main/docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md)  
+**Project Title:** Werracle: MetaMorpho Curator Risk Radar & Independent SVR Telemetry Suite  
+**Organization name:** ITouch Systems / Werracle Research & Security Desk  
+**Organization website and/or social media links:**  
+- **Public Risk Radar:** https://radar.werracle.com | https://werracle.io/radar.html  
+- **Live Telemetry API:** https://api.werracle.com/v1/radar/overview  
+- **Open-Source Repository:** https://github.com/pCwOrM/werracle  
+- **CERN Zenodo Research DOI:** https://doi.org/10.5281/zenodo.23623588 (Record: 23623589)  
+- **Hugging Face Dataset:** https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026  
+- **Lead Contact & Twitter/X:** https://x.com/pcworm | `pcworm@pcworm.net`  
 
 ---
 
-## 1. Executive Summary
+### About us + prior experience:
+ITouch Systems Research & Development Desk (headquartered at Adana Çukurova Technopark) is an independent engineering and cryptoeconomic research team specializing in high-throughput on-chain telemetry, formal verification, and empirical protocol mechanics. 
 
-As Morpho Blue and MetaMorpho vaults scale across Layer-2 rollups, transparent and independent telemetry on **liquidation efficiency, Oracle Extractable Value (OEV) recapture, and borrower risk distribution** is vital for depositors, risk curators (e.g., Steakhouse Financial, Gauntlet, Re7 Labs, B.Protocol), and DAO governance.
+Guided by the timeless scientific principle of **"integritas et scientia" (moral stewardship first, scientific rigor foremost)**, our ethos is to serve the decentralized commons by delivering verified, public-good infrastructure without speculative noise or paywalled barriers.
 
-Unlike traditional grant proposals that request upfront capital for unbuilt prototypes, **Werracle has already built, tested, and deployed a production-grade, public-good risk radar and empirical auditing engine**:
-- **Live 24/7 Monitoring:** Tracks **83 Morpho Blue markets** and **69,000+ borrower positions** on Base with sub-second health factor surveillance.
-- **Empirically Audited SVR Performance:** Decoded all 105 Chainlink Smart Value Recapture (SVR) liquidation transactions on Base Morpho during the October 12–19, 2026 volatility window ($190,506.31 gross collateral), proving independently that **98.10% ($186,889.85 USD)** of gross liquidation value was successfully recaptured and returned directly to Morpho vaults and depositors.
-- **Multi-Call Receipt Decoding:** Solved the single-event undercounting problem by building an atomic sub-call parser capable of accurately decoding bundled transactions with up to **32 liquidation sub-calls** in a single execution.
-- **Solver Decentralization Verified:** Confirmed active participation from **20 distinct solver contract architectures and 27 signing EOAs** (top solver volume share capped at 31.64%), proving genuine Bertrand competition without monopolistic cartel capture.
-
-Through this grant application under MIP-81 / MIP-93, we propose maintaining this public infrastructure, adding dedicated **MetaMorpho Vault Curator Risk Dashboards**, expanding multi-call SVR ingestion to **Arbitrum and Ethereum L1**, and delivering automated weekly risk digests to the Morpho governance forum.
-
----
-
-## 2. Problem Statement & Motivation
-
-### 2.1 The Visibility Void for MetaMorpho Vault Curators
-MetaMorpho curators allocate hundreds of millions in deposits across diverse Morpho Blue market pairs (e.g., `cbBTC/USDC`, `WETH/USDC`, `cbXRP/USDC`). However, curators currently lack:
-1. **Granular Health Horizons:** Real-time visibility separating active pre-liquidation risk ($0.95 \le HF < 1.10$) from dormant legacy bad debt ($HF < 0.95$, such as decommissioned oracle assets).
-2. **Borrower Exposure Concentration:** Market-level borrower density metrics to anticipate cascading collateral pressure before volatility breaches liquidation thresholds.
-3. **Automated Alert Webhooks:** Low-latency notifications when large borrower cohorts cluster near the Liquidation Loan-to-Value (LLTV) threshold.
-
-### 2.2 Independent Verification of SVR & OEV Recapture
-Order Flow Auctions (OFA) like Chainlink SVR are designed to eliminate MEV leakage by forcing searchers/solvers to bid away liquidation bonuses back to protocol vaults. While theoretical claims exist, the Morpho community requires **independent, on-chain empirical proof**:
-- Are solvers truly competing away their margins?
-- Is value actually flowing back to vault depositors?
-- Are atomic multi-call liquidations behaving safely under high network congestion?
-
-Werracle answers these questions with audited, open-source data.
+**Prior Track Record & Existing Morpho Footprint:**
+Before requesting any grant funding, our desk self-funded, built, and actively deployed a production-grade monitoring suite for the Morpho Blue ecosystem on Base:
+1. **Live High-Frequency Telemetry:** We run a continuous, bare-metal observation daemon (`pcworm-root`) that has processed over **285,000 Base flashblocks** and decoded **5.6M+ transactions**, tracking **83 Morpho Blue markets** and **69,000+ borrower positions** in real time.
+2. **Empirical OEV & Liquidation Proof:** During the acute market volatility regime of October 12–19, 2026, we captured and audited all 105 Chainlink Smart Value Recapture (SVR) multi-call liquidation transactions on Base Morpho ($190,506.31 gross collateral). Our findings independently proved to the DeFi ecosystem that **98.10% ($186,889.85 USD)** of gross liquidation value was successfully recaptured and returned directly to Morpho vaults and depositors.
+3. **Open Science & Peer Verification:** This research and its underlying 1,157-transaction dataset have been formally registered on **CERN Zenodo** under permanent DOI `10.5281/zenodo.23623588` and open-sourced on **Hugging Face** (`pCwOrM/werracle-oev-liquidation-dataset-2026`) with 15/15 mathematical validation invariants passing at 100%.
 
 ---
 
-## 3. What Werracle Has Already Delivered (Milestone 1 — Completed)
-
-Prior to requesting grant funding, Werracle developed, deployed, and validated the following public infrastructure:
-
-### 3.1 Live Production Risk Radar
-- **URLs:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)
-- **Coverage:** 83 Morpho Blue markets on Base.
-- **Telemetry Throughput:** Over **275,000 flashblocks processed** and **5.5M+ transactions decoded**.
-- **Risk Segmentation:** Delineates **~4,800 active positions near liquidation** ($0.95 \le HF < 1.10$) from **82 legacy bad debt positions** ($HF < 0.95$), preventing distorted risk signals.
-
-### 3.2 Audited Empirical Dataset (October 12–19, 2026 Baseline)
-- **Public API:** `GET https://api.werracle.com/v1/radar/overview`  
-- **Dataset Endpoint:** `GET https://radar.werracle.com/v1/radar/dataset`  
-- **Zenodo DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Record: `23623589`)
-- **Hugging Face Hub:** [`pCwOrM/werracle-oev-liquidation-dataset-2026`](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026) (Interactive Table Viewer & `load_dataset`)  
-- **Audited Metrics:**
-  - **Gross Liquidated Value:** $190,506.31 USD across 105 Base SVR events.
-  - **Protocol Recaptured Bids:** **$186,889.85 USD (98.10% recapture rate)**.
-  - **Pre-Swap Solver Net Margin:** $3,545.73 USD (1.86% share).
-  - **Median Solver Margin:** **-1.55%** (61.9% of transactions concluded at zero or negative net profit before DEX swap slippage).
-  - **Decentralization:** 20 unique solver contracts, 27 unique signing EOAs; top solver volume capped at 31.64%.
-  - **Multi-Call Bundles:** 64.76% (68 of 105 txs) were bundled multi-calls with up to 32 sub-calls in a single transaction.
-
-### 3.3 Top Market Exposure Telemetry
-Empirical breakdown of where SVR liquidation volume occurred during market stress:
-- `cbXRP / USDC` (LLTV 62.5%): 18,801 borrowers | $88,801.33 gross liquidated (46.61% of total) | 96.19% recaptured.
-- `SOL / USDC` (LLTV 62.5%): 4,172 borrowers | $27,790.95 gross liquidated | 96.10% recaptured.
-- `cbLTC / USDC` (LLTV 62.5%): 1,771 borrowers | $17,056.41 gross liquidated | 95.50% recaptured.
-- `WETH / USDC` (LLTV 86.0%): 23,182 borrowers | $14,907.65 gross liquidated | 98.40% recaptured.
-- `cbBTC / USDC` (LLTV 86.0%): 72,055 borrowers | Routine micro-liquidations | 98.51% recaptured.
+### Leading Contributor(s):
+- **Volkan Dağlı** (Systems Architect & Lead Researcher)  
+  *Background:* Systems programming, high-frequency distributed telemetry, and formal verification in Lean 4.  
+  *Profiles:* [GitHub](https://github.com/pCwOrM) | [ORCID: 0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) | [Twitter/X](https://x.com/pcworm)
+- **Zerrin Dağlı** (Research Co-Author & Statistical Analyst)  
+  *Affiliation:* Mersin University & YKAL. Specialist in empirical data modeling and risk metrics.  
+  *Profile:* [ORCID: 0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
+- **Dağhan Dağlı** (Research Co-Author & Cryptoeconomic Analyst)  
+  *Affiliation:* Toros Science High School / Toros University MEV Research. Focus on Order Flow Auctions (OFA) and solver game theory.  
+  *Profile:* [ORCID: 0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313)
+- **Bekirhan Dağlı** (Infrastructure Sponsor & Contributor)  
+  *Affiliation:* Co-Founder & Managing Partner, ITouch Systems. Dedicated bare-metal computing resources and network infrastructure sponsorship.
 
 ---
 
-## 4. Proposed Scope of Work & Roadmap
+### Requested budget:
+**15k MORPHO** *(or 15,000 USDC equivalent)*
 
-We propose a 2-month execution roadmap to expand Werracle into a dedicated, institutional-grade risk suite for the Morpho ecosystem:
+In strict accordance with MIP 93 guidelines, **100% of this budget is dedicated entirely to forward-looking scope, maintenance, and technical expansion**. All preliminary development (Base Radar, SVR multi-call parser, Zenodo monograph, and 285k+ flashblock ingestion) has already been fully delivered and gifted to the community as a public good.
 
-```mermaid
-flowchart TD
-    M1["Milestone 1: Delivered (Base Radar & 105 SVR Audited)"] --> M2["Milestone 2: MetaMorpho Curator Suite & Webhooks (Month 1)"]
-    M2 --> M3["Milestone 3: Multi-Chain SVR (Arbitrum & L1) & Forum Digest (Month 2)"]
-    
-    style M1 fill:#10b981,color:#fff,stroke:#059669
-    style M2 fill:#3b82f6,color:#fff,stroke:#2563eb
-    style M3 fill:#6366f1,color:#fff,stroke:#4f46e5
-```
-
-### Milestone 1: Live Base Radar & Verified Dataset (COMPLETED & VERIFIED)
-- **Status:** Delivered & Active in Production.
-- **Deliverables:**
-  - Public dashboard and REST API monitoring 83 Morpho markets on Base.
-  - Audited multi-call SVR empirical dataset and comprehensive research paper.
-  - Zero-drift sealed daemon architecture with sub-second WebSocket flashblock decoding.
-
-### Milestone 2: MetaMorpho Vault Curator Suite & Alert Webhooks (Month 1)
-- **Objective:** Tailor the observatory specifically to MetaMorpho vault curators (Steakhouse, Gauntlet, Flagship, Re7).
-- **Deliverables:**
-  1. **Vault-Level Risk Aggregation:** Dedicated dashboard views mapping collateral risk directly to specific MetaMorpho vaults (e.g., Flagship USDC, Steakhouse USDC, Re7 WETH).
-  2. **Curator Alert Webhooks:** Configurable Discord/Telegram/Slack webhook dispatchers that notify risk teams when:
-     - Cumulative borrow volume with $1.00 \le HF < 1.05$ exceeds $500,000 in any single market.
-     - Oracle price approaches within 1.5% of market LLTV.
-  3. **Curator API Endpoints:** Dedicated `/v1/radar/curator/{vault_address}` endpoint providing instantaneous health distribution histograms.
-
-### Milestone 3: Cross-Chain Expansion (Arbitrum & L1) & Governance Digest (Month 2)
-- **Objective:** Expand multi-call decoding beyond Base and provide regular risk transparency to Morpho governance.
-- **Deliverables:**
-  1. **Arbitrum Morpho Blue Ingestion:** Deploy dedicated rate-limited archival RPC decoders to audit Arbitrum SVR and liquidation auctions.
-  2. **Ethereum L1 Builder Payment Comparator:** Live tracking comparing L2 SVR protocol recapture rates against Ethereum L1 private builder bundle payments.
-  3. **Automated Bi-Weekly Governance Forum Reports:** Automated, markdown-formatted reports posted directly to the Morpho DAO forum summarizing:
-     - Bi-weekly liquidation volume across all Morpho markets.
-     - Exact dollar and percentage value recaptured by SVR for depositors.
-     - Solver competition health and margin spreads.
+Disbursement aligns with the MIP 93 structure:
+- **20% (3,000 MORPHO):** Upfront mobilization upon grant approval.
+- **20% (3,000 MORPHO):** Upon completion of Month 1 deliverables (Curator Suite & Webhook Engine).
+- **60% (9,000 MORPHO):** Upon delivery of Month 2 deliverables and attainment of the objective impact metrics.
 
 ---
 
-## 5. Budget & Funding Request
+### Scope of Work:
+While Morpho Blue provides unmatched mathematical elegance and modular isolation, MetaMorpho vault curators (e.g., Steakhouse Financial, Gauntlet, Re7 Labs, Flagship, B.Protocol) and large depositors face specific visibility challenges:
+1. **Curator Horizon Blurring:** Current dashboards often conflate active pre-liquidation vulnerability ($0.95 \le HF < 1.10$) with dormant, isolated legacy bad debt ($HF < 0.95$), diluting actionable risk response.
+2. **Atomic Multi-Call Blindspots:** Over 64.7% of Base SVR liquidations occur via multi-call transactions executing up to 32 bundled sub-calls. Standard single-event log decoders undercount volume and miscalculate solver margin compression.
+3. **Cross-Chain Telemetry Asymmetry:** Solvers and curators lack comparative telemetry contrasting L2 SVR protocol recapture efficiency against Ethereum L1 private builder payments.
 
-We request a total grant of **15,000 USDC**, distributed according to milestone completion:
-
-| Milestone | Scope | Timeline | Funding Requested |
-| :--- | :--- | :--- | :--- |
-| **Milestone 1** | Live Base Observatory & Audited SVR Dataset | Delivered | **5,000 USDC** (Retroactive/Initial) |
-| **Milestone 2** | MetaMorpho Curator Suite, Vault Mapping & Alert Webhooks | 4 Weeks | **5,000 USDC** |
-| **Milestone 3** | Arbitrum Expansion, L1 Comparator & Governance Reports | 4 Weeks | **5,000 USDC** |
-| **Total** | Full Institutional Risk Radar for Morpho Ecosystem | **8 Weeks** | **15,000 USDC** |
-
-*Payment Destination:* Multi-sig or safe address specified upon grant approval.
-
----
-
-## 6. Team & Technical Credentials
-
-- **Lead Researcher & Engineer:** Volkan Dağlı (Founder, ITouch Systems / Werracle Research Desk)  
-  - Background in systems programming, high-frequency telemetry, and formal verification.
-  - Author of Lean 4 formal verification specifications for on-chain automated market mechanisms ([Werracle Lean 4 Repository](https://github.com/pCwOrM/werracle)).
-- **Infrastructure:** Bare-metal dedicated nodes (`pcworm-root`), redundant Cloudflare strict-SSL edge network, and 24/7 autonomous monitoring daemons.
-- **Commitment to Open Source:** All decoder scripts, API routers, and empirical datasets are 100% open-source under the MIT license for community verification.
+**Deliverables over the 2-Month Scope:**
+1. **MetaMorpho Curator Risk Dashboard (Month 1):**
+   - Direct mapping of collateral positions to specific MetaMorpho vaults (e.g. Flagship USDC, Steakhouse USDC, Re7 WETH).
+   - Delineation of active collateral stress horizons versus legacy non-liquidatable positions.
+2. **Automated Curator Alert Webhook Engine (Month 1):**
+   - Low-latency webhook dispatchers (Discord, Telegram, Slack) triggering when aggregate debt near liquidation ($1.00 \le HF < 1.05$) exceeds configurable thresholds ($500k+) in any market.
+3. **Cross-Chain Multi-Call Decoder Expansion (Month 2):**
+   - Expansion of our atomic receipt sub-call decoder to **Arbitrum Morpho Blue** markets and **Ethereum L1**.
+   - Continuous comparative telemetry tracking SVR recapture percentages vs. L1 MEV-Boost priority fees.
+4. **Automated Bi-Weekly Governance Risk Digest (Month 2):**
+   - Standardized, machine-generated bi-weekly risk and liquidation reports posted directly to the Morpho Governance Forum.
 
 ---
 
-## 7. Verification & Community Links
-
-- **Citable Research DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588)  
-- **Zenodo Open Science Archive:** [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589)  
-- **Hugging Face Dataset:** [https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
-- **Web Dashboard:** [https://radar.werracle.com](https://radar.werracle.com)  
-- **Public Good Portal:** [https://werracle.io/radar.html](https://werracle.io/radar.html)  
-- **Live JSON Overview:** [https://api.werracle.com/v1/radar/overview](https://api.werracle.com/v1/radar/overview)  
-- **Live Analytics API:** [https://api.werracle.com/v1/radar/oev-analytics](https://api.werracle.com/v1/radar/oev-analytics)  
-- **Empirical Research Paper:** [https://github.com/pCwOrM/werracle/blob/main/docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md](https://github.com/pCwOrM/werracle/blob/main/docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md)  
-- **GitHub Repository:** [https://github.com/pCwOrM/werracle](https://github.com/pCwOrM/werracle)  
+### Benefit for the Morpho Ecosystem:
+1. **Public Good with Zero Gating:** In full adherence to MIP 93 rules, every tool, dashboard, API endpoint, and dataset is 100% free, open-source (MIT / CC-BY-4.0), and devoid of paywalls or subscription tiers.
+2. **Independent Curator Validation:** Provides MetaMorpho vault managers with a neutral, third-party observatory to safeguard depositor capital and calibrate LLTV allocations.
+3. **Scientific Proof of SVR Efficacy:** Our empirical research provides empirical proof that Chainlink SVR on Morpho Blue succeeds in eliminating toxic liquidation MEV, recapturing 98.10% for vault depositors. This strengthens institutional trust in Morpho's architecture.
 
 ---
-*We look forward to community feedback and partnering with the Morpho DAO Grants Committee to advance risk transparency across the ecosystem.*
+
+### Metrics:
+We define objective, machine-verifiable impact metrics:
+1. **Market Coverage:** Expand real-time surveillance from 83 Base markets to **120+ active Morpho Blue markets** across Base and Arbitrum.
+2. **Curator Integration:** Map and monitor at least **5 major MetaMorpho vaults** with dedicated health-distribution API endpoints (`/v1/radar/curator/{vault_address}`).
+3. **Governance Reporting:** Publish at least **4 consecutive bi-weekly comprehensive liquidation & SVR risk digests** on the Morpho forum.
+4. **Uptime & Telemetry Reliability:** Maintain **$\ge$ 99.8% uptime** on the public telemetry API (`api.werracle.com`) and observatory frontend throughout the grant period.
+
+---
+
+### Timeline:
+- **Month 1 (Weeks 1–4): MetaMorpho Curator Architecture & Webhooks**
+  - Week 1–2: Deploy MetaMorpho vault-to-market allocation schema and curator health breakdown charts.
+  - Week 3–4: Build and test the configurable Discord/Telegram/Slack webhook alert engine for near-LLTV cohorts.
+- **Month 2 (Weeks 5–8): Cross-Chain SVR Expansion & Governance Digest**
+  - Week 5–6: Deploy Arbitrum Morpho Blue WebSocket ingestion and atomic multi-call receipt decoder.
+  - Week 7–8: Implement automated forum digest reporting daemon and comparative L1 vs. L2 OEV analytics.
+
+---
+
+### Future directions (optional):
+Following the successful completion of this pilot grant, our desk plans to introduce:
+- An open-source **Predictive Bad Debt Simulation Engine** incorporating orderbook liquidity depth from Aerodrome and Uniswap v3 to model cascading slippage during extreme black-swan events.
+- An interactive **Curator Allocation Simulator** allowing MetaMorpho managers to stress-test hypothetical market supply reallocations before on-chain execution.
