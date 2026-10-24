@@ -150,6 +150,7 @@ We request a total grant of **15,000 USDC**, distributed according to milestone 
 
 - **Citable Research DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588)  
 - **Zenodo Open Science Archive:** [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589)  
+- **Hugging Face Dataset:** [https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
 - **Web Dashboard:** [https://radar.werracle.com](https://radar.werracle.com)  
 - **Public Good Portal:** [https://werracle.io/radar.html](https://werracle.io/radar.html)  
 - **Live JSON Overview:** [https://api.werracle.com/v1/radar/overview](https://api.werracle.com/v1/radar/overview)  
