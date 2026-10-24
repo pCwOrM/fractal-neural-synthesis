@@ -1,0 +1,116 @@
+<h2>Empirical OEV &amp; Liquidation Dynamics: 98.10% Value Recapture in Chainlink SVR Auctions and Structural MEV Power-Law Distribution on Ethereum L1</h2>
+
+<p>
+  <strong>Official Open Science Replication Package &amp; Empirical Benchmark</strong><br/>
+  <em>Companion Research to the Werr Framework (<a href="https://doi.org/10.5281/zenodo.22939253" target="_blank" rel="noopener">Zenodo: 10.5281/zenodo.22939253</a> &bull; <a href="https://arxiv.org/abs/2609.25498" target="_blank" rel="noopener">arXiv:2609.25498</a>)</em><br/>
+  <strong>Document ID:</strong> <code>WERRACLE-RES-2026-001-REV2</code> &bull; <strong>Date:</strong> October 24, 2026<br/>
+  <strong>Lead Authors:</strong> Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı<br/>
+  <strong>Infrastructure &amp; Contributor Attribution:</strong> Bekirhan Dağlı (ITouch Systems Research Desk, Adana Çukurova Teknokent, Türkiye)<br/>
+  <strong>Live Surveillance Observatory:</strong> <a href="https://radar.werracle.com" target="_blank" rel="noopener">radar.werracle.com</a> | <a href="https://werracle.io/radar.html" target="_blank" rel="noopener">werracle.io/radar.html</a> | <a href="https://api.werracle.com/v1/radar/overview" target="_blank" rel="noopener">JSON Telemetry API</a>
+</p>
+
+<hr/>
+
+<h3>Executive Summary &amp; Breakthrough Findings</h3>
+
+<p>
+  Order Flow Auctions (OFA) and Proposer-Builder Separation (PBS) have fundamentally altered the landscape of decentralized finance (DeFi) liquidations. This open-science research package provides the complete, machine-audited dataset and companion monograph analyzing <b>1,157 on-chain liquidations</b> across <b>Ethereum L1, Base L2, and Arbitrum</b> during the severe market volatility regime of <b>October 12–19, 2026</b>.
+</p>
+
+<p>
+  By deploying high-throughput WebSocket telemetry monitoring 83 Morpho Blue markets (over 280,000 flashblocks and 5.6M+ transactions decoded) coupled with atomic multi-call receipt decoders, this work presents the first independent empirical proof of <b>Oracle Extractable Value (OEV) recapture</b> under live market stress:
+</p>
+
+<ul>
+  <li>
+    <strong>1. 98.10% Protocol Value Recapture:</strong> Across 105 verified Chainlink Smart Value Recapture (SVR) liquidations on Base Morpho Blue and Aave v3 totaling <b>$190,506.31 in gross liquidated collateral</b>, competitive solver bidding redirected <b>$186,889.85 USD (98.10%)</b> directly back to protocol reserves and depositors as competitive bids.
+  </li>
+  <li>
+    <strong>2. Bertrand Margin Compression &amp; Winner's Curse:</strong> Unconstrained price competition among permissionless solvers compressed gross margins to <b>1.86% ($3,545.73 USD pre-swap)</b>, with median margin settling at <b>-1.55%</b>. In <b>61.9% of transactions (65/105)</b>, solvers concluded at zero or negative net margin prior to off-chain DEX slippage. We document severe overbidding events (e.g. Tx <code>0x76a4c8...</code>) where solvers bid up to <b>102.79%</b> of collateral value, absorbing out-of-pocket losses of -$522.48 to win transaction inclusion.
+  </li>
+  <li>
+    <strong>3. Decentralization &amp; Absence of Monopolistic Capture:</strong> Active participation from <b>20 distinct solver contract architectures and 27 signing EOAs</b> confirms that order flow auctions maintain genuine Bertrand decentralization without cartelization. While solver <code>0x8b61...</code> won 48.6% of transaction counts by dominating micro-liquidations, its volume share was capped at <b>31.64%</b>, with independent solvers (<code>0x3ae5...</code>, <code>0xbd0d...</code>, <code>0xd128...</code>) driving competitive pressure on large liquidations.
+  </li>
+  <li>
+    <strong>4. Multi-Call Bundling Complexity (Methodological Advance):</strong> <b>64.76% (68/105) of SVR transactions were atomic multi-calls</b> executing up to <b>32 liquidation sub-calls</b> in a single transaction (Tx <code>0xc0a519...</code>, $20,969.08 gross). We demonstrate that naive single-event indexers miscalculate liquidation volume and solver PnL by failing to parse recursive sub-call execution trees.
+  </li>
+  <li>
+    <strong>5. Ethereum L1 Power-Law Distribution:</strong> Analysis of 1,049 Ethereum L1 liquidations reveals that <b>80.84% (848 txs)</b> of MEV-Boost block builder priority payments are micro-dust (&lt; $1.00 USD, median $0.08 USD), while the top 22 whale liquidations capture <b>96.05% ($344,155.62 USD)</b> of all builder revenue via private PBS bundles.
+  </li>
+</ul>
+
+<hr/>
+
+<h3>Package Contents &amp; Artifact Inventory</h3>
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: monospace; font-size: 13px;">
+  <thead style="background-color: #f1f5f9;">
+    <tr>
+      <th>File Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf</b></td>
+      <td>PDF Preprint</td>
+      <td>Camera-ready 3-page academic research preprint monograph with tables and charts.</td>
+    </tr>
+    <tr>
+      <td><b>EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md</b></td>
+      <td>Markdown</td>
+      <td>Full Markdown version of the empirical research monograph.</td>
+    </tr>
+    <tr>
+      <td><b>data/werracle_oev_empirical_dataset_2026.json</b></td>
+      <td>JSON Dataset</td>
+      <td>Audited dataset of 1,157 records (105 Base SVR, 3 Arbitrum SVR, 1,049 L1 events).</td>
+    </tr>
+    <tr>
+      <td><b>scripts/verify_dataset_metrics.py</b></td>
+      <td>Python Script</td>
+      <td>Automated test suite certifying all 15 core empirical invariants (100% pass).</td>
+    </tr>
+    <tr>
+      <td><b>scripts/audit_multicall_bundle.py</b></td>
+      <td>Python Script</td>
+      <td>Demonstration script inspecting atomic 32-call bundles and overbid dynamics.</td>
+    </tr>
+    <tr>
+      <td><b>data/checksums.sha256</b></td>
+      <td>SHA-256 Hashes</td>
+      <td>Cryptographic checksums for data integrity verification.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h3>Reproduction &amp; Verification Instructions</h3>
+
+<p>Any researcher or peer reviewer can independently certify the mathematical and statistical findings with Python 3:</p>
+
+<pre style="background: #0f172a; color: #f8fafc; padding: 12px; border-radius: 6px; overflow-x: auto;">
+# 1. Clone repository or unzip package
+unzip zenodo_bundle_oev_liquidation_empirical_research.zip
+cd zenodo_bundle_oev_liquidation_empirical_research
+
+# 2. Run automated verification suite
+python scripts/verify_dataset_metrics.py
+
+# 3. Inspect multi-call atomic bundles and case studies
+python scripts/audit_multicall_bundle.py
+</pre>
+
+<hr/>
+
+<h3>Institutional Attribution &amp; Computing Infrastructure</h3>
+
+<p>
+  High-throughput bare-metal execution nodes (<code>pcworm-root</code>), archival RPC telemetry streams, and 24/7 continuous monitoring daemons were provided and sponsored by <b>Bekirhan Dağlı</b> (Managing Partner &amp; Co-Founder) and <b>ITouch Systems Research &amp; Development Desk</b> (Adana Çukurova Teknokent, Türkiye).
+</p>
+
+<p>
+  <b>Open Access &amp; Licensing:</b> This work is licensed under the <b>Creative Commons Attribution 4.0 International License (CC-BY-4.0)</b>. Accompanying software tools are released under the MIT License.
+</p>

@@ -1,10 +1,16 @@
 # Empirical OEV & Liquidation Dynamics: Protocol Value Recapture in Chainlink SVR and Structural Centralization on Ethereum L1
 
-**Author:** Werracle Research & Security Desk (`pcworm@pcworm.net`)  
-**Publication Date:** October 23, 2026  
-**Document ID:** `WERRACLE-RES-2026-001-REV1`  
-**Classification:** Empirical Protocol Research & Theoretical Proposals  
-**Data Repository:** [`/opt/apps/werracle/research/werracle_oev_empirical_dataset_2026.json`](file:///c:/Users/maat/Documents/antigravity/wonderful-raman/data/werracle_oev_empirical_dataset_2026.json)  
+**Authors:**  
+- **Volkan Dağlı** (Anadolu University & ITouch Systems Research Desk, ORCID: `0009-0000-1587-8703`)  
+- **Zerrin Dağlı** (Mersin University & Yusuf Kalkavan Anadolu Lisesi, ORCID: `0000-0001-9490-6425`)  
+- **Dağhan Dağlı** (Toros Science High School, MEV / Toros University, ORCID: `0009-0003-2492-8313`)  
+
+**Infrastructure & Contributor Attribution:** Bekirhan Dağlı (ITouch Systems, Adana Çukurova Teknokent)  
+**Publication Date:** October 24, 2026  
+**Document ID:** `WERRACLE-RES-2026-001-REV2`  
+**Classification:** Empirical Protocol Research, Cryptoeconomics & Open Science  
+**Data Repository:** [`werracle_oev_empirical_dataset_2026.json`](file:///c:/Users/maat/Documents/antigravity/wonderful-raman/data/werracle_oev_empirical_dataset_2026.json)  
+**Live Observatory:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)  
 
 ---
 
