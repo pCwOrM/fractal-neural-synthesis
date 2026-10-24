@@ -31,6 +31,8 @@ Before requesting any grant funding, our desk self-funded, built, and actively d
   *Background:* Order Flow Auctions (OFA), solver game theory, and multi-call receipt analytics.
 - **Bekirhan Dağlı (@bdagli-web)** — Infrastructure & Bare-Metal Engineering  
   *Background:* Co-Founder & Managing Partner, ITouch Systems. Dedicated bare-metal computing resources and 24/7 daemon operations.
+- **Dr. Z. D. (@jesmaat)** — External Academic & Statistical Advisor (Voluntary / Non-funded)  
+  *Background:* Quantitative empirical data modeling, statistical invariants, and academic methodology review.
 
 ---
 

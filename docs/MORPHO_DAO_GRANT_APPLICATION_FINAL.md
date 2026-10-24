@@ -32,6 +32,8 @@ Before requesting any grant funding, our desk self-funded, built, and actively d
   *Profile:* [ORCID: 0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313)
 - **Bekirhan Dağlı (@bdagli-web)** — Infrastructure & Bare-Metal Engineering  
   *Affiliation:* Co-Founder & Managing Partner, ITouch Systems. Dedicated bare-metal computing resources and network infrastructure sponsorship.
+- **Dr. Z. D. (@jesmaat)** — External Academic & Statistical Advisor (Voluntary / Non-funded)  
+  *Background:* Quantitative empirical data modeling, statistical invariants, and academic methodology review.
 
 ---
 
