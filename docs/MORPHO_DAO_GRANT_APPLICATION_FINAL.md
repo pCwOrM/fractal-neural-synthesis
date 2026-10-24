@@ -9,6 +9,7 @@
 **Live Observatory:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)  
 **Live Telemetry API:** [https://api.werracle.com/v1/radar/overview](https://api.werracle.com/v1/radar/overview) | [/v1/radar/oev-analytics](https://api.werracle.com/v1/radar/oev-analytics)  
 **Citable Empirical Research DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Zenodo Record: [23623589](https://zenodo.org/records/23623589))  
+**Hugging Face Dataset:** [https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
 **Empirical Paper:** [`docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md`](https://github.com/pCwOrM/werracle/blob/main/docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md)  
 
 ---
@@ -58,6 +59,8 @@ Prior to requesting grant funding, Werracle developed, deployed, and validated t
 ### 3.2 Audited Empirical Dataset (October 12–19, 2026 Baseline)
 - **Public API:** `GET https://api.werracle.com/v1/radar/overview`  
 - **Dataset Endpoint:** `GET https://radar.werracle.com/v1/radar/dataset`  
+- **Zenodo DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Record: `23623589`)
+- **Hugging Face Hub:** [`pCwOrM/werracle-oev-liquidation-dataset-2026`](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026) (Interactive Table Viewer & `load_dataset`)  
 - **Audited Metrics:**
   - **Gross Liquidated Value:** $190,506.31 USD across 105 Base SVR events.
   - **Protocol Recaptured Bids:** **$186,889.85 USD (98.10% recapture rate)**.
