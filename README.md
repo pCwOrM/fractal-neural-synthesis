@@ -637,5 +637,5 @@ This research into Zero-Storage Fractal Neural Synthesis and Orbital Error Dynam
 | **Official Wallet (Binance)** | TRC20 (TRON) | `TLMhaDJTVYBHBSGJ9nCQGLvqnYFPSBgLJu` |
 | **Official Corporate Entity** | Teknokent | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. (Çukurova Teknokent) |
 
-* **Official Contacts:** `info@itouch.com.tr` (Corporate) | `pcworm@pcworm.net` (Lead Research) | `ask@answerr.me` (Autonomous Agent) | Web: `https://answerr.me`
+* **Official Contacts:** `ask@answerr.me` (Official Inquiries & AI Agent) | `info@itouch.com.tr` (Corporate) | Web: `https://answerr.me`
 
