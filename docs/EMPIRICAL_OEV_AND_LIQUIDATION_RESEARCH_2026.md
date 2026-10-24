@@ -113,6 +113,62 @@ xychart-beta
 
 The empirical data demonstrates that competitive bidding among permissionless solvers compresses margins to near zero, transferring virtually all available liquidation surplus to the protocol.
 
+### 3.3 Solver Decentralization & The Absence of Monopolistic Capture
+
+A critical governance concern for lending protocols is whether order flow auctions create monopolistic solver moats or cartels. Our on-chain decoding of all 105 Base SVR events identified **20 unique solver contract architectures** and **27 unique signing EOAs**:
+
+| Solver Contract | Tx Count | Gross Liquidated Vol | Share of Total Vol (%) | Pre-Swap Net PnL |
+| :--- | :--- | :--- | :--- | :--- |
+| `0x8b61...8472` | 51 | \$60,269.18 | 31.64% | +\$447.20 |
+| `0x3ae5...1bba` | 6 | \$53,452.63 | 28.06% | +\$1,968.45 |
+| `0xbd0d...0005` | 4 | \$33,057.97 | 17.35% | +\$620.40 |
+| `0xd128...4b3f` | 15 | \$17,842.90 | 9.37% | +\$182.15 |
+| `0xa3ee...9a93` | 1 | \$8,705.60 | 4.57% | +\$212.80 |
+| *Other 15 Solvers* | 28 | \$17,178.03 | 9.01% | +\$114.73 |
+
+**Key Takeaways:**
+1. **No Monopolistic Monopoly:** While solver `0x8b61...` won 48.6% of transaction counts (frequently winning micro-liquidations), it accounted for only **31.64%** of gross dollar volume.
+2. **Aggressive Bertrand Pressure:** Large-ticket liquidations were vigorously contested by solvers `0x3ae5...` and `0xbd0d...`, driving protocol bids above 95% on major positions.
+
+### 3.4 Multi-Call Liquidation Bundling Dynamics
+
+Naive indexers that evaluate only single liquidation log receipts severely misinterpret SVR mechanics. On Base:
+- **68 of 105 transactions (64.8%)** were bundled multi-calls containing $> 1$ liquidation sub-call.
+- Single transactions executed up to **32 liquidation sub-calls** atomically in a single block.
+- **Sub-call Distribution:** 1 call: 37 txs (35.2%), 2 calls: 14 txs (13.3%), 3 calls: 12 txs (11.4%), 15 calls: 8 txs (7.6%), 4 calls: 7 txs (6.7%), 6 calls: 5 txs (4.8%).
+
+Decoding the multi-call execution graph is essential to accurately measure collateral seized vs. debt repaid across atomic bundles.
+
+### 3.5 Market Exposure Distribution & Empirical Case Studies
+
+Across the 83 monitored Morpho markets on Base, liquidation activity during the October 12–19 volatility window was heavily concentrated in specific collateral assets:
+
+| Collateral / Loan Market | SVR Tx Count | Gross Liquidated Vol ($) | Share of Volume (%) |
+| :--- | :--- | :--- | :--- |
+| **`cbXRP/USDC`** | 10 | \$88,801.33 | 46.61% |
+| **`SOL/USDC`** | 8 | \$27,790.95 | 14.59% |
+| **`cbLTC/USDC`** | 8 | \$17,056.41 | 8.95% |
+| **`WETH/USDC`** | 9 | \$14,907.65 | 7.82% |
+| **`cbADA/USDC`** | 11 | \$10,488.43 | 5.51% |
+| **`JitoSOL/USDC`** | 9 | \$8,613.92 | 4.52% |
+| **`USDC/WETH`** | 10 | \$7,897.73 | 4.15% |
+| **`cbDOGE/USDC`** | 12 | \$6,785.99 | 3.56% |
+| **`cbZEC/USDC`** | 13 | \$3,641.44 | 1.91% |
+| *Other Markets* | 15 | \$4,522.46 | 2.38% |
+
+#### Flagship Empirical Case Studies:
+- **Case Study A (Largest Multi-Call Bundle):** Tx `0xc0a51904f3bd704512b5c502e3812e7568cbbe6191c8110b4aa110899c26c1f9`  
+  - *Market:* `cbXRP/USDC` | *Sub-calls:* 32 bundled liquidations.  
+  - *Gross Collateral Seized:* **\$20,969.08**  
+  - *Protocol Recaptured Bid:* **\$19,979.88 (95.28%)**  
+  - *Solver Pre-Swap Margin:* **\$988.81 (4.72%)**  
+  - *Demonstration:* Proves that massive multi-call liquidations safely return $> 95\%$ of value to vault depositors under automated SVR auctions.
+- **Case Study B (Winner's Curse & Overbidding):** Tx `0x76a4c8ed78f4c3...`  
+  - *Market:* `cbXRP/USDC` | *Gross Collateral:* **\$18,539.32**  
+  - *Protocol Recaptured Bid:* **\$19,056.49 (102.79%)**  
+  - *Solver Pre-Swap Loss:* **-\$522.48 (-2.82%)**  
+  - *Demonstration:* In hyper-competitive bidding wars, solvers occasionally submit bids exceeding 100% of collateral value, absorbing the financial loss while depositors receive a net bonus.
+
 ---
 
 ## 4. Theoretical Proposal: Pre-Emptive Position Protection (Hypothesis)
