@@ -24,16 +24,13 @@ Before requesting any grant funding, our desk self-funded, built, and actively d
 ---
 
 ### Leading Contributor(s):
-- **Volkan Dağlı** (Systems Architect & Lead Researcher)  
+- **Volkan Dağlı (@pcworm)** — Systems Architect & Lead Researcher (ITouch Systems)  
   *Background:* Systems programming, high-frequency distributed telemetry, and formal verification in Lean 4.  
   *Profiles:* [GitHub](https://github.com/pCwOrM) | [ORCID: 0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) | [Twitter/X](https://x.com/pcworm)
-- **Zerrin Dağlı** (Research Co-Author & Statistical Analyst)  
-  *Affiliation:* Mersin University & YKAL. Specialist in empirical data modeling and risk metrics.  
-  *Profile:* [ORCID: 0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
-- **Dağhan Dağlı** (Research Co-Author & Cryptoeconomic Analyst)  
+- **Dağhan Dağlı (@lexovian)** — Cryptoeconomic & MEV Researcher  
   *Affiliation:* Toros Science High School / Toros University MEV Research. Focus on Order Flow Auctions (OFA) and solver game theory.  
   *Profile:* [ORCID: 0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313)
-- **Bekirhan Dağlı** (Infrastructure Sponsor & Contributor)  
+- **Bekirhan Dağlı (@bdagli-web)** — Infrastructure & Bare-Metal Engineering  
   *Affiliation:* Co-Founder & Managing Partner, ITouch Systems. Dedicated bare-metal computing resources and network infrastructure sponsorship.
 
 ---
