@@ -6,6 +6,7 @@
   <strong>Document ID:</strong> <code>WERRACLE-RES-2026-001-REV2</code> &bull; <strong>Date:</strong> October 24, 2026<br/>
   <strong>Lead Authors:</strong> Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı<br/>
   <strong>Infrastructure &amp; Contributor Attribution:</strong> Bekirhan Dağlı (ITouch Systems Research Desk, Adana Çukurova Teknokent, Türkiye)<br/>
+  <strong>Hugging Face Dataset Hub:</strong> <a href="https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026" target="_blank" rel="noopener">pCwOrM/werracle-oev-liquidation-dataset-2026</a> (Interactive Table Viewer &amp; Python <code>load_dataset</code>)<br/>
   <strong>Live Surveillance Observatory:</strong> <a href="https://radar.werracle.com" target="_blank" rel="noopener">radar.werracle.com</a> | <a href="https://werracle.io/radar.html" target="_blank" rel="noopener">werracle.io/radar.html</a> | <a href="https://api.werracle.com/v1/radar/overview" target="_blank" rel="noopener">JSON Telemetry API</a>
 </p>
 
@@ -89,17 +90,23 @@
 
 <h3>Reproduction &amp; Verification Instructions</h3>
 
-<p>Any researcher or peer reviewer can independently certify the mathematical and statistical findings with Python 3:</p>
+<p>The empirical dataset can be accessed interactively via Hugging Face or verified locally from the archive:</p>
 
 <pre style="background: #0f172a; color: #f8fafc; padding: 12px; border-radius: 6px; overflow-x: auto;">
-# 1. Clone repository or unzip package
+# Method A: Instant Load via Hugging Face Datasets (Python)
+from datasets import load_dataset
+svr = load_dataset("pCwOrM/werracle-oev-liquidation-dataset-2026", "svr_liquidations")
+l1 = load_dataset("pCwOrM/werracle-oev-liquidation-dataset-2026", "l1_liquidations")
+print("Loaded SVR records:", len(svr["train"]), "| L1 records:", len(l1["train"]))
+
+# Method B: Local Independent Audit from Zip Package
 unzip zenodo_bundle_oev_liquidation_empirical_research.zip
 cd zenodo_bundle_oev_liquidation_empirical_research
 
-# 2. Run automated verification suite
+# Run automated verification suite (certifies 15/15 mathematical invariants)
 python scripts/verify_dataset_metrics.py
 
-# 3. Inspect multi-call atomic bundles and case studies
+# Inspect multi-call atomic bundles and case studies
 python scripts/audit_multicall_bundle.py
 </pre>
 

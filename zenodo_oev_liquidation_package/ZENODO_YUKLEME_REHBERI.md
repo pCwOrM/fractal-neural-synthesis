@@ -1,96 +1,57 @@
-# CERN Zenodo Yükleme ve Yayın Rehberi
+# CERN Zenodo Güncelleme (Edit) ve Yayın Rehberi
 ## Empirical OEV & Liquidation Dynamics: 98.10% Value Recapture in Chainlink SVR Auctions and Structural MEV Power-Law Distribution on Ethereum L1
 
-Bu rehber, **Base L2 Chainlink SVR**, **Morpho Blue** ve **Ethereum L1 MEV-Boost** sistemleri üzerinde 1.157 doğrulanmış işlemle gerçekleştirdiğimiz ampirik araştırmayı **CERN Zenodo** üzerinde açık bilim standardında kalıcı bir **DOI** ile tescillemeniz için hazırlanmıştır.
+**Canlı Zenodo Kaydı:** [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589)  
+**Çatı DOI:** [`https://doi.org/10.5281/zenodo.23623588`](https://doi.org/10.5281/zenodo.23623588)  
+**Hugging Face Dataset:** [https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)
 
 ---
 
-### 📦 Zenodo Paket Klasörü & Dosya Ayrımı
-**Klasör Yolu:** `c:\Users\maat\Documents\antigravity\wonderful-raman\zenodo_oev_liquidation_package\`
+## ⚡ 1. Stratejik Karar: Neden "Yeni Versiyon" Değil de "Edit" (Düzenleme)?
 
-* **Zenodo'ya Yüklenecek Dosyalar (Web Arayüzüne Sürüklenecekler):**
-  1. `Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf` *(Doğrudan tarayıcıda önizlenecek 3 sayfalık kamera-hazır akademik monograf)*
-  2. `EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md` *(Markdown monograf)*
-  3. `zenodo_bundle_oev_liquidation_empirical_research.zip` *(1.157 kayıtlı veri setini, doğrulama scriptlerini ve SHA-256 özetlerini içeren temiz arşiv)*
-* **Yardımcı Yerel Dosyalar (Yüklenmez, size rehberlik eder):**
-  * `.zenodo.json` *(Zenodo API üstveri şeması)*
-  * `zenodo_description.html` *(Açıklama alanına yapıştırılacak zengin HTML)*
-  * `ZENODO_YUKLEME_REHBERI.md` *(Bu rehber)*
+> [!IMPORTANT]
+> **En İdeal ve Temiz Bilimsel Karar: Mevcut kaydı "Edit" (Düzenle) yaparak güncellemektir.**
+
+1. **DOI Değişmez:** Zenodo'da kayıtlı bir yayını "Edit" yaptığınızda metadata (açıklama metni, ilişkili linkler) güncellenir ancak **DOI numarası (`10.5281/zenodo.23623588` / `23623589`) birebir aynı kalır**.
+2. **Versiyon Karmaşası Önlenir:** Hibe başvurumuzda, GitHub repomuzda ve Hugging Face kartımızda bu DOI tescillenmiştir. Yeni versiyon (Version 2) çıkarmak gereksiz bir alt-DOI türetir; oysa dosyalarımız (PDF monograf, JSON veri seti, doğrulama kodları) zaten sıfır hatalıdır.
+3. **DataCite Standartlarına Tam Uyum:** Zenodo kurallarına göre dosya değişimi gerekmedikçe harici veri platformu bağlantıları (Hugging Face vb.) metadata düzenlemesiyle aynı kayda eklenir.
 
 ---
 
-### 🚀 Adım Adım Yükleme Talimatı
+## 🛠️ 2. Zenodo'yu 2 Dakikada Güncelleme Adımları
 
-#### Adım 1: Zenodo'ya Giriş Yapın
-1. Tarayıcınızda [https://zenodo.org/deposit/new](https://zenodo.org/deposit/new) adresine gidin.
-2. Giriş yapın (GitHub veya ORCID ile).
+### Adım 1: Kayıt Sayfasına Gidin ve "Edit"e Basın
+1. Tarayıcınızda doğrudan şu linki açın:  
+   👉 [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589)
+2. Giriş yapmış durumdayken sağ üstte yer alan turuncu **"Edit"** (Düzenle) butonuna tıklayın.
 
-#### Adım 2: Dosyaları Yükleyin
-`zenodo_oev_liquidation_package` klasöründeki şu 3 dosyayı sürükleyip bırakın:
-* `Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf`
-* `EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md`
-* `zenodo_bundle_oev_liquidation_empirical_research.zip`
+### Adım 2: Description (Açıklama) Kutusunu Güncelleyin
+1. Klasördeki `zenodo_oev_liquidation_package/zenodo_description.html` dosyasının içeriğini kopyalayın.
+2. Zenodo düzenleme sayfasındaki **Description** alanını silip bu güncel HTML metnini yapıştırın.  
+   *(Bu metin tepeye Hugging Face interaktif bağlantısını ve Python kullanım örneğini ekler).*
 
-#### Adım 3: Temel Üstveri Bilgilerini Doldurun
-
-* **Resource type:**  
-  * Type: `Dataset` *(veya Publication > Preprint)*
-
-* **Title (Başlık):**  
+### Adım 3: Related Identifiers (İlişkili Bağlantılar) Alanına Hugging Face'i Ekleyin
+Sayfayı aşağı kaydırıp **Related works / identifiers** bölümüne gelin:
+* **Identifier:**  
   ```text
-  Empirical OEV & Liquidation Dynamics: 98.10% Value Recapture in Chainlink SVR Auctions and Structural MEV Power-Law Distribution on Ethereum L1
+  https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026
   ```
+* **Relation:** `is supplemented by this resource` (veya `isSupplementedBy`)
+* **Resource type:** `Dataset`
 
-* **Publication Date:** `2026-10-24`
+*(Mevcut GitHub ve diğer linkler kalmaya devam edecektir).*
 
-* **Creators (Yazarlar - Tam Akademik Künye):**
-  1. Family name: `Dağlı`, Given names: `Volkan`  
-     * Affiliation: `Anadolu University, Eskişehir, Türkiye & ITouch Systems, Adana, Türkiye`  
-     * ORCID: `0009-0000-1587-8703`
-  2. Family name: `Dağlı`, Given names: `Zerrin`  
-     * Affiliation: `Mersin University, Mersin, Türkiye & Yusuf Kalkavan Anadolu Lisesi, Mersin, Türkiye`  
-     * ORCID: `0000-0001-9490-6425`
-  3. Family name: `Dağlı`, Given names: `Dağhan`  
-     * Affiliation: `Toros Science High School, MEV (Toros University), Mersin, Türkiye`  
-     * ORCID: `0009-0003-2492-8313`
-
-* **Contributors (Katkıda Bulunanlar / Altyapı Desteği):**
-  1. Family name: `Dağlı`, Given names: `Bekirhan`  
-     * Affiliation: `ITouch Systems, Adana, Türkiye`  
-     * Contributor type: `Other` *(veya HostingInstitution / DataCollector)*
-
-* **Description (Açıklama):**  
-  Klasördeki `zenodo_description.html` dosyasının içeriğini kopyalayıp Zenodo'nun **Description** kutusuna yapıştırın.
-
-* **License:**  
-  `Creative Commons Attribution 4.0 International (CC-BY-4.0)`
-
-* **Keywords (Anahtar Kelimeler):**  
-  ```text
-  DeFi Liquidations, Oracle Extractable Value (OEV), Chainlink SVR, Morpho Blue, Order Flow Auctions (OFA), Maximal Extractable Value (MEV), Proposer-Builder Separation (PBS), Bertrand Competition, Multi-Call Decoding, Base L2, Ethereum L1, Open Science, Werracle
-  ```
-
-* **Related Identifiers (İlişkili Bağlantılar):**
-  * `https://github.com/pCwOrM/werracle` &rarr; `isSupplementTo` (Software)
-  * `https://radar.werracle.com` &rarr; `isDocumentedBy` (Other)
-  * `https://werracle.io/radar.html` &rarr; `isDocumentedBy` (Other)
-  * `https://api.werracle.com/v1/radar/overview` &rarr; `isDocumentedBy` (Other)
-  * `10.5281/zenodo.22939253` &rarr; `cites` (Dataset)
+### Adım 4: Kaydedin ve Yayınlayın (Publish)
+1. Sayfanın en üstündeki **"Save"** (Kaydet) butonuna basın.
+2. Ardından **"Publish"** (Yayınla) butonuna basarak onaylayın.
+3. Zenodo sayfanız anında güncellenecek, DOI numaranız hiç bozulmadan hem CERN arşivinde hem de Hugging Face'te birbirine çift taraflı bağlanmış olacaktır!
 
 ---
 
-#### Adım 4: Kaydedin ve Yayınlayın (Publish)
-1. Sayfanın en altındaki veya üstündeki **Save** (Taslağı Kaydet) butonuna basın.
-2. Bilgilerin doğruluğunu kontrol edin.
-3. **Publish** butonuna basarak yayını onaylayın.
-4. Zenodo size anında kalıcı bir DOI tahsis edecektir: `10.5281/zenodo.XXXXXXX`.
+## 📦 Dosya Bilgileri & Arşiv Özeti (Referans)
 
----
-
-### 🎯 Adım 5: Alınan DOI'nin Hibe Başvurusuna Entegrasyonu
-DOI tahsis edildiğinde, [`docs/MORPHO_DAO_GRANT_APPLICATION_FINAL.md`](file:///c:/Users/maat/Documents/antigravity/wonderful-raman/docs/MORPHO_DAO_GRANT_APPLICATION_FINAL.md) dosyasındaki ilgili satırı güncelleyeceğiz:
-```markdown
-**Citable Research DOI:** https://doi.org/10.5281/zenodo.XXXXXXX
-**Zenodo Open Science Archive:** https://zenodo.org/records/XXXXXXX
-```
-Ve başvurumuz, arkasında uluslararası CERN/Zenodo tescilli kalıcı akademik bir makaleyle Morpho DAO forumuna sunulacaktır!
+* `Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf` (3 sayfalık kamera-hazır PDF)
+* `EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md` (Markdown monograf)
+* `zenodo_bundle_oev_liquidation_empirical_research.zip` (184 KB)
+* `data/werracle_oev_empirical_dataset_2026.json` (1.157 doğrulanmış işlem)
+* `scripts/verify_dataset_metrics.py` (15 ampirik değişmez testi)

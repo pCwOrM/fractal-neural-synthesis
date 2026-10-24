@@ -9,7 +9,7 @@
 **Publication Date:** October 24, 2026  
 **Document ID:** `WERRACLE-RES-2026-001-REV2`  
 **Classification:** Empirical Protocol Research, Cryptoeconomics & Open Science  
-**Data Repository:** [`werracle_oev_empirical_dataset_2026.json`](file:///c:/Users/maat/Documents/antigravity/wonderful-raman/data/werracle_oev_empirical_dataset_2026.json)  
+**Data Repository:** [`werracle_oev_empirical_dataset_2026.json`](file:///c:/Users/maat/Documents/antigravity/wonderful-raman/data/werracle_oev_empirical_dataset_2026.json) | [Hugging Face Hub](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
 **Live Observatory:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)  
 
 ---
