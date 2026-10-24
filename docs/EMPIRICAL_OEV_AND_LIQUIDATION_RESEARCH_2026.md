@@ -8,6 +8,7 @@
 **Infrastructure & Contributor Attribution:** Bekirhan Dağlı (ITouch Systems, Adana Çukurova Teknokent)  
 **Publication Date:** October 24, 2026  
 **Document ID:** `WERRACLE-RES-2026-001-REV2`  
+**Permanent DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Zenodo Archive: [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589))  
 **Classification:** Empirical Protocol Research, Cryptoeconomics & Open Science  
 **Data Repository:** [`werracle_oev_empirical_dataset_2026.json`](file:///c:/Users/maat/Documents/antigravity/wonderful-raman/data/werracle_oev_empirical_dataset_2026.json)  
 **Live Observatory:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)  

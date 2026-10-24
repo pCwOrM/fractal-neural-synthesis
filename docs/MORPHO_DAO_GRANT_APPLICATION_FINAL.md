@@ -8,6 +8,7 @@
 **Repository:** [https://github.com/pCwOrM/werracle](https://github.com/pCwOrM/werracle)  
 **Live Observatory:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)  
 **Live Telemetry API:** [https://api.werracle.com/v1/radar/overview](https://api.werracle.com/v1/radar/overview) | [/v1/radar/oev-analytics](https://api.werracle.com/v1/radar/oev-analytics)  
+**Citable Empirical Research DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Zenodo Record: [23623589](https://zenodo.org/records/23623589))  
 **Empirical Paper:** [`docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md`](https://github.com/pCwOrM/werracle/blob/main/docs/EMPIRICAL_OEV_AND_LIQUIDATION_RESEARCH_2026.md)  
 
 ---
@@ -144,6 +145,8 @@ We request a total grant of **15,000 USDC**, distributed according to milestone 
 
 ## 7. Verification & Community Links
 
+- **Citable Research DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588)  
+- **Zenodo Open Science Archive:** [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589)  
 - **Web Dashboard:** [https://radar.werracle.com](https://radar.werracle.com)  
 - **Public Good Portal:** [https://werracle.io/radar.html](https://werracle.io/radar.html)  
 - **Live JSON Overview:** [https://api.werracle.com/v1/radar/overview](https://api.werracle.com/v1/radar/overview)  
