@@ -212,7 +212,7 @@ def build_pdf(filename):
 
     # Title & Subtitle
     story.append(Paragraph("Empirical OEV & Liquidation Dynamics: Protocol Value Recapture in Chainlink SVR and Structural Centralization on Ethereum L1", title_style))
-    story.append(Paragraph("An Open Science Microstructure Audit Across 1,157 On-Chain Liquidations (Document ID: WERRACLE-RES-2026-001-REV2)", subtitle_style))
+    story.append(Paragraph("An Open Science Microstructure Audit Across 1,157 On-Chain Liquidations &bull; CERN Zenodo DOI: 10.5281/zenodo.23623588", subtitle_style))
     
     # Authors
     authors_text = "<b>Volkan Dağlı</b><sup>1,2</sup> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Zerrin Dağlı</b><sup>3,4</sup> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Dağhan Dağlı</b><sup>5</sup>"
@@ -398,8 +398,9 @@ def build_pdf(filename):
     story.append(Paragraph(
         "<b>Scope Boundaries:</b> (1) Base measurements reflect the acute volatility regime of October 12–19, 2026. (2) Realized solver net profit is lower than reported pre-swap margin "
         "due to DEX swap slippage and price impact. (3) L1 measurements quantify MEV-Boost priority payments to builders, not gross collateral volume.<br/>"
-        "<b>Open Science Reproducibility:</b> The complete JSON dataset (1,157 records) and automated verification scripts are included in this Zenodo archive. "
-        "Executing `python scripts/verify_dataset_metrics.py` mechanically certifies all 15 core empirical invariants in under two seconds.",
+        "<b>Open Science Reproducibility:</b> The complete JSON dataset (1,157 records) and automated verification scripts are permanently archived on CERN Zenodo "
+        "(DOI: 10.5281/zenodo.23623588, Record: 23623589) and mirrored on Hugging Face Datasets (pCwOrM/werracle-oev-liquidation-dataset-2026). "
+        "Live network surveillance is open at https://radar.werracle.com. Executing `python scripts/verify_dataset_metrics.py` mechanically certifies all 15 core empirical invariants in under two seconds.",
         body_style
     ))
 
@@ -412,5 +413,17 @@ def build_pdf(filename):
     print(f"Successfully built camera-ready PDF: {filename}")
 
 if __name__ == '__main__':
-    out_pdf = os.path.join(os.path.dirname(__file__), "..", "zenodo_oev_liquidation_package", "Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf")
-    build_pdf(out_pdf)
+    base_dir = os.path.dirname(__file__)
+    zenodo_pkg = os.path.join(base_dir, "..", "zenodo_oev_liquidation_package")
+    ssrn_pkg = os.path.join(base_dir, "..", "ssrn_oev_liquidation_package")
+    
+    os.makedirs(zenodo_pkg, exist_ok=True)
+    os.makedirs(ssrn_pkg, exist_ok=True)
+    
+    out_zenodo = os.path.join(zenodo_pkg, "Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf")
+    out_ssrn = os.path.join(ssrn_pkg, "Empirical_OEV_and_Liquidation_Dynamics_Research_Monograph.pdf")
+    
+    build_pdf(out_zenodo)
+    import shutil
+    shutil.copy2(out_zenodo, out_ssrn)
+    print(f"Copied camera-ready PDF to SSRN package: {out_ssrn}")
