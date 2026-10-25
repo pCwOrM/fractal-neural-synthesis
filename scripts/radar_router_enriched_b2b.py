@@ -1,9 +1,10 @@
 """
-Werracle OEV & HF Liquidation Radar API Router (B2B DaaS Production Edition)
+Werracle OEV & HF Liquidation Radar API Router (B2B DaaS Production Edition v2.0)
 FastAPI Router for answerr-api (/v1/radar)
 Provides verified, independent on-chain analytics for Chainlink Smart Value Recapture (SVR),
 real-time Health Factor (HF) risk surveillance across 83 Morpho markets ($2.59B debt),
 and specialized MetaMorpho Vault Curator stress-testing.
+All baseline metrics are mathematically re-derived on-chain from dataset v1.2.
 """
 
 import os
@@ -28,7 +29,7 @@ SVR_VERIFIED = os.path.join(BASE_DIR, "svr_marj_dogrulanmis.json")
 LIQUIDATIONS_FILE = os.path.join(BASE_DIR, "liquidations.jsonl")
 
 RESEARCH_DIR = "/opt/apps/werracle/research"
-EMPIRICAL_DATASET = os.path.join(RESEARCH_DIR, "werracle_oev_empirical_dataset_2026.json")
+EMPIRICAL_DATASET = os.path.join(RESEARCH_DIR, "werracle_oev_empirical_dataset_2026_v1.2.json")
 
 # In-memory TTL Cache (3 seconds)
 _CACHE: Dict[str, Any] = {}
@@ -95,15 +96,25 @@ def _require_auth(request: Request, allowed_tiers: List[str] = ["pro", "institut
     return auth
 
 
-# Baseline Audited Findings
+# ==============================================================================
+# VERIFIED BASELINE ON-CHAIN FINDINGS (Dataset v1.2 / All 54 Checks Passed)
+# ==============================================================================
 BASE_AUDITED_SVR_EVENTS = 105
-BASE_AUDITED_GROSS_USD = 190506.31
-BASE_PROTOCOL_CAPTURE_PCT = 98.10
-BASE_PROTOCOL_BIDS_USD = 186889.85
-BASE_SOLVER_PRE_SWAP_MARGIN_PCT = 1.86
-BASE_SOLVER_PRE_SWAP_NET_USD = 3545.73
-BASE_MEDIAN_MARGIN_PCT = -1.55
-BASE_BREAKEVEN_OR_SUBZERO_PCT = 61.90
+BASE_TOTAL_DEBT_REPAID_USD = 1898755.19
+BASE_LIQUIDATION_INCENTIVE_USD = 190506.31
+BASE_PROTOCOL_BIDS_USD = 179807.38
+BASE_PROTOCOL_CAPTURE_PCT = 94.38
+BASE_MEDIAN_TX_CAPTURE_PCT = 98.30
+BASE_SOLVER_ORACLE_MARGIN_PCT = 5.58
+BASE_MEDIAN_TX_MARGIN_PCT = 1.26
+BASE_NONPOSITIVE_MARGIN_TX = 33
+BASE_SOLVER_CONTRACTS_COUNT = 17
+BASE_TOP3_SOLVER_SHARE_PCT = 77.05
+BASE_HHI = 2216
+
+L1_TOTAL_BUILDER_PAYMENTS_USD = 366112.89
+L1_MEDIAN_PAYMENT_USD = 0.09
+L1_TOP22_SHARE_PCT = 95.94
 
 
 # ==========================================
@@ -169,7 +180,7 @@ def verify_api_key(request: Request):
 # 2. CORE PUBLIC GOOD ENDPOINTS (FREE)
 # ==========================================
 
-@radar_router.get("/overview", summary="Verified OEV & Liquidation Surveillance Overview")
+@radar_router.get("/overview", summary="Verified OEV & Liquidation Surveillance Overview (v2.0)")
 def get_radar_overview():
     morpho_st = _get_cached_json(MORPHO_DURUM, {})
     l1_st = _get_cached_json(L1_DURUM, {})
@@ -181,6 +192,7 @@ def get_radar_overview():
     return {
         "protocol": "Werracle Reflex Decision Engine",
         "service": "Cross-Chain OEV & High-Frequency Liquidation Risk Radar",
+        "version": "v2.0 (Re-derived on-chain from dataset v1.2)",
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "status": "OPERATIONAL",
         "peer_review_references": {
@@ -192,12 +204,19 @@ def get_radar_overview():
         },
         "verified_svr_baseline": {
             "audited_events_count": BASE_AUDITED_SVR_EVENTS,
-            "gross_liquidation_volume_usd": BASE_AUDITED_GROSS_USD,
-            "protocol_recapture_rate_pct": BASE_PROTOCOL_CAPTURE_PCT,
-            "protocol_bids_usd": BASE_PROTOCOL_BIDS_USD,
-            "solver_pre_swap_net_margin_pct": BASE_SOLVER_PRE_SWAP_MARGIN_PCT,
-            "solver_median_net_margin_pct": BASE_MEDIAN_MARGIN_PCT,
-            "breakeven_or_subzero_events_pct": BASE_BREAKEVEN_OR_SUBZERO_PCT
+            "sample_venues": {"morpho_blue": 86, "aave_v3": 19},
+            "total_liquidations_in_sample": 513,
+            "total_debt_repaid_usd": BASE_TOTAL_DEBT_REPAID_USD,
+            "liquidation_incentive_oev_usd": BASE_LIQUIDATION_INCENTIVE_USD,
+            "protocol_captured_bids_usd": BASE_PROTOCOL_BIDS_USD,
+            "protocol_capture_rate_pct": BASE_PROTOCOL_CAPTURE_PCT,
+            "median_tx_bid_share_pct": BASE_MEDIAN_TX_CAPTURE_PCT,
+            "solver_margin_oracle_pct": BASE_SOLVER_ORACLE_MARGIN_PCT,
+            "median_tx_solver_margin_pct": BASE_MEDIAN_TX_MARGIN_PCT,
+            "nonpositive_margin_tx_count": BASE_NONPOSITIVE_MARGIN_TX,
+            "competition_status": f"{BASE_SOLVER_CONTRACTS_COUNT} winning solver contracts; top-3 = {BASE_TOP3_SOLVER_SHARE_PCT}% of incentive (HHI {BASE_HHI})",
+            "timeframe": "Base 2–22 Oct 2026 (87/105 tx in 12–18 Oct); Ethereum L1 22 Sep–22 Oct 2026",
+            "recapture_mechanism": "Bids accrue to SVR proceeds contracts shared between protocol and Chainlink"
         },
         "realtime_surveillance": {
             "base_l2": {
@@ -221,13 +240,15 @@ def get_radar_overview():
                 "chain_id": 1,
                 "status": l1_st.get("status", "ACTIVE"),
                 "tracked_liquidations": l1_st.get("toplam_likidasyon", 1049),
-                "builder_centralization_top3_pct": 89.2
+                "builder_payments_total_usd": L1_TOTAL_BUILDER_PAYMENTS_USD,
+                "median_builder_payment_usd": L1_MEDIAN_PAYMENT_USD,
+                "top22_transactions_share_pct": L1_TOP22_SHARE_PCT
             }
         }
     }
 
 
-@radar_router.get("/chains", summary="Multi-Chain OEV Capture Breakdown")
+@radar_router.get("/chains", summary="Multi-Chain OEV Capture Breakdown (v2.0)")
 def get_chain_breakdown():
     return {
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -237,19 +258,22 @@ def get_chain_breakdown():
                 "chain_id": 8453,
                 "oev_mechanism": "Chainlink Smart Value Recapture (SVR / Atlas)",
                 "verified_events_in_corpus": 105,
-                "gross_volume_usd": 190506.31,
-                "protocol_recapture_pct": 98.10,
-                "solver_net_margin_pct": 1.86,
-                "primary_recapture_beneficiary": "Protocol Vault / DAO Treasury"
+                "total_debt_repaid_usd": BASE_TOTAL_DEBT_REPAID_USD,
+                "liquidation_incentive_oev_usd": BASE_LIQUIDATION_INCENTIVE_USD,
+                "protocol_recapture_pct": BASE_PROTOCOL_CAPTURE_PCT,
+                "median_tx_recapture_pct": BASE_MEDIAN_TX_CAPTURE_PCT,
+                "solver_oracle_margin_pct": BASE_SOLVER_ORACLE_MARGIN_PCT,
+                "primary_recapture_beneficiary": "SVR Proceeds Contracts (Protocol DAO & Chainlink)"
             },
             {
                 "chain": "ethereum_l1",
                 "chain_id": 1,
                 "oev_mechanism": "PBS / Flashbots MEV-Boost & Builder Priority Fees",
                 "verified_events_in_corpus": 1049,
-                "gross_volume_usd": 4128500.00,
+                "builder_payments_total_usd": L1_TOTAL_BUILDER_PAYMENTS_USD,
                 "protocol_recapture_pct": 0.0,
-                "builder_capture_pct": 78.4,
+                "median_builder_payment_usd": L1_MEDIAN_PAYMENT_USD,
+                "top22_transactions_share_pct": L1_TOP22_SHARE_PCT,
                 "primary_recapture_beneficiary": "Block Builders & Proposers (Structural Centralization)"
             },
             {
@@ -273,7 +297,7 @@ def get_dataset_summary():
         return JSONResponse(status_code=503, content={"error": "Empirical dataset not available yet"})
     return {
         "metadata": ds.get("metadata", {}),
-        "empirical_summary": ds.get("empirical_summary", {})
+        "summary": ds.get("summary", {})
     }
 
 
@@ -304,7 +328,6 @@ def get_hot_positions(request: Request, limit: int = Query(25, ge=1, le=1000)):
             "oracle_type": m.get("oracle_tipi", "chainlink_v2")
         }
         if is_pro:
-            # Full borrower addresses and details for Pro & Institutional
             item["borrowers_sample"] = m.get("borclular", [])[:50]
         markets_risk.append(item)
 
@@ -324,43 +347,41 @@ def get_hot_positions(request: Request, limit: int = Query(25, ge=1, le=1000)):
 
 @radar_router.get("/solvers", summary="SVR Solvers & MEV Competition Intelligence (Pro Tier)")
 def get_solvers_intelligence(request: Request, limit: int = Query(50, ge=1, le=200)):
-    # Requires Pro or Institutional
     auth = _require_auth(request, allowed_tiers=["pro", "institutional"])
 
-    svr_data = _get_cached_json(SVR_VERIFIED, [])
+    ds = _get_cached_json(EMPIRICAL_DATASET, {})
+    svr_data = ds.get("svr_liquidations", [])
     
-    # Aggregate solver statistics
     solver_stats: Dict[str, Dict[str, Any]] = {}
     for ev in svr_data:
-        s_contract = ev.get("solver_contract", "Unknown")
-        gross = float(ev.get("gross_usd", 0) or 0)
-        bid = float(ev.get("bid_usd", 0) or 0)
-        profit = float(ev.get("net_profit_usd", 0) or 0)
+        s_contract = ev.get("winning_solver_contract") or ev.get("solver_contract", "Unknown")
+        inc = float(ev.get("liquidation_incentive_usd", 0) or 0)
+        bid = float(ev.get("svr_bid_usd", 0) or 0)
+        margin = float(ev.get("solver_margin_oracle_usd", 0) or 0)
         
         if s_contract not in solver_stats:
             solver_stats[s_contract] = {
                 "solver_contract": s_contract,
-                "solver_signer": ev.get("solver_signer"),
                 "total_liquidations": 0,
-                "gross_volume_usd": 0.0,
+                "liquidation_incentive_usd": 0.0,
                 "total_bids_usd": 0.0,
-                "net_profit_usd": 0.0,
-                "markets_active": set()
+                "solver_margin_oracle_usd": 0.0,
+                "venues_active": set()
             }
         
         st = solver_stats[s_contract]
         st["total_liquidations"] += 1
-        st["gross_volume_usd"] += gross
+        st["liquidation_incentive_usd"] += inc
         st["total_bids_usd"] += bid
-        st["net_profit_usd"] += profit
-        if ev.get("market"):
-            st["markets_active"].add(ev.get("market"))
+        st["solver_margin_oracle_usd"] += margin
+        if ev.get("venue"):
+            st["venues_active"].add(ev.get("venue"))
 
-    ranked = sorted(solver_stats.values(), key=lambda x: x["gross_volume_usd"], reverse=True)
+    ranked = sorted(solver_stats.values(), key=lambda x: x["liquidation_incentive_usd"], reverse=True)
     for r in ranked:
-        r["markets_active"] = list(r["markets_active"])
-        r["avg_capture_pct"] = round((r["total_bids_usd"] / r["gross_volume_usd"] * 100), 2) if r["gross_volume_usd"] > 0 else 0.0
-        r["avg_net_margin_pct"] = round((r["net_profit_usd"] / r["gross_volume_usd"] * 100), 2) if r["gross_volume_usd"] > 0 else 0.0
+        r["venues_active"] = list(r["venues_active"])
+        r["avg_bid_share_pct"] = round((r["total_bids_usd"] / r["liquidation_incentive_usd"] * 100), 2) if r["liquidation_incentive_usd"] > 0 else 0.0
+        r["avg_margin_pct"] = round((r["solver_margin_oracle_usd"] / r["liquidation_incentive_usd"] * 100), 2) if r["liquidation_incentive_usd"] > 0 else 0.0
 
     return {
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -369,13 +390,13 @@ def get_solvers_intelligence(request: Request, limit: int = Query(50, ge=1, le=2
         "solvers_ranked": ranked[:limit],
         "macro_metrics": {
             "protocol_recapture_rate_pct": BASE_PROTOCOL_CAPTURE_PCT,
-            "median_solver_net_margin_pct": BASE_MEDIAN_MARGIN_PCT,
-            "solver_competition_index": "High (Winner-take-all SVR Dutch auction)"
+            "median_tx_bid_share_pct": BASE_MEDIAN_TX_CAPTURE_PCT,
+            "solver_competition_index": f"Top-3 solvers control {BASE_TOP3_SOLVER_SHARE_PCT}% of incentive (HHI {BASE_HHI})"
         }
     }
 
 
-@radar_router.get("/oev-analytics", summary="OEV & SVR Margin Economics (Verified)")
+@radar_router.get("/oev-analytics", summary="OEV & SVR Margin Economics (Verified v2.0)")
 def get_oev_analytics(request: Request):
     auth = _extract_auth(request)
     is_pro = auth and auth["tier"] in ["pro", "institutional"]
@@ -383,23 +404,25 @@ def get_oev_analytics(request: Request):
     data = {
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "total_verified_events": BASE_AUDITED_SVR_EVENTS,
-        "gross_liquidation_volume_usd": BASE_AUDITED_GROSS_USD,
+        "total_debt_repaid_usd": BASE_TOTAL_DEBT_REPAID_USD,
+        "liquidation_incentive_oev_usd": BASE_LIQUIDATION_INCENTIVE_USD,
+        "protocol_captured_bids_usd": BASE_PROTOCOL_BIDS_USD,
         "protocol_recapture_rate_pct": BASE_PROTOCOL_CAPTURE_PCT,
-        "protocol_bids_usd": BASE_PROTOCOL_BIDS_USD,
-        "solver_pre_swap_net_margin_pct": BASE_SOLVER_PRE_SWAP_MARGIN_PCT,
-        "solver_median_net_margin_pct": BASE_MEDIAN_MARGIN_PCT,
-        "breakeven_or_subzero_events_pct": BASE_BREAKEVEN_OR_SUBZERO_PCT,
+        "median_tx_bid_share_pct": BASE_MEDIAN_TX_CAPTURE_PCT,
+        "solver_oracle_margin_pct": BASE_SOLVER_ORACLE_MARGIN_PCT,
+        "median_tx_solver_margin_pct": BASE_MEDIAN_TX_MARGIN_PCT,
+        "nonpositive_margin_tx_count": BASE_NONPOSITIVE_MARGIN_TX,
         "methodological_boundaries": [
-            "High-volatility primary sample window: Oct 12-19, 2026.",
-            "Protocol recapture represents pre-swap value returned to Morpho Blue markets.",
-            "DEX slippage across pools is excluded from pre-swap margin calculation."
+            "Dataset v1.2: Sample window Base 2–22 Oct 2026; L1 22 Sep–22 Oct 2026.",
+            "Liquidation incentive defined as seized collateral value minus repaid debt, valued at block-oracle prices.",
+            "SVR bids valued at actual on-chain transaction-time ETH prices (not a constant proxy).",
+            "DEX swap slippage across secondary pools is excluded from oracle-price margins."
         ]
     }
 
     if is_pro:
-        # Include full verified events for Pro & Institutional
-        svr_list = _get_cached_json(SVR_VERIFIED, [])
-        data["events_sample"] = svr_list[:100]
+        ds = _get_cached_json(EMPIRICAL_DATASET, {})
+        data["events_sample"] = ds.get("svr_liquidations", [])[:100]
     else:
         data["note"] = "Granular per-transaction event data requires Pro or Institutional API Key."
 
@@ -412,17 +435,14 @@ def get_oev_analytics(request: Request):
 
 @radar_router.get("/curator/{vault_address}", summary="MetaMorpho Vault Risk Surveillance & Stress Testing (Institutional)")
 def get_curator_vault_risk(vault_address: str, request: Request):
-    # Requires Institutional Tier
     auth = _require_auth(request, allowed_tiers=["institutional"])
 
     v_addr = vault_address.strip().lower()
     morpho_st = _get_cached_json(MORPHO_DURUM, {})
     pazarlar_data = _get_cached_json(MORPHO_PAZARLAR, {}).get("pazarlar", [])
 
-    # Filter markets: match vault address or filter all USDC/loan markets
     matched_markets = []
     for m in pazarlar_data:
-        # Match by loan token, collateral or specific vault ID
         if v_addr in ["all", "usdc", "flagship", "steakhouse", "re7"]:
             if m.get("loan_sym") == "USDC":
                 matched_markets.append(m)
@@ -430,36 +450,32 @@ def get_curator_vault_risk(vault_address: str, request: Request):
             matched_markets.append(m)
     
     if not matched_markets:
-        # Fallback to top 20 active markets
         matched_markets = pazarlar_data[:20]
 
     total_debt = sum(float(m.get("borc_usd", 0) or 0) for m in matched_markets)
     total_borrowers = sum(len(m.get("borclular", [])) for m in matched_markets)
     
-    # Stress test scenarios: Projected liquidatable debt under collateral shocks
-    # Base empirical elasticity: 1% drop in collateral price ~ 1.8% of marginal debt crosses LLTV
     simulations = {
         "shock_minus_5pct": {
             "collateral_price_shock_pct": -5.0,
             "projected_liquidatable_debt_usd": round(total_debt * 0.042, 2),
-            "projected_svr_recapture_usd": round(total_debt * 0.042 * 0.981, 2),
+            "projected_svr_recapture_usd": round(total_debt * 0.042 * (BASE_PROTOCOL_CAPTURE_PCT / 100.0), 2),
             "estimated_bad_debt_usd": round(total_debt * 0.0015, 2)
         },
         "shock_minus_10pct": {
             "collateral_price_shock_pct": -10.0,
             "projected_liquidatable_debt_usd": round(total_debt * 0.098, 2),
-            "projected_svr_recapture_usd": round(total_debt * 0.098 * 0.981, 2),
+            "projected_svr_recapture_usd": round(total_debt * 0.098 * (BASE_PROTOCOL_CAPTURE_PCT / 100.0), 2),
             "estimated_bad_debt_usd": round(total_debt * 0.0048, 2)
         },
         "shock_minus_20pct": {
             "collateral_price_shock_pct": -20.0,
             "projected_liquidatable_debt_usd": round(total_debt * 0.245, 2),
-            "projected_svr_recapture_usd": round(total_debt * 0.245 * 0.981, 2),
+            "projected_svr_recapture_usd": round(total_debt * 0.245 * (BASE_PROTOCOL_CAPTURE_PCT / 100.0), 2),
             "estimated_bad_debt_usd": round(total_debt * 0.0162, 2)
         }
     }
 
-    # Vault Risk Score (0 = Completely Safe, 100 = Critical Distress)
     hot_count = morpho_st.get("sicak", 5017)
     bad_debt_count = morpho_st.get("batik_borc", 82)
     risk_score = round(min(100.0, (bad_debt_count * 0.3) + (hot_count / 100.0)), 1)
@@ -486,7 +502,7 @@ def get_curator_vault_risk(vault_address: str, request: Request):
 # 5. INTERACTIVE DASHBOARD (HTML)
 # ==========================================
 
-@radar_router.get("/dashboard", response_class=HTMLResponse, summary="Public Good Dashboard")
+@radar_router.get("/dashboard", response_class=HTMLResponse, summary="Public Good Dashboard (v2.0)")
 def get_radar_dashboard():
     overview = get_radar_overview()
     chains = get_chain_breakdown()["chains"]
@@ -703,7 +719,7 @@ def get_radar_dashboard():
     <div class="container">
         <header>
             <div class="title-group">
-                <h1>Werracle OEV & Liquidation Sensory Radar <span class="badge">Live Production API</span></h1>
+                <h1>Werracle OEV & Liquidation Sensory Radar <span class="badge">Live Production API v2.0</span></h1>
                 <p>Real-time cross-chain liquidation surveillance, Chainlink SVR analytics, and MetaMorpho Risk Telemetry.</p>
             </div>
             <div>
@@ -714,19 +730,19 @@ def get_radar_dashboard():
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-label">SVR Protocol Recapture</div>
+                <div class="stat-label">SVR Recapture Share</div>
                 <div class="stat-val">{BASE_PROTOCOL_CAPTURE_PCT:.1f}%</div>
-                <div class="stat-sub">{BASE_AUDITED_SVR_EVENTS} audited Base SVR events</div>
+                <div class="stat-sub">Median tx: {BASE_MEDIAN_TX_CAPTURE_PCT:.1f}% (${BASE_PROTOCOL_BIDS_USD:,.0f} returned)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Liquidated Debt In Sample</div>
+                <div class="stat-val">${BASE_TOTAL_DEBT_REPAID_USD:,.0f}</div>
+                <div class="stat-sub">OEV Incentive: ${BASE_LIQUIDATION_INCENTIVE_USD:,.0f}</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Monitored Morpho Debt</div>
                 <div class="stat-val">${overview['realtime_surveillance']['base_l2']['total_monitored_debt_usd']:,.0f}</div>
                 <div class="stat-sub">Across 83 Morpho Blue markets</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Tracked Borrowers</div>
-                <div class="stat-val">{overview['realtime_surveillance']['base_l2']['positions_tracked']:,}</div>
-                <div class="stat-sub">{overview['realtime_surveillance']['base_l2']['hot_positions_hf_below_1_10']} at HF &lt; 1.10</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Reflex Decision Speed</div>
@@ -736,7 +752,7 @@ def get_radar_dashboard():
         </div>
 
         <div class="panel">
-            <h2>Multi-Chain Empirical Comparison</h2>
+            <h2>Multi-Chain Empirical Comparison (v2.0)</h2>
             <table>
                 <thead>
                     <tr>
@@ -745,17 +761,17 @@ def get_radar_dashboard():
                         <th>Corpus Events</th>
                         <th>Recapture Mechanism</th>
                         <th>Protocol Recapture</th>
-                        <th>Solver Margin</th>
+                        <th>Solver / Builder Share</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Base L2</strong></td>
                         <td>Chainlink SVR / Atlas</td>
-                        <td>105</td>
+                        <td>105 tx (513 liqs)</td>
                         <td>Permissionless Dutch Auction</td>
-                        <td><span class="tag tag-success">98.10%</span></td>
-                        <td>1.86% (Median: -1.55%)</td>
+                        <td><span class="tag tag-success">{BASE_PROTOCOL_CAPTURE_PCT:.1f}%</span> (Median {BASE_MEDIAN_TX_CAPTURE_PCT:.1f}%)</td>
+                        <td>{BASE_SOLVER_ORACLE_MARGIN_PCT:.2f}% (Median {BASE_MEDIAN_TX_MARGIN_PCT:.2f}%)</td>
                     </tr>
                     <tr>
                         <td><strong>Ethereum L1</strong></td>
@@ -763,7 +779,7 @@ def get_radar_dashboard():
                         <td>1,049</td>
                         <td>Builder Priority Fees</td>
                         <td><span class="tag tag-blue">0.00%</span></td>
-                        <td>78.4% to Block Builders</td>
+                        <td>$366,113 to Builders (Top 22 tx = 95.9%)</td>
                     </tr>
                     <tr>
                         <td><strong>Arbitrum One</strong></td>
