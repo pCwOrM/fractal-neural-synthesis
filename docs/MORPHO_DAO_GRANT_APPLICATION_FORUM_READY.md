@@ -7,7 +7,8 @@
 - **Public Risk Radar:** radar [dot] werracle [dot] com | werracle [dot] io / radar [dot] html  
 - **Live Telemetry API:** api [dot] werracle [dot] com / v1 / radar / overview  
 - **Open-Source Repository:** github [dot] com / pCwOrM / werracle  
-- **CERN Zenodo Research DOI:** doi: 10.5281 / zenodo / 23623588 (Zenodo Record: 23623589)  
+- **CERN Zenodo Research DOI:** doi: 10.5281 / zenodo / 23623588 (Zenodo Record: 23623589)
+- **Elsevier SSRN Abstract:** ssrn [dot] com / abstract=7668638 (Abstract ID: 7668638)  
 - **Hugging Face Dataset:** huggingface [dot] co / datasets / pCwOrM / werracle-oev-liquidation-dataset-2026  
 - **Lead Contact & Twitter/X:** x [dot] com / pcworm | pcworm [at] pcworm [dot] net  
 

@@ -7,6 +7,7 @@
 - **Live Telemetry API:** https://api.werracle.com/v1/radar/overview  
 - **Open-Source Repository:** https://github.com/pCwOrM/werracle  
 - **CERN Zenodo Research DOI:** https://doi.org/10.5281/zenodo.23623588 (Record: 23623589)  
+- **Elsevier SSRN Abstract:** https://papers.ssrn.com/abstract=7668638  
 - **Hugging Face Dataset:** https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026  
 - **Lead Contact & Twitter/X:** https://x.com/pcworm | `pcworm@pcworm.net`  
 
@@ -19,7 +20,7 @@ ITouch Systems Research & Development Desk (headquartered at Adana Çukurova Tec
 Before requesting any grant funding, our desk self-funded, built, and actively deployed a production-grade monitoring suite for the Morpho Blue ecosystem on Base:
 1. **Live High-Frequency Telemetry:** We run a continuous, bare-metal observation daemon (`pcworm-root`) that has processed over **285,000 Base flashblocks** and decoded **5.6M+ transactions**, tracking **83 Morpho Blue markets** and **69,000+ borrower positions** in real time.
 2. **Empirical OEV & Liquidation Proof:** During the acute market volatility regime of October 12–19, 2026, we captured and audited all 105 Chainlink Smart Value Recapture (SVR) multi-call liquidation transactions on Base Morpho ($190,506.31 gross collateral). Our findings independently proved to the DeFi ecosystem that **98.10% ($186,889.85 USD)** of gross liquidation value was successfully recaptured and returned directly to Morpho vaults and depositors.
-3. **Open Science & Peer Verification:** This research and its underlying 1,157-transaction dataset have been formally registered on **CERN Zenodo** under permanent DOI `10.5281/zenodo.23623588` and open-sourced on **Hugging Face** (`pCwOrM/werracle-oev-liquidation-dataset-2026`) with 15/15 mathematical validation invariants passing at 100%.
+3. **Open Science & Peer Verification:** This research and its underlying 1,157-transaction dataset have been formally registered on **CERN Zenodo** under permanent DOI `10.5281/zenodo.23623588`, indexed on **Elsevier SSRN** ([Abstract: 7668638](https://papers.ssrn.com/abstract=7668638)), and open-sourced on **Hugging Face** (`pCwOrM/werracle-oev-liquidation-dataset-2026`) with 15/15 mathematical validation invariants passing at 100%.
 
 ---
 
