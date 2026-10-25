@@ -1,0 +1,38 @@
+{
+  "usdc_deposit_address": "0x4945ef6e124eea2176ddf050b33db42b0ae8c7f7",
+  "usdc_contract_base": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "network": "base_mainnet",
+  "chain_id": 8453,
+  "base_rpcs": [
+    "https://mainnet.base.org",
+    "https://base-rpc.publicnode.com"
+  ],
+  "pricing": {
+    "pro": {
+      "name": "Pro Researcher & Searcher",
+      "amount_usdc": 149.0,
+      "duration_days": 30,
+      "rate_limit_per_min": 600,
+      "features": [
+        "Unrestricted access to 141,000+ monitored borrowers and 83 Morpho markets",
+        "Full /v1/radar/hot-positions stream (up to 1,000 positions per query)",
+        "Exclusive /v1/radar/solvers endpoint with solver margins and Atlas stats",
+        "Granular transaction logs in /v1/radar/oev-analytics",
+        "600 requests per minute"
+      ]
+    },
+    "institutional": {
+      "name": "Institutional Risk Curator",
+      "amount_usdc": 499.0,
+      "duration_days": 30,
+      "rate_limit_per_min": 3000,
+      "features": [
+        "Everything included in Pro Tier",
+        "Exclusive /v1/radar/curator/{vault} endpoint for MetaMorpho Vault surveillance",
+        "Stress test liquidation simulations under -5%, -10%, -15%, -20% price drops",
+        "Real-time Bad Debt & Liquidation Reserve Buffer analytics",
+        "Dedicated VIP rate limit (3,000 requests/minute)"
+      ]
+    }
+  }
+}
