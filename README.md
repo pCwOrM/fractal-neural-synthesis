@@ -30,6 +30,7 @@
 [![arXiv: 2609.30719](https://img.shields.io/badge/arXiv-2609.30719%20(Werracle)-b31b1b.svg)](https://arxiv.org/abs/2609.30719)
 [![SSRN: 7626279](https://img.shields.io/badge/SSRN-7626279%20(Werracle)-002f6c.svg?logo=elsevier)](https://ssrn.com/abstract=7626279)
 [![SSRN: 7659198](https://img.shields.io/badge/SSRN-7659198%20(Paper%201)-002f6c.svg?logo=elsevier)](https://papers.ssrn.com/abstract=7659198)
+[![SSRN: 7668699](https://img.shields.io/badge/SSRN-7668699%20(Paper%2011)-002f6c.svg?logo=elsevier)](https://papers.ssrn.com/abstract=7668699)
 [![arXiv:2610.14263](https://img.shields.io/badge/arXiv-2610.14263%20%5Bcs.CC%5D-b31b1b.svg)](https://arxiv.org/abs/2610.14263)
 [![arXiv DOI: 10.48550/arXiv.2610.14263](https://img.shields.io/badge/DOI-10.48550%2FarXiv.2610.14263-b31b1b.svg)](https://doi.org/10.48550/arXiv.2610.14263)
 [![The Gauntlet Benchmarks](https://img.shields.io/badge/The%20Gauntlet-Zero--VRAM%20Supremacy-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)

@@ -20,6 +20,7 @@
 [![Patent Başvurusu](https://img.shields.io/badge/Patent%20Başvurusu-TR%202026%2F016285-red.svg)](https://epats.turkpatent.gov.tr)
 [![Paper 1: Zenodo Çatı DOI](https://img.shields.io/badge/Paper%201%20DOI-10.5281%2Fzenodo.22774934-024dad.svg)](https://doi.org/10.5281/zenodo.22774934)
 [![Paper 1: SSRN 7659198](https://img.shields.io/badge/SSRN-7659198%20(Paper%201)-002f6c.svg?logo=elsevier)](https://papers.ssrn.com/abstract=7659198)
+[![Paper 11: SSRN 7668699](https://img.shields.io/badge/SSRN-7668699%20(Paper%2011)-002f6c.svg?logo=elsevier)](https://papers.ssrn.com/abstract=7668699)
 [![Kardeş Makale: WERR](https://img.shields.io/badge/Kardeş%20Makale-WERR-8b5cf6.svg)](https://github.com/pCwOrM/werr)
 [![On-Chain AI Oracle: werracle](https://img.shields.io/badge/Web3%20Oracle-werracle-f59e0b.svg?logo=ethereum&logoColor=white)](https://github.com/pCwOrM/werracle)
 [![The Gauntlet Kıyaslamaları](https://img.shields.io/badge/The%20Gauntlet-Sıfır--VRAM%20Liderliği-brightgreen.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/benchmarks.html)
