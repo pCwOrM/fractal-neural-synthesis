@@ -2,7 +2,7 @@
 
 **Account Type:** Free Twitter Account (Strict $\le$ 280 Characters per Tweet)  
 **Image to Attach (Tweet 1):** `twitter_werracle_svr_infographic.png`  
-**Verified Handles:** `@base`, `@MorphoLabs`, `@ITouchSystems`  
+**Verified Handles:** `@base`, `@MorphoLabs`, `@ITouchSys`  
 **Date:** 26 October 2026  
 
 ---
@@ -71,7 +71,7 @@ To monitor these dynamics live, we built Werracle Radar:
 📜 Zenodo: https://doi.org/10.5281/zenodo.22942598
 📑 Paper: arXiv:2609.30719 & SSRN: 7626279
 
-Built on @base by @ITouchSystems with Mersin & Toros Univ. researchers. Feedback welcome! [5/5]
+Built on @base by @ITouchSys with Mersin & Toros Univ. researchers. Feedback welcome! [5/5]
 ```
 **Character count:** 241 / 280 ✅ PASS
 
