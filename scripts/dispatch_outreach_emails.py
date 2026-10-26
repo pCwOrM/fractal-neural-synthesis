@@ -36,7 +36,7 @@ Key empirical findings from our audited sample (Base, 2–22 October 2026, 105 m
 
 The complete dataset, raw execution traces, and reproduction scripts have been deposited under open-access licenses:
 - Zenodo Record (DOI: 10.5281/zenodo.22942598): Full transaction manifest and CSV/JSONL traces.
-- Hugging Face Repository: https://huggingface.co/datasets/pCwOrM/defi-oev-liquidations-l1-base (CC-BY-4.0).
+- Hugging Face Repository: https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026 (CC-BY-4.0).
 - Replication Engine: All 54 summary metrics can be independently verified by running `reproduce_summary.py` against raw RPC traces.
 - Live Telemetry Observatory: https://radar.werracle.com (actively monitoring 38 verified lending markets and $2.20B+ in clean borrow debt).
 

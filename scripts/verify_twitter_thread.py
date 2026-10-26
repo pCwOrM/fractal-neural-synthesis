@@ -32,10 +32,10 @@ tweets = [
     # Tweet 5: Open Science, Links & Team
     (
         "100% open-access & reproducible:\n\n"
-        "📂 Dataset: https://huggingface.co/datasets/pCwOrM/defi-oev-liquidations-l1-base\n"
+        "📂 Dataset: https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026\n"
         "📜 Zenodo: https://doi.org/10.5281/zenodo.22942598\n"
         "📑 Paper: arXiv:2609.30719 & SSRN: 7626279\n\n"
-        "Built on @base by @ITouchSystems with Mersin & Toros Univ. researchers. Feedback welcome! [5/5]"
+        "Built on @base by @ITouchSys with Mersin & Toros Univ. researchers. Feedback welcome! [5/5]"
     )
 ]
 

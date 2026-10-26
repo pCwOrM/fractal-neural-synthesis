@@ -67,7 +67,7 @@ To monitor these dynamics live, we built Werracle Radar:
 ```text
 100% open-access & reproducible:
 
-📂 Dataset: https://huggingface.co/datasets/pCwOrM/defi-oev-liquidations-l1-base
+📂 Dataset: https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026
 📜 Zenodo: https://doi.org/10.5281/zenodo.22942598
 📑 Paper: arXiv:2609.30719 & SSRN: 7626279
 
@@ -129,7 +129,7 @@ Bu dinamikleri canlı izlemek için Werracle Radar'ı kurduk:
 ```text
 %100 açık bilim ve yeniden üretilebilir:
 
-📂 Veri Seti: https://huggingface.co/datasets/pCwOrM/defi-oev-liquidations-l1-base
+📂 Veri Seti: https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026
 📜 Zenodo: https://doi.org/10.5281/zenodo.22942598
 📑 Makale: arXiv:2609.30719 & SSRN: 7626279
 
