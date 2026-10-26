@@ -1,0 +1,1292 @@
+import os
+import shutil
+from playwright.sync_api import sync_playwright
+
+html_content = """<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>WERRACLE: Sıfır Bellek Ayak İzli Blok-İçi Yapay Zekâ Karar Kahini - Yatırımcı Sunumu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: 1920px 1080px;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #070a12;
+      color: #f8fafc;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 45%),
+                  #070a12;
+      padding: 70px 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 22px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+      color: #070a12;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 6px 16px;
+      border-radius: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-title {
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #e2e8f0;
+    }
+
+    .category-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 35px 0;
+    }
+
+    .slide-title {
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .slide-subtitle {
+      font-size: 21px;
+      color: #94a3b8;
+      margin-bottom: 35px;
+      max-width: 1400px;
+      line-height: 1.45;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .card-highlight {
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .card-accent-green {
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .card-accent-purple {
+      border: 1px solid rgba(168, 85, 247, 0.35);
+    }
+
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-desc {
+      font-size: 16px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .metric-hero {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric-sub {
+      font-size: 15px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .color-cyan { color: #38bdf8; }
+    .color-green { color: #34d399; }
+    .color-purple { color: #c084fc; }
+    .color-rose { color: #fb7185; }
+    .color-gold { color: #fbbf24; }
+
+    .chart-container {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .chart-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 17px;
+      margin-top: 10px;
+    }
+
+    table.data-table th {
+      background: rgba(30, 41, 59, 0.7);
+      color: #38bdf8;
+      padding: 16px 20px;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+    }
+
+    table.data-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+    }
+
+    table.data-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill-item {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .pill-item.green {
+      background: rgba(16, 185, 129, 0.1);
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    .pill-item.purple {
+      background: rgba(168, 85, 247, 0.1);
+      color: #c084fc;
+      border-color: rgba(168, 85, 247, 0.2);
+    }
+
+    .cover-title {
+      font-size: 68px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 10%, #38bdf8 50%, #34d399 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 1400px;
+    }
+
+    .cover-sub {
+      font-size: 26px;
+      color: #94a3b8;
+      line-height: 1.45;
+      max-width: 1300px;
+      margin-bottom: 50px;
+    }
+
+    .portal-badges {
+      display: flex;
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .portal-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .portal-badge .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1: COVER -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Sıfır Bellek Ayak İzli Blok-İçi Yapay Zekâ Karar Kahini</span>
+      </div>
+      <div class="category-tag">TOHUM TURU &bull; 1.500.000 $ &bull; EKİM 2026</div>
+    </div>
+
+    <div class="content-area">
+      <div class="cover-title">Web3 İçin Sent Altı Blok-İçi Refleks Zekâsı ve Gerçek Zamanlı Risk Savunması</div>
+      <div class="cover-sub">
+        Derin yapay sinir ağı ağırlıklarını sıfırlayan, EVM ve Starknet akıllı sözleşmeleri içinde ~20,7k gaz maliyetiyle doğrudan çalışan, Lean 4 makine ispatlı dünyanın ilk blok-içi karar kahini.
+      </div>
+
+      <div class="grid-4" style="margin-top: 20px;">
+        <div class="card card-highlight">
+          <div class="metric-hero color-cyan">~20,7k</div>
+          <div class="metric-sub">EVM Yürütme Gazı</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Blok-içi sınıflandırma başına sent altı maliyet (&lt;0,001 $)</p>
+        </div>
+        <div class="card card-accent-green">
+          <div class="metric-hero color-green">0 Bayt</div>
+          <div class="metric-sub">Model Bellek Ayak İzi</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Sıfır VRAM/DRAM ağırlığı. Tek bir bytes32 depolama yuvası</p>
+        </div>
+        <div class="card card-accent-purple">
+          <div class="metric-hero color-purple">&lt; 12 ms</div>
+          <div class="metric-sub">Blok-İçi Karar Gecikmesi</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Senkron yürütme flaş kredileri işlem bitmeden durdurur</p>
+        </div>
+        <div class="card">
+          <div class="metric-hero color-gold">2,20 Milyar $+</div>
+          <div class="metric-sub">İzlenen Canlı Borç</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">38 doğrulanmış Morpho, Aave ve Euler pazarında canlı</p>
+        </div>
+      </div>
+
+      <div class="portal-badges">
+        <div class="portal-badge"><span class="dot" style="background:#38bdf8;"></span> werracle.io &bull; Zincir Üstü Protokol & Kancalar</div>
+        <div class="portal-badge"><span class="dot" style="background:#34d399;"></span> radar.werracle.com &bull; B2B Risk Telemetrisi DaaS</div>
+        <div class="portal-badge"><span class="dot" style="background:#fbbf24;"></span> werracle.com &bull; Kurumsal & Küratör SLA</div>
+        <div class="portal-badge"><span class="dot" style="background:#c084fc;"></span> werr.io &bull; Lean 4 Biçimsel İspatlar & Külliyat</div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ. &bull; Çukurova Teknokent</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 01 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Pazar İhtiyacı ve Yapısal Açık</span>
+      </div>
+      <div class="category-tag">3,8 MİLYAR DOLARLIK GECİKME BOŞLUĞU</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">DeFi Akıllı Sözleşmeleri Statik ve Blok-İçi Saldırılara Karşı Kördür</div>
+      <div class="slide-subtitle">
+        Merkeziyetsiz protokoller milyarlarca dolarlık yüksek hızlı sermayeyi statik kurallarla yönetmektedir. Mevcut çözümler blok-içi gerçek zamanlı karar zekâsı sunamaz.
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-title color-rose">
+            <span style="font-size: 26px;">⚠️</span> Blok-İçi İstismar Boşluğu
+          </div>
+          <div class="card-desc">
+            Atomik flaş krediler, sandviç saldırıları ve fiyat önleme hamleleri tek bir blok içinde durum kesinleşmeden önce gerçekleşir. Sözleşmeler işlem içinde dinamik tepki veremediği için bugüne kadar <b>3,8 milyar dolardan fazla</b> sermaye çalınmıştır.
+          </div>
+          <div class="pill-list">
+            <span class="pill-item">Flaş Kredi Boşaltmaları</span>
+            <span class="pill-item">Toksik MEV Sandviçleri</span>
+            <span class="pill-item">LVR Likidite Kaybı</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title color-rose">
+            <span style="font-size: 26px;">⏱️</span> Asenkron Orakıl Gecikmesi
+          </div>
+          <div class="card-desc">
+            Geleneksel itme/çekme orakılları (Chainlink, Pyth) blok başına ya da zincirler arası turlarda bir güncellenir (saniyeler ila dakikalar sürer). Aynı işlemin ve çağrı yığınının içinde gerçekleşen durum değişikliklerine karşı tamamen kördürler.
+          </div>
+          <div class="pill-list">
+            <span class="pill-item">Nabız Eşik Sınırları</span>
+            <span class="pill-item">Eski Veri Pencereleri</span>
+            <span class="pill-item">Sıfır Blok-İçi Görünürlük</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title color-rose">
+            <span style="font-size: 26px;">🛑</span> ZK-ML ve Bellek Tıkanıklığı
+          </div>
+          <div class="card-desc">
+            Sıfır Bilgi Makine Öğrenimi (ZK-ML) senkron koruma için aşırı hantal ve pahalıdır. Kanıt üretimi zincir dışında 15–60 saniye sürer; zincir üstü doğrulama ise 350k–1M+ gaz tüketerek blok-içi devre kesiciyi imkansız kılar.
+          </div>
+          <div class="pill-list">
+            <span class="pill-item">Ağır Kanıtlayıcılar</span>
+            <span class="pill-item">Devasa Gaz Yükü</span>
+            <span class="pill-item">Bellek / DRAM Tükenmesi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-highlight" style="margin-top: 30px;">
+        <div style="font-size: 18px; color: #cbd5e1;">
+          <b>Kurumsal Çıkmaz:</b> Morpho, Aave ve Euler'de 10 milyar doların üzerinde TVL yöneten kasa küratörleri, granüler gerçek zamanlı borçlu tasfiye telemetrisi ve otomatik sent altı devre kesiciler olmadan tamamen kör uçuş yapmaktadır.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Werracle: Prosedürel Zincir Üstü Yapay Zekâ</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 02 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: THE BREAKTHROUGH -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Özgün Teknoloji ve Mimari</span>
+      </div>
+      <div class="category-tag">PATENT BAŞVURUSU &bull; TR 2026/016285</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Prosedürel Kaçış Dinamikleri: Ağırlık Matrisi Olmadan Refleks Zekâsı</div>
+      <div class="slide-subtitle">
+        Von Neumann depolama darboğazını ortadan kaldırıyoruz: tek bir depolama yuvasında deterministik polinom yörüngelerinden (<span style="font-family:'JetBrains Mono';">z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c</span>) anlık karar yüzeyleri sentezlenir.
+      </div>
+
+      <div class="grid-2">
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div class="card card-highlight">
+            <div class="card-title color-cyan">Sıfır Bellek Ayak İzli Sinaptik Sentez</div>
+            <div class="card-desc">
+              Belleğe megabaytlarca statik ağırlık matrisi yüklemek yerine, Werracle çok boyutlu karar sınırlarını prosedürel Mandelbrot kaçış hızları üzerinden dinamik hesaplar. Karar modelinin zincir üstü bellek ayak izi kesinlikle <b>0 Bayttır</b>.
+            </div>
+          </div>
+
+          <div class="card card-accent-green">
+            <div class="card-title color-green">Tek Bir 32 Bayt Yuva (bytes32 / felt252)</div>
+            <div class="card-desc">
+              Tüm çalışma durumu—tohum koordinatı, yakınlaştırma üssü, sayaç (*nonce*), kaçış eşiği, hassasiyet modu ve acil durdurma bayrağı—tek bir yuvaya sığar. EVM ve Starknet Cairo üzerinde maksimum okuma/yazma verimliliği sağlar.
+            </div>
+          </div>
+
+          <div class="card card-accent-purple">
+            <div class="card-title color-purple">Sub-12ms Senkron Blok-İçi Yürütme</div>
+            <div class="card-desc">
+              EVM işlem çağrı yığını içinde doğrudan çalışır (<span style="font-family:'JetBrains Mono'; color:#38bdf8;">decideNoul</span> 20,7k gaz tüketir). Anormal fiyat sapması veya likidite boşalması tespit edilirse fonlar çıkmadan işlem atomik olarak geri döner (`revert`).
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 20px; font-weight: 700; color: #f8fafc; margin-bottom: 15px;">Temel Teknik Özellikler</div>
+            <table class="data-table">
+              <tr>
+                <td><b>Gaz Tüketimi</b></td>
+                <td style="color:#38bdf8; font-weight:700;">20.700 Gaz (solc 0.8.20)</td>
+              </tr>
+              <tr>
+                <td><b>Starknet CairoVM</b></td>
+                <td style="color:#34d399; font-weight:700;">~1.420 Adım (STARK-Native)</td>
+              </tr>
+              <tr>
+                <td><b>Depolama Ayak İzi</b></td>
+                <td style="color:#c084fc; font-weight:700;">1 x bytes32 (EVM) / felt252 (Cairo)</td>
+              </tr>
+              <tr>
+                <td><b>Sabit Nokta Hassasiyeti</b></td>
+                <td style="color:#f8fafc; font-weight:700;">Q16.16 Aritmetiği (Taşma Yok)</td>
+              </tr>
+              <tr>
+                <td><b>Karar Hızı</b></td>
+                <td style="color:#fbbf24; font-weight:700;">9,3 ms Motor / &lt;12 ms RPC</td>
+              </tr>
+              <tr>
+                <td><b>Patent Başvurusu</b></td>
+                <td style="color:#fb7185; font-weight:700;">TÜRKPATENT TR 2026/016285</td>
+              </tr>
+            </table>
+          </div>
+          <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 15px; margin-top: 20px; font-size: 14px; color: #cbd5e1;">
+            <b>Biçimsel Doğrulama Garantisi:</b> Matematiksel kaçış sınırlarının %100'ü Lean 4 içinde aksiyomsuz kanıtlanmıştır (<span style="font-family:'JetBrains Mono';">zero sorry</span>). Sonsuz yürütme döngülerine karşı matematiksel olarak bağışıktır.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Werracle Çekirdek Motor: Prosedürel Kaçış Dinamikleri</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 03 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: BENCHMARK & COMPARISON -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Rekabetçi Kıyaslama ve Gaz Profili</span>
+      </div>
+      <div class="category-tag">ZK-ML'DEN 1000x HIZLI &bull; 15x UCUZ</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Maliyet, Gecikme ve Depolamada Benzersiz Asimetri</div>
+      <div class="slide-subtitle">
+        EVM yürütme gazı ve karar gecikmesi karşılaştırması, Werracle'ın akıllı sözleşmeler için neden tek geçerli blok-içi savunma motoru olduğunu ampirik olarak ortaya koymaktadır.
+      </div>
+
+      <div class="grid-2">
+        <div class="chart-container">
+          <img src="chart_latency_gas_comparison_tr.png" alt="Yürütme Gazı ve Gecikme Karşılaştırması">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div class="card card-highlight">
+            <div class="card-title color-cyan">ZK-ML'den 15x ila 25x Düşük Gaz</div>
+            <div class="card-desc">
+              ZK-ML doğrulayıcıları (Modulus, EZKL) çıkarım kontrolü başına <b>350k ila 1.200k gaz</b> harcar. Bu maliyet ana ağlarda her takasta veya her kredide çalışmayı ekonomik olarak imkansız kılar. Werracle yalnızca <b>20,7k gaz</b> harcar.
+            </div>
+          </div>
+
+          <div class="card card-accent-green">
+            <div class="card-title color-green">1000 Kat Daha Hızlı (&lt;12ms vs 35sn)</div>
+            <div class="card-desc">
+              ZK-ML kanıtlayıcıları zincir üstüne bir makbuz göndermeden önce 15 ila 60 saniyelik zincir dışı kanıt üretimine ihtiyaç duyar. Bu süre içinde flaş kredi saldırganları arbitrajı tamamlayıp fonları çoktan taşımış olur.
+            </div>
+          </div>
+
+          <div class="card card-accent-purple">
+            <div class="card-title color-purple">Senkron Blok-İçi Yürütme</div>
+            <div class="card-desc">
+              Bloklar arası asenkron güncelleme gerektiren itme/çekme orakıllarının (Chainlink/Pyth) aksine Werracle sözleşmenin çağrı yığınında yer alır; likidite ve volatiliteyi fonlar transfer edilmeden <b>önce</b> değerlendirir.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>solc 0.8.20 ve Cairo 2.8+ ile kıyaslanmıştır</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 04 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: PILLAR 1 - WERRACLE.IO -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Ürün Sütunu 1: werracle.io</span>
+      </div>
+      <div class="category-tag">ZİNCİR ÜSTÜ PROTOKOL & KANCALAR</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">werracle.io: Web3 Protokolü ve Otonom Kanca Katmanı</div>
+      <div class="slide-subtitle">
+        Büyük EVM zincirleri, Starknet ve NEAR üzerinde doğrudan devreye alınabilir akıllı sözleşme kancaları, flaş kredi devre kesicileri ve AMM dinamik ücret modülleri.
+      </div>
+
+      <div class="grid-3">
+        <div class="card card-highlight">
+          <div class="card-title color-cyan">
+            <span>🛡️</span> Blok-İçi Devre Kesiciler
+          </div>
+          <div class="card-desc">
+            Borç verme havuzlarına, likit staking kasalarına ve teminat yöneticilerine doğrudan sarmalayıcı veya geri çağırma kancası olarak yerleşir. Yürütülen işlem içinde anlık volatiliteyi ölçer ve kötü niyetli flaş kredi saldırılarını atomik olarak durdurur.
+          </div>
+          <div class="pill-list" style="margin-top:20px;">
+            <span class="pill-item">Morpho Kasa Sarmalama</span>
+            <span class="pill-item">Aave v3 Koruması</span>
+            <span class="pill-item">Atomik Revert</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-green">
+          <div class="card-title color-green">
+            <span>⚡</span> Uniswap v4 Dinamik Ücret Kancası
+          </div>
+          <div class="card-desc">
+            Gelen takas işlemlerini <span style="font-family:'JetBrains Mono'; font-size:14px; color:#34d399;">beforeSwap</span> üzerinden yakalar. Ani volatilite dalgalanmalarında havuz takas ücretini anlık yükselterek toksik MEV akışını engeller ve pasif likidite sağlayıcılarını LVR kaybından korur.
+          </div>
+          <div class="pill-list" style="margin-top:20px;">
+            <span class="pill-item">Uniswap v4 Kancası</span>
+            <span class="pill-item">LVR Azaltımı</span>
+            <span class="pill-item">LP Gelir Yakalama</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-purple">
+          <div class="card-title color-purple">
+            <span>🌐</span> Çok Zincirli Mimari
+          </div>
+          <div class="card-desc">
+            Farklı sanal makineler üzerinde doğrulanmış üretim kodları:
+            <ul style="margin-left: 20px; margin-top: 10px; font-size: 14.5px; color:#cbd5e1; line-height: 1.6;">
+              <li><b>EVM:</b> Aurora testnet'te canlı (<span style="font-family:'JetBrains Mono'; font-size:12px;">0x1d7Ae9...</span>)</li>
+              <li><b>Starknet:</b> Cairo 2.8+ Sierra (Ekubo uzantısı)</li>
+              <li><b>NEAR:</b> Toksik niyet filtreleme ve yönlendirme</li>
+            </ul>
+          </div>
+          <div class="pill-list" style="margin-top:15px;">
+            <span class="pill-item">Solidity 0.8.20</span>
+            <span class="pill-item">Cairo 2.8 Sierra</span>
+            <span class="pill-item">NEAR Intents</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 25px; padding: 22px 30px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-size: 18px; font-weight: 700; color: #f8fafc;">Tarayıcı Tabanlı Simülatör ve Canlı Sözleşme Gezgini:</span>
+          <span style="font-size: 16px; color: #94a3b8; margin-left: 15px;">Geliştiriciler, canlı EVM bayt koduyla %100 birebir aynı çalışan karar sınırlarını tarayıcılarında ücretsiz test edebilir.</span>
+        </div>
+        <span class="category-tag" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">werracle.io/#simulator</span>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>werracle.io &bull; Web3 Protokolü ve Akıllı Sözleşme Savunması</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 05 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: PILLAR 2 - RADAR.WERRACLE.COM -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Ürün Sütunu 2: radar.werracle.com</span>
+      </div>
+      <div class="category-tag">GERÇEK ZAMANLI RİSK TELEMETRİSİ & B2B DAAS</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">radar.werracle.com: Ampirik Tasfiye ve OEV Gözlemevi</div>
+      <div class="slide-subtitle">
+        Morpho, Aave ve Euler üzerinde 2,20 Milyar Doların üzerinde borcu otomatik batık borç takibi, SVR doğrulaması ve USDC ile anında API anahtarı teslimiyle izler.
+      </div>
+
+      <div class="grid-4" style="margin-bottom: 25px;">
+        <div class="card">
+          <div class="metric-hero color-cyan">38</div>
+          <div class="metric-sub">Doğrulanmış Kredi Pazarı</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Morpho Blue, Aave v3, Euler v2 (45 listelenmemiş/sentetik spam pazar filtrelendi)</p>
+        </div>
+        <div class="card">
+          <div class="metric-hero color-green">2,20 Milyar $</div>
+          <div class="metric-sub">Temiz Borç Takibi</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">68.735 aktif borçlu pozisyonu gerçek zamanlı izleniyor</p>
+        </div>
+        <div class="card">
+          <div class="metric-hero color-gold">%94,38</div>
+          <div class="metric-sub">SVR Değer Geri Kazanımı</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Base üzerinde 190,5 bin $'lık brüt teşvikin 179,8 bin $'ı mevduat sahiplerine döndü</p>
+        </div>
+        <div class="card">
+          <div class="metric-hero color-purple">%95,94</div>
+          <div class="metric-sub">L1 İlk 22 İşlem Sızıntısı</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">L1'deki 22 büyük tasfiye 366,1 bin $'lık builder rüşvetinin 351,3 bin $'ını kapsar</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-highlight">
+          <div class="card-title color-cyan">Otonom B2B Mikro Ödeme (Base USDC)</div>
+          <div class="card-desc">
+            Geliştiriciler ve fonlar Base üzerinde yerel USDC ile doğrudan abone olur. Sıfır manuel faturalama: zincir üstü transferler ECDSA cüzdan imzasını doğrular, şifreli API anahtarını üretir ve dağıtık Uvicorn çalışanlarında atomik hız limitini devreye sokar.
+          </div>
+          <div class="pill-list">
+            <span class="pill-item">Geliştirici (149 $/ay)</span>
+            <span class="pill-item">Profesyonel (499 $/ay)</span>
+            <span class="pill-item">Kurumsal (2.499 $/ay)</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-green">
+          <div class="card-title color-green">Sürekli Makro Risk Sınıflandırması</div>
+          <div class="card-desc">
+            Canlı borç pozisyonlarını anında <span style="color:#fb7185; font-weight:700;">Batık Borç (HF &lt; 0,95)</span> ve <span style="color:#fbbf24; font-weight:700;">Tasfiye Riski (0,95 &le; HF &lt; 1,10)</span> olarak etiketler. Protokol ve küratörlere sistemik iflas tehlikesini anlık alarm olarak bildirir.
+          </div>
+          <div class="pill-list">
+            <span class="pill-item">Anlık Websocket Bildirimi</span>
+            <span class="pill-item">Küratör Kasa Eşitleme</span>
+            <span class="pill-item">Geçmiş İz Replay'leri</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>radar.werracle.com &bull; Canlı Telemetri API'si: api.werracle.com/v1/radar</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 06 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: PILLAR 3 - WERRACLE.COM -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Ürün Sütunu 3: werracle.com</span>
+      </div>
+      <div class="category-tag">KURUMSAL, KÜRATÖR SLA & LİSANSLAMA</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">werracle.com: Kurumsal Lisanslama ve Kasa Küratörü SLA'sı</div>
+      <div class="slide-subtitle">
+        Öncü risk küratörlerine ve kurumsal borç verme protokollerine adanmış teminat stres simülasyon motorları ve özel fraktal tohum modelleri sunuyoruz.
+      </div>
+
+      <div class="grid-3">
+        <div class="card card-highlight">
+          <div class="card-title color-cyan">
+            <span>🏛️</span> Kasa Küratörü Stres Modellemesi
+          </div>
+          <div class="card-desc">
+            En büyük DeFi risk yöneticileri için geliştirildi: <b>Steakhouse Financial, Gauntlet ve Re7 Capital</b>. Belirli kasa dağılımlarındaki batık borç ve tasfiye primlerini öngörmek için teminat çöküşlerini (%0 ila -%30) dinamik olarak simüle eder.
+          </div>
+          <div class="pill-list" style="margin-top:15px;">
+            <span class="pill-item">Steakhouse USDC Kasası</span>
+            <span class="pill-item">Gauntlet Prime Core</span>
+            <span class="pill-item">Re7 WETH Morpho</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-green">
+          <div class="card-title color-green">
+            <span>🔑</span> Kurumsal Tohum Sentezi
+          </div>
+          <div class="card-desc">
+            Kurumsal alt ağlar, izinli rollup'lar ve özel likidite havuzları özel risk hassasiyet parametrelerine ihtiyaç duyar. Gerçek dünya varlıkları (RWA) ve kurumsal portföylere uygun özel fraktal tohumlar formüle edilip mühürlenir.
+          </div>
+          <div class="pill-list" style="margin-top:15px;">
+            <span class="pill-item">RWA Borç Parametreleri</span>
+            <span class="pill-item">Kurumsal Alt Ağlar</span>
+            <span class="pill-item">Özel Orakıllar</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-purple">
+          <div class="card-title color-purple">
+            <span>📜</span> İş Kaynağı Lisansı (BSL 1.1)
+          </div>
+          <div class="card-desc">
+            Çekirdek yürütme fikri mülkiyeti BSL 1.1 ile korunmakta olup, <b>1 Ocak 2030'da Apache 2.0'a</b> dönüşümü yasal olarak taahhüt edilmiştir. Ticarileşme sürecinde gelirleri güvenceye alırken ekosisteme tam şeffaflık ve denetlenebilirlik sunar.
+          </div>
+          <div class="pill-list" style="margin-top:15px;">
+            <span class="pill-item">BSL 1.1 Ticari</span>
+            <span class="pill-item">2030-01-01 Geçiş Tarihi</span>
+            <span class="pill-item">Apache 2.0 Güvencesi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 25px; padding: 22px 30px;">
+        <div style="font-size: 17px; color: #cbd5e1; line-height: 1.6;">
+          <b>Aktif Pilot Süreci:</b> Steakhouse Financial, Gauntlet ve Re7 Capital risk masaları için 30 günlük canlı değerlendirme anahtarları tanımlanmıştır (<span style="font-family:'JetBrains Mono'; color:#38bdf8;">/v1/radar/curator/steakhouse</span>). Modelleme, Steakhouse'un %20'lik ani teminat çöküşündeki en kötü senaryo kaybının kasanın yalnızca <b>%0,13'ü (146 bin $)</b> ile sınırlı kaldığını doğrulamıştır.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>werracle.com &bull; Kurumsal Merkez ve Ticari İşbirlikleri</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 07 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: UNIFIED PRODUCT FLYWHEEL -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Ekosistem Sinerjisi ve Büyüme Çarkı</span>
+      </div>
+      <div class="category-tag">UÇTAN UCA SAVUNMA MİMARİSİ</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Bütünleşik Büyüme Çarkı: Her Portal Değeri Nasıl Büyütür?</div>
+      <div class="slide-subtitle">
+        Telemetri zincir üstü kancaları besler; zincir üstü işlem hacmi kurumsal SLA sözleşmelerine dönüşür; biçimsel ispatlar ise kurumsal güveni sağlar.
+      </div>
+
+      <div class="grid-2">
+        <div class="chart-container">
+          <img src="chart_werracle_ecosystem_tr.png" alt="Bütünleşik Werracle Ürün Yığını">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div class="card card-highlight">
+            <div class="card-title color-cyan">1. Telemetri Toplama (radar.werracle.com)</div>
+            <div class="card-desc">
+              2,20 milyar doların üzerindeki borcun canlı izlenmesi, zincir üstü devre kesicileri kalibre etmek için gereken gerçek zamanlı volatilite endekslerini ve tasfiye risk sinyallerini sağlar.
+            </div>
+          </div>
+
+          <div class="card card-accent-green">
+            <div class="card-title color-green">2. Zincir Üstü Refleks Yürütme (werracle.io)</div>
+            <div class="card-desc">
+              Protokol kancaları işlem çağrısı içinde 20,7k gazla çalışarak toksik akışı engeller, dinamik AMM takas komisyonlarını toplar ve milyonlarca dolarlık flaş kredi boşaltmalarının önüne geçer.
+            </div>
+          </div>
+
+          <div class="card card-accent-purple">
+            <div class="card-title color-purple">3. Kurumsal Gelire Dönüştürme (werracle.com)</div>
+            <div class="card-desc">
+              Kurumsal küratörler ve DeFi protokolleri yüksek değerli kurumsal SLA ve özel tohum lisanslama müşterilerine dönüşerek sürdürülebilir ARR ve uzun vadeli rekabet avantajı sağlar.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Sinerjik Çoklu Ürün Savunulabilirliği</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 08 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: FORMAL PROOFS & ACADEMIC -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Akademik Temel ve Lean 4 İspatları</span>
+      </div>
+      <div class="category-tag">SIFIR AKSİYOM &bull; 40 TEOREM &bull; SIFIR SORRY</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Matematiksel Olarak Kanıtlanmış Güvenlik: Sözleşme Sorumluluğunu Sıfırlıyoruz</div>
+      <div class="slide-subtitle">
+        Halüsinasyon gören olasılıksal derin yapay sinir ağlarının aksine Werracle'ın prosedürel kaçış dinamikleri Lean 4 içinde makine denetimli olarak ispatlanmıştır.
+      </div>
+
+      <div class="grid-3">
+        <div class="card card-highlight">
+          <div class="card-title color-purple">
+            <span>📜</span> Lean 4 Biçimsel Doğrulaması
+          </div>
+          <div class="card-desc">
+            <span style="font-family:'JetBrains Mono'; font-size:13px; color:#c084fc;">WerracleProof.lean</span> dosyasında 1 ila 6. basamaklar arasında <b>40 makine denetimli teorem</b>. İspatlanmamış hiçbir varsayım yoktur (<span style="font-family:'JetBrains Mono'; font-weight:700;">zero sorry</span>).
+          </div>
+          <ul style="margin-left: 20px; margin-top: 10px; font-size: 14px; color:#cbd5e1; line-height: 1.6;">
+            <li>Kaçış döngülerinin kesinlikle sonlanması garantisi</li>
+            <li>Taşmayan Q16.16 sabit noktalı int64 aritmetiği</li>
+            <li>Deterministik gaz tavan sınırları</li>
+          </ul>
+        </div>
+
+        <div class="card card-accent-green">
+          <div class="card-title color-green">
+            <span>🔬</span> Hakemli Açık Bilim Külliyatı
+          </div>
+          <div class="card-desc">
+            Önde gelen uluslararası açık bilim ve hakemli platformlarda yayımlanmıştır:
+          </div>
+          <ul style="margin-left: 20px; margin-top: 10px; font-size: 14px; color:#cbd5e1; line-height: 1.6;">
+            <li><b>arXiv: 2609.30719</b> [cs.CR, cs.AI, cs.DC]</li>
+            <li><b>Elsevier SSRN: 7626279</b> (Tasfiye Monografisi)</li>
+            <li><b>arXiv: 2609.33066</b> (Lean 4 Biçimsel İspatları)</li>
+            <li><b>CERN Zenodo DOI: 10.5281/zenodo.22942598</b></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title color-cyan">
+            <span>🔒</span> 1.000 Mühürlü Test Vektörü
+          </div>
+          <div class="card-desc">
+            SHA-256 üretim bildirimleriyle mühürlenmiş: EVM ve CairoVM derleyicilerinde <b>%100 başarı oranıyla</b> doğrulanmış 1.000 zorlu sınır-durum testi.
+          </div>
+          <div class="pill-list" style="margin-top: 20px;">
+            <span class="pill-item">%100 Başarı Oranı</span>
+            <span class="pill-item">Bit-Birebir Simülasyon</span>
+            <span class="pill-item">Sıfır Derleme Sapması</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 25px; padding: 22px 30px;">
+        <div style="font-size: 17px; color: #cbd5e1;">
+          <b>Akademik Farkımız:</b> Rakip Web3 orakılları çoklu imza (multi-sig) güven varsayımlarına dayanırken; Werracle'ın algoritmik savunması Lean 4 etkileşimli teorem ispatlayıcısı tarafından matematiksel olarak garanti altına alınmıştır.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>werr.io &bull; Akademik Portal ve Biçimsel İspat Külliyatı</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 09 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: BUSINESS MODEL & FINANCIALS -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Finansal Model ve Gelir Motorları</span>
+      </div>
+      <div class="category-tag">ÜÇ KADEMELİ YİNELENEN GELİR</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Çoklu Motor Gelir Modeli: 2029'da 7,4M $ ARR'a Ulaşım</div>
+      <div class="slide-subtitle">
+        Öngörülebilir B2B DaaS yinelenen gelirlerini, protokol hacim komisyonları ve kurumsal SLA lisanslamasıyla birleştiriyoruz.
+      </div>
+
+      <div class="grid-2">
+        <div class="chart-container">
+          <img src="chart_product_arr_projection_tr.png" alt="Konsolide ARR Projeksiyonları">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div class="card card-highlight">
+            <div class="card-title color-cyan">Motor 1: Radar DaaS Abonelikleri (149 – 2.499 $/ay)</div>
+            <div class="card-desc">
+              Base USDC ile doğrudan tahsil edilir. Geliştiriciler, arayıcılar ve risk masaları yüksek frekanslı tasfiye sinyalleri, batık borç alarmları ve ham geçmiş izler için ödeme yapar. Olgunlukta <b>3,20 M$ ARR</b>'a ulaşır.
+            </div>
+          </div>
+
+          <div class="card card-accent-green">
+            <div class="card-title color-green">Motor 2: Protokol Kanca Komisyonları (0,5 – 1,5 bps)</div>
+            <div class="card-desc">
+              Werracle Uniswap v4 ücret kancalarını ve flaş kredi devre kesicilerini entegre eden protokoller, geri kazanılan değerden ve takas ücretlerinden pay verir. 15 büyük protokol ile <b>2,70 M$ ARR</b> hedeflenir.
+            </div>
+          </div>
+
+          <div class="card card-accent-purple">
+            <div class="card-title color-purple">Motor 3: Küratör SLA & Kurumsal Lisanslama</div>
+            <div class="card-desc">
+              Kurumsal kasa küratörleri (Steakhouse, Gauntlet, Re7) özel stres simülasyon API'leri, özel tohumlar ve garantili SLA altyapısı için 10k–25k $/ay öder. 8 kurumsal müşteriyle <b>1,50 M$ ARR</b>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Finansal Projeksiyonlar ve Gelir Modeli</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 10 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: MARKET OPPORTUNITY & TRACTION -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Pazar Fırsatı ve Mevcut İlerleme</span>
+      </div>
+      <div class="category-tag">DEVASA ADRESLENEBİLİR PAZAR</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">140 Milyar Dolarlık DeFi Pazarında Değeri Yakalıyoruz</div>
+      <div class="slide-subtitle">
+        Web3 sermayesi kurumsal düzeyde güvenlik altyapısına muhtaçtır. Werracle; zincir üstü yapay zekâ, orakıl altyapısı ve DeFi risk yönetiminin tam kesişiminde konumlanmıştır.
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 25px;">
+        <div class="card">
+          <div class="metric-hero color-cyan">140 Milyar $+</div>
+          <div class="metric-sub">Toplam Adreslenebilir Pazar (TAM)</div>
+          <p style="font-size: 14.5px; color: #94a3b8; margin-top: 8px;">Küresel DeFi protokolleri ve kredi kasalarındaki kilitli toplam sermaye</p>
+        </div>
+        <div class="card">
+          <div class="metric-hero color-green">15 Milyar $+</div>
+          <div class="metric-sub">Hizmet Verilebilir Pazar (SAM)</div>
+          <p style="font-size: 14.5px; color: #94a3b8; margin-top: 8px;">MEV ve flaş kredi riskine maruz kalan borç verme ve DEX likiditesi</p>
+        </div>
+        <div class="card">
+          <div class="metric-hero color-gold">1,8 Milyar $</div>
+          <div class="metric-sub">Elde Edilebilir Pazar (SOM)</div>
+          <p style="font-size: 14.5px; color: #94a3b8; margin-top: 8px;">Orakıllar, risk denetimleri ve telemetri araçları için yıllık küresel harcama</p>
+        </div>
+      </div>
+
+      <div class="card card-highlight">
+        <div class="card-title color-cyan">Mevcut Operasyonel Çekiş ve Kilometre Taşları</div>
+        <div class="grid-3" style="margin-top: 15px;">
+          <div>
+            <div style="font-size: 16px; font-weight: 700; color: #f8fafc;">Canlı Zincir Dağıtımları</div>
+            <p style="font-size: 14px; color: #94a3b8; margin-top: 6px;">
+              Aurora testnet'te sözleşmeler canlı; Base L2 üretim telemetrisi aktif; Starknet Cairo 2.8 Sierra kod tabanı hazır.
+            </p>
+          </div>
+          <div>
+            <div style="font-size: 16px; font-weight: 700; color: #f8fafc;">Kurumsal Değerlendirme Anahtarları</div>
+            <p style="font-size: 14px; color: #94a3b8; margin-top: 6px;">
+              Steakhouse Financial, Gauntlet ve Re7 Capital risk masaları için aktif pilot deneme anahtarları tanımlandı.
+            </p>
+          </div>
+          <div>
+            <div style="font-size: 16px; font-weight: 700; color: #f8fafc;">Fikri Mülkiyet ve Hibeler</div>
+            <p style="font-size: 14px; color: #94a3b8; margin-top: 6px;">
+              TÜRKPATENT TR 2026/016285 tescillendi; akademik monografiler yayımlandı; Teknokent Ar-Ge onayı ve Base adaylığı hazır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Pazar Büyüklüğü ve Operasyonel Ayak İzi</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 11 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: THE TEAM -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Kurucu Ekip ve Kurumsal Kökler</span>
+      </div>
+      <div class="category-tag">MÜHENDİSLİK & AKADEMİK BİRİKİM</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Akademik Bilimle Desteklenen Dünya Standartlarında Mühendislik</div>
+      <div class="slide-subtitle">
+        Düşük seviyeli EVM/Cairo mühendisliğini, biçimsel matematiksel mantık ve kurumsal şirket yönetimiyle birleştiriyoruz.
+      </div>
+
+      <div class="grid-3">
+        <div class="card card-highlight">
+          <div class="card-title color-cyan">
+            <span>💻</span> Volkan Dağlı
+          </div>
+          <div style="font-size: 15px; color: #38bdf8; font-weight: 600; margin-bottom: 10px;">
+            Kurucu Ortak & CTO / Baş Mimar
+          </div>
+          <div class="card-desc">
+            <b>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ.</b> (Çukurova Teknokent) Yönetici Ortağı ve CTO'su. Anadolu Üniversitesi akademik bağı. WERR Motoru, Lean 4 ispat paketi ve düşük gecikmeli EVM/Cairo çekirdeğinin baş mimarı.
+          </div>
+          <div class="pill-list" style="margin-top: 15px;">
+            <span class="pill-item">ORCID: 0009-0000-1587-8703</span>
+            <span class="pill-item">Lean 4 Mimarı</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-green">
+          <div class="card-title color-green">
+            <span>🎓</span> Dr. Zerrin Dağlı
+          </div>
+          <div style="font-size: 15px; color: #34d399; font-weight: 600; margin-bottom: 10px;">
+            Akademik Danışman & Bilimsel İnceleme
+          </div>
+          <div class="card-desc">
+            <b>Mersin Üniversitesi</b> Öğretim Elemanı ve Yusuf Kalkavan Anadolu Lisesi Akademik Danışmanı / Eğitimcisi. Algoritmik karmaşıklık sınırları, açık bilim yayınları ve biçimsel doğrulama metodolojileri baş danışmanı.
+          </div>
+          <div class="pill-list" style="margin-top: 15px;">
+            <span class="pill-item">Mersin Üniversitesi</span>
+            <span class="pill-item">Karmaşıklık Sınırları</span>
+          </div>
+        </div>
+
+        <div class="card card-accent-purple">
+          <div class="card-title color-purple">
+            <span>⚡</span> Dağhan Dağlı
+          </div>
+          <div style="font-size: 15px; color: #c084fc; font-weight: 600; margin-bottom: 10px;">
+            Genç Araştırmacı & Algoritma Geliştirici
+          </div>
+          <div class="card-desc">
+            <b>Toros Fen Lisesi, MEV (Toros Üniversitesi)</b> Öğrencisi ve Araştırmacısı. Çapraz derleyici test çözücüleri, test vektörleri ve açık kaynak otomatik doğrulama betikleri katkıcısı.
+          </div>
+          <div class="pill-list" style="margin-top: 15px;">
+            <span class="pill-item">Toros Fen Lisesi</span>
+            <span class="pill-item">MEV / Toros Üniv.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 25px; padding: 22px 30px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-size: 18px; font-weight: 700; color: #f8fafc;">Kurumsal Ar-Ge Üssü:</span>
+          <span style="font-size: 16px; color: #94a3b8; margin-left: 15px;">Adana Çukurova Teknokent bünyesinde kuluçkalanmış olup tüm fikri mülkiyet hakları ITouch Systems Ltd. Şti.'ye aittir.</span>
+        </div>
+        <span class="category-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">ask@answerr.me</span>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Werracle Ekibi ve Kurumsal Miras</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 12 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: THE ASK & USE OF FUNDS -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Tohum Yatırım Talebi ve Fon Kullanımı</span>
+      </div>
+      <div class="category-tag">1.500.000 $ TOHUM YATIRIM TURU</div>
+    </div>
+
+    <div class="content-area">
+      <div class="slide-title">Küresel Protokol Yayılımı ve Tier-1 Denetimleri Destekliyoruz</div>
+      <div class="slide-subtitle">
+        Çok zincirli protokol kancalarını tamamlamak, lider DeFi küratörlerini entegre etmek ve DaaS yinelenen gelirlerini nakit akışı başa-baş noktasına taşımak için 18–24 aylık pist.
+      </div>
+
+      <div class="grid-2">
+        <div class="chart-container">
+          <img src="chart_fund_allocation_werracle_tr.png" alt="Fon Kullanımı Pasta Grafiği">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="card card-highlight">
+            <div class="card-title color-cyan">%40 (600.000 $) &bull; Çekirdek Protokol & Çok Zincirli Mühendislik</div>
+            <div class="card-desc">
+              Uniswap v4 ücret kancalarının ana ağ dağıtımı, Starknet Ekubo LVR uzantısı, Monad ve Solana yüksek hızlı adaptörleri.
+            </div>
+          </div>
+
+          <div class="card card-accent-green">
+            <div class="card-title color-green">%25 (375.000 $) &bull; DeFi BD & Kurumsal Küratör Ortaklıkları</div>
+            <div class="card-desc">
+              İlk 15 borç verme ve AMM pazarına doğrudan entegrasyon. Kasa yöneticilerine (Steakhouse, Gauntlet, Re7) özel SLA desteği.
+            </div>
+          </div>
+
+          <div class="card card-accent-purple">
+            <div class="card-title color-purple">%20 (300.000 $) &bull; Güvenlik Denetimleri & Bare-Metal Düğümler</div>
+            <div class="card-desc">
+              Tier-1 akıllı sözleşme denetimleri (OpenZeppelin / Trail of Bits), sürekli Lean 4 biçimsel ispat geliştirmeleri ve düşük gecikmeli küresel RPC kümeleri.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title color-gold">%15 (225.000 $) &bull; Uluslararası Fikri Mülkiyet, Hukuk & ABD Yapılanması</div>
+            <div class="card-desc">
+              PCT uluslararası patent başvuruları, ABD bağlı şirket kuruluşu, W-8BEN-E ve kurumsal yasal uyum altyapısı.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Tohum Turu Sermaye Dağılımı (18–24 Aylık Pist)</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 13 / 14</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: CONCLUSION & CONTACT -->
+  <div class="slide">
+    <div class="header-bar">
+      <div class="brand-wrap">
+        <span class="brand-badge">WERRACLE</span>
+        <span class="brand-title">Otonom Web3 Savunmasının Geleceği</span>
+      </div>
+      <div class="category-tag">ORAKILLARI YENİDEN TANIMLAMAK İÇİN BİZE KATILIN</div>
+    </div>
+
+    <div class="content-area" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <div class="brand-badge" style="font-size: 22px; padding: 10px 28px; margin-bottom: 25px;">WERRACLE PROTOKOL & DAAS</div>
+      
+      <div class="cover-title" style="max-width: 1400px; font-size: 60px; margin-bottom: 25px;">
+        Akıllı Sözleşmeler Artık Pasif Kalamaz. Web3'ün Geleceği Refleksiftir.
+      </div>
+
+      <div style="font-size: 24px; color: #94a3b8; max-width: 1100px; line-height: 1.5; margin-bottom: 50px;">
+        Merkeziyetsiz finansta sonraki trilyon dolarlık sermayeyi koruyacak sent altı, makine denetimli refleks zekâsı katmanını birlikte inşa edelim.
+      </div>
+
+      <div class="grid-4" style="width: 100%; max-width: 1500px; text-align: left;">
+        <div class="card card-highlight">
+          <div style="font-size: 14px; text-transform: uppercase; color: #38bdf8; font-weight: 700; margin-bottom: 6px;">Protokol & dApp</div>
+          <div style="font-size: 19px; font-weight: 700; color: #f8fafc;">https://werracle.io</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Tarayıcı Simülatörü & Uniswap v4 Kancası</p>
+        </div>
+
+        <div class="card card-accent-green">
+          <div style="font-size: 14px; text-transform: uppercase; color: #34d399; font-weight: 700; margin-bottom: 6px;">Risk Telemetrisi DaaS</div>
+          <div style="font-size: 19px; font-weight: 700; color: #f8fafc;">https://radar.werracle.com</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Canlı API & 2,20 Milyar $ Borç Gözlemevi</p>
+        </div>
+
+        <div class="card card-accent-purple">
+          <div style="font-size: 14px; text-transform: uppercase; color: #c084fc; font-weight: 700; margin-bottom: 6px;">Kurumsal Merkez</div>
+          <div style="font-size: 19px; font-weight: 700; color: #f8fafc;">https://werracle.com</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Lisanslama & Kurumsal Küratör SLA'sı</p>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 14px; text-transform: uppercase; color: #fbbf24; font-weight: 700; margin-bottom: 6px;">Yönetici İletişimi</div>
+          <div style="font-size: 19px; font-weight: 700; color: #f8fafc;">ask@answerr.me</div>
+          <p style="font-size: 14px; color: #94a3b8; margin-top: 8px;">Volkan Dağlı, CTO & Kurucu Ortak</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ. &bull; Çukurova Teknokent, Adana / Türkiye</span>
+      <span>Gizli &bull; Tohum Yatırımcı Sunumu</span>
+      <span>Slayt 14 / 14</span>
+    </div>
+  </div>
+
+</body>
+</html>
+"""
+
+html_path = os.path.abspath('deck_assets/werracle_product_deck_tr.html')
+with open(html_path, 'w', encoding='utf-8') as f:
+    f.write(html_content)
+print(f"HTML presentation written: {html_path}")
+
+pdf_local_path = os.path.abspath('Werracle_Product_Investor_Pitch_Deck_TR.pdf')
+pdf_artifact_path = os.path.abspath('C:/Users/maat/.gemini/antigravity/brain/dda702fe-3efa-4434-83d5-3111cadb22cf/Werracle_Product_Investor_Pitch_Deck_TR.pdf')
+
+print("Rendering Turkish Werracle Product PDF via Playwright Chromium...")
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page(viewport={"width": 1920, "height": 1080})
+    file_url = f"file:///{html_path.replace(os.sep, '/')}"
+    page.goto(file_url, wait_until="networkidle")
+    page.pdf(
+        path=pdf_local_path,
+        width="1920px",
+        height="1080px",
+        print_background=True,
+        prefer_css_page_size=True
+    )
+    browser.close()
+
+print(f"SUCCESS: Rendered local Turkish PDF -> {pdf_local_path}")
+shutil.copy2(pdf_local_path, pdf_artifact_path)
+print(f"SUCCESS: Copied artifact Turkish PDF -> {pdf_artifact_path}")
+print("PDF Size:", f"{os.path.getsize(pdf_local_path):,} bytes")
