@@ -78,8 +78,10 @@ DEFAULT_CONFIG = {
             "name": "Pro Researcher & Searcher",
             "amount_usdc": 149.0,
             "amount_try_net": 5190.0,
-            "amount_try_vat": 1038.0,
-            "amount_try_total": 6228.0,
+            "amount_try_vat": 0.0,
+            "amount_try_total": 5190.0,
+            "vat_rate": 0.0,
+            "vat_exemption": "0% KDV (4691 s. TGB Kanunu & 3065 s. KDV Kanunu Geçici 20/1 Teknopark Ar-Ge Yazılım İstisnası)",
             "duration_days": 30,
             "rate_limit_per_min": 600
         },
@@ -87,11 +89,22 @@ DEFAULT_CONFIG = {
             "name": "Institutional Risk Curator",
             "amount_usdc": 499.0,
             "amount_try_net": 17390.0,
-            "amount_try_vat": 3478.0,
-            "amount_try_total": 20868.0,
+            "amount_try_vat": 0.0,
+            "amount_try_total": 17390.0,
+            "vat_rate": 0.0,
+            "vat_exemption": "0% KDV (4691 s. TGB Kanunu & 3065 s. KDV Kanunu Geçici 20/1 Teknopark Ar-Ge Yazılım İstisnası)",
             "duration_days": 30,
             "rate_limit_per_min": 3000
         }
+    },
+    "bank_accounts": {
+        "bank_name": "TEB (Türk Ekonomi Bankası A.Ş.) — Adana Toros Şubesi (446)",
+        "account_holder": "ITOUCH BİLİŞİM SİSTEMLERİ MÜHENDİSLİK DANIŞMANLIK SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+        "customer_no": "23764109",
+        "swift_bic": "TEBUTRIS",
+        "iban_try": "TR920003200000000070575465",
+        "iban_usd": "TR830003200000000088946748",
+        "iban_eur": "TR280003200000000088946768"
     }
 }
 
@@ -689,8 +702,8 @@ def init_iyzico_card_checkout(tier: str, billing: Dict[str, Any], client_ip: str
 
     p_info = cfg["pricing"][tier]
     net_try = float(p_info.get("amount_try_net", 5190.0 if tier == "pro" else 17390.0))
-    vat_try = float(p_info.get("amount_try_vat", round(net_try * 0.20, 2)))
-    total_try = float(p_info.get("amount_try_total", round(net_try + vat_try, 2)))
+    vat_try = 0.0
+    total_try = net_try
     total_str = f"{total_try:.2f}"
 
     email = (billing.get("email") or "").strip()
@@ -866,26 +879,86 @@ def settle_iyzico_card_callback(token: str, db_path: str = DB_PATH) -> Dict[str,
     }
 
 
+def create_bank_transfer_invoice(tier: str, currency: str, billing: Dict[str, Any], wire_ref: str = "", db_path: str = DB_PATH) -> Dict[str, Any]:
+    """Creates an UNPAID (Proforma / Pending Wire) Commercial Invoice record in SQLite so the buyer can download an official UNPAID PDF invoice and pay via TEB IBAN."""
+    init_db(db_path)
+    cfg = load_config()
+    tier = (tier or "pro").lower()
+    if tier not in cfg["pricing"]:
+        return {"success": False, "error": "Invalid tier. Choose 'pro' or 'institutional'."}
+    curr = (currency or "TRY").upper()
+    if curr not in ("TRY", "USD", "EUR"):
+        curr = "TRY"
+    p_info = cfg["pricing"][tier]
+    if curr == "TRY":
+        amt = float(p_info.get("amount_try_net", 5190.0 if tier == "pro" else 17390.0))
+        iban = "TR92 0003 2000 0000 0070 5754 65 (TEB TRY)"
+    elif curr == "EUR":
+        amt = 139.0 if tier == "pro" else 465.0
+        iban = "TR28 0003 2000 0000 0088 9467 68 (TEB EUR)"
+    else:
+        amt = float(p_info.get("amount_usdc", 149.0 if tier == "pro" else 499.0))
+        iban = "TR83 0003 2000 0000 0088 9467 48 (TEB USD)"
+
+    now = time.time()
+    ref_id = f"WIRE-{int(now)}-{secrets.token_hex(3).upper()}"
+    inv_no = f"PRO-{time.strftime('%Y', time.gmtime(now))}-{ref_id[-6:]}"
+    conn = get_db_connection(db_path)
+    with conn:
+        conn.execute("""
+            INSERT INTO payments (
+                tx_hash, payer_address, amount_usdc, tier, claimed_at, key_hash, verified_on_chain, binance_synced,
+                network, currency, payment_method, billing_json, invoice_no, key_prefix, raw_api_key
+            ) VALUES (?, ?, ?, ?, ?, ?, 0, 0, 'bank_wire_teb', ?, ?, ?, ?, 'PENDING_WIRE_VERIFICATION', '')
+        """, (
+            ref_id,
+            wire_ref or (billing.get("company") or "Bank Wire Transfer"),
+            amt,
+            tier,
+            now,
+            f"pending_{ref_id}",
+            curr,
+            f"Bank Wire / EFT ({iban})",
+            json.dumps(billing, ensure_ascii=False),
+            inv_no
+        ))
+    conn.close()
+    return {
+        "success": True,
+        "status": "unpaid",
+        "reference": ref_id,
+        "invoice_no": inv_no,
+        "tier": tier,
+        "amount": amt,
+        "currency": curr,
+        "bank_iban": iban,
+        "invoice_pdf_url": f"https://radar.werracle.com/v1/radar/invoice/{ref_id}.pdf",
+        "message": "Unpaid (Proforma) Commercial Invoice generated. Once your TEB wire transfer is verified, your invoice status updates to PAID and your API key is activated."
+    }
+
+
 def get_payment_for_invoice(payment_ref: str, db_path: str = DB_PATH) -> Optional[Dict[str, Any]]:
     init_db(db_path)
     ref = (payment_ref or "").strip().removesuffix(".pdf")
-    if ref.lower() == "sample":
+    if ref.lower() in ("sample", "sample-unpaid", "proforma"):
         now = time.time()
+        is_unpaid_sample = ref.lower() in ("sample-unpaid", "proforma")
         return {
-            "tx_hash": "0x8f94e2c7d3b109a4e6c218d5b049f1a2c3d4e5f60718293a4b5c6d7e8f901234",
-            "payer_address": "0x71C...89A (Verified Institutional Subscriber)",
+            "status": "unpaid" if is_unpaid_sample else "paid",
+            "tx_hash": "WIRE-PENDING-TEB-446" if is_unpaid_sample else "0x8f94e2c7d3b109a4e6c218d5b049f1a2c3d4e5f60718293a4b5c6d7e8f901234",
+            "payer_address": "Bank Wire / EFT Transfer (Awaiting Confirmation)" if is_unpaid_sample else "0x71C...89A (Verified Institutional Subscriber)",
             "amount_usdc": 149.00,
             "net_amount": 149.00,
             "vat_amount": 0.00,
             "tier": "pro",
             "claimed_at": now,
             "expires_at": now + 30 * 86400,
-            "network": "Base Mainnet (Chain ID 8453)",
-            "currency": "USDC",
-            "payment_method": "On-Chain Crypto (Base Mainnet USDC)",
-            "recipient_address": "0x4945ef6e124eea2176ddf050b33db42b0ae8c7f7 (Base Treasury)",
-            "invoice_no": f"INV-{time.strftime('%Y', time.gmtime(now))}-SAMPLE01",
-            "key_prefix": "wrk_pro_live_sample***",
+            "network": "TEB Bank Wire (SWIFT: TEBUTRIS)" if is_unpaid_sample else "Base Mainnet (Chain ID 8453)",
+            "currency": "USD" if is_unpaid_sample else "USDC",
+            "payment_method": "Bank Wire / EFT (TEB USD IBAN)" if is_unpaid_sample else "On-Chain Crypto (Base Mainnet USDC)",
+            "recipient_address": "TR83 0003 2000 0000 0088 9467 48 (TEB USD)" if is_unpaid_sample else "0x4945ef6e124eea2176ddf050b33db42b0ae8c7f7 (Base Treasury)",
+            "invoice_no": f"PRO-{time.strftime('%Y', time.gmtime(now))}-SAMPLE" if is_unpaid_sample else f"INV-{time.strftime('%Y', time.gmtime(now))}-SAMPLE01",
+            "key_prefix": "PENDING_WIRE_VERIFICATION" if is_unpaid_sample else "wrk_pro_live_sample***",
             "rate_limit_per_min": 600,
             "billing": {
                 "company": "Sample Quantitative DeFi Fund Ltd.",
@@ -917,13 +990,14 @@ def get_payment_for_invoice(payment_ref: str, db_path: str = DB_PATH) -> Optiona
 
     curr = p.get("currency") or "USDC"
     amt = float(p.get("amount_usdc") or 149.0)
-    if curr == "TRY":
-        net_amt = round(amt / 1.20, 2)
-        vat_amt = round(amt - net_amt, 2)
+    net_amt = amt
+    vat_amt = 0.0
+    is_paid = bool(p.get("verified_on_chain", 1))
+    if "bank_wire" in str(p.get("network", "")).lower():
+        recip = "TEB (Adana Toros Şb. 446) — ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ."
+    elif curr == "TRY":
         recip = "ITouch Bilişim Sistemleri Ltd. Şti. — iyzico Merchant #276514"
     else:
-        net_amt = amt
-        vat_amt = 0.0
         recip = (
             "TLMhaDJTVYBHBSGJ9nCQGLvqnYFPsBgLJu (TRON TRC20 Treasury)"
             if "trc20" in str(p.get("network", "")).lower()
@@ -931,6 +1005,7 @@ def get_payment_for_invoice(payment_ref: str, db_path: str = DB_PATH) -> Optiona
         )
 
     return {
+        "status": "paid" if is_paid else "unpaid",
         "tx_hash": p["tx_hash"],
         "payer_address": p["payer_address"],
         "amount_usdc": amt,
@@ -945,7 +1020,7 @@ def get_payment_for_invoice(payment_ref: str, db_path: str = DB_PATH) -> Optiona
         "payment_method": p.get("payment_method") or "On-Chain Crypto",
         "recipient_address": recip,
         "invoice_no": p.get("invoice_no") or f"INV-2026-{hashlib.sha256(p['tx_hash'].encode()).hexdigest()[:8].upper()}",
-        "key_prefix": p.get("key_prefix") or k_dict.get("key_prefix") or f"wrk_{p['tier'][:4]}_live_***",
+        "key_prefix": p.get("key_prefix") or k_dict.get("key_prefix") or (f"wrk_{p['tier'][:4]}_live_***" if is_paid else "PENDING_WIRE_VERIFICATION"),
         "rate_limit_per_min": k_dict.get("rate_limit_per_min") or (3000 if p["tier"] == "institutional" else 600),
         "billing": billing
     }

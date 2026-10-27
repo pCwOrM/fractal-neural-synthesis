@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 
 WORKSPACE = os.getcwd()
 CHARTS_DIR = os.path.join(WORKSPACE, "deck_assets")
-ARTIFACT_DIR = r"C:\Users\maat\.gemini\antigravity\brain\dda702fe-3efa-4434-83d5-3111cadb22cf"
+ARTIFACT_DIR = r"C:\Users\maat\.gemini\antigravity\brain\9cfb8917-acbb-4be8-8bb2-995d94af3274"
 
 def img_to_b64(filename):
     path = os.path.join(CHARTS_DIR, filename)
@@ -291,7 +291,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="brand">WERRACLE RADAR</div>
       <div class="category-pill">DeFi Risk Telemetrisi</div>
     </div>
-    <div class="header-title">ITouch Systems &bull; Tohum / Stratejik Yatırım Turu</div>
+    <div class="header-title">ITouch Bilişim Sistemleri &bull; Tohum / Stratejik Yatırım Turu</div>
   </div>
   <div class="content" style="align-items: flex-start; justify-content: center; max-width: 1000px;">
     <div class="hero-tag">
@@ -617,7 +617,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="card" style="padding: 16px 20px;">
         <div class="card-title"><span style="color:#38bdf8;">●</span> Teknokent Vergi Avantajı: %100 İstisna</div>
         <div class="card-desc">
-          Çukurova Teknokent bünyesinde: Yabancı kurumlara yazılım ihracatı <strong>%100 Kurumlar Vergisi indirimine</strong> tabidir (CB Kararı 11257).
+          Çukurova Üniversitesi Teknokent bünyesinde: Yabancı kurumlara yazılım ihracatı <strong>%100 Kurumlar Vergisi indirimine</strong> tabidir (CB Kararı 11257).
         </div>
       </div>
     </div>
@@ -817,53 +817,60 @@ html_content = f"""<!DOCTYPE html>
   <div class="header">
     <div class="header-left">
       <div class="brand">WERRACLE RADAR</div>
-      <div class="category-pill">Kurucu Ekip</div>
+      <div class="category-pill">Yönetim Ekibi ve Yönetişim</div>
     </div>
-    <div class="header-title">Teknik Disiplin ve Akademik Güvence</div>
+    <div class="header-title">ITouch Bilişim Sistemleri (8 Kişilik Ekip) ve Akademik Katman</div>
   </div>
   <div class="content">
-    <h1 class="slide-title">Biçimsel Doğrulama ve Nicel Ekonometri Araştırmacıları</h1>
-    <h2 class="slide-sub">Teorik ekonometri, yüksek frekanslı blokzincir mühendisliği ve kurumsal ürün geliştirmeyi birleştiren çekirdek kadro.</h2>
-    <div class="grid-3" style="margin-bottom: 24px;">
+    <h1 class="slide-title">Üst Yönetim, Mühendislik Kadrosu ve Akademik Yönetişim</h1>
+    <h2 class="slide-sub">Çukurova Üniversitesi Teknokent'te yerleşik ITouch Bilişim Sistemleri Ltd. Şti. ticari kadrosu ve bağımsız akademik araştırma katmanı.</h2>
+    <div class="grid-3" style="margin-bottom: 22px;">
       <div class="card card-highlight">
-        <div class="card-title">Volkan Dağlı</div>
-        <div style="font-size: 13px; font-weight: 700; color: #38bdf8; margin-bottom: 10px;">Kurucu Ortak & CTO / Baş Geliştirici</div>
-        <div class="card-desc">
-          ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. kurucu ortağı. Anadolu Üniversitesi ile akademik bağı olan biçimsel doğrulama araştırmacısı. Werracle Reflex motorunun baş mimarı ve 4 doğrulanmış Zenodo monografisinin başyazarı.
+        <div class="card-title">Yönetim ve Ortaklar</div>
+        <div class="card-desc" style="font-size: 13px; line-height: 1.55;">
+          <strong>Volkan Dağlı — Kurucu & CTO</strong><br>
+          Fizikçi, Yönetim Bilişim Sistemleri Uzmanı & Bilişim Teknolojileri YL (M.Sc. IT). Werracle ve WERR çekirdeğinin baş mimarı.<br><br>
+          <strong>Bekirhan Dağlı — Ortak & CEO</strong><br>
+          Çevre Mühendisi. ITouch Bilişim Sistemleri bünyesinde kurumsal strateji, iş geliştirme ve kurumsal operasyonlara liderlik etmektedir.
         </div>
       </div>
       <div class="card">
-        <div class="card-title">Dr. Zerrin Dağlı</div>
-        <div style="font-size: 13px; font-weight: 700; color: #10b981; margin-bottom: 10px;">Akademik ve Ekonometrik Danışman</div>
-        <div class="card-desc">
-          Mersin Üniversitesi ve Yusuf Kalkavan Anadolu Lisesi bünyesinde araştırmacı. Tasfiye dinamiklerinin istatistiksel doğrulaması ve ekonometrik modelleme lideri.
+        <div class="card-title">Mühendislik, Finans ve Operasyon</div>
+        <div class="card-desc" style="font-size: 12.5px; line-height: 1.55;">
+          &bull; <strong>Burak Salar</strong> — Mekatronik Mühendisi, MBA<br>
+          &bull; <strong>Fatih İlkin Sercan</strong> — Ekonomist, Sermaye Piyasası ve Borsa YL<br>
+          &bull; <strong>Mustafa Kalender</strong> — Bilgisayar Mühendisi<br>
+          &bull; <strong>Mustafa Ünal</strong> — Yazılım Geliştirme Uzmanı & Usta Öğretici<br>
+          &bull; <strong>Prenses Metin</strong> — Bilgisayar Programcısı<br>
+          &bull; <strong>Semih Salar</strong> — İşletme Uzmanı
         </div>
       </div>
       <div class="card">
-        <div class="card-title">Dağhan Dağlı</div>
-        <div style="font-size: 13px; font-weight: 700; color: #a855f7; margin-bottom: 10px;">Lise Araştırmacısı & Geliştirici</div>
-        <div class="card-desc">
-          Toros Science High School, MEV (Toros University). Akıllı sözleşme birim testleri, RPC çözümleme hatları ve tasfiye simülasyon ortamları geliştiricisi.
+        <div class="card-title">Akademik Araştırma ve Patentler</div>
+        <div class="card-desc" style="font-size: 12.5px; line-height: 1.55;">
+          &bull; <strong>Volkan Dağlı</strong> — Baş Araştırmacı (Anadolu Üniversitesi)<br>
+          &bull; <strong>Dr. Zerrin Dağlı</strong> — Akademik Danışman ve Ortak Yazar (Mersin Üniv.)<br>
+          &bull; <strong>Dağhan Dağlı</strong> — Araştırma Stajyeri (Toros Üniv. — Toros Fen Lisesi)
         </div>
       </div>
     </div>
     <div class="grid-3">
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Çukurova Teknokent</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Resmi Ar-Ge kuluçka merkezi ve laboratuvar desteği.</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Çukurova Üniversitesi Teknokent</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">ITouch Bilişim Sistemleri Ar-Ge Merkezi.</div>
       </div>
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">TÜRKPATENT TR 2026/016285</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Tescilli usuli tahkim patenti başvurusu.</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">TÜRKPATENT TR 2026/016285 & 016633</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Münhasır ticari lisans ve markalar (Werr®, Werracle®, Answerr®).</div>
       </div>
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">%100 Vergi Avantajı</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Cumhurbaşkanı Kararı 11257 ile yazılım ihracat istisnası.</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">BSL 1.1 Ticari Lisanslama</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Açık akademik ve testnet erişimi; ITouch Bilişim Sistemleri üzerinden kurumsal ana ağ ve DaaS lisansı.</div>
       </div>
     </div>
   </div>
   <div class="footer">
-    <div>Doğrudan Yönetici İletişimi: <a href="mailto:ask@answerr.me">ask@answerr.me</a></div>
+    <div>Doğrudan Yönetici İletişimi: <a href="mailto:contact@werracle.com">contact@werracle.com</a> &bull; <a href="mailto:ask@answerr.me">ask@answerr.me</a></div>
     <div>Slayt 11 / 12</div>
   </div>
 </div>

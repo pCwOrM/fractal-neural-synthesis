@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 
 WORKSPACE = os.getcwd()
 CHARTS_DIR = os.path.join(WORKSPACE, "deck_assets")
-ARTIFACT_DIR = r"C:\Users\maat\.gemini\antigravity\brain\dda702fe-3efa-4434-83d5-3111cadb22cf"
+ARTIFACT_DIR = r"C:\Users\maat\.gemini\antigravity\brain\9cfb8917-acbb-4be8-8bb2-995d94af3274"
 
 def img_to_b64(filename):
     path = os.path.join(CHARTS_DIR, filename)
@@ -323,7 +323,7 @@ html_content = f"""<!DOCTYPE html>
     </div>
   </div>
   <div class="footer">
-    <div>Founders: Volkan Dağlı (CTO) &bull; Dr. Zerrin Dağlı (Advisor) &bull; Dağhan Dağlı</div>
+    <div>ITouch Systems Leadership: Volkan Dağlı (Founder &amp; CTO) &bull; Bekirhan Dağlı (Partner &amp; CEO)</div>
     <div>Executive Line: <a href="mailto:ask@answerr.me">ask@answerr.me</a> &bull; <a href="https://radar.werracle.com">radar.werracle.com</a></div>
     <div>Slide 01 / 12</div>
   </div>
@@ -617,7 +617,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="card" style="padding: 16px 20px;">
         <div class="card-title"><span style="color:#38bdf8;">●</span> Tax Advantage: 100% Export Exemption</div>
         <div class="card-desc">
-          Headquartered in Çukurova Teknokent: Software exports to foreign institutions qualify for <strong>100% Corporate Tax exemption</strong> (Pres. Decree 11257).
+          Headquartered in Çukurova University Science Park: Software exports to foreign institutions qualify for <strong>100% Corporate Tax exemption</strong> (Pres. Decree 11257).
         </div>
       </div>
     </div>
@@ -817,53 +817,60 @@ html_content = f"""<!DOCTYPE html>
   <div class="header">
     <div class="header-left">
       <div class="brand">WERRACLE RADAR</div>
-      <div class="category-pill">Founding Team</div>
+      <div class="category-pill">Executive Team & Governance</div>
     </div>
-    <div class="header-title">Technical Rigor & Academic Precision</div>
+    <div class="header-title">ITouch Systems (8-Person Team) & Academic Layer</div>
   </div>
   <div class="content">
-    <h1 class="slide-title">Engineered by Formal Verification & Quantitative Researchers</h1>
-    <h2 class="slide-sub">Bridging theoretical econometrics, high-frequency blockchain engineering, and enterprise delivery.</h2>
-    <div class="grid-3" style="margin-bottom: 24px;">
+    <h1 class="slide-title">Executive Leadership, Engineering Force & Academic Rigor</h1>
+    <h2 class="slide-sub">Operated commercially by ITouch Bilişim Sistemleri Ltd. Şti. (Çukurova University Science Park) alongside an independent academic research layer.</h2>
+    <div class="grid-3" style="margin-bottom: 22px;">
       <div class="card card-highlight">
-        <div class="card-title">Volkan Dağlı</div>
-        <div style="font-size: 13px; font-weight: 700; color: #38bdf8; margin-bottom: 10px;">Co-Founder & CTO / Lead Developer</div>
-        <div class="card-desc">
-          Co-Founder & CTO at ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. Formal verification researcher affiliated with Anadolu University. Lead architect of Werracle Reflex Engine and author of 4 verified Zenodo open-science monographs.
+        <div class="card-title">Leadership & Partners</div>
+        <div class="card-desc" style="font-size: 13px; line-height: 1.55;">
+          <strong>Volkan Dağlı — Founder & CTO</strong><br>
+          Physicist, MIS Specialist & M.Sc. in IT. Lead architect of Werracle & WERR Engine.<br><br>
+          <strong>Bekirhan Dağlı — Partner & CEO</strong><br>
+          Environmental Engineer. Leads corporate strategy, enterprise licensing, and operations at ITouch Systems.
         </div>
       </div>
       <div class="card">
-        <div class="card-title">Dr. Zerrin Dağlı</div>
-        <div style="font-size: 13px; font-weight: 700; color: #10b981; margin-bottom: 10px;">Academic & Econometric Advisor</div>
-        <div class="card-desc">
-          Academic advisor affiliated with Mersin University and Yusuf Kalkavan Anadolu Lisesi. Quantitative methodology specialist leading the statistical verification and econometric modeling for liquidation dynamics.
+        <div class="card-title">Engineering, Finance & Ops</div>
+        <div class="card-desc" style="font-size: 12.5px; line-height: 1.55;">
+          &bull; <strong>Burak Salar</strong> — Mechatronics Engineer, MBA<br>
+          &bull; <strong>Fatih İlkin Sercan</strong> — Economist & M.Sc. in Capital Markets and Stock Exchange<br>
+          &bull; <strong>Mustafa Kalender</strong> — Computer Engineer<br>
+          &bull; <strong>Mustafa Ünal</strong> — Software Development Specialist & Master Instructor<br>
+          &bull; <strong>Prenses Metin</strong> — Computer Programmer<br>
+          &bull; <strong>Semih Salar</strong> — Business Administration Specialist
         </div>
       </div>
       <div class="card">
-        <div class="card-title">Dağhan Dağlı</div>
-        <div style="font-size: 13px; font-weight: 700; color: #a855f7; margin-bottom: 10px;">Student Researcher & Contributor</div>
-        <div class="card-desc">
-          Toros Science High School, MEV (Toros University). Focus on smart contract unit testing, RPC decoding pipelines, and automated liquidation simulation environments.
+        <div class="card-title">Academic & Patent Layer</div>
+        <div class="card-desc" style="font-size: 12.5px; line-height: 1.55;">
+          &bull; <strong>Volkan Dağlı</strong> — Principal Investigator (Anadolu Univ.)<br>
+          &bull; <strong>Dr. Zerrin Dağlı</strong> — Academic Advisor & Co-Author (Mersin Univ.)<br>
+          &bull; <strong>Dağhan Dağlı</strong> — Research Intern (Toros Univ. — Toros Science High School)
         </div>
       </div>
     </div>
     <div class="grid-3">
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Çukurova Teknokent</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Official technology incubator & R&D lab support.</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Çukurova University Science Park</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">ITouch Systems R&D HQ.</div>
       </div>
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">TÜRKPATENT TR 2026/016285</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Registered patent application for procedural arbitration.</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">TÜRKPATENT TR 2026/016285 & 016633</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Exclusive commercial license & trademarks (Werr®, Werracle®, Answerr®).</div>
       </div>
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">100% Tax Advantage</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Corporate export tax exemption under Pres. Decree 11257.</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">BSL 1.1 Commercial Licensing</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Open academic & testnet access; commercial mainnet & DaaS licensing via ITouch Systems.</div>
       </div>
     </div>
   </div>
   <div class="footer">
-    <div>Direct Executive Contact: <a href="mailto:ask@answerr.me">ask@answerr.me</a></div>
+    <div>Direct Executive Contact: <a href="mailto:contact@werracle.com">contact@werracle.com</a> &bull; <a href="mailto:ask@answerr.me">ask@answerr.me</a></div>
     <div>Slide 11 / 12</div>
   </div>
 </div>
