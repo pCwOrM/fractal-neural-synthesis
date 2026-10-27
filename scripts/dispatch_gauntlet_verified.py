@@ -1,3 +1,4 @@
+import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -9,7 +10,7 @@ sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 SMTP_HOST = "mail.answerr.me"
 SMTP_PORT = 465
 SMTP_USER = "ask@answerr.me"
-SMTP_PASS = "Jesmaat.19"
+SMTP_PASS = os.environ.get("ANSWERR_MAIL_PASS", "")
 FROM_ADDR = "ask@answerr.me"
 BCC_ADDR = "pcworm@pcworm.net"
 

@@ -1,3 +1,4 @@
+import os
 import imaplib
 import email
 from email.header import decode_header
@@ -26,7 +27,7 @@ def clean_header(val):
 
 try:
     M = imaplib.IMAP4_SSL("mail.answerr.me", 993, timeout=10)
-    M.login("ask@answerr.me", "Jesmaat.19")
+    M.login("ask@answerr.me", os.environ.get("ANSWERR_MAIL_PASS", ""))
 
     typ, mailboxes = M.list()
     print("=== Mailboxes ===")

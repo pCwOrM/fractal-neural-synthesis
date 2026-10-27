@@ -1,10 +1,11 @@
+import os
 import urllib.request, json
 
 url = "https://api.werracle.com/v1/radar/curator/steakhouse"
 req = urllib.request.Request(
     url,
     headers={
-        "X-API-Key": "wrk_inst_live_88f6148d4210df23c15c33c0a402a0a8104e2fcb",
+        "X-API-Key": os.environ.get("WERRACLE_RADAR_KEY", "wrk_inst_live_sample"),
         "User-Agent": "SteakhouseTest/1.0"
     }
 )

@@ -1,3 +1,4 @@
+import os
 import paramiko
 
 ssh = paramiko.SSHClient()
@@ -45,7 +46,7 @@ exit_code = stdout.channel.recv_exit_status()
 print(f"Synced clean DB to mechsrv replica! (Exit code: {exit_code})")
 
 # Test that old key is now rejected
-test_cmd = "curl -s -o /dev/null -w '%{http_code}' -H 'X-API-Key: wrk_inst_live_88f6148d4210df23c15c33c0a402a0a8104e2fcb' http://127.0.0.1:8560/v1/radar/curator/steakhouse"
+test_cmd = f"curl -s -o /dev/null -w '%{{http_code}}' -H 'X-API-Key: {os.environ.get('WERRACLE_RADAR_KEY', 'wrk_inst_live_sample')}' http://127.0.0.1:8560/v1/radar/curator/steakhouse"
 stdin, stdout, stderr = ssh.exec_command(test_cmd)
 http_code = stdout.read().decode().strip()
 print(f"Test old key HTTP response code: {http_code} (Expected: 401)")

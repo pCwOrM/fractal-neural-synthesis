@@ -1,3 +1,4 @@
+import os
 import imaplib
 import email
 from email.header import decode_header
@@ -30,7 +31,7 @@ def get_body(msg):
     return ""
 
 M = imaplib.IMAP4_SSL("mail.answerr.me", 993, timeout=10)
-M.login("ask@answerr.me", "Jesmaat.19")
+M.login("ask@answerr.me", os.environ.get("ANSWERR_MAIL_PASS", ""))
 M.select("INBOX", readonly=True)
 
 target_ids = ["49", "51", "52", "53", "54", "56", "57", "58", "59"]
