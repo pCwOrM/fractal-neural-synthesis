@@ -1,9 +1,10 @@
+import os
 import paramiko
 
 host = "185.27.133.12"
 port = 1394
 user = "itouchsy"
-password = "2HRaBof_pHdi{E}S"
+password = os.environ.get("WERRACLE_SSH_PASS", "")
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())

@@ -1,8 +1,9 @@
+import os
 import paramiko
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect("185.27.133.12", port=1394, username="itouchsy", password="2HRaBof_pHdi{E}S", timeout=15)
+client.connect("185.27.133.12", port=1394, username="itouchsy", password=os.environ.get("WERRACLE_SSH_PASS", ""), timeout=15)
 
 sftp = client.open_sftp()
 print("Files in /home/itouchsy/werracle.com:", sftp.listdir("/home/itouchsy/werracle.com"))
