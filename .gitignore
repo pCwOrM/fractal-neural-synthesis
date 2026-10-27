@@ -87,3 +87,14 @@ blackhole_v3_package/
 mdpi_fractalfract_package/
 goofy-pasteur/
 
+
+# Security & Credentials
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*credentials*.json
+*credentials*.py
+*.secret*
