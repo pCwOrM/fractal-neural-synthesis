@@ -850,7 +850,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="card-desc" style="font-size: 12.5px; line-height: 1.55;">
           &bull; <strong>Volkan Dağlı</strong> — Baş Araştırmacı (Anadolu Üniversitesi)<br>
           &bull; <strong>Dr. Zerrin Dağlı</strong> — Akademik Danışman ve Ortak Yazar (Mersin Üniv.)<br>
-          &bull; <strong>Dağhan Dağlı</strong> — Araştırma Stajyeri (Toros Üniv. — Toros Fen Lisesi)
+          &bull; <strong>Dağhan Dağlı</strong> — Ortak Yazar & Ortak Buluş Sahibi (Toros Üniv. — Toros Fen Lisesi)
         </div>
       </div>
     </div>
@@ -861,7 +861,7 @@ html_content = f"""<!DOCTYPE html>
       </div>
       <div class="card" style="padding: 16px;">
         <div style="font-weight: 700; color: #ffffff; font-size: 14px;">TÜRKPATENT TR 2026/016285 & 016633</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Münhasır ticari lisans ve markalar (Werr®, Werracle®, Answerr®).</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Münhasır ticari lisans ve markalar (Werr™, Werracle™, Answerr™).</div>
       </div>
       <div class="card" style="padding: 16px;">
         <div style="font-weight: 700; color: #ffffff; font-size: 14px;">BSL 1.1 Ticari Lisanslama</div>

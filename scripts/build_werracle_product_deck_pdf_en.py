@@ -371,7 +371,7 @@ html_content = """<!DOCTYPE html>
     </div>
 
     <div class="footer-bar">
-      <span>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ. &bull; Çukurova University Science Park</span>
+      <span>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ. &bull; Cukurova University Science Park</span>
       <span>Confidential &bull; Seed Investment Pitch Deck</span>
       <span>Slide 01 / 14</span>
     </div>
@@ -1076,7 +1076,7 @@ html_content = """<!DOCTYPE html>
     <div class="content-area">
       <div class="slide-title">Executive Leadership, Engineering Force & Academic Rigor</div>
       <div class="slide-subtitle">
-        Operated commercially by our 8-person team at ITouch Systems (Çukurova University Science Park) alongside an independent academic research & patent layer.
+        Operated commercially by our 8-person team at ITouch Systems (Cukurova University Science Park) alongside an independent academic research & patent layer.
       </div>
 
       <div class="grid-3">
@@ -1112,8 +1112,8 @@ html_content = """<!DOCTYPE html>
           </div>
           <div class="card-desc" style="font-size: 14px; line-height: 1.55;">
             &bull; <b>Volkan Dağlı</b> — Principal Investigator (Anadolu University)<br>
-            &bull; <b>Dr. Zerrin Dağlı</b> — Academic Advisor & Co-Author (Mersin University)<br>
-            &bull; <b>Dağhan Dağlı</b> — Research Intern (Toros University — Toros Science High School)<br><br>
+            &bull; <b>Dr. Zerrin Dağlı</b> — Academic Advisor, Co-Author & Co-Inventor (Mersin University)<br>
+            &bull; <b>Dağhan Dağlı</b> — Co-Author & Co-Inventor (Toros University — Toros Science High School)<br><br>
             <b>Patents TR 2026/016285 & TR 2026/016633:</b> Licensed exclusively to ITouch Systems.
           </div>
         </div>
@@ -1121,8 +1121,8 @@ html_content = """<!DOCTYPE html>
 
       <div class="card" style="margin-top: 25px; padding: 20px 28px; display: flex; justify-content: space-between; align-items: center;">
         <div>
-          <span style="font-size: 17px; font-weight: 700; color: #f8fafc;">ITouch Bilişim Sistemleri Ltd. Şti. (Çukurova University Science Park):</span>
-          <span style="font-size: 15px; color: #94a3b8; margin-left: 12px;">Trademarks: Werr®, Werracle®, Answerr®</span>
+          <span style="font-size: 17px; font-weight: 700; color: #f8fafc;">ITouch Bilişim Sistemleri Ltd. Şti. (Cukurova University Science Park):</span>
+          <span style="font-size: 15px; color: #94a3b8; margin-left: 12px;">Trademarks: Werr™, Werracle™, Answerr™</span>
         </div>
         <span class="category-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">contact@werracle.com</span>
       </div>
@@ -1244,7 +1244,7 @@ html_content = """<!DOCTYPE html>
     </div>
 
     <div class="footer-bar">
-      <span>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ. &bull; Çukurova University Science Park, Adana / Turkey</span>
+      <span>ITOUCH BİLİŞİM SİSTEMLERİ MÜH. DAN. SAN. VE TİC. LTD. ŞTİ. &bull; Cukurova University Science Park, Adana / Turkey</span>
       <span>Confidential &bull; Seed Investment Pitch Deck</span>
       <span>Slide 14 / 14</span>
     </div>

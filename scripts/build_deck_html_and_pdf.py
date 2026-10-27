@@ -617,7 +617,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="card" style="padding: 16px 20px;">
         <div class="card-title"><span style="color:#38bdf8;">●</span> Tax Advantage: 100% Export Exemption</div>
         <div class="card-desc">
-          Headquartered in Çukurova University Science Park: Software exports to foreign institutions qualify for <strong>100% Corporate Tax exemption</strong> (Pres. Decree 11257).
+          Headquartered in Cukurova University Science Park: Software exports to foreign institutions qualify for <strong>100% Corporate Tax exemption</strong> (Pres. Decree 11257).
         </div>
       </div>
     </div>
@@ -823,7 +823,7 @@ html_content = f"""<!DOCTYPE html>
   </div>
   <div class="content">
     <h1 class="slide-title">Executive Leadership, Engineering Force & Academic Rigor</h1>
-    <h2 class="slide-sub">Operated commercially by ITouch Bilişim Sistemleri Ltd. Şti. (Çukurova University Science Park) alongside an independent academic research layer.</h2>
+    <h2 class="slide-sub">Operated commercially by ITouch Bilişim Sistemleri Ltd. Şti. (Cukurova University Science Park) alongside an independent academic research layer.</h2>
     <div class="grid-3" style="margin-bottom: 22px;">
       <div class="card card-highlight">
         <div class="card-title">Leadership & Partners</div>
@@ -849,19 +849,19 @@ html_content = f"""<!DOCTYPE html>
         <div class="card-title">Academic & Patent Layer</div>
         <div class="card-desc" style="font-size: 12.5px; line-height: 1.55;">
           &bull; <strong>Volkan Dağlı</strong> — Principal Investigator (Anadolu Univ.)<br>
-          &bull; <strong>Dr. Zerrin Dağlı</strong> — Academic Advisor & Co-Author (Mersin Univ.)<br>
-          &bull; <strong>Dağhan Dağlı</strong> — Research Intern (Toros Univ. — Toros Science High School)
+          &bull; <strong>Dr. Zerrin Dağlı</strong> — Academic Advisor, Co-Author & Co-Inventor (Mersin Univ.)<br>
+          &bull; <strong>Dağhan Dağlı</strong> — Co-Author & Co-Inventor (Toros Univ. — Toros Science High School)
         </div>
       </div>
     </div>
     <div class="grid-3">
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Çukurova University Science Park</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Cukurova University Science Park</div>
         <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">ITouch Systems R&D HQ.</div>
       </div>
       <div class="card" style="padding: 16px;">
         <div style="font-weight: 700; color: #ffffff; font-size: 14px;">TÜRKPATENT TR 2026/016285 & 016633</div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Exclusive commercial license & trademarks (Werr®, Werracle®, Answerr®).</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Exclusive commercial license & trademarks (Werr™, Werracle™, Answerr™).</div>
       </div>
       <div class="card" style="padding: 16px;">
         <div style="font-weight: 700; color: #ffffff; font-size: 14px;">BSL 1.1 Commercial Licensing</div>
