@@ -692,7 +692,14 @@
       }
     }
 
-  </style>
+  
+  /* mobile touch targets & legibility (audit 29 Oct 2026) */
+  @media (max-width: 768px) {
+  .bench-stat-label{font-size:11px}
+  a[href*="/issues/"],a[href*="/pull/"]{display:inline-block;padding:10px 4px;min-height:40px;box-sizing:border-box}
+  .btn-copy-cmd{min-height:40px;padding:8px 14px}
+  }
+</style>
   <link rel="stylesheet" href="assets/site-nav.css">
 </head>
 <body>

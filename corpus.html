@@ -515,7 +515,13 @@
       }
     }
 
-  </style>
+  
+  /* mobile touch targets & legibility (audit 29 Oct 2026) */
+  @media (max-width: 768px) {
+  .btn-action,.cat-btn{min-height:40px}
+  .btn-action{display:flex;align-items:center;justify-content:center}
+  }
+</style>
   <link rel="stylesheet" href="assets/site-nav.css">
 </head>
 <body>

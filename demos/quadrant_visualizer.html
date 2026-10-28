@@ -528,7 +528,12 @@
       .header-actions { width: 100%; justify-content: space-between; margin-top: 8px; }
       .badges-col { align-items: flex-end; }
     }
-  </style>
+  
+  /* mobile touch targets & legibility (audit 29 Oct 2026) */
+  @media (max-width: 768px) {
+  .badge-mode,.badge-doi,.quad-tag,.res-label,.wc-title,.wc-ratio,.case-inp{font-size:11px}
+  }
+</style>
 </head>
 <body>
 

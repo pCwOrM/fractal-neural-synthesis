@@ -117,7 +117,12 @@
     html.dark .dark\:border-rose-600\/40 { border-color: rgb(225 29 72 / 0.4) !important; }
     html.dark .dark\:bg-emerald-950\/40 { background-color: rgb(6 78 59 / 0.4) !important; }
     html.dark .dark\:bg-rose-950\/40 { background-color: rgb(136 19 55 / 0.4) !important; }
-  </style>
+  
+  /* mobile touch targets & legibility (audit 29 Oct 2026) */
+  @media (max-width: 768px) {
+  .text-\[10px\],.text-\[9px\],.text-\[10px\] *{font-size:11px !important}
+  }
+</style>
 </head>
 <body style="overflow-x:hidden;" class="antialiased p-3 sm:p-5 min-h-screen font-sans">
 

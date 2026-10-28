@@ -1047,7 +1047,15 @@
       .learn-btn { width: 100%; text-align: center; }
     }
 
-  </style>
+  
+  /* mobile touch targets & legibility (audit 29 Oct 2026) */
+  @media (max-width: 768px) {
+  .milestone-btn,.jump-pill,.eco-btn,.btn-gallery,.btn-copy-bib{min-height:40px}
+  .eco-btn,.btn-gallery,.btn-copy-bib{display:inline-flex;align-items:center;justify-content:center}
+  .milestone-btn,.jump-pill{display:inline-flex;align-items:center}
+  input[type=range]{min-height:32px;touch-action:manipulation}
+  }
+</style>
   <link rel="stylesheet" href="assets/site-nav.css">
 </head>
 <body>
