@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/fns_logo_banner.svg" alt="Fractal Neural Synthesis - WERR Resonance Architecture" width="100%">
+</p>
+
 # Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation & Formal Reflexes
 
 ### *A Formal Mathematical, Algorithmic, and Empirical Corpus for Non-Tensor Edge Intelligence*

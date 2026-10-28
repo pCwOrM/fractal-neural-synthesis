@@ -72,7 +72,20 @@
       letter-spacing: 0.5px;
       color: #fff;
     }
-    .brand-icon { font-size: 1.4rem; color: var(--cyan); }
+    .brand-icon { font-size: 1.4rem; color: var(--cyan); display: flex; align-items: center; }
+    .brand-logo-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));
+      transition: transform 0.25s ease, filter 0.25s ease;
+      flex-shrink: 0;
+    }
+    .brand:hover .brand-logo-img {
+      transform: scale(1.08) rotate(4deg);
+      filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.7));
+    }
+
     .nav-links { display: flex; align-items: center; gap: 12px; }
     .btn-nav {
       display: inline-flex;
@@ -477,11 +490,11 @@
   <!-- Top Nav -->
   <nav class="top-nav">
     <a href="index.html" class="brand">
-      <span class="brand-icon">🌀</span>
+      <img src="assets/fns_logo_nav.svg" alt="FNS Logo" class="brand-logo-img" width="28" height="28">
       <span>Fractal Neural Synthesis</span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="btn-nav" id="navHome">🌀 Ana Portal</a>
+      <a href="index.html" class="btn-nav" id="navHome"><img src="assets/fns_logo_nav.svg" alt="FNS" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;"> Ana Portal</a>
       <a href="index.html#milestones" class="btn-nav" id="navMilestones">🏆 Rekorlar &amp; İspatlar</a>
       <a href="corpus.html" class="btn-nav active" id="navCorpus" style="font-weight:700;">
         <span>📚</span>

@@ -78,7 +78,38 @@
       color: #fff;
       text-decoration: none !important;
     }
-    .brand-icon { font-size: 1.35rem; color: var(--cyan); }
+    .brand-icon { font-size: 1.35rem; color: var(--cyan); display: flex; align-items: center; }
+    .brand-logo-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));
+      transition: transform 0.25s ease, filter 0.25s ease;
+      flex-shrink: 0;
+    }
+    .brand:hover .brand-logo-img {
+      transform: scale(1.08) rotate(4deg);
+      filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.7));
+    }
+    .hero-brand-emblem-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .hero-brand-emblem {
+      width: 140px;
+      height: 140px;
+      filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.45));
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+      cursor: pointer;
+    }
+    .hero-brand-emblem:hover {
+      transform: scale(1.08) rotate(2deg);
+      filter: drop-shadow(0 0 45px rgba(168, 85, 247, 0.65));
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -993,7 +1024,7 @@
   <!-- Top Sticky Navigation -->
   <nav class="top-nav">
     <a href="index.html" class="brand">
-      <span class="brand-icon">🌀</span>
+      <img src="assets/fns_logo_nav.svg" alt="FNS Logo" class="brand-logo-img" width="28" height="28">
       <span>Fractal Neural Synthesis</span>
     </a>
     <div class="nav-links">

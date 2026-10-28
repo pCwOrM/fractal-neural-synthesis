@@ -108,6 +108,18 @@
       font-size: 16px;
       letter-spacing: -0.02em;
     }
+    .brand-logo-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));
+      transition: transform 0.25s ease, filter 0.25s ease;
+      flex-shrink: 0;
+    }
+    .brand-link:hover .brand-logo-img {
+      transform: scale(1.08) rotate(4deg);
+      filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.7));
+    }
     .brand-badge {
       background: linear-gradient(135deg, #10b981, #38bdf8);
       color: #000;
@@ -657,14 +669,14 @@
   <!-- Top Navigation -->
   <nav class="top-nav">
     <a href="index.html" class="brand-link">
-      <span style="font-size: 24px;">🌀</span>
+      <img src="assets/fns_logo_nav.svg" alt="FNS Logo" class="brand-logo-img" width="28" height="28">
       <span>Fractal Neural Synthesis</span>
       <span class="brand-badge">The Gauntlet</span>
     </a>
     <div class="nav-actions">
       <!-- Standardized Portal Navigation -->
       <a href="index.html" class="btn-nav">
-        <span>🌀</span>
+        <span><img src="assets/fns_logo_nav.svg" alt="FNS" style="width:16px;height:16px;vertical-align:middle;"></span>
         <span id="navHome">Ana Portal</span>
       </a>
       <a href="index.html#milestones" class="btn-nav">
