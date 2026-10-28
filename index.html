@@ -1291,7 +1291,7 @@
             <div class="eco-tag" style="color:var(--cyan); background:rgba(56,189,248,0.12);">KABUL ALINDI &middot; RESMİ LİSTELEME</div>
             <h3 class="eco-name" id="eco1Name">Awesome Jev &amp; JevBench Kıyaslama Havuzu</h3>
             <p class="eco-text" id="eco1Text">
-              Werr, <strong>Awesome Jev</strong> resmi ekosistem rehberine kabul edildi (<a href="https://awesomejev.com" target="_blank">awesomejev.com</a>). Ayrıca <strong>JevBench</strong> bağımsız çevrimdışı değerlendirme havuzuna sıfır-VRAM ve 24-bayt Mandelbrot çekirdeği ile entegre edildi (231/231 görevde %100 sözleşme uyumu).
+              Werr, <strong>Awesome Jev</strong> resmi ekosistem rehberine kabul edildi (<a href="https://awesomejev.com" target="_blank">awesomejev.com</a>). Ayrıca <strong>JevBench</strong> bağımsız çevrimdışı değerlendirme havuzuna sıfır-VRAM ve 24-bayt fraktal karar çekirdeği ile entegre edildi (231/231 görevde %100 sözleşme uyumu).
             </p>
             <div class="eco-links">
               <a href="https://awesomejev.com" target="_blank" class="eco-btn">Awesome Jev ↗</a>
@@ -1569,7 +1569,7 @@
         <div class="section-eyebrow" id="figEye">KAMUYA AÇIK HAKEMLİ GRAFİKLER &amp; KIYASLAMALAR</div>
         <h2 class="section-title" id="figTitle">Paper 1 Açık Bilimsel Şekiller Galerisi</h2>
         <p class="section-desc" id="figDesc">
-          Mandelbrot Fractal Neural Synthesis (SSRN: 7659198 &amp; Zenodo: 10.5281/zenodo.22867037) açık bilim yayınımızda yer alan hakemli ampirik kıyaslama grafikleri ve ağırlık yüzeyleri.
+          Fractal Neural Synthesis (SSRN: 7659198 &amp; Zenodo: 10.5281/zenodo.22867037) açık bilim yayınımızda yer alan hakemli ampirik kıyaslama grafikleri ve ağırlık yüzeyleri.
         </p>
       </div>
 
@@ -1710,7 +1710,7 @@
   </footer>
 
   <script>
-        // 7 Public Empirical Figures from Paper 1 (Mandelbrot Fractal Neural Synthesis - SSRN: 7659198 & Zenodo: 10.5281/zenodo.22867037)
+        // 7 Public Empirical Figures from Paper 1 (Fractal Neural Synthesis - SSRN: 7659198 & Zenodo: 10.5281/zenodo.22867037)
     const FIGURES = [
       {
         id: 1,
@@ -1732,9 +1732,9 @@
         id: 3,
         src: "figures/gate_solutions_128.png",
         title_en: "Fig 3: Deterministic Boolean Logic Gates (AND, OR, NAND, NOR)",
-        desc_en: "100.0% classification accuracy across all boolean gates derived directly from 4-quadrant quadratic Mandelbrot escape dynamics.",
+        desc_en: "100.0% classification accuracy across all boolean gates derived directly from 4-quadrant quadratic fractal escape dynamics.",
         title_tr: "Şekil 3: Deterministik Boole Mantık Kapıları (AND, OR, NAND, NOR)",
-        desc_tr: "4-kadranlı karesel Mandelbrot kaçış dinamiklerinden doğrudan türetilen %100 doğruluklu mantık kapısı çözümleri."
+        desc_tr: "4-kadranlı karesel fraktal kaçış dinamiklerinden doğrudan türetilen %100 doğruluklu mantık kapısı çözümleri."
       },
       {
         id: 4,
@@ -1748,16 +1748,16 @@
         id: 5,
         src: "figures/quadrant_weights_128.png",
         title_en: "Fig 5: 4-Quadrant Area Weight Extraction Geometry",
-        desc_en: "Partitioning a 128x128 Mandelbrot patch into 4 quadrants (Q1..Q4) mapping non-escaping pixel density directly to weights and bias.",
+        desc_en: "Partitioning a 128x128 fractal patch into 4 quadrants (Q1..Q4) mapping non-escaping pixel density directly to weights and bias.",
         title_tr: "Şekil 5: 4-Bölge Alan Ağırlık Ayrıştırma Geometrisi",
-        desc_tr: "128x128 Mandelbrot yamasını 4 kadranına bölerek kaçmayan piksel oranını doğrudan ağırlıklara ve nöron eşiğine eşleyen geometri."
+        desc_tr: "128x128 fraktal yamasını 4 kadranına bölerek kaçmayan piksel oranını doğrudan ağırlıklara ve nöron eşiğine eşleyen geometri."
       },
       {
         id: 6,
         src: "figures/mandelbrot_patches.png",
-        title_en: "Fig 6: Multi-Scale Mandelbrot Escape Surface Patches",
+        title_en: "Fig 6: Multi-Scale Fractal Escape Surface Patches",
         desc_en: "Vectorized escape dynamics evaluated at 128x128 resolution across varying zoom factors and complex plane coordinates.",
-        title_tr: "Şekil 6: Çok Ölçekli Mandelbrot Kaçış Yüzey Yamaları",
+        title_tr: "Şekil 6: Çok Ölçekli Fraktal Kaçış Yüzey Yamaları",
         desc_tr: "Farklı yakınlaştırma katsayıları ve karmaşık koordinatlarda 128x128 çözünürlükle hesaplanan vektörize kaçış dinamikleri."
       },
       {
@@ -1949,7 +1949,7 @@
         if (document.getElementById('ecoTitle')) document.getElementById('ecoTitle').innerText = 'Ecosystem Listings, Open-Source Inclusions & Formal Proof Gates';
         if (document.getElementById('ecoDesc')) document.getElementById('ecoDesc').innerText = 'Inclusions and integrations of WERR and FNS across global AI directories (Awesome Jev, Awesome Edge AI), offline evaluation benchmarks (JevBench), and P2P formal theorem proof gates (Mike DuPont Lean Worker & Gokujo Gate).';
         if (document.getElementById('eco1Name')) document.getElementById('eco1Name').innerText = 'Awesome Jev & JevBench Evaluation Pool';
-        if (document.getElementById('eco1Text')) document.getElementById('eco1Text').innerText = 'Werr is officially listed on Awesome Jev (awesomejev.com) and integrated into the JevBench offline evaluation suite via zero-VRAM Mandelbrot dynamics (100% strict contract pass across 231/231 tasks).';
+        if (document.getElementById('eco1Text')) document.getElementById('eco1Text').innerText = 'Werr is officially listed on Awesome Jev (awesomejev.com) and integrated into the JevBench offline evaluation suite via zero-VRAM fractal dynamics (100% strict contract pass across 231/231 tasks).';
         if (document.getElementById('eco2Name')) document.getElementById('eco2Name').innerText = 'Mike DuPont Lean Worker & Gokujo Proof Gate';
         if (document.getElementById('eco2Text')) document.getElementById('eco2Text').innerText = 'Verified under @jmikedupont2 meta-introspector/lean-worker (PR #27) and lean-workers-union (PR #2) Argument-of-Knowledge (AOK) proof-gate: 223 declarations, 8/8 modules compiled cleanly with 0 sorry.';
         if (document.getElementById('eco3Name')) document.getElementById('eco3Name').innerText = 'CrocSwap / integer-mult-bounds (PR #226)';
@@ -1979,7 +1979,7 @@
         if (document.getElementById('learnTitle')) document.getElementById('learnTitle').innerText = 'How to Explore, Learn & Apply Fractal Neural Synthesis';
         if (document.getElementById('learnDesc')) document.getElementById('learnDesc').innerText = 'A structured 4-tier educational and scientific roadmap for researchers, systems engineers, and students seeking to grasp O(1) memory neural derivation and verify formal proofs.';
         if (document.getElementById('learn1Title')) document.getElementById('learn1Title').innerText = 'How Does AI Think Without Persistent Weights?';
-        if (document.getElementById('learn1Text')) document.getElementById('learn1Text').innerText = 'Explore how FNS derives deterministic logic gates (OR, AND, XOR, NAND) in microseconds from a compact 24-byte Mandelbrot seed without loading 40 GB+ neural weight tensors into GPU VRAM.';
+        if (document.getElementById('learn1Text')) document.getElementById('learn1Text').innerText = 'Explore how FNS derives deterministic logic gates (OR, AND, XOR, NAND) in microseconds from a compact 24-byte fractal seed without loading 40 GB+ neural weight tensors into GPU VRAM.';
         if (document.getElementById('learn2Title')) document.getElementById('learn2Title').innerText = 'Bare-Metal & Embedded Microsecond Reflex Inferences';
         if (document.getElementById('learn2Text')) document.getElementById('learn2Text').innerText = 'Run zero-VRAM reflex models on ARM Cortex-M4 and Arduino Uno (ATmega328P, 2 KB SRAM, 0 heap) in 0.04 ms. Inspect JevBench (231/231 strict pass) and 40-core Dual Xeon gauntlet telemetry.';
         if (document.getElementById('learn3Title')) document.getElementById('learn3Title').innerText = 'Intra-Block AI Decision Oracles & LVR Circuit Breakers';
