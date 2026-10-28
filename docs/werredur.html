@@ -46,21 +46,22 @@
     .glow-purple { box-shadow: 0 0 25px rgba(168, 85, 247, 0.2); }
     .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   </style>
+  <style>body > section, body > main, body > footer { width: 100%; min-width: 0; box-sizing: border-box; }</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white">
 
   <!-- Navigation -->
   <header class="border-b border-brand-border bg-brand-navy/90 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <span class="text-2xl font-black tracking-tight text-white">Werredu<span class="text-sky-400">R</span></span>
-        <span class="text-xs font-mono bg-sky-950 text-sky-400 border border-sky-800 px-2.5 py-0.5 rounded-full">v4.0 Release</span>
+        <span class="hidden sm:inline text-xs font-mono bg-sky-950 text-sky-400 border border-sky-800 px-2.5 py-0.5 rounded-full">v4.0 Release</span>
       </div>
-      <div class="flex items-center space-x-6 text-sm font-medium">
-        <a href="#benchmarks" class="text-slate-400 hover:text-white transition">Benchmarks</a>
-        <a href="#demo" class="text-slate-400 hover:text-white transition">Live Servo Demo</a>
-        <a href="#architecture" class="text-slate-400 hover:text-white transition">Architecture</a>
-        <a href="https://doi.org/10.5281/zenodo.23128224" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-1.5 rounded-lg transition flex items-center space-x-1">
+      <div class="flex items-center space-x-3 sm:space-x-6 text-sm font-medium">
+        <a href="#benchmarks" class="hidden md:inline text-slate-400 hover:text-white transition">Benchmarks</a>
+        <a href="#demo" class="hidden md:inline text-slate-400 hover:text-white transition">Live Servo Demo</a>
+        <a href="#architecture" class="hidden md:inline text-slate-400 hover:text-white transition">Architecture</a>
+        <a href="https://doi.org/10.5281/zenodo.23128224" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-1.5 rounded-lg transition flex items-center space-x-1" rel="noopener noreferrer">
           <span>Zenodo v4</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
         </a>
@@ -109,11 +110,11 @@
 
       <!-- Action buttons -->
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-3 rounded-lg border border-slate-700 flex items-center space-x-2 transition">
+        <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-3 rounded-lg border border-slate-700 flex items-center space-x-2 transition" rel="noopener noreferrer">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           <span>GitHub Repository</span>
         </a>
-        <a href="https://doi.org/10.5281/zenodo.23128224" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-3 rounded-lg transition">
+        <a href="https://doi.org/10.5281/zenodo.23128224" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-3 rounded-lg transition" rel="noopener noreferrer">
           Download Zenodo Bundle (v4.0)
         </a>
       </div>
@@ -316,9 +317,9 @@
         <span class="text-slate-400">Concept DOI: 10.5281/zenodo.22999420 | Version DOI: 10.5281/zenodo.23128224</span>
       </div>
       <div class="flex space-x-6">
-        <a href="https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis" class="hover:text-slate-300 transition">GitHub</a>
+        <a href="https://github.com/pCwOrM/fractal-neural-synthesis" class="hover:text-slate-300 transition">GitHub</a>
         <a href="https://doi.org/10.5281/zenodo.23128224" class="hover:text-slate-300 transition">Zenodo v4</a>
-        <a href="https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/" class="hover:text-slate-300 transition">Flagship Portal</a>
+        <a href="https://pcworm.github.io/fractal-neural-synthesis/" class="hover:text-slate-300 transition">Flagship Portal</a>
       </div>
     </div>
   </footer>

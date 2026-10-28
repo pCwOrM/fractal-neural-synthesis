@@ -1,0 +1,6 @@
+Contact: https://github.com/pCwOrM/fractal-neural-synthesis/security/advisories/new
+Contact: mailto:pcworm@pcworm.net
+Expires: 2027-10-29T00:00:00.000Z
+Preferred-Languages: tr, en
+Canonical: https://pcworm.github.io/fractal-neural-synthesis/.well-known/security.txt
+Policy: https://github.com/pCwOrM/fractal-neural-synthesis/blob/master/SECURITY.md

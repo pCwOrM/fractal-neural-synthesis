@@ -19,7 +19,7 @@ We take the security and integrity of our open-source codebase, client-side web 
 If you discover a security vulnerability, execution vulnerability, or supply-chain issue, please **do not open a public GitHub issue**. Instead, follow responsible disclosure:
 
 1. **GitHub Private Security Advisory (Preferred):**
-   Navigate to the [Security Advisories tab](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis/security/advisories) on GitHub and click **"Report a vulnerability"**.
+   Navigate to the [Security Advisories tab](https://github.com/pCwOrM/fractal-neural-synthesis/security/advisories) on GitHub and click **"Report a vulnerability"**.
 
 2. **Direct Researcher Contact:**
    Contact the corresponding author privately:

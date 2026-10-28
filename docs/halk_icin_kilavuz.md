@@ -4,7 +4,7 @@
 **Yazarlar:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
 **Resmi DOI:** [10.5281/zenodo.22802921](https://doi.org/10.5281/zenodo.22802921)  
 **Açık Kaynak Kod Deposu:** [github.com/pCwOrM/mandelbrot-fractal-neural-synthesis](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis)  
-**Canlı Web Laboratuvarı:** [pcworm.github.io/mandelbrot-fractal-neural-synthesis](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/)
+**Canlı Web Laboratuvarı:** [pcworm.github.io/fractal-neural-synthesis](https://pcworm.github.io/fractal-neural-synthesis/)
 
 ---
 
@@ -182,7 +182,7 @@ Evrenin kendi matematiğinde zaten var olan kusursuz bir fraktal düzen, devasa 
 
 Siz de bu serüvenin bir parçası olmak, kodu incelemek veya tarayıcınızda canlı denemek isterseniz kapımız daima açıktır:
 
-* 🌐 **Canlı Deneyim:** [pcworm.github.io/mandelbrot-fractal-neural-synthesis](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/)
+* 🌐 **Canlı Deneyim:** [pcworm.github.io/fractal-neural-synthesis](https://pcworm.github.io/fractal-neural-synthesis/)
 * 💻 **Açık Kaynak Kodlar:** [github.com/pCwOrM/mandelbrot-fractal-neural-synthesis](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis)
 * 📑 **Akademik Ön Baskı:** [doi.org/10.5281/zenodo.22802921](https://doi.org/10.5281/zenodo.22802921)
 

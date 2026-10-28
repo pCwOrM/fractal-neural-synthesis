@@ -547,7 +547,7 @@ raw_html = """<!DOCTYPE html>
       <span>👤 <strong>Yazarlar:</strong> Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı</span>
       <span>🏛️ <strong>Kurum:</strong> ITouch Systems & Mersin Üniversitesi</span>
       <span>📑 <strong>Kalıcı DOI:</strong> <a href="https://doi.org/10.5281/zenodo.22802921" target="_blank">10.5281/zenodo.22802921</a></span>
-      <span>🌐 <strong>Web:</strong> <a href="https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/" target="_blank">Canlı Laboratuvar</a></span>
+      <span>🌐 <strong>Web:</strong> <a href="https://pcworm.github.io/fractal-neural-synthesis/" target="_blank">Canlı Laboratuvar</a></span>
     </div>
   </header>
 
@@ -1128,7 +1128,7 @@ md_content = """# Fraktal Zeka: Halka Anlatım ve Teorik Derinlik Rehberi
 **Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
 **Kurum:** ITouch Systems & Mersin Üniversitesi  
 **Resmi DOI:** [10.5281/zenodo.22802921](https://doi.org/10.5281/zenodo.22802921)  
-**Canlı Laboratuvar:** [pcworm.github.io/mandelbrot-fractal-neural-synthesis](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/)
+**Canlı Laboratuvar:** [pcworm.github.io/fractal-neural-synthesis](https://pcworm.github.io/fractal-neural-synthesis/)
 
 ---
 
