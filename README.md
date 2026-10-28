@@ -177,6 +177,17 @@ console.log(evaluateReflex({ risk: 0.15, load_factor: 1.0 }));
 
 ---
 
+## 🏛️ Active Grant Pipelines, Research Fellowships & Institutional Framework
+
+| Grant / Funding Program | Organization & Track | Focus Area | Status & References |
+| :--- | :--- | :--- | :--- |
+| **Starknet Foundation Seed Grant** | Starknet Foundation (`grants@starknet.org`) &bull; Seed Grant Track | STARK-native zero-storage AI oracle in Cairo 2.x Sierra (`werracle_starknet`), Ekubo Protocol v2 dynamic anti-LVR fee extension, Dojo autonomous agents | 🔬 **Passed Pre-screening &bull; In Screening** ([Roadmap & Dossier](https://github.com/pCwOrM/werracle/blob/main/docs/STARKNET_ARCHITECTURE_AND_SEED_GRANT_ROADMAP.md)) |
+| **Morpho DAO Tooling & Risk Grant** | Morpho Association (`forum.morpho.org`) &bull; MIP-81 / MIP-93 Track | Independent SVR & OEV Risk Observatory for Morpho Blue (`radar.werracle.com`), 83 Base markets, 105 SVR liquidations, 98.10% value recapture verified | 🔒 **Sealed & Staged for Forum** ([Proposal MIP-81](https://github.com/pCwOrM/werracle/blob/main/docs/MORPHO_DAO_GRANT_APPLICATION_MIP81_SEALED.md)) |
+| **Flashbots Research Fellowship** | Flashbots (`grants@flashbots.net`) &bull; MEV & LVR Mitigation Track ($50k) | Intra-block dynamic fee adaptation for LVR elimination, 40-core gauntlet across 30,000 simulated swaps, Lean 4 formal fee bounds | ⏳ **Submitted &bull; Rolling Review** ([Werracle Repository](https://github.com/pCwOrM/werracle)) |
+| **Institutional R&D & Incubation** | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. &bull; Çukurova Üniversitesi Teknokent | Exclusive operating rights, patent governance (`TR 2026/016285` & `TR 2026/016633`), registered trademarks (`Werr®`, `Answerr®`, `Werracle®`) | 🏛️ **Active & Fully Incubated** ([ORCID: 0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703)) |
+
+---
+
 ## 📜 Intellectual Property & Licensing
 
 * **Core Research & Mathematical Proofs:**  
