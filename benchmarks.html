@@ -657,23 +657,27 @@
   <!-- Top Navigation -->
   <nav class="top-nav">
     <a href="index.html" class="brand-link">
-      <span style="font-size: 24px;">⚡</span>
+      <span style="font-size: 24px;">🌀</span>
       <span>Fractal Neural Synthesis</span>
       <span class="brand-badge">The Gauntlet</span>
     </a>
     <div class="nav-actions">
-      <!-- Ecosystem Links -->
+      <!-- Standardized Portal Navigation -->
       <a href="index.html" class="btn-nav">
         <span>🌀</span>
-        <span id="navPaper">Paper &amp; Labs</span>
+        <span id="navHome">Ana Portal</span>
       </a>
-      <a href="https://pcworm.github.io/werr/" target="_blank" class="btn-nav">
-        <span>⚡</span>
-        <span id="navWerr">WERR Kernel</span>
+      <a href="index.html#milestones" class="btn-nav">
+        <span>🏆</span>
+        <span id="navMilestones">Rekorlar</span>
       </a>
-      <a href="https://answerr.me" target="_blank" class="btn-nav">
-        <span>🌐</span>
-        <span id="navAnswerr">ANSWERR API</span>
+      <a href="corpus.html" class="btn-nav" style="border-color: rgba(56,189,248,0.3); color: var(--cyan);">
+        <span>📚</span>
+        <span id="navCorpus">Grand Corpus (15)</span>
+      </a>
+      <a href="benchmarks.html" class="btn-nav active" style="border-color: rgba(16,185,129,0.4); color: var(--emerald); font-weight:700;">
+        <span>⚔️</span>
+        <span>The Gauntlet</span>
       </a>
       <a href="demos/snake.html" class="btn-nav">
         <span>🐍</span>
@@ -1291,16 +1295,18 @@
   <!-- Footer -->
   <footer>
     <div class="footer-links">
-      <a href="index.html">🌀 Research Paper &amp; Labs</a>
-      <a href="https://pcworm.github.io/werr/#benchmark-arena" target="_blank">⚡ WERR Kernel &amp; Live Arena</a>
-      <a href="https://answerr.me" target="_blank">🌐 ANSWERR Production Gateway</a>
-      <a href="demos/snake.html">🎮 1v1 Snake Game</a>
-      <a href="https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis" target="_blank">⭐ GitHub Repository</a>
+      <a href="index.html">🌀 Ana Portal &amp; Laboratuvar</a>
+      <a href="corpus.html">📚 Grand Corpus (15 Makale &amp; İspat)</a>
+      <a href="index.html#milestones">🏆 9 Dünya Rekoru</a>
+      <a href="index.html#grants">🏛️ Yürüyen Hibeler (Starknet/Morpho)</a>
+      <a href="demos/snake.html">🎮 1v1 Çıplak Metal Yılan Arenası</a>
       <a href="https://huggingface.co/pCwOrM" target="_blank" style="color:#f59e0b;">🤗 Hugging Face (@pCwOrM)</a>
-      <a href="https://doi.org/10.5281/zenodo.22774934" target="_blank">🏛️ Research DOI: 10.5281/zenodo.22774934</a>
-      <a href="https://doi.org/10.5281/zenodo.22867426" target="_blank">⚡ WERR DOI: 10.5281/zenodo.22867426</a>
+      <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank">⭐ GitHub Repository</a>
+      <a href="https://orcid.org/0009-0000-1587-8703" target="_blank">👤 Volkan Dağlı (ORCID)</a>
     </div>
-    <p>&copy; 2026 Mandelbrot Fractal Neural Synthesis Research Group &bull; Open Science &bull; MIT License</p>
+    <p style="margin-top:10px; font-size:12px; color:var(--text-muted); line-height:1.6;">
+      &copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong> &bull; Volkan Dağlı &bull; <strong>ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ.</strong> &bull; Çukurova Üniversitesi Teknokent &bull; Patentler: <code>TR 2026/016285</code> &amp; <code>TR 2026/016633</code> &bull; Markalar: <code>Werr®</code>, <code>Answerr®</code>, <code>Werracle®</code>
+    </p>
   </footer>
 </div>
 
@@ -1460,7 +1466,9 @@
     currentLang = lang;
     const t = i18n[lang];
     langLabel.innerText = t.langBtn;
-    document.getElementById('navPaper').innerText = t.navPaper;
+    if (document.getElementById('navHome')) document.getElementById('navHome').innerText = 'Ana Portal';
+    if (document.getElementById('navMilestones')) document.getElementById('navMilestones').innerText = 'Rekorlar';
+    if (document.getElementById('navCorpus')) document.getElementById('navCorpus').innerText = 'Büyük Külliyat (15)';
     document.getElementById('navWerr').innerText = t.navWerr;
     document.getElementById('navAnswerr').innerText = t.navAnswerr;
     document.getElementById('navSnake').innerText = t.navSnake;

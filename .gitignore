@@ -110,3 +110,7 @@ arxiv_*_package/
 zenodo_*_package/
 blackhole_v*_package/
 ssrn_submission_package/
+
+# Archive directories (excluded from Pages)
+archive/
+_archive/

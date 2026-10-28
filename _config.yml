@@ -1,0 +1,31 @@
+# GitHub Pages / Jekyll Configuration
+title: "Fractal Neural Synthesis"
+description: "Zero-Storage Procedural Weight Derivation & Formal Deterministic Reflexes"
+url: "https://pcworm.github.io"
+baseurl: "/fractal-neural-synthesis"
+
+# Include dotfiles needed by web
+include:
+  - .nojekyll
+
+# Exclude internal source directories, archives, and private staging from Pages build
+exclude:
+  - archive
+  - _archive
+  - scratch
+  - scripts
+  - claude
+  - tasks
+  - tools
+  - zenodo*
+  - ssrn*
+  - deck_assets
+  - cell_injection_staging
+  - hf_dataset_staging
+  - mdpi_fractalfract_package
+  - blackhole_v3_package
+  - backup_pre_*
+  - *.py
+  - *.sh
+  - *.zip
+  - *.tar.gz

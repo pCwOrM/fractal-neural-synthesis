@@ -45,6 +45,7 @@
     }
 
     body {
+      overflow-x: hidden;
       background-color: var(--bg-page);
       color: var(--text-primary);
       transition: background-color 0.25s ease, color 0.25s ease;
@@ -93,7 +94,22 @@
     html.dark .dark\:bg-rose-950\/40 { background-color: rgb(136 19 55 / 0.4) !important; }
   </style>
 </head>
-<body class="antialiased p-3 sm:p-5 min-h-screen font-sans">
+<body style="overflow-x:hidden;" class="antialiased p-3 sm:p-5 min-h-screen font-sans">
+
+  <!-- Unified Top Portal Bar -->
+  <div class="max-w-4xl mx-auto mb-3 flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-900/85 border border-slate-700/60 text-xs backdrop-blur-md shadow-md">
+    <a href="../index.html" class="flex items-center gap-2 text-sky-400 hover:text-sky-300 font-bold transition-all no-underline">
+      <span>🌀</span> <span>Fractal Neural Synthesis</span>
+      <span class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/15 border border-sky-500/30 text-sky-300 hidden sm:inline">Halk Labı</span>
+    </a>
+    <div class="flex items-center gap-2 sm:gap-4 text-[11px] font-semibold text-slate-300">
+      <a href="../index.html" class="hover:text-white transition-colors no-underline">← Ana Portal</a>
+      <a href="../corpus.html" class="hover:text-white transition-colors no-underline">📚 Külliyat</a>
+      <a href="../benchmarks.html" class="hover:text-emerald-400 text-emerald-400/90 transition-colors no-underline">⚔️ The Gauntlet</a>
+      <a href="quadrant_visualizer.html" class="hover:text-white transition-colors hidden sm:inline no-underline">128×128 Lab</a>
+      <a href="snake.html" class="hover:text-white transition-colors hidden sm:inline no-underline">🐍 Arena</a>
+    </div>
+  </div>
 
   <div class="max-w-4xl mx-auto theme-card border rounded-2xl overflow-hidden">
     
@@ -1491,5 +1507,9 @@ ${td.footer}
     zoomSlider.addEventListener('input', render);
     applyLanguage(currentLang);
   </script>
+  <!-- Unified Institutional Footer -->
+  <footer class="max-w-4xl mx-auto mt-4 text-center text-[11px] text-slate-400 py-3 border-t border-slate-800">
+    &copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong> &middot; Volkan Dağlı &middot; <strong>ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ.</strong> &middot; Çukurova Üniversitesi Teknokent &middot; Patent TR 2026/016285
+  </footer>
 </body>
 </html>

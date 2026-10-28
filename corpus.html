@@ -481,9 +481,19 @@
       <span>Fractal Neural Synthesis</span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="btn-nav" id="navHome">Home &amp; Labs</a>
-      <a href="corpus.html" class="btn-nav active" id="navCorpus">Grand Corpus (15)</a>
-      <a href="benchmarks.html" class="btn-nav" style="color: var(--emerald); border-color: rgba(16,185,129,0.3)">The Gauntlet</a>
+      <a href="index.html" class="btn-nav" id="navHome">🌀 Ana Portal</a>
+      <a href="index.html#milestones" class="btn-nav" id="navMilestones">🏆 Rekorlar &amp; İspatlar</a>
+      <a href="corpus.html" class="btn-nav active" id="navCorpus" style="font-weight:700;">
+        <span>📚</span>
+        <span>Grand Corpus (15)</span>
+      </a>
+      <a href="benchmarks.html" class="btn-nav" style="color: var(--emerald); border-color: rgba(16,185,129,0.3)">
+        <span>⚔️</span>
+        <span>The Gauntlet</span>
+      </a>
+      <a href="index.html#learning" class="btn-nav" style="color:var(--gold)" id="navLearning">🎓 Öğrenme Rehberi</a>
+      <a href="index.html#labs" class="btn-nav" id="navLabs">🔬 Laboratuvarlar</a>
+      <a href="index.html#grants" class="btn-nav" id="navGrants">🏛️ Hibeler</a>
       <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="btn-nav">GitHub ↗</a>
       <button type="button" class="btn-nav btn-lang" id="langBtn" onclick="toggleLanguage()">🌐 <span id="langLabel">Türkçe</span></button>
     </div>
@@ -1306,6 +1316,10 @@
         document.getElementById('statNeuronsLbl').innerText = 'Drosophila Konnektomu';
         document.getElementById('navHome').innerText = 'Ana Sayfa & Laboratuvar';
         document.getElementById('navCorpus').innerText = 'Büyük Külliyat (15)';
+        if (document.getElementById('navMilestones')) document.getElementById('navMilestones').innerText = '🏆 Rekorlar & İspatlar';
+        if (document.getElementById('navLearning')) document.getElementById('navLearning').innerText = '🎓 Öğrenme Rehberi';
+        if (document.getElementById('navLabs')) document.getElementById('navLabs').innerText = '🔬 Laboratuvarlar';
+        if (document.getElementById('navGrants')) document.getElementById('navGrants').innerText = '🏛️ Hibeler';
         document.getElementById('wrEyebrow').innerText = 'KANITLANMIŞ DENEYSEL VE BİÇİMSEL KİLOMETRE TAŞLARI';
         document.getElementById('wrTitle').innerText = 'Dünya Rekorları & Bilimsel Başarılar';
         document.getElementById('wrDesc').innerText = 'Deneysel kıyaslamalar ve makine doğrulamalı matematiksel kilometre taşları';
@@ -1323,6 +1337,10 @@
         document.getElementById('statNeuronsLbl').innerText = 'Drosophila Connectome';
         document.getElementById('navHome').innerText = 'Home & Labs';
         document.getElementById('navCorpus').innerText = 'Grand Corpus (15)';
+        if (document.getElementById('navMilestones')) document.getElementById('navMilestones').innerText = '🏆 Records & Proofs';
+        if (document.getElementById('navLearning')) document.getElementById('navLearning').innerText = '🎓 Learning Roadmap';
+        if (document.getElementById('navLabs')) document.getElementById('navLabs').innerText = '🔬 Labs';
+        if (document.getElementById('navGrants')) document.getElementById('navGrants').innerText = '🏛️ Grants';
         document.getElementById('wrEyebrow').innerText = 'PROVEN EMPIRICAL & FORMAL MILESTONES';
         document.getElementById('wrTitle').innerText = 'World Records & Scientific Breakthroughs';
         document.getElementById('wrDesc').innerText = 'Empirical benchmarks and machine-certified mathematical milestones';

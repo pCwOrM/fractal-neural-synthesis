@@ -57,6 +57,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
+      overflow-x: hidden;
       background: radial-gradient(circle at top center, var(--bg-radial) 0%, var(--bg-body) 70%);
       color: var(--text-main);
       font-family: var(--font);
@@ -506,7 +507,22 @@
 </head>
 <body>
 
-<div class="container">
+  <!-- Unified Top Portal Bar -->
+  <div style="width: 100%; max-width: 680px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-radius: 14px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.2); font-size: 12px; backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
+    <a href="../index.html" style="display: flex; align-items: center; gap: 8px; color: var(--emerald); font-weight: 700; text-decoration: none;">
+      <span>🌀</span> <span>Fractal Neural Synthesis</span>
+      <span style="font-size: 10px; padding: 2px 7px; border-radius: 999px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: var(--emerald);">128×128 Lab</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600;">
+      <a href="../index.html" style="color: var(--text-muted); text-decoration: none;">← Ana Portal</a>
+      <a href="../corpus.html" style="color: var(--text-muted); text-decoration: none;">📚 Külliyat</a>
+      <a href="../benchmarks.html" style="color: var(--emerald); text-decoration: none;">⚔️ The Gauntlet</a>
+      <a href="interactive_lab.html" style="color: var(--text-muted); text-decoration: none;">Halk Labı</a>
+      <a href="snake.html" style="color: var(--text-muted); text-decoration: none;">🐍 Arena</a>
+    </div>
+  </div>
+
+  <div class="container">
 
   <!-- Üst Başlık Banner -->
   <div class="header">
@@ -1028,5 +1044,8 @@ ${td.authors}
   const savedTheme = localStorage.getItem('widget_theme');
   applyTheme(savedTheme !== 'light');
 </script>
+  <footer style="width: 100%; max-width: 680px; margin-top: 14px; text-align: center; font-size: 11px; color: var(--text-muted); line-height: 1.5; padding: 10px;">
+    &copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong> &middot; Volkan Dağlı &middot; <strong>ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ.</strong> &middot; Çukurova Üniversitesi Teknokent &middot; Patent TR 2026/016285
+  </footer>
 </body>
 </html>

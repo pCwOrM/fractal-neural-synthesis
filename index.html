@@ -848,6 +848,144 @@
       .eco-card { flex-direction: column; gap: 10px; padding: 18px 14px; }
     }
 
+
+    /* Hero Quick Jump Strip */
+    .hero-jump-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+      padding: 10px 18px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+    }
+    .jump-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 4px;
+    }
+    .jump-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .jump-pill:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--cyan);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 768px) {
+      .hero-jump-strip {
+        border-radius: 14px;
+        padding: 10px 12px;
+        justify-content: flex-start;
+      }
+      .jump-pill { font-size: 0.74rem; padding: 4px 10px; }
+    }
+
+    /* Learning Grid & Cards */
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .learn-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+    .learn-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .learn-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .learn-step-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .learn-level {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .learn-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .learn-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+    .learn-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .learn-btn {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .learn-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--cyan);
+      color: #fff;
+    }
+    .learn-btn.primary {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .learn-btn.primary:hover {
+      background: var(--cyan);
+      color: #06080e;
+    }
+    @media (max-width: 768px) {
+      .learning-grid { grid-template-columns: 1fr; }
+      .learn-card { padding: 18px 14px; }
+      .learn-actions { flex-direction: column; }
+      .learn-btn { width: 100%; text-align: center; }
+    }
+
   </style>
 </head>
 <body>
@@ -859,13 +997,8 @@
       <span>Fractal Neural Synthesis</span>
     </a>
     <div class="nav-links">
-      <a href="#milestones" class="nav-link" id="navMilestones">🏆 Rekorlar & İspatlar</a>
-      <a href="#ecosystem" class="nav-link" id="navEcosystem">Ekosistem</a>
-      <a href="#grants" class="nav-link" id="navGrants">🏛️ Hibeler & Destekler</a>
-      <a href="#paradigm" class="nav-link" id="navParadigm">Paradigma</a>
-      <a href="#labs" class="nav-link" id="navLabs">Laboratuvar</a>
-      <a href="#figures" class="nav-link" id="navFigures">Figürler</a>
-      <a href="corpus.html" class="btn-nav active" style="font-weight:700;">
+      <a href="#milestones" class="nav-link" id="navMilestones">🏆 Rekorlar &amp; İspatlar</a>
+      <a href="corpus.html" class="btn-nav" style="font-weight:700; color:var(--cyan); border-color:rgba(56,189,248,0.3)">
         <span>📚</span>
         <span id="navCorpus">Grand Corpus (15)</span>
       </a>
@@ -873,19 +1006,13 @@
         <span>⚔️</span>
         <span>The Gauntlet</span>
       </a>
-      <!-- Language Toggle Button -->
-      <button type="button" class="btn-nav" id="btnLang" onclick="toggleLanguage()">
-        <span>🌐</span>
-        <span id="langLabel">English</span>
+      <a href="#learning" class="nav-link" id="navLearning" style="color:var(--gold)">🎓 Öğrenme Rehberi</a>
+      <a href="#labs" class="nav-link" id="navLabs">🔬 Laboratuvar</a>
+      <a href="#grants" class="nav-link" id="navGrants">🏛️ Hibeler &amp; Destekler</a>
+      <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="nav-link">GitHub ↗</a>
+      <button type="button" class="btn-nav btn-lang" id="langBtn" onclick="toggleLanguage()">
+        🌐 <span id="langLabel">English</span>
       </button>
-      <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="btn-nav">
-        <span>⭐</span>
-        <span>GitHub</span>
-      </a>
-      <a href="https://huggingface.co/pCwOrM" target="_blank" class="btn-nav" style="border-color:rgba(245,158,11,0.3); color:#f59e0b;">
-        <span>🤗</span>
-        <span>Hugging Face</span>
-      </a>
     </div>
   </nav>
 
@@ -921,6 +1048,19 @@
           <span>🔬</span>
           <span id="btnHeroLabs">Canlı Laboratuvarları Başlat</span>
         </a>
+      </div>
+
+      <!-- Section Quick Jump Pill Strip -->
+      <div class="hero-jump-strip">
+        <span class="jump-label" id="jumpLabel">Hızlı Keşif:</span>
+        <a href="#milestones" class="jump-pill">🏆 9 Dünya Rekoru</a>
+        <a href="#ecosystem" class="jump-pill">🌐 Ekosistem &amp; Jev</a>
+        <a href="#grants" class="jump-pill">🏛️ Hibeler &amp; Destekler</a>
+        <a href="#learning" class="jump-pill">🎓 4-Kademeli Öğrenme Rehberi</a>
+        <a href="#paradigm" class="jump-pill">⚖️ Bilimsel Paradigma</a>
+        <a href="#labs" class="jump-pill">🔬 Canlı Laboratuvarlar</a>
+        <a href="#figures" class="jump-pill">📊 Paper 1 Figürleri</a>
+        <a href="#team" class="jump-pill">👥 Ekip &amp; Yönetim</a>
       </div>
 
       <!-- Stats Bar -->
@@ -1831,6 +1971,21 @@
         if (document.getElementById('grant3Text')) document.getElementById('grant3Text').innerText = 'Our proposal submitted to the Flashbots Research Committee targets Loss-Versus-Rebalancing (LVR) elimination via intra-block zero-storage dynamic fee adaptation. Validated with a 40-core dual Xeon gauntlet across 30,000 simulated swaps and Lean 4 formal fee bounds (500 <= Fee <= 5000 bps).';
         if (document.getElementById('grant4Name')) document.getElementById('grant4Name').innerText = 'ITouch Systems · Cukurova University Science Park';
         if (document.getElementById('grant4Text')) document.getElementById('grant4Text').innerText = 'All core technologies, software codebases, datasets, and patent portfolios (TR 2026/016285 and TR 2026/016633) are developed and operated under institutional R&D incentives at Cukurova University Science Park by ITOUCH BILISIM SISTEMLERI LTD. STI. Registered trademarks: Werr®, Answerr®, Werracle®.';
+
+        // Learning Roadmap Translations
+        if (document.getElementById('navLearning')) document.getElementById('navLearning').innerText = '🎓 Learning Roadmap';
+        if (document.getElementById('jumpLabel')) document.getElementById('jumpLabel').innerText = 'Quick Navigation:';
+        if (document.getElementById('learnEye')) document.getElementById('learnEye').innerText = 'RESEARCH & LEARNING ROADMAP';
+        if (document.getElementById('learnTitle')) document.getElementById('learnTitle').innerText = 'How to Explore, Learn & Apply Fractal Neural Synthesis';
+        if (document.getElementById('learnDesc')) document.getElementById('learnDesc').innerText = 'A structured 4-tier educational and scientific roadmap for researchers, systems engineers, and students seeking to grasp O(1) memory neural derivation and verify formal proofs.';
+        if (document.getElementById('learn1Title')) document.getElementById('learn1Title').innerText = 'How Does AI Think Without Persistent Weights?';
+        if (document.getElementById('learn1Text')) document.getElementById('learn1Text').innerText = 'Explore how FNS derives deterministic logic gates (OR, AND, XOR, NAND) in microseconds from a compact 24-byte Mandelbrot seed without loading 40 GB+ neural weight tensors into GPU VRAM.';
+        if (document.getElementById('learn2Title')) document.getElementById('learn2Title').innerText = 'Bare-Metal & Embedded Microsecond Reflex Inferences';
+        if (document.getElementById('learn2Text')) document.getElementById('learn2Text').innerText = 'Run zero-VRAM reflex models on ARM Cortex-M4 and Arduino Uno (ATmega328P, 2 KB SRAM, 0 heap) in 0.04 ms. Inspect JevBench (231/231 strict pass) and 40-core Dual Xeon gauntlet telemetry.';
+        if (document.getElementById('learn3Title')) document.getElementById('learn3Title').innerText = 'Intra-Block AI Decision Oracles & LVR Circuit Breakers';
+        if (document.getElementById('learn3Text')) document.getElementById('learn3Text').innerText = 'Overcoming the 10-300s latency wall of ZK-ML by executing intra-block AI reflex triage inside a single 32-byte EVM storage slot (~21k gas) and Cairo 2.0 (felt252) with 98.10% OEV recapture on Base.';
+        if (document.getElementById('learn4Title')) document.getElementById('learn4Title').innerText = 'Machine-Certified Formal Proofs in Lean 4 Mathlib';
+        if (document.getElementById('learn4Text')) document.getElementById('learn4Text').innerText = 'Inspect machine-verified computational group theory (GAP BSGS), Schönhage boolean circuit record (-377K wires), 230 NSF ICARM curves, and the 81-theorem General Divisor Theorem (GDT v3.0) with zero project axioms.';
 
 
         document.getElementById('pEye').innerText = 'SCIENTIFIC PARADIGM SHIFT';
