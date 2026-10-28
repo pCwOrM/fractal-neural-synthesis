@@ -680,10 +680,6 @@
           <span>🔬</span>
           <span id="btnHeroLabs">Canlı Laboratuvarları Başlat</span>
         </a>
-        <a href="docs/Mandelbrot_Fractal_Neural_Synthesis_IEEE_Paper_EN.pdf" target="_blank" class="btn-hero secondary">
-          <span>📄</span>
-          <span>IEEE Preprint (PDF)</span>
-        </a>
       </div>
 
       <!-- Stats Bar -->
@@ -842,16 +838,16 @@
     <!-- SECTION 3: SCIENTIFIC FIGURES GALLERY (NO JUMPING!) -->
     <section class="section-wrap" id="figures">
       <div class="section-head">
-        <div class="section-eyebrow" id="figEye">BİLİMSEL VEKTÖR DİYAGRAMLARI (300 DPI)</div>
-        <h2 class="section-title" id="figTitle">Paper 2 Akademik Şekiller Galerisi</h2>
+        <div class="section-eyebrow" id="figEye">KAMUYA AÇIK HAKEMLİ GRAFİKLER &amp; KIYASLAMALAR</div>
+        <h2 class="section-title" id="figTitle">Paper 1 Açık Bilimsel Şekiller Galerisi</h2>
         <p class="section-desc" id="figDesc">
-          Orbital Error Dynamics (OED v3) makalesinde yer alan 7 adet hakemli yüksek çözünürlüklü vektör diyagramı.
+          Mandelbrot Fractal Neural Synthesis (SSRN: 7659198 &amp; Zenodo: 10.5281/zenodo.22867037) açık bilim yayınımızda yer alan hakemli ampirik kıyaslama grafikleri ve ağırlık yüzeyleri.
         </p>
       </div>
 
       <div class="gallery-container">
         <div class="gallery-header">
-          <div class="gallery-title" id="galleryHeading">Paper 2 Scientific Vector Figures (300 DPI)</div>
+          <div class="gallery-title" id="galleryHeading">Paper 1 Public Empirical Figures &amp; Benchmark Gallery</div>
           <div class="gallery-controls">
             <button type="button" class="btn-gallery" id="btnGalleryPrev" onclick="prevFigure()">&larr; Önceki</button>
             <span class="gallery-counter" id="galleryCounter">1 / 7</span>
@@ -860,9 +856,9 @@
         </div>
 
         <div class="gallery-main-view">
-          <img id="galleryMainImg" class="gallery-main-img" src="figures/fig1_observer_horizon.png" alt="Scientific Figure">
+          <img id="galleryMainImg" class="gallery-main-img" src="figures/two_moons_decision_boundary.png" alt="Scientific Figure">
           <div class="gallery-desc-box">
-            <div class="gallery-desc-title" id="galleryTitleText">Fig 1: Observer Horizon Geometry (life_view)</div>
+            <div class="gallery-desc-title" id="galleryTitleText">Fig 1: Two-Moons Non-Convex Decision Boundary (99.30%)</div>
             <div class="gallery-desc-text" id="galleryDescText">Dual-cusp coordinate manifold...</div>
           </div>
         </div>
@@ -904,31 +900,59 @@
 
       <div class="team-grid">
         <div class="team-card">
-          <div class="team-role">Principal Investigator &amp; System Architect</div>
+          <div class="team-role" id="volkanRole">Principal Investigator &amp; System Architect</div>
           <div class="team-name">Volkan Dağlı</div>
-          <div class="team-affil" id="volkanAffil">ITouch Bilişim Sistemleri &middot; Çukurova Üniversitesi Teknokent, Adana</div>
+          <div class="team-affil" id="volkanAffil">
+            <strong>Akademik:</strong> Anadolu Üniversitesi<br>
+            <strong>Kurumsal:</strong> Kurucu Ortak &amp; CTO, ITOUCH BİLİŞİM SİSTEMLERİ (Çukurova Teknokent)
+          </div>
           <a href="https://orcid.org/0009-0000-1587-8703" target="_blank" style="font-family:var(--font-mono); font-size:0.78rem; color:#a3e635; display:inline-flex; align-items:center; gap:5px; margin-top:8px; text-decoration:none;">
             <svg width="14" height="14" viewBox="0 0 256 256" fill="#a3e635"><path d="M128,0A128,128,0,1,0,256,128,128,128,0,0,0,128,0ZM86.35,186.25H65.86V73.47H86.35ZM76.11,61.94a12.8,12.8,0,1,1,12.79-12.8A12.8,12.8,0,0,1,76.11,61.94Zm115.54,63.16c0,32.25-18.78,48.24-49.33,48.24H109.84V73.47h35.81C174.45,73.47,191.65,91.8,191.65,125.1ZM130.33,90.41v69.28h13.23c19.34,0,27.84-12.44,27.84-34.64,0-21.6-9.1-34.64-27.84-34.64Z"/></svg>
             ORCID: 0009-0000-1587-8703 ↗
           </a>
         </div>
         <div class="team-card">
-          <div class="team-role">Research Co-Author</div>
+          <div class="team-role" id="daghanRole">Research Co-Author &amp; Connectomics Lead</div>
           <div class="team-name">Dağhan Dağlı</div>
-          <div class="team-affil" id="daghanAffil">Toros Science High School &middot; ITouch Systems Research</div>
+          <div class="team-affil" id="daghanAffil">
+            <strong>Akademik:</strong> Toros Üniversitesi &middot; Toros Fen Lisesi<br>
+            <strong>Araştırma:</strong> ITouch Systems Genç Araştırmacı / Stajyer
+          </div>
           <a href="https://orcid.org/0009-0003-2492-8313" target="_blank" style="font-family:var(--font-mono); font-size:0.78rem; color:#a3e635; display:inline-flex; align-items:center; gap:5px; margin-top:8px; text-decoration:none;">
             <svg width="14" height="14" viewBox="0 0 256 256" fill="#a3e635"><path d="M128,0A128,128,0,1,0,256,128,128,128,0,0,0,128,0ZM86.35,186.25H65.86V73.47H86.35ZM76.11,61.94a12.8,12.8,0,1,1,12.79-12.8A12.8,12.8,0,0,1,76.11,61.94Zm115.54,63.16c0,32.25-18.78,48.24-49.33,48.24H109.84V73.47h35.81C174.45,73.47,191.65,91.8,191.65,125.1ZM130.33,90.41v69.28h13.23c19.34,0,27.84-12.44,27.84-34.64,0-21.6-9.1-34.64-27.84-34.64Z"/></svg>
             ORCID: 0009-0003-2492-8313 ↗
           </a>
         </div>
         <div class="team-card">
-          <div class="team-role">Academic Advisor &amp; Co-Author</div>
+          <div class="team-role" id="zerrinRole">Academic Advisor &amp; Co-Author</div>
           <div class="team-name">Dr. Zerrin Dağlı</div>
-          <div class="team-affil" id="zerrinAffil">Mersin University &middot; Academic Advisory</div>
+          <div class="team-affil" id="zerrinAffil">
+            <strong>Akademik:</strong> Mersin Üniversitesi<br>
+            <strong>Rol:</strong> Bağımsız Akademik Danışman (Ticari bağı yoktur)
+          </div>
           <a href="https://orcid.org/0000-0001-9490-6425" target="_blank" style="font-family:var(--font-mono); font-size:0.78rem; color:#a3e635; display:inline-flex; align-items:center; gap:5px; margin-top:8px; text-decoration:none;">
             <svg width="14" height="14" viewBox="0 0 256 256" fill="#a3e635"><path d="M128,0A128,128,0,1,0,256,128,128,128,0,0,0,128,0ZM86.35,186.25H65.86V73.47H86.35ZM76.11,61.94a12.8,12.8,0,1,1,12.79-12.8A12.8,12.8,0,0,1,76.11,61.94Zm115.54,63.16c0,32.25-18.78,48.24-49.33,48.24H109.84V73.47h35.81C174.45,73.47,191.65,91.8,191.65,125.1ZM130.33,90.41v69.28h13.23c19.34,0,27.84-12.44,27.84-34.64,0-21.6-9.1-34.64-27.84-34.64Z"/></svg>
             ORCID: 0000-0001-9490-6425 ↗
           </a>
+        </div>
+      </div>
+
+      <!-- Institutional Governance & IP Licensing Card -->
+      <div style="margin-top:28px; background:rgba(14,20,36,0.85); border:1px solid rgba(56,189,248,0.3); border-radius:14px; padding:22px; font-size:0.9rem; line-height:1.6;" id="govBox">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+          <span style="font-size:1.2rem;">🏛️</span>
+          <strong style="color:#fff; font-size:1.05rem;" id="govTitle">Kurumsal Yönetişim, Patent Mülkiyeti &amp; Münhasır Lisanslama Katmanı</strong>
+        </div>
+        <div style="color:var(--text-muted);" id="govContent">
+          <p style="margin-bottom:8px;">
+            <strong>1. Şahsi Buluş ve Akademik Yazarlık:</strong> Tüm algoritmalar, bilimsel yayınlar ve patentler (<code style="color:var(--cyan)">TR 2026/016285</code> &amp; <code style="color:var(--cyan)">TR 2026/016633</code>), <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong> ve <strong>Dağhan Dağlı</strong> adına şahsi ortak buluş ve eser olarak tescillidir.
+          </p>
+          <p style="margin-bottom:8px;">
+            <strong>2. Tam Temsil ve Yetkilendirme:</strong> Yazarlar ve buluş sahipleri, fikrî mülkiyete dair tüm temsil, yönetim ve lisanslama yetkisini resmi olarak Baş Araştırmacı ve Baş Mimar <strong>Volkan Dağlı</strong>'ya devretmiştir.
+          </p>
+          <p style="margin-bottom:0;">
+            <strong>3. Münhasır Ticari İşletim &amp; Markalar:</strong> Volkan Dağlı tarafından; tüm teknolojilerin, patent haklarının, yazılımların ve modellerin küresel ticari işletme, lisanslama ve dağıtım hakları münhasıran <strong>ITouch Bilişim Sistemleri Ltd. Şti.</strong>'ye (Çukurova Üniversitesi Teknokent) devredilmiştir. <strong>Werr®</strong>, <strong>Answerr®</strong> ve <strong>Werracle®</strong> markaları ITouch Bilişim Sistemleri adına tescilli resmi markalardır.
+          </p>
         </div>
       </div>
 
@@ -958,63 +982,63 @@
   </footer>
 
   <script>
-    // 7 Figures Data (300 DPI Scientific Figures)
+        // 7 Public Empirical Figures from Paper 1 (Mandelbrot Fractal Neural Synthesis - SSRN: 7659198 & Zenodo: 10.5281/zenodo.22867037)
     const FIGURES = [
       {
         id: 1,
-        src: "figures/fig1_observer_horizon.png",
-        title_en: "Fig 1: Observer Horizon Geometry (life_view)",
-        desc_en: "Dual-cusp coordinate manifold: Blue Radiant Apex (X_blue) observing future quantum potential while grounded to terrestrial escape loss, Yellow Grounded Mirror (X_yellow), and expressive radial utterance vector.",
-        title_tr: "Şekil 1: Gözlemci Ufku Geometrisi (life_view)",
-        desc_tr: "Çift uçlu koordinat manifoldu: Gelecekteki kuantum havuzunu gözlemleyen Mavi Zirve (X_blue), karasal kaçış kaybına bağlı Sarı Ayna (X_yellow) ve ifadecil radyal saçılma vektörü."
+        src: "figures/two_moons_decision_boundary.png",
+        title_en: "Fig 1: Two-Moons Non-Convex Decision Boundary (99.30% Accuracy)",
+        desc_en: "Zero-storage procedural weight synthesis deriving non-linear decision boundary across 1,000 noisy samples without persistent tensor arrays (Paper 1 SSRN: 7659198).",
+        title_tr: "Şekil 1: Two-Moons Konveks Olmayan Karar Sınırı (%99.30 Doğruluk)",
+        desc_tr: "Kalıcı ağırlık tensörleri tutulmaksızın 1.000 gürültülü örneklem üzerinde türetilen doğrusal olmayan sıfır-bellekli karar yüzeyi (Paper 1 SSRN: 7659198)."
       },
       {
         id: 2,
-        src: "figures/fig2_bent_sine_and_cusp.png",
-        title_en: "Fig 2: Bent Sine Wave Hypothesis & Cardioid Cusp Dynamics",
-        desc_en: "Mathematical proof of non-equilibrium intelligence: straight waves are static; harmonic sine waves are repetitively sterile. Living systems emerge when waves bend inward toward the cardioid cusp (c = 1/4) under quantum drag.",
-        title_tr: "Şekil 2: Bükülmüş Sinüs Dalgası Hipotezi & Kardioid Kusp Dinamikleri",
-        desc_tr: "Denge-dışı zekanın matematiksel ispatı: Düz dalgalar hareketsiz, periyodik sinüsler kısırdır. Canlı sistemler, kuantum ve çevre sürtünmesiyle ana kardioid ucuna (c = 1/4) içe doğru büküldüğünde doğar."
+        src: "figures/two_spirals_decision_boundary.png",
+        title_en: "Fig 2: Two-Spirals Continuous Manifold Separation (98.50% Accuracy)",
+        desc_en: "Procedural fractal neural network resolving the non-linearly interlocking Two-Spirals problem with 0 Bytes persistent VRAM.",
+        title_tr: "Şekil 2: Two-Spirals Sürekli Manifold Ayrışımı (%98.50 Doğruluk)",
+        desc_tr: "0 Byte kalıcı VRAM ile birbirine geçmiş iki spiral manifoldunu çözen prosedürel fraktal sinir ağı."
       },
       {
         id: 3,
-        src: "figures/fig3_quantum_tunneling_operator.png",
-        title_en: "Fig 3: Zinc Spark Quantum Tunneling Operator",
-        desc_en: "Biological fertilization fireworks modeled as a heavy-tailed stochastic operator (Ω_tunneling) that instantaneously tunnels out of non-convex saddle traps without gradient loss convergence.",
-        title_tr: "Şekil 3: Çinko Kıvılcımı Kuantum Tünelleme Operatörü",
-        desc_tr: "Döllenme anındaki çinko patlamalarından esinlenen ağır-kuyruklu stokastik operatör (Ω_tunneling); gradyan inişine hapsolmadan konveks olmayan yerel tuzaklardan anında tüneller."
+        src: "figures/gate_solutions_128.png",
+        title_en: "Fig 3: Deterministic Boolean Logic Gates (AND, OR, NAND, NOR)",
+        desc_en: "100.0% classification accuracy across all boolean gates derived directly from 4-quadrant quadratic Mandelbrot escape dynamics.",
+        title_tr: "Şekil 3: Deterministik Boole Mantık Kapıları (AND, OR, NAND, NOR)",
+        desc_tr: "4-kadranlı karesel Mandelbrot kaçış dinamiklerinden doğrudan türetilen %100 doğruluklu mantık kapısı çözümleri."
       },
       {
         id: 4,
-        src: "figures/fig4_nonequilibrium_phase_surfing.png",
-        title_en: "Fig 4: Non-Equilibrium Phase Surfing",
-        desc_en: "Zero-friction phase modulation (Δφ) surfing along the Lyapunov boundary (λ = 0) of the Mandelbrot set, actively resisting gravitational collapse into dark attractor basins.",
-        title_tr: "Şekil 4: Denge-Dışı Faz Sörfü",
-        desc_tr: "Mandelbrot kümesinin Lyapunov sınırında (λ = 0) sıfır sürtünmeli faz modülasyonu (Δφ); siyah delik çekim havuzlarına çökmeye karşı aktif direnç gösterir."
+        src: "figures/xor_complete_network_128.png",
+        title_en: "Fig 4: Complete Non-Linear XOR Composite Architecture",
+        desc_en: "Resolving the classic non-linearly separable XOR problem using an ultra-compact procedural composite neural network.",
+        title_tr: "Şekil 4: Doğrusal Olmayan XOR Kompozit Ağ Mimarisi",
+        desc_tr: "Doğrusal olarak ayrılamayan klasik XOR problemini ultra kompakt prosedürel kompozit sinir ağıyla çözen mimari."
       },
       {
         id: 5,
-        src: "figures/fig5_dual_brain_cybernetics.png",
-        title_en: "Fig 5: Dual-Brain Enteric-Cranial Cybernetics",
-        desc_en: "Bi-directional feedback architecture: cranial cerebral cortex exploring speculative manifolds while subcortical/enteric limbic gatekeepers enforce homeostatic safety and immunological tolerance.",
-        title_tr: "Şekil 5: Çift Beyin Enterik-Kraniyal Sibernetik",
-        desc_tr: "İki yönlü geri-beslemeli mimari: Serebral korteks spekülatif manifoldları keşfederken, subkortikal/enterik limbik bekçi homeostatik denge ve immünolojik toleransı denetler."
+        src: "figures/quadrant_weights_128.png",
+        title_en: "Fig 5: 4-Quadrant Area Weight Extraction Geometry",
+        desc_en: "Partitioning a 128x128 Mandelbrot patch into 4 quadrants (Q1..Q4) mapping non-escaping pixel density directly to weights and bias.",
+        title_tr: "Şekil 5: 4-Bölge Alan Ağırlık Ayrıştırma Geometrisi",
+        desc_tr: "128x128 Mandelbrot yamasını 4 kadranına bölerek kaçmayan piksel oranını doğrudan ağırlıklara ve nöron eşiğine eşleyen geometri."
       },
       {
         id: 6,
-        src: "figures/fig6_complex_4quadrant_genetics.png",
-        title_en: "Fig 6: Complex 4-Quadrant Genetics (A, T, C, G)",
-        desc_en: "Mapping the 4-nucleotide genetic basis onto the complex plane quadrants (Q1..Q4) for procedural parameter synthesis, mirroring biological morphogenetic compression.",
-        title_tr: "Şekil 6: Karmaşık 4-Bölge Genetik Haritalama (A, T, C, G)",
-        desc_tr: "4 nükleotitli genetik kodun karmaşık düzlemin 4 bölgesine (Q1..Q4) izdüşürülerek prosedürel parametre üretimi; biyolojik morfogenetik sıkıştırmanın tam karşılığı."
+        src: "figures/mandelbrot_patches.png",
+        title_en: "Fig 6: Multi-Scale Mandelbrot Escape Surface Patches",
+        desc_en: "Vectorized escape dynamics evaluated at 128x128 resolution across varying zoom factors and complex plane coordinates.",
+        title_tr: "Şekil 6: Çok Ölçekli Mandelbrot Kaçış Yüzey Yamaları",
+        desc_tr: "Farklı yakınlaştırma katsayıları ve karmaşık koordinatlarda 128x128 çözünürlükle hesaplanan vektörize kaçış dinamikleri."
       },
       {
         id: 7,
-        src: "figures/fig7_empirical_benchmark.png",
-        title_en: "Fig 7: Empirical Benchmark Verification",
-        desc_en: "5-seed rigorous radar benchmark (80/20 train/test) across XOR (99.80%), Two Moons (99.40%), and Two Spirals (98.70%) with 0 persistent weights and 0.41 ms latency.",
-        title_tr: "Şekil 7: Deneysel Benchmark Doğrulaması",
-        desc_tr: "5 farklı tohumla (80/20 eğitim/test) XOR (%99.80), Two Moons (%99.40) ve Two Spirals (%98.70) radar kıyaslaması; 0 kalıcı ağırlık ve 0.41 ms gecikme."
+        src: "figures/zoom_weight_curve.png",
+        title_en: "Fig 7: Procedural Parameter Zoom Sensitivity & Dynamic Range",
+        desc_en: "Smooth continuous modulation of extracted synaptic weights as a function of the scale zoom parameter lambda.",
+        title_tr: "Şekil 7: Prosedürel Parametre Yakınlaştırma Duyarlılığı & Dinamik Aralık",
+        desc_tr: "Çıkarılan sinaptik ağırlıkların yakınlaştırma parametresi lambda'ya bağlı olarak sergilediği pürüzsüz ve sürekli değişim."
       }
     ];
 
@@ -1173,9 +1197,10 @@
         document.getElementById('l2Btn').innerText = 'Open Research Panel ↗';
 
         document.getElementById('sbTitle').innerText = 'Dynamic Orbit Decision Sandbox';
-        document.getElementById('figEye').innerText = 'SCIENTIFIC VECTOR FIGURES (300 DPI)';
-        document.getElementById('figTitle').innerText = 'Paper 2 Academic Figures Gallery';
-        document.getElementById('figDesc').innerText = 'High-resolution peer-reviewed vector figures from Orbital Error Dynamics (OED v3).';
+        document.getElementById('figEye').innerText = 'PUBLIC PEER-REVIEWED BENCHMARKS & FIGURES';
+        document.getElementById('figTitle').innerText = 'Paper 1 Open Science Figures Gallery';
+        document.getElementById('figDesc').innerText = 'Peer-reviewed empirical benchmark charts and procedural weight surfaces published in our open-science monograph (SSRN: 7659198 & Zenodo: 10.5281/zenodo.22867037).';
+        document.getElementById('galleryHeading').innerText = 'Paper 1 Public Empirical Figures & Benchmark Gallery';
 
         document.getElementById('cbtTitle').innerText = 'The Grand Research Corpus & Open Archive';
         document.getElementById('cbtDesc').innerText = '15 peer-reviewed preprints & monographs, 81+ Lean 4 theorems (0 sorry), world-record tensor compression (-377K wires), 230 NSF ICARM high-rank elliptic curves, Drosophila 158K connectome, and permanent Zenodo CERN archives.';
@@ -1183,9 +1208,11 @@
 
         document.getElementById('teamEye').innerText = 'RESEARCH TEAM & CITATION';
         document.getElementById('teamTitle').innerText = 'Authors and Institutional Affiliations';
-        document.getElementById('volkanAffil').innerHTML = 'ITouch Systems &middot; Cukurova University Science Park, Adana';
-        document.getElementById('daghanAffil').innerHTML = 'Toros Science High School &middot; ITouch Systems Research';
-        document.getElementById('zerrinAffil').innerHTML = 'Mersin University &middot; Academic Advisory';
+        document.getElementById('volkanAffil').innerHTML = '<strong>Academic:</strong> Anadolu University<br><strong>Commercial:</strong> Co-Founder &amp; CTO, ITouch Systems (Cukurova University Science Park)';
+        document.getElementById('daghanAffil').innerHTML = '<strong>Academic:</strong> Toros University &middot; Toros Science High School<br><strong>Research:</strong> Student Researcher / Volunteer';
+        document.getElementById('zerrinAffil').innerHTML = '<strong>Academic:</strong> Mersin University<br><strong>Role:</strong> Independent Academic Advisor (No commercial tie)';
+        document.getElementById('govTitle').innerText = 'Corporate Governance, Patent Ownership & Exclusive Licensing Layer';
+        document.getElementById('govContent').innerHTML = '<p style="margin-bottom:8px;"><strong>1. Personal Invention &amp; Academic Authorship:</strong> All algorithms, preprints, and patents (<code>TR 2026/016285</code> &amp; <code>TR 2026/016633</code>) are registered personally and jointly by <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, and <strong>Dağhan Dağlı</strong>.</p><p style="margin-bottom:8px;"><strong>2. Power of Attorney &amp; Representation:</strong> The co-authors and co-inventors formally vest full power of attorney, representation, and licensing authority in Principal Investigator &amp; Chief Architect <strong>Volkan Dağlı</strong>.</p><p style="margin-bottom:0;"><strong>3. Exclusive Commercial Licensing &amp; Trademarks:</strong> Volkan Dağlı has assigned all global commercial operating, licensing, and distribution rights for the software, patents, and technologies exclusively to <strong>ITouch Systems</strong> (ITouch Bilişim Sistemleri Ltd. Şti. &middot; Cukurova University Science Park). <strong>Werr®</strong>, <strong>Answerr®</strong>, and <strong>Werracle®</strong> are registered trademarks of ITouch Systems.</p>';
         document.getElementById('siteFooterInst').innerHTML = '&copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong>. Volkan Dağlı &middot; ITouch Systems &middot; Cukurova University Science Park.';
         document.getElementById('btnCopyBib').innerText = 'Copy';
       } else {
