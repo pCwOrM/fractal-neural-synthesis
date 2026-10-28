@@ -352,7 +352,7 @@ def generate_commercial_invoice_pdf(payment: Dict[str, Any]) -> bytes:
     c.setFillColor(colors.HexColor("#334155"))
     c.drawString(22 * mm, ver_y + 12.2 * mm, "TRY (TL) IBAN : TR92 0003 2000 0000 0070 5754 65  (Acc No: 70575465 | Customer No: 23764109)")
     c.drawString(22 * mm, ver_y + 8.0 * mm,  "USD ($)  IBAN : TR83 0003 2000 0000 0088 9467 48  (Acc No: 88946748 | SWIFT/BIC: TEBUTRIS)")
-    c.drawString(22 * mm, ver_y + 3.8 * mm,  "EUR (€)  IBAN : TR28 0003 2000 0000 0088 9467 68  (Acc No: 88946768 | Beneficiary: ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ.)")
+    c.drawString(22 * mm, ver_y + 3.8 * mm,  "EUR (€)  IBAN : TR28 0003 2000 0000 0088 9467 68  (Acc No: 88946768 | Beneficiary (SWIFT): ITOUCH BILISIM SISTEMLERI LTD. STI.)")
 
     # Corporate Governance & Legal Footer
     foot_y = 22 * mm
