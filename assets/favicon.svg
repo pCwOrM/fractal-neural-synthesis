@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="100%" height="100%">
+  <defs>
+    <radialGradient id="navGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#04060a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="navCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="navViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="50%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Ring -->
+  <circle cx="20" cy="20" r="19" fill="#060913" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2"/>
+  <circle cx="20" cy="20" r="19" fill="url(#navGlow)"/>
+  <circle cx="20" cy="20" r="14.5" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.8" stroke-dasharray="2 3"/>
+
+  <!-- Fractal Synaptic Swirl -->
+  <path d="M 20,8 C 13,8 8,14 8,20 C 8,25 12,29 17,31 C 19,31 20,30 20,28 C 20,24 14,22 14,18 C 14,14 17,11 20,11" 
+        fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 20,8 C 27,8 32,14 32,20 C 32,25 28,29 23,31 C 21,31 20,30 20,28 C 20,24 26,22 26,18 C 26,14 23,11 20,11" 
+        fill="none" stroke="#c084fc" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- 3D Crystal W Crown Core -->
+  <polygon points="20,11 16.5,17 12,13 14.5,23.5 20,26.5" fill="url(#navCyan)" stroke="#e0f2fe" stroke-width="0.5"/>
+  <polygon points="20,11 23.5,17 28,13 25.5,23.5 20,26.5" fill="url(#navViolet)" stroke="#fdf4ff" stroke-width="0.5"/>
+  
+  <!-- White Spine -->
+  <line x1="20" y1="10.5" x2="20" y2="28" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- 3 Tripod Nodes -->
+  <circle cx="20" cy="8" r="1.8" fill="#ffffff"/>
+  <circle cx="29" cy="24" r="1.6" fill="#fbbf24"/>
+  <circle cx="11" cy="24" r="1.6" fill="#10b981"/>
+</svg>

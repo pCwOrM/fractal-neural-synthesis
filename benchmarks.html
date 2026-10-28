@@ -5,7 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Zero-VRAM Gauntlet | Fractal Neural Synthesis (FNS) &amp; WERR Benchmarks</title>
   <meta name="description" content="The unchallengeable benchmark wall: Zero-VRAM, 24-byte fractal seed, sub-2ms deterministic System-1 decision supremacy across WindTunnel WebMCP, JevBench, Tau-Bench, and Gymnasium RL.">
-  <link rel="icon" type="image/svg+xml" href="https://pcworm.github.io/werr/assets/werr_logo_core_fav_black.svg">
+  <link rel="canonical" href="https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/fns_logo_nav.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html">
+  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS)">
+  <meta property="og:title" content="The Zero-VRAM Gauntlet | FNS &amp; WERR Benchmarks">
+  <meta property="og:description" content="Zero-VRAM, 24-byte fractal seed, sub-2ms deterministic System-1 decision supremacy across WindTunnel WebMCP, JevBench, Tau-Bench, and Gymnasium RL.">
+  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Zero-VRAM Gauntlet Benchmark Wall">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pcworm">
+  <meta name="twitter:creator" content="@pcworm">
+  <meta name="twitter:title" content="The Zero-VRAM Gauntlet | FNS Deterministic Supremacy">
+  <meta name="twitter:description" content="Zero-VRAM, 24-byte fractal seed, sub-2ms System-1 reflex benchmarks vs LLMs and RL agents.">
+  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
 
   <style>
     :root {
@@ -1477,59 +1505,52 @@
   function applyLanguage(lang) {
     currentLang = lang;
     const t = i18n[lang];
-    langLabel.innerText = t.langBtn;
-    if (document.getElementById('navHome')) document.getElementById('navHome').innerText = 'Ana Portal';
-    if (document.getElementById('navMilestones')) document.getElementById('navMilestones').innerText = 'Rekorlar';
-    if (document.getElementById('navCorpus')) document.getElementById('navCorpus').innerText = 'Büyük Külliyat (15)';
-    document.getElementById('navWerr').innerText = t.navWerr;
-    document.getElementById('navAnswerr').innerText = t.navAnswerr;
-    document.getElementById('navSnake').innerText = t.navSnake;
-    document.getElementById('heroBadge').innerText = t.heroBadge;
-    document.getElementById('heroTitle').innerHTML = t.heroTitle;
-    document.getElementById('heroDesc').innerHTML = t.heroDesc;
-    document.getElementById('btnViewLeaderboard').innerText = t.btnViewLeaderboard;
-    document.getElementById('btnTakeChallenge').innerText = t.btnTakeChallenge;
-    document.getElementById('hud1Title').innerText = t.hud1Title;
-    document.getElementById('hud2Title').innerText = t.hud2Title;
-    document.getElementById('hud3Title').innerText = t.hud3Title;
-    document.getElementById('hud4Title').innerText = t.hud4Title;
-    document.getElementById('hud5Title').innerText = t.hud5Title;
-    document.getElementById('hud6Title').innerText = t.hud6Title;
-    document.getElementById('sec1Title').innerText = t.sec1Title;
-    document.getElementById('sec1Desc').innerText = t.sec1Desc;
-    document.getElementById('sec1Badge').innerText = t.sec1Badge;
-    document.getElementById('thArch').innerText = t.thArch;
-    document.getElementById('thWeights').innerText = t.thWeights;
-    document.getElementById('thVram').innerText = t.thVram;
-    document.getElementById('thHardware').innerText = t.thHardware;
-    document.getElementById('thLatency').innerText = t.thLatency;
-    document.getElementById('thCost').innerText = t.thCost;
-    document.getElementById('thDeterminism').innerText = t.thDeterminism;
-    document.getElementById('thHallucination').innerText = t.thHallucination;
-    document.getElementById('sec2Title').innerText = t.sec2Title;
-    document.getElementById('sec2Desc').innerText = t.sec2Desc;
-    document.getElementById('sec2Badge').innerText = t.sec2Badge;
-    document.getElementById('wtCardBody').innerHTML = t.wtCardBody;
-    document.getElementById('btnWtIssue').innerText = t.btnWtIssue;
-    document.getElementById('jevCardBody').innerHTML = t.jevCardBody;
-    if (document.getElementById('btnJevIssue')) document.getElementById('btnJevIssue').innerText = t.btnJevIssue;
-    document.getElementById('btnJevLive').innerText = t.btnJevLive;
-    document.getElementById('gymCardBody').innerHTML = t.gymCardBody;
-    if (document.getElementById('btnSnakeIssue')) document.getElementById('btnSnakeIssue').innerText = t.btnSnakeIssue;
-    document.getElementById('btnSnakeArena').innerText = t.btnSnakeArena;
-    document.getElementById('tauCardBody').innerHTML = t.tauCardBody;
-    if (document.getElementById('btnTauIssue')) document.getElementById('btnTauIssue').innerText = t.btnTauIssue;
-    document.getElementById('btnTauTest').innerText = t.btnTauTest;
-    document.getElementById('maniCardBody').innerHTML = t.maniCardBody;
-    document.getElementById('btnManiReport').innerText = t.btnManiReport;
-    document.getElementById('jev2CardBody').innerHTML = t.jev2CardBody;
-    if (document.getElementById('btnJev2Issue')) document.getElementById('btnJev2Issue').innerText = t.btnJev2Issue;
-    document.getElementById('btnJev2Test').innerText = t.btnJev2Test;
-    document.getElementById('sec3Title').innerText = t.sec3Title;
-    document.getElementById('sec3Desc').innerText = t.sec3Desc;
-    document.getElementById('sec4Title').innerText = t.sec4Title;
-    document.getElementById('sec4Desc').innerText = t.sec4Desc;
-    document.getElementById('sec5Title').innerText = t.sec5Title;
+const setTxt = (id, val) => { const el = document.getElementById(id); if (el && val) el.innerText = val; };
+    if (langLabel) langLabel.innerText = t.langBtn;
+    setTxt('navHome', 'Ana Portal');
+    setTxt('navMilestones', 'Rekorlar');
+    setTxt('navCorpus', 'Büyük Külliyat (15)');
+    setTxt('navWerr', t.navWerr);
+    setTxt('navAnswerr', t.navAnswerr);
+    setTxt('navSnake', t.navSnake);
+    setTxt('heroBadge', t.heroBadge);
+    setTxt('btnViewLeaderboard', t.btnViewLeaderboard);
+    setTxt('btnTakeChallenge', t.btnTakeChallenge);
+    setTxt('hud1Title', t.hud1Title);
+    setTxt('hud2Title', t.hud2Title);
+    setTxt('hud3Title', t.hud3Title);
+    setTxt('hud4Title', t.hud4Title);
+    setTxt('hud5Title', t.hud5Title);
+    setTxt('hud6Title', t.hud6Title);
+    setTxt('sec1Title', t.sec1Title);
+    setTxt('sec1Desc', t.sec1Desc);
+    setTxt('sec1Badge', t.sec1Badge);
+    setTxt('thArch', t.thArch);
+    setTxt('thWeights', t.thWeights);
+    setTxt('thVram', t.thVram);
+    setTxt('thHardware', t.thHardware);
+    setTxt('thLatency', t.thLatency);
+    setTxt('thCost', t.thCost);
+    setTxt('thDeterminism', t.thDeterminism);
+    setTxt('thHallucination', t.thHallucination);
+    setTxt('sec2Title', t.sec2Title);
+    setTxt('sec2Desc', t.sec2Desc);
+    setTxt('sec2Badge', t.sec2Badge);
+    setTxt('btnWtIssue', t.btnWtIssue);
+    setTxt('btnJevIssue', t.btnJevIssue);
+    setTxt('btnJevLive', t.btnJevLive);
+    setTxt('btnSnakeIssue', t.btnSnakeIssue);
+    setTxt('btnSnakeArena', t.btnSnakeArena);
+    setTxt('btnTauIssue', t.btnTauIssue);
+    setTxt('btnTauTest', t.btnTauTest);
+    setTxt('btnManiReport', t.btnManiReport);
+    setTxt('btnJev2Issue', t.btnJev2Issue);
+    setTxt('btnJev2Test', t.btnJev2Test);
+    setTxt('sec3Title', t.sec3Title);
+    setTxt('sec3Desc', t.sec3Desc);
+    setTxt('sec4Title', t.sec4Title);
+    setTxt('sec4Desc', t.sec4Desc);
+    setTxt('sec5Title', t.sec5Title);
     document.getElementById('sec5Desc').innerHTML = t.sec5Desc;
     localStorage.setItem('gauntlet_lang', lang);
   }
