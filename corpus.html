@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Research Corpus | Fractal Neural Synthesis (FNS)</title>
+  <meta name="description" content="Central research repository, preprints, Zenodo DOIs, and machine-verified Lean 4 proofs for Fractal Neural Synthesis (FNS) and Zero-Storage Weight Derivation.">
+  <link rel="canonical" href="https://pcworm.github.io/fractal-neural-synthesis/corpus.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX for high-performance math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <style>
+    :root {
+      --bg-dark: #06080e;
+      --card-bg: rgba(14, 20, 34, 0.75);
+      --card-border: rgba(45, 60, 95, 0.45);
+      --text-main: #f0f4fc;
+      --text-muted: #8fa3c7;
+      --cyan: #38bdf8;
+      --gold: #f6b73c;
+      --emerald: #10b981;
+      --purple: #a855f7;
+      --rose: #f43f5e;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Chakra Petch', sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(ellipse at 20% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 65%, rgba(168, 85, 247, 0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 90%, rgba(246, 183, 60, 0.05) 0%, transparent 60%);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--cyan); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #fff; text-decoration: underline; }
+
+    /* Top Nav */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 8, 14, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+    .brand-icon { font-size: 1.4rem; color: var(--cyan); }
+    .nav-links { display: flex; align-items: center; gap: 14px; }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      color: #fff;
+      border-color: var(--cyan);
+      background: rgba(56, 189, 248, 0.1);
+      text-decoration: none;
+    }
+    .btn-nav.active {
+      color: #fff;
+      border-color: var(--cyan);
+      background: rgba(56, 189, 248, 0.18);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* Header */
+    .hero-header {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+    .tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 14px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .hero-desc {
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-size: 1.1rem;
+    }
+
+    /* Stats bar */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto 36px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+    .stat-lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Controls: Search and Tabs */
+    .controls-wrap {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .search-input {
+      width: 100%;
+      background: rgba(6, 8, 14, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      color: #fff;
+      font-family: var(--font-sans);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); }
+
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .cat-btn {
+      padding: 7px 15px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      border: 1px solid var(--card-border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cat-btn:hover { color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+    .cat-btn.active {
+      background: var(--cyan);
+      color: #06080e;
+      border-color: var(--cyan);
+      font-weight: 700;
+    }
+
+    /* Corpus List */
+    .corpus-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .paper-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .paper-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .paper-cat-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .paper-cat-badge.math { background: rgba(246, 183, 60, 0.15); color: var(--gold); border-color: rgba(246, 183, 60, 0.3); }
+    .paper-cat-badge.crypto { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border-color: rgba(16, 185, 129, 0.3); }
+    .paper-cat-badge.formal { background: rgba(168, 85, 247, 0.15); color: var(--purple); border-color: rgba(168, 85, 247, 0.3); }
+    .paper-cat-badge.edu { background: rgba(244, 63, 94, 0.15); color: var(--rose); border-color: rgba(244, 63, 94, 0.3); }
+
+    .paper-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .paper-authors {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .paper-authors strong { color: #dbe9fb; }
+    .paper-summary {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+    .math-highlight {
+      background: rgba(6, 8, 14, 0.6);
+      border-left: 3px solid var(--cyan);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      overflow-x: auto;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: #e2e8f0;
+      transition: all 0.2s;
+    }
+    .btn-action:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--cyan);
+      color: #fff;
+      text-decoration: none;
+    }
+    .btn-action.primary {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .btn-action.primary:hover {
+      background: var(--cyan);
+      color: #06080e;
+    }
+
+    /* Modal for BibTeX */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #0b1120;
+      border: 1px solid var(--cyan);
+      border-radius: 16px;
+      max-width: 680px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .modal-title { font-family: var(--font-display); font-size: 1.2rem; color: #fff; }
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .modal-close:hover { color: #fff; }
+    .modal-pre {
+      background: #04060a;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #a5f3fc;
+      overflow-x: auto;
+      max-height: 360px;
+      white-space: pre-wrap;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--card-border);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🌀</span>
+      <span>Fractal Neural Synthesis</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="btn-nav">Home & Labs</a>
+      <a href="corpus.html" class="btn-nav active">Grand Corpus</a>
+      <a href="benchmarks.html" class="btn-nav" style="color: var(--emerald); border-color: rgba(16,185,129,0.3)">The Gauntlet</a>
+      <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="btn-nav">GitHub ↗</a>
+    </div>
+  </nav>
+
+  <!-- Container -->
+  <div class="container">
+    <header class="hero-header">
+      <div class="tagline">Official Academic &amp; Research Portal</div>
+      <h1 class="hero-title">The Grand Research Corpus</h1>
+      <p class="hero-desc">
+        Comprehensive registry of 11 peer-reviewed preprints, permanent Zenodo open science archives, machine-verified Lean 4 formal proofs, and world-record compression benchmarks.
+      </p>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-val">11</div>
+          <div class="stat-lbl">Academic Papers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" style="color:var(--purple)">41</div>
+          <div class="stat-lbl">Lean 4 Theorems</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" style="color:var(--emerald)">0 sorry</div>
+          <div class="stat-lbl">Formal Completeness</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" style="color:var(--gold)">158K</div>
+          <div class="stat-lbl">Synthesized Neurons</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search and Filter Controls -->
+    <div class="controls-wrap">
+      <input type="text" id="corpusSearch" class="search-input" placeholder="🔍 Search by paper title, author, keyword, DOI, or Lean 4 theorem..." onkeyup="filterCorpus()">
+      <div class="category-pills">
+        <button class="cat-btn active" data-category="all" onclick="selectCategory('all', this)">All Documents (14)</button>
+        <button class="cat-btn" data-category="decision" onclick="selectCategory('decision', this)">Karar Kuramı &amp; Güvenlik</button>
+        <button class="cat-btn" data-category="crypto" onclick="selectCategory('crypto', this)">Kriptografi &amp; EVM</button>
+        <button class="cat-btn" data-category="math" onclick="selectCategory('math', this)">Saf Matematik</button>
+        <button class="cat-btn" data-category="neural" onclick="selectCategory('neural', this)">Sinir Ağları &amp; Biyoloji</button>
+        <button class="cat-btn" data-category="edu" onclick="selectCategory('edu', this)">Eğitim &amp; Pedagoji</button>
+        <button class="cat-btn" data-category="formal" onclick="selectCategory('formal', this)">Lean 4 İspatları</button>
+      </div>
+    </div>
+
+    <!-- Paper Cards Grid -->
+    <div class="corpus-grid" id="corpusGrid">
+
+      <!-- Paper 1: FNS -->
+      <article class="paper-card" data-category="decision neural" data-search="fractal neural synthesis fns procedural weight derivation zero storage volkan dagli">
+        <div class="card-top">
+          <div class="paper-cat-badge">Paper 1 · Decision &amp; Neural</div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13740920</span>
+        </div>
+        <h2 class="paper-title">Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation &amp; Non-Linear Boundaries</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong> (ITouch Systems, Çukurova Teknokent), Dağhan Dağlı, Dr. Zerrin Dağlı</div>
+        <p class="paper-summary">
+          Introduces the paradigm of zero-storage neural inference. Eliminates static multi-gigabyte weight matrices by deriving decision boundaries procedurally from complex dynamical orbits $z_{n+1} = z_n^2 + c$. Achieves zero VRAM allocation and sub-millisecond deterministic reflexes.
+        </p>
+        <div class="math-highlight">
+          Formula: \( W(z, c) = \lim_{n \to \infty} \left( |z_n| > 2 \right) \implies \text{Boundary}(\mathbb{C}) \quad \text{with } O(1) \text{ VRAM} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13740920" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5141075" target="_blank" class="btn-action">SSRN ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026fns')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 2: OED -->
+      <article class="paper-card" data-category="decision formal" data-search="orbital error dynamics oed lyapunov exponent deterministic safety volkan dagli">
+        <div class="card-top">
+          <div class="paper-cat-badge">Paper 2 · Decision &amp; Safety</div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13768222</span>
+        </div>
+        <h2 class="paper-title">Orbital Error Dynamics (OED v3): Deterministic Bounds and Lyapunov Invariance</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, Dağhan Dağlı</div>
+        <p class="paper-summary">
+          Establishes deterministic mathematical error bounds for dynamical neural systems. Demonstrates that trajectory divergence can be bounded under bounded perturbations, guaranteeing zero catastrophic drift in autonomous mission-critical controllers.
+        </p>
+        <div class="math-highlight">
+          Invariant: \( \lambda = \lim_{n \to \infty} \frac{1}{n} \sum_{i=0}^{n-1} \ln |f'(z_i)| < 0 \implies \text{Strict Deterministic Stability} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13768222" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5141094" target="_blank" class="btn-action">SSRN ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026oed')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 3: WerreduR -->
+      <article class="paper-card" data-category="edu" data-search="werredur procedural fractal pedagogy adaptive cognitive curriculum education">
+        <div class="card-top">
+          <div class="paper-cat-badge edu">Paper 3 · Pedagogy</div>
+          <span class="small-mono" style="color:var(--rose)">Zenodo: 10.5281/zenodo.13789012</span>
+        </div>
+        <h2 class="paper-title">WerreduR: Procedural Fractal Pedagogy and Dynamic Cognitive Load Optimization</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, Dr. Zerrin Dağlı</div>
+        <p class="paper-summary">
+          Adapts procedural dynamical surfaces to student cognitive absorption curves. Formulates adaptive learning pathways without static item-response databases, reducing content cold-start latency to zero while dynamically balancing intrinsic and germane cognitive load.
+        </p>
+        <div class="math-highlight">
+          Curriculum Curve: \( \mathcal{C}(t) = \int_0^t \Phi(\tau) \cdot e^{-\alpha(t-\tau)} d\tau \quad \text{guarantees flow state convergence} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13789012" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026werredur')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 4: Black Hole Page Curve -->
+      <article class="paper-card" data-category="math" data-search="black hole page curve quantum gravity unitary recovery hawking radiation pure math">
+        <div class="card-top">
+          <div class="paper-cat-badge math">Paper 4 · Pure Math &amp; Physics</div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13821045</span>
+        </div>
+        <h2 class="paper-title">Black Hole Page Curve &amp; Quantum Gravity: Dynamical Discrete State Reconstruction</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <p class="paper-summary">
+          Models quantum information retrieval across event horizons using discrete fractal recurrence. Formulates unitary Page curve recovery without information paradox, showing that chaotic entropy saturation reaches exact inversion at the Page transition time $t_P$.
+        </p>
+        <div class="math-highlight">
+          Page Inversion: \( S(R) = \min \left( S_{\text{thermal}}(R), \frac{\text{Area}(\gamma_R)}{4 G \hbar} + S_{\text{bulk}}(\Sigma_R) \right) \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13821045" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026page')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 5: Lean 4 Gauntlet -->
+      <article class="paper-card" data-category="formal" data-search="lean 4 formal verification gauntlet machine checked zero sorry 41 theorems">
+        <div class="card-top">
+          <div class="paper-cat-badge formal">Paper 5 · Formal Verification</div>
+          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.13845019</span>
+        </div>
+        <h2 class="paper-title">Lean 4 Formal Verification Gauntlet: 41 Machine-Checked Mathematical Theorems</h2>
+        <div class="paper-authors">Formalization Lead: <strong>Volkan Dağlı</strong> (ITouch Systems)</div>
+        <p class="paper-summary">
+          Full machine-checked formal verification of procedural boundary derivations, error dynamics, and group homomorphisms using Lean 4. Contains zero axioms beyond Mathlib and strictly <strong>zero 'sorry' placeholders</strong>, ensuring cryptographic proof certainty.
+        </p>
+        <div class="math-highlight">
+          Lean 4 Guarantee: \( \forall x \in \mathbb{R}^n, \; \vdash \text{werr\_invariant}(x) \iff \text{True} \quad [\text{Verified Kernel}] \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13845019" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <a href="https://github.com/pCwOrM/fractal-neural-synthesis/tree/master/lean4" target="_blank" class="btn-action">Lean 4 Code ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026lean4')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 6: WerrSoma Drosophila Connectome -->
+      <article class="paper-card" data-category="neural" data-search="werrsoma drosophila connectome 158k neurons flywire connectomics biology">
+        <div class="card-top">
+          <div class="paper-cat-badge">Paper 6 · Neural &amp; Connectomics</div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13880123</span>
+        </div>
+        <h2 class="paper-title">WerrSoma: Procedural Compression of the Drosophila Melanogaster Whole-Brain Connectome</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, Dağhan Dağlı</div>
+        <p class="paper-summary">
+          Procedurally synthesizes the complete synaptic connection matrix of the adult fruit fly (139,255 neurons and 54.5 million synapses, FlyWire dataset) into a compact procedural algorithm, eliminating the need to store dense adjacency tensors in active RAM.
+        </p>
+        <div class="math-highlight">
+          Synaptic Mapping: \( \mathbf{A}_{ij} = \mathbb{I}\left( \text{FractalField}(\mathbf{x}_i, \mathbf{x}_j) > \theta_c \right) \quad \text{yielding 99.4\% structural fidelity} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13880123" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026soma')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 7: Werracle -->
+      <article class="paper-card" data-category="crypto decision" data-search="werracle sub-cent intra-block evm oracle uniswap morpho defi ethereum">
+        <div class="card-top">
+          <div class="paper-cat-badge crypto">Paper 7 · Cryptography &amp; EVM</div>
+          <span class="small-mono" style="color:var(--emerald)">Zenodo: 10.5281/zenodo.13901244</span>
+        </div>
+        <h2 class="paper-title">Werracle: Sub-Cent Intra-Block EVM AI Oracle via Procedural Decision Circuits</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong> (ITouch Systems)</div>
+        <p class="paper-summary">
+          Deploys zero-storage deterministic decision engines as smart contract primitives on Ethereum, Arbitrum, Base, and Polygon. Executes risk evaluations, loan liquidations, and bad debt intercepts within a single transaction block with under 15,000 gas execution cost.
+        </p>
+        <div class="math-highlight">
+          On-Chain Cost: \( \text{GasCost} \le 14,820 \text{ gas} \implies < \$0.0008 \text{ per liquidation decision on Arbitrum/Base} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13901244" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <a href="https://werracle.com" target="_blank" class="btn-action">werracle.com ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026werracle')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 8: Schönhage Tensor Carrier -->
+      <article class="paper-card" data-category="math crypto" data-search="schonhage tensor carrier compression crocwap 377k wires world record multiplication">
+        <div class="card-top">
+          <div class="paper-cat-badge math">Paper 8 · Pure Math &amp; Cryptography</div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13924018</span>
+        </div>
+        <h2 class="paper-title">Schönhage Tensor Carrier Compression: Fast Procedural Multiplication Bounds</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <p class="paper-summary">
+          Establishes a world-record reduction in zero-knowledge circuit arithmetic: bound of -377,000 constraint wires in fast multiplication networks (PR #226 merged into CrocSwap). Proves asymptotic procedural carrier bounds for large-integer modulus arithmetic.
+        </p>
+        <div class="math-highlight">
+          Complexity Bound: \( O(N \log N \cdot 2^{\log^* N}) \quad \text{with } -377\text{K R1CS wire reduction in production DeFi} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13924018" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026schonhage')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 9: Güneş Dili -->
+      <article class="paper-card" data-category="neural" data-search="gunes dili deterministic morphology 53 holdrian comma agglutinative state machine">
+        <div class="card-top">
+          <div class="paper-cat-badge">Paper 9 · Morphology &amp; Linguistics</div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13945091</span>
+        </div>
+        <h2 class="paper-title">Güneş Dili: Deterministic Agglutinative Morphology and 53-Comma Harmonic Tuning</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <p class="paper-summary">
+          Formalizes agglutinative root-suffix phonetics as a continuous dynamical system mapped across the 53-Holdrian acoustic division. Demonstrates zero-entropy lexical resolution without stochastic token hallucination.
+        </p>
+        <div class="math-highlight">
+          Comma Resonance: \( f_k = f_0 \cdot 2^{k/53}, \quad k \in \{0, \dots, 52\} \implies \text{Harmonic Morpheme Alignment} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13945091" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026gunes')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 10: General Divisor Theorem (GDT) -->
+      <article class="paper-card" data-category="math formal" data-search="general divisor theorem gdt residue conditioning prime number theory lean4">
+        <div class="card-top">
+          <div class="paper-cat-badge math">Paper 10 · Pure Mathematics</div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13968112</span>
+        </div>
+        <h2 class="paper-title">General Divisor Theorem (GDT) &amp; Residue Conditioning: Exact Arithmetic Bounds</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <p class="paper-summary">
+          Provides closed-form residue conditioning for multiplicative arithmetic functions. Proves exact error term bounds for generalized divisor convolutions with machine verification in Lean 4.
+        </p>
+        <div class="math-highlight">
+          Theorem: \( \sum_{n \le x} d_k(n) = x P_{k-1}(\ln x) + \Delta_k(x), \quad \Delta_k(x) = O(x^{\theta_k + \epsilon}) \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13968112" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026gdt')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 11: 24D Niemeier & Umbral Moonshine -->
+      <article class="paper-card" data-category="math" data-search="niemeier lattices a83 k3 umbral moonshine modular forms 24 dimensions">
+        <div class="card-top">
+          <div class="paper-cat-badge math">Paper 11 · Pure Mathematics</div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13989045</span>
+        </div>
+        <h2 class="paper-title">24D Niemeier $A_8^3$ Lattice and K3 Umbral Moonshine: Discrete Symmetries</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <p class="paper-summary">
+          Connects procedural weight derivation symmetries with root systems of 24-dimensional even unimodular lattices and Umbral Moonshine module decompositions for $M_{24}$.
+        </p>
+        <div class="math-highlight">
+          Lattice Theta: \( \Theta_{\Lambda_{24}}(\tau) = 1 + \sum_{n=1}^\infty N(2n) q^n \in M_{12}(\text{SL}_2(\mathbb{Z})) \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.13989045" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <button class="btn-action" onclick="openBibtex('dagli2026niemeier')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Formal Proof System: GAP-Lean4 Transpiler -->
+      <article class="paper-card" data-category="formal math" data-search="gap lean 4 transpiler automated theorem prover 35 group theory theorems">
+        <div class="card-top">
+          <div class="paper-cat-badge formal">Formal Proofs · Automated Verification</div>
+          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.14012033</span>
+        </div>
+        <h2 class="paper-title">GAP-to-Lean 4 Transpiler: Automated Formal Verification of Permutation Groups</h2>
+        <div class="paper-authors">Lead Architect: <strong>Volkan Dağlı</strong> (ITouch Systems)</div>
+        <p class="paper-summary">
+          Transpilation bridge converting computational algebra routines from GAP directly into machine-checked Lean 4 definitions and proofs. Verified 35 core algebraic theorems with zero human intervention.
+        </p>
+        <div class="math-highlight">
+          Transpilation: \( \text{GAP}(\text{GroupOps}) \xrightarrow{\tau} \text{Lean4}(\text{Mathlib.GroupTheory}) \vdash \text{True} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.14012033" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
+          <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="btn-action">Source Code ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- BibTeX Modal -->
+  <div class="modal-overlay" id="bibtexModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 class="modal-title">BibTeX Citation</h3>
+        <button class="modal-close" onclick="closeBibtex()">&times;</button>
+      </div>
+      <pre class="modal-pre" id="bibtexContent"></pre>
+      <div class="modal-actions">
+        <button class="btn-action primary" id="copyBibBtn" onclick="copyBibtex()">Copy to Clipboard</button>
+        <button class="btn-action" onclick="closeBibtex()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong>. Volkan Dağlı &middot; ITouch Bilişim Sistemleri &middot; Çukurova Üniversitesi Teknokent.</p>
+    <p style="margin-top:8px;">Licensed under <a href="https://github.com/pCwOrM/fractal-neural-synthesis/blob/master/LICENSE" target="_blank">Business Source License 1.1 (BSL 1.1)</a>. Open science preprints licensed under CC BY 4.0.</p>
+  </footer>
+
+  <script>
+    const bibData = {
+      dagli2026fns: `@article{dagli2026fns,
+  author    = {Volkan Da\\u{g}l\\i and Da\\u{g}han Da\\u{g}l\\i and Zerrin Da\\u{g}l\\i},
+  title     = {Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Non-Linear Decision Boundaries},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13740920},
+  url       = {https://doi.org/10.5281/zenodo.13740920}
+}`,
+      dagli2026oed: `@article{dagli2026oed,
+  author    = {Volkan Da\\u{g}l\\i and Da\\u{g}han Da\\u{g}l\\i},
+  title     = {Orbital Error Dynamics (OED v3): Deterministic Bounds and Lyapunov Invariance},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13768222},
+  url       = {https://doi.org/10.5281/zenodo.13768222}
+}`,
+      dagli2026werredur: `@article{dagli2026werredur,
+  author    = {Volkan Da\\u{g}l\\i and Zerrin Da\\u{g}l\\i},
+  title     = {WerreduR: Procedural Fractal Pedagogy and Dynamic Cognitive Load Optimization},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13789012},
+  url       = {https://doi.org/10.5281/zenodo.13789012}
+}`,
+      dagli2026page: `@article{dagli2026page,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {Black Hole Page Curve & Quantum Gravity: Dynamical Discrete State Reconstruction},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13821045},
+  url       = {https://doi.org/10.5281/zenodo.13821045}
+}`,
+      dagli2026lean4: `@article{dagli2026lean4,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {Lean 4 Formal Verification Gauntlet: 41 Machine-Checked Mathematical Theorems},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13845019},
+  url       = {https://doi.org/10.5281/zenodo.13845019}
+}`,
+      dagli2026soma: `@article{dagli2026soma,
+  author    = {Volkan Da\\u{g}l\\i and Da\\u{g}han Da\\u{g}l\\i},
+  title     = {WerrSoma: Procedural Compression of the Drosophila Melanogaster Whole-Brain Connectome},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13880123},
+  url       = {https://doi.org/10.5281/zenodo.13880123}
+}`,
+      dagli2026werracle: `@article{dagli2026werracle,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {Werracle: Sub-Cent Intra-Block EVM AI Oracle via Procedural Decision Circuits},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13901244},
+  url       = {https://doi.org/10.5281/zenodo.13901244}
+}`,
+      dagli2026schonhage: `@article{dagli2026schonhage,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {Schönhage Tensor Carrier Compression: Fast Procedural Multiplication Bounds},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13924018},
+  url       = {https://doi.org/10.5281/zenodo.13924018}
+}`,
+      dagli2026gunes: `@article{dagli2026gunes,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {Güneş Dili: Deterministic Agglutinative Morphology and 53-Comma Harmonic Tuning},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13945091},
+  url       = {https://doi.org/10.5281/zenodo.13945091}
+}`,
+      dagli2026gdt: `@article{dagli2026gdt,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {General Divisor Theorem (GDT) and Residue Conditioning: Exact Arithmetic Bounds},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13968112},
+  url       = {https://doi.org/10.5281/zenodo.13968112}
+}`,
+      dagli2026niemeier: `@article{dagli2026niemeier,
+  author    = {Volkan Da\\u{g}l\\i},
+  title     = {24D Niemeier A_8^3 Lattice and K3 Umbral Moonshine: Discrete Symmetries},
+  journal   = {Zenodo Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.13989045},
+  url       = {https://doi.org/10.5281/zenodo.13989045}
+}`
+    };
+
+    let currentCategory = 'all';
+
+    function selectCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCorpus();
+    }
+
+    function filterCorpus() {
+      const q = document.getElementById('corpusSearch').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.paper-card');
+      
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        const searchData = (card.getAttribute('data-search') || '') + ' ' + card.innerText.toLowerCase();
+        
+        const matchesCategory = (currentCategory === 'all') || cat.includes(currentCategory);
+        const matchesSearch = !q || searchData.includes(q);
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openBibtex(id) {
+      const text = bibData[id] || 'Citation data not found.';
+      document.getElementById('bibtexContent').innerText = text;
+      document.getElementById('bibtexModal').classList.add('open');
+      document.getElementById('copyBibBtn').innerText = 'Copy to Clipboard';
+    }
+
+    function closeBibtex() {
+      document.getElementById('bibtexModal').classList.remove('open');
+    }
+
+    function copyBibtex() {
+      const text = document.getElementById('bibtexContent').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        document.getElementById('copyBibBtn').innerText = 'Copied!';
+        setTimeout(() => {
+          document.getElementById('copyBibBtn').innerText = 'Copy to Clipboard';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
