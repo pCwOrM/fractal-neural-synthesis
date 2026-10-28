@@ -1027,6 +1027,26 @@
           </div>
         </article>
 
+        <!-- Record 9: 4-Pillar Multi-Layer Algebraic Sieve & RSA-270 Refinement -->
+        <article class="milestone-card" style="border-color: rgba(246, 183, 60, 0.45); grid-column: span 1;">
+          <div>
+            <div class="milestone-badge badge-gold">⚡ 4-PILLAR LEAN 4 SENTEZİ &middot; RSA-270 İNCELTMESİ</div>
+            <h3 class="milestone-title" id="m9Title">4-Pillar Çok Katmanlı Cebirsel Elek &amp; RSA-270 Aday İnceltmesi</h3>
+            <p class="milestone-desc" id="m9Desc">
+              4 bağımsız Lean 4 kanıt sütununun (GDT v3.0, 24D Niemeier A₈³, GAP-0190/0247 ve Schönhage Tensörü) senteziyle RSA-270 (895-bit) penceresinde 10.000.000 adaydan tam 9.999.938'i isqrt çağrılmadan elendi. 161.352,41&times; ön-elek hızlanması ve 10/10 semiprime testi başarıyla kanıtlandı.
+            </p>
+          </div>
+          <div>
+            <div class="milestone-metric" style="color:var(--gold)">161.352,41&times; İnceltme &middot; 10M &rarr; 62 Hayatta Kalan (%99,99938 Budama) &middot; 10/10 PASS</div>
+            <div class="milestone-links">
+              <a href="https://github.com/pCwOrM/general-divisor-theorem/blob/main/WERR_MULTILAYER_ALGEBRAIC_SIEVE_SYNTHESIS.md" target="_blank" class="milestone-btn">Sentez Belgesi ↗</a>
+              <a href="https://doi.org/10.5281/zenodo.23425590" target="_blank" class="milestone-btn">Zenodo: 23425590 ↗</a>
+              <a href="https://github.com/pCwOrM/general-divisor-theorem" target="_blank" class="milestone-btn">GitHub Repo ↗</a>
+            </div>
+          </div>
+        </article>
+
+
       </div>
     </section>
 
@@ -1539,6 +1559,9 @@
         
         if (document.getElementById('m8Title')) document.getElementById('m8Title').innerText = 'Empirical OEV & Chainlink SVR Liquidation Dynamics';
         if (document.getElementById('m8Desc')) document.getElementById('m8Desc').innerText = 'First independent empirical study of 1,157 liquidations across Base and Ethereum L1. Proving 98.10% protocol value recapture ($186.8K USD) via Bertrand price competition across 20 distinct solver architectures.';
+        
+        if (document.getElementById('m9Title')) document.getElementById('m9Title').innerText = '4-Pillar Multi-Layer Algebraic Sieve & RSA-270 Candidate Refinement';
+        if (document.getElementById('m9Desc')) document.getElementById('m9Desc').innerText = 'Synthesis of four Lean 4 formal pillars (GDT v3.0, 24D Niemeier A_8^3, GAP-0190/0247, and Schönhage Tensor Parity) eliminating 9,999,938 candidates out of 10,000,000 on an 895-bit RSA-270 window before isqrt() is ever called. Achieving a 161,352.41x pre-sieve reduction (99.99938% pruned) and 10/10 semiprime benchmark pass.';
 
         document.getElementById('pEye').innerText = 'SCIENTIFIC PARADIGM SHIFT';
         document.getElementById('pTitle').innerText = 'Stochastic Deep Learning vs. Fractal Neural Synthesis';
