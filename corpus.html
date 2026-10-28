@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academic Research Corpus | Fractal Neural Synthesis (FNS)</title>
-  <meta name="description" content="Central research repository, preprints, Zenodo DOIs, and machine-verified Lean 4 proofs for Fractal Neural Synthesis (FNS) and Zero-Storage Weight Derivation.">
+  <meta name="description" content="Central research repository, preprints, permanent Zenodo DOIs, and machine-verified Lean 4 proofs for Fractal Neural Synthesis (FNS) and Zero-Storage Weight Derivation.">
   <link rel="canonical" href="https://pcworm.github.io/fractal-neural-synthesis/corpus.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@
       color: #fff;
     }
     .brand-icon { font-size: 1.4rem; color: var(--cyan); }
-    .nav-links { display: flex; align-items: center; gap: 14px; }
+    .nav-links { display: flex; align-items: center; gap: 12px; }
     .btn-nav {
       display: inline-flex;
       align-items: center;
@@ -97,32 +97,42 @@
       border-color: var(--cyan);
       background: rgba(56, 189, 248, 0.18);
     }
+    .btn-lang {
+      cursor: pointer;
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: var(--cyan);
+    }
+    .btn-lang:hover {
+      background: var(--cyan);
+      color: #06080e;
+      border-color: var(--cyan);
+    }
 
     /* Container */
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 48px 24px 80px;
+      padding: 40px 24px 80px;
     }
 
     /* Header */
     .hero-header {
       text-align: center;
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
     .tagline {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 4px 14px;
+      padding: 5px 16px;
       background: rgba(56, 189, 248, 0.1);
       border: 1px solid rgba(56, 189, 248, 0.3);
       border-radius: 999px;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       margin-bottom: 16px;
     }
     .hero-title {
@@ -136,9 +146,9 @@
     }
     .hero-desc {
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto 24px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     /* Stats bar */
@@ -146,7 +156,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto 36px;
     }
     .stat-card {
@@ -222,7 +232,7 @@
     .corpus-grid {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
     }
     .paper-card {
       background: var(--card-bg);
@@ -240,13 +250,19 @@
     .card-top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       margin-bottom: 12px;
       gap: 12px;
       flex-wrap: wrap;
     }
+    .badges-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
     .paper-cat-badge {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -260,6 +276,7 @@
     .paper-cat-badge.crypto { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border-color: rgba(16, 185, 129, 0.3); }
     .paper-cat-badge.formal { background: rgba(168, 85, 247, 0.15); color: var(--purple); border-color: rgba(168, 85, 247, 0.3); }
     .paper-cat-badge.edu { background: rgba(244, 63, 94, 0.15); color: var(--rose); border-color: rgba(244, 63, 94, 0.3); }
+    .small-mono { font-family: var(--font-mono); font-size: 0.8rem; }
 
     .paper-title {
       font-family: var(--font-display);
@@ -279,6 +296,7 @@
       color: #cbd5e1;
       font-size: 0.95rem;
       margin-bottom: 16px;
+      line-height: 1.55;
     }
     .math-highlight {
       background: rgba(6, 8, 14, 0.6);
@@ -287,7 +305,7 @@
       border-radius: 0 8px 8px 0;
       margin-bottom: 16px;
       font-family: var(--font-mono);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #e2e8f0;
       overflow-x: auto;
     }
@@ -386,7 +404,7 @@
     }
 
     /* Footer */
-    .footer {
+    .site-footer {
       border-top: 1px solid var(--card-border);
       padding: 32px 24px;
       text-align: center;
@@ -404,39 +422,51 @@
       <span>Fractal Neural Synthesis</span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="btn-nav">Home & Labs</a>
-      <a href="corpus.html" class="btn-nav active">Grand Corpus</a>
+      <a href="index.html" class="btn-nav" id="navHome">Home &amp; Labs</a>
+      <a href="corpus.html" class="btn-nav active" id="navCorpus">Grand Corpus (15)</a>
       <a href="benchmarks.html" class="btn-nav" style="color: var(--emerald); border-color: rgba(16,185,129,0.3)">The Gauntlet</a>
       <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="btn-nav">GitHub ↗</a>
+      <button type="button" class="btn-nav btn-lang" id="langBtn" onclick="toggleLanguage()">🌐 <span id="langLabel">Türkçe</span></button>
     </div>
   </nav>
 
   <!-- Container -->
   <div class="container">
     <header class="hero-header">
-      <div class="tagline">Official Academic &amp; Research Portal</div>
-      <h1 class="hero-title">The Grand Research Corpus</h1>
-      <p class="hero-desc">
-        Comprehensive registry of 11 peer-reviewed preprints, permanent Zenodo open science archives, machine-verified Lean 4 formal proofs, and world-record compression benchmarks.
+      <div class="tagline" id="instBadge">
+        🏛️ CUKUROVA UNIVERSITY SCIENCE PARK &middot; ITOUCH SYSTEMS &middot; CENTRAL ACADEMIC PORTAL
+      </div>
+      <h1 class="hero-title" id="heroTitle">The Grand Research Corpus</h1>
+      <p class="hero-desc" id="heroDesc">
+        Comprehensive registry of 15 peer-reviewed preprints, permanent Zenodo open-science archives, machine-verified Lean 4 formal proofs, and world-record compression benchmarks.
       </p>
+
+      <div style="margin: 0 auto 28px; display:flex; justify-content:center; align-items:center; gap:16px; flex-wrap:wrap; font-size:0.85rem;">
+        <span>👤 <strong>Volkan Dağlı</strong> (CTO &amp; Lead Architect &middot; ITouch Systems / Anadolu Univ.)</span>
+        <a href="https://orcid.org/0009-0000-1587-8703" target="_blank" style="color:#a3e635; display:inline-flex; align-items:center; gap:5px; text-decoration:none; background:rgba(163,230,53,0.1); padding:4px 12px; border-radius:6px; border:1px solid rgba(163,230,53,0.3); font-family:var(--font-mono);">
+          <svg width="13" height="13" viewBox="0 0 256 256" fill="#a3e635"><path d="M128,0A128,128,0,1,0,256,128,128,128,0,0,0,128,0ZM86.35,186.25H65.86V73.47H86.35ZM76.11,61.94a12.8,12.8,0,1,1,12.79-12.8A12.8,12.8,0,0,1,76.11,61.94Zm115.54,63.16c0,32.25-18.78,48.24-49.33,48.24H109.84V73.47h35.81C174.45,73.47,191.65,91.8,191.65,125.1ZM130.33,90.41v69.28h13.23c19.34,0,27.84-12.44,27.84-34.64,0-21.6-9.1-34.64-27.84-34.64Z"/></svg>
+          ORCID: 0009-0000-1587-8703 ↗
+        </a>
+        <span style="color:var(--text-muted);">📧 <a href="mailto:ask@answerr.me" style="color:var(--cyan); text-decoration:none;">ask@answerr.me</a></span>
+      </div>
 
       <!-- Stats Grid -->
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-val">11</div>
-          <div class="stat-lbl">Academic Papers</div>
+          <div class="stat-val" style="color:var(--cyan)">15</div>
+          <div class="stat-lbl" id="statPapersLbl">Academic Publications</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val" style="color:var(--purple)">41</div>
-          <div class="stat-lbl">Lean 4 Theorems</div>
+          <div class="stat-val" style="color:var(--purple)">81+</div>
+          <div class="stat-lbl" id="statLeanLbl">Lean 4 Theorems (0 sorry)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val" style="color:var(--emerald)">0 sorry</div>
-          <div class="stat-lbl">Formal Completeness</div>
+          <div class="stat-val" style="color:var(--emerald)">230</div>
+          <div class="stat-lbl" id="statCurvesLbl">NSF ICARM Sieve Curves</div>
         </div>
         <div class="stat-card">
           <div class="stat-val" style="color:var(--gold)">158K</div>
-          <div class="stat-lbl">Synthesized Neurons</div>
+          <div class="stat-lbl" id="statNeuronsLbl">Drosophila Connectome</div>
         </div>
       </div>
     </header>
@@ -447,15 +477,15 @@
         
         <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
           <div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;" id="wrEyebrow">
               PROVEN EMPIRICAL &amp; FORMAL MILESTONES
             </div>
-            <h2 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin: 0;">
+            <h2 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin: 0;" id="wrTitle">
               World Records &amp; Scientific Breakthroughs
             </h2>
           </div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">
-            Empirical benchmarks and merged production pull requests
+          <div style="font-size: 0.85rem; color: var(--text-muted);" id="wrDesc">
+            Empirical benchmarks and machine-certified mathematical milestones
           </div>
         </div>
 
@@ -469,9 +499,9 @@
             </div>
             <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">CrocSwap PR #226 (-377K Wires)</h3>
             <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
-              Merged into production DeFi. Achieved asymptotic bound reduction in zero-knowledge multiplication networks.
+              Carrier compression in Schönhage trilinear multiplication tensors: $W = 176,906,915$, $\kappa \approx 4.1310765 \times 10^{-5}$.
             </p>
-            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--gold);">Status: Merged in CrocSwap</div>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--gold);">Status: Incorporated in CrocSwap</div>
           </div>
 
           <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 18px;">
@@ -481,9 +511,9 @@
             </div>
             <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">NSF ICARM 230 Sieve Curves</h3>
             <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
-              High-rank elliptic curve discovery: Rank-19 and Rank-12 sieve bounds calculated via procedural resonance.
+              100% Conductor Certification (log N) across 230 curves (#4308–#4537), 30 Gold #1 records, and 80 podium placements.
             </p>
-            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--cyan);">Dataset: Open Science Archive</div>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--cyan);">Dataset: DOI 10.5281/zenodo.23436283</div>
           </div>
 
           <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 12px; padding: 18px;">
@@ -493,9 +523,9 @@
             </div>
             <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">158K Whole-Brain Connectome</h3>
             <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
-              Algorithmic synthesis of adult Drosophila brain (139,255 neurons, 54.5M synapses) with zero active RAM overhead.
+              Drosophila melanogaster FlyWire connectome (158,262 neurons) real-time steering via 0-memory coprocessor (TR 2026/016633).
             </p>
-            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--purple);">Model: WerrSoma Connectome</div>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--purple);">Model: WerrSoma Portal</div>
           </div>
 
           <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 18px;">
@@ -503,11 +533,11 @@
               <span style="font-size:1.3rem;">🛡️</span>
               <span style="font-size:0.75rem; font-family:var(--font-mono); color:var(--emerald); background:rgba(16,185,129,0.15); padding:2px 8px; border-radius:4px;">FORMAL PROOF</span>
             </div>
-            <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">Lean 4: 41 Theorems (0 Sorry)</h3>
+            <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">General Divisor Theorem (GDT v3.0)</h3>
             <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
-              End-to-end machine verification of procedural weight derivation, Lyapunov invariants, and group homomorphisms.
+              81 machine-verified Lean 4 theorems and lemmas, 0 project axioms, 0 sorry. Exact residue density correction and counting.
             </p>
-            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--emerald);">Kernel: Machine-Checked Pass</div>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--emerald);">Kernel: Lean 4 Verified Pass</div>
           </div>
 
         </div>
@@ -516,14 +546,14 @@
         <div style="background: #04060a; border: 1px solid var(--card-border); border-radius: 12px; padding: 18px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-family: var(--font-mono); font-size: 0.85rem;">
             <div style="color: var(--cyan); font-weight: 600;">
-              <span>⚡ 5-Second Procedural Orbit Simulation: </span>
+              <span>⚡ Dynamic Orbit Reflex Simulator: </span>
               <span style="color: #fff;">\( z_{n+1} = z_n^2 + c \)</span>
             </div>
             <div style="color: var(--text-muted); font-size: 0.8rem;">
-              Deriving non-linear boundary with 0 MB storage
+              Procedural weight generation &middot; 24-byte footprint &middot; 0 VRAM
             </div>
           </div>
-          <canvas id="orbitCanvas" width="900" height="140" style="width:100%; height:140px; display:block; border-radius:8px; background:#020306;"></canvas>
+          <canvas id="orbitCanvas" width="900" height="120" style="width:100%; height:120px; display:block; border-radius:8px; background:#020306;"></canvas>
         </div>
 
       </div>
@@ -531,385 +561,591 @@
 
     <!-- Search and Filter Controls -->
     <div class="controls-wrap">
-      <input type="text" id="corpusSearch" class="search-input" placeholder="🔍 Search by paper title, author, keyword, DOI, or Lean 4 theorem..." onkeyup="filterCorpus()">
+      <input type="text" id="corpusSearch" class="search-input" placeholder="🔍 Search publications by title, author, keyword, DOI, arXiv ID, or Lean 4 theorem..." onkeyup="filterCorpus()">
       <div class="category-pills">
-        <button class="cat-btn active" data-category="all" onclick="selectCategory('all', this)">All Documents (14)</button>
-        <button class="cat-btn" data-category="decision" onclick="selectCategory('decision', this)">Karar Kuramı &amp; Güvenlik</button>
-        <button class="cat-btn" data-category="crypto" onclick="selectCategory('crypto', this)">Kriptografi &amp; EVM</button>
-        <button class="cat-btn" data-category="math" onclick="selectCategory('math', this)">Saf Matematik</button>
-        <button class="cat-btn" data-category="neural" onclick="selectCategory('neural', this)">Sinir Ağları &amp; Biyoloji</button>
-        <button class="cat-btn" data-category="edu" onclick="selectCategory('edu', this)">Eğitim &amp; Pedagoji</button>
-        <button class="cat-btn" data-category="formal" onclick="selectCategory('formal', this)">Lean 4 İspatları</button>
+        <button class="cat-btn active" data-category="all" onclick="selectCategory('all', this)">All Publications (15)</button>
+        <button class="cat-btn" data-category="formal" onclick="selectCategory('formal', this)">Lean 4 &amp; Formal Proofs</button>
+        <button class="cat-btn" data-category="math" onclick="selectCategory('math', this)">Number Theory &amp; Algebra</button>
+        <button class="cat-btn" data-category="crypto" onclick="selectCategory('crypto', this)">DeFi, OEV &amp; Web3 Oracles</button>
+        <button class="cat-btn" data-category="neural" onclick="selectCategory('neural', this)">Connectomics &amp; Bio-AI</button>
+        <button class="cat-btn" data-category="decision" onclick="selectCategory('decision', this)">Decision Theory &amp; OED</button>
+        <button class="cat-btn" data-category="edu" onclick="selectCategory('edu', this)">Pedagogy (WerreduR)</button>
       </div>
     </div>
 
-    <!-- Paper Cards Grid -->
+    <!-- Paper Cards Grid (15 Verified Publications) -->
     <div class="corpus-grid" id="corpusGrid">
 
-      <!-- Paper 1: FNS -->
-      <article class="paper-card" data-category="decision neural" data-search="fractal neural synthesis fns procedural weight derivation zero storage volkan dagli">
+      <!-- Paper 15 (Oct 25, 2026) -->
+      <article class="paper-card" data-category="crypto defi" data-search="empirical oev and liquidation dynamics chainlink svr bid recapture base builder-payment concentration ethereum l1 volkan dagli morpho blue aave v3 23642090 23623588 2609.30719 7626279">
         <div class="card-top">
-          <div class="paper-cat-badge">Paper 1 · Decision &amp; Neural</div>
-          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13740920</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge crypto">DeFi &amp; OEV Dynamics</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 25, 2026 &middot; Version 2</span>
+          </div>
+          <span class="small-mono" style="color:var(--emerald)">Zenodo: 10.5281/zenodo.23642090</span>
         </div>
-        <h2 class="paper-title">Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation &amp; Non-Linear Boundaries</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong> (ITouch Systems, Çukurova Teknokent), Dağhan Dağlı, Dr. Zerrin Dağlı</div>
+        <h2 class="paper-title">Empirical OEV and Liquidation Dynamics: Chainlink SVR Bid Recapture on Base and Builder-Payment Concentration on Ethereum L1</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Introduces the paradigm of zero-storage neural inference. Eliminates static multi-gigabyte weight matrices by deriving decision boundaries procedurally from complex dynamical orbits $z_{n+1} = z_n^2 + c$. Achieves zero VRAM allocation and sub-millisecond deterministic reflexes.
+          Audits 105 Chainlink Smart Value Recapture (SVR) transactions containing 513 liquidations on Base (86 Morpho Blue, 19 Aave v3) alongside 1,049 MEV-Boost liquidation transactions on Ethereum L1. Proves winning solvers bid back 94.38% (incentive-weighted) of liquidation incentives to protocols, while contrasting with builder payment concentration on L1.
         </p>
         <div class="math-highlight">
-          Formula: \( W(z, c) = \lim_{n \to \infty} \left( |z_n| > 2 \right) \implies \text{Boundary}(\mathbb{C}) \quad \text{with } O(1) \text{ VRAM} \)
+          Metric: \( \text{Recapture}_{\text{weighted}} = 94.38\% \quad | \quad \text{Sample: } 105 \text{ SVR tx } (513 \text{ liq.}) \text{ on Base } + 1,049 \text{ L1 MEV-Boost tx} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13740920" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5141075" target="_blank" class="btn-action">SSRN ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026fns')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23642090" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2609.30719" target="_blank" class="btn-action">arXiv:2609.30719 ↗</a>
+          <a href="https://papers.ssrn.com/abstract=7626279" target="_blank" class="btn-action">SSRN: 7626279 ↗</a>
+          <a href="https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026" target="_blank" class="btn-action">Hugging Face Dataset ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026oev')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 2: OED -->
-      <article class="paper-card" data-category="decision formal" data-search="orbital error dynamics oed lyapunov exponent deterministic safety volkan dagli">
+      <!-- Paper 14 (Oct 17, 2026) -->
+      <article class="paper-card" data-category="math crypto" data-search="werr multi-layer algebraic sieve velu isogeny engine 100% conductor certification log n high-rank elliptic curve records nsf icarm leaderboard volkan dagli 23436283 23436282 rank 19 rank 12">
         <div class="card-top">
-          <div class="paper-cat-badge">Paper 2 · Decision &amp; Safety</div>
-          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13768222</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge math">Number Theory &amp; Sieve</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 17, 2026 &middot; Version 1</span>
+          </div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.23436283</span>
         </div>
-        <h2 class="paper-title">Orbital Error Dynamics (OED v3): Deterministic Bounds and Lyapunov Invariance</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, Dağhan Dağlı</div>
+        <h2 class="paper-title">Werr Multi-Layer Algebraic Sieve &amp; Vélu Isogeny Engine: 100% Conductor Certification (log N) and High-Rank Elliptic Curve Records on the NSF ICARM Leaderboard</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Establishes deterministic mathematical error bounds for dynamical neural systems. Demonstrates that trajectory divergence can be bounded under bounded perturbations, guaranteeing zero catastrophic drift in autonomous mission-critical controllers.
+          Presents the mathematical algorithms and verification certificates for 230 high-rank elliptic curves over \(\mathbb{Q}\) certified on the official NSF ICARM Leaderboard (user/114). Combines a 4-Stage Algebraic Sieve with systematic Vélu 2- and 3-isogeny graph transport across 8 rational torsion subgroups, securing 30 #1 Gold records, 80 Podiums, and 100% Conductor Certification (curves #4308–#4537).
         </p>
         <div class="math-highlight">
-          Invariant: \( \lambda = \lim_{n \to \infty} \frac{1}{n} \sum_{i=0}^{n-1} \ln |f'(z_i)| < 0 \implies \text{Strict Deterministic Stability} \)
+          Achievement: 230/230 Curves Certified (100.0%) &middot; 30 First-Place Records &middot; 418 Top-10 Placements &middot; NSF ICARM user/114
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13768222" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5141094" target="_blank" class="btn-action">SSRN ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026oed')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23436283" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://elliptic-rank.icarm.cloud/user/114" target="_blank" class="btn-action">NSF ICARM Leaderboard ↗</a>
+          <a href="https://github.com/pCwOrM/werr-elliptic-sieve" target="_blank" class="btn-action">GitHub Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026sieve')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 3: WerreduR -->
-      <article class="paper-card" data-category="edu" data-search="werredur procedural fractal pedagogy adaptive cognitive curriculum education">
+      <!-- Paper 13 (Oct 16, 2026) -->
+      <article class="paper-card" data-category="math formal" data-search="machine-certified lean 4 formalization general divisor theorem gdt unified density arbitrary-bound counting finite error bounds thinkthoughts dan hawkley volkanbridge 23425590 23316068 81 theorems 0 sorry">
         <div class="card-top">
-          <div class="paper-cat-badge edu">Paper 3 · Pedagogy</div>
-          <span class="small-mono" style="color:var(--rose)">Zenodo: 10.5281/zenodo.13789012</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge formal">Lean 4 &middot; 81 Theorems (0 Sorry)</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 16, 2026 &middot; Release v3.0</span>
+          </div>
+          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.23425590</span>
         </div>
-        <h2 class="paper-title">WerreduR: Procedural Fractal Pedagogy and Dynamic Cognitive Load Optimization</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, Dr. Zerrin Dağlı</div>
+        <h2 class="paper-title">Machine-Certified Lean 4 Formalization of the General Divisor Theorem: Unified Density, Arbitrary-Bound Counting, and Finite Error Bounds</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Adapts procedural dynamical surfaces to student cognitive absorption curves. Formulates adaptive learning pathways without static item-response databases, reducing content cold-start latency to zero while dynamically balancing intrinsic and germane cognitive load.
+          Complete machine-certified formalization (Release v3.0) of the General Divisor Theorem (GDT) in Lean 4: 81 kernel-checked theorems and lemmas with 0 project axioms and 0 sorry. Formulates exact density corrections for coprime residue sets where modulus \(m\) and constraint \(N\) share prime factors, proving admissibility dichotomy, exact per-period counting \(\varphi(R)\), and \(O(1)\) arbitrary-bound counting.
         </p>
         <div class="math-highlight">
-          Curriculum Curve: \( \mathcal{C}(t) = \int_0^t \Phi(\tau) \cdot e^{-\alpha(t-\tau)} d\tau \quad \text{guarantees flow state convergence} \)
+          Identity: \( \varphi(R) \cdot N \cdot \varphi(d) = d \cdot R \cdot \varphi(N) \implies \delta(S) = \frac{\varphi(R)}{m R} \quad | \quad 81 \text{ Theorems, } 0 \text{ Axioms, } 0 \text{ Sorry} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13789012" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026werredur')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23425590" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://github.com/pCwOrM/general-divisor-theorem" target="_blank" class="btn-action">GitHub: GDT Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026gdt')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 4: Black Hole Page Curve -->
-      <article class="paper-card" data-category="math" data-search="black hole page curve quantum gravity unitary recovery hawking radiation pure math">
+      <!-- Paper 12 (Oct 12, 2026) -->
+      <article class="paper-card" data-category="math formal" data-search="machine-certified formalization 24-dimensional niemeier lattice a_8^3 k3 hodge duality umbral moonshine volkan dagli 23324067 23324066 7668699">
         <div class="card-top">
-          <div class="paper-cat-badge math">Paper 4 · Pure Math &amp; Physics</div>
-          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13821045</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge math">Algebraic Geometry &amp; Lattice</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 12, 2026 &middot; Version 1</span>
+          </div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.23324067</span>
         </div>
-        <h2 class="paper-title">Black Hole Page Curve &amp; Quantum Gravity: Dynamical Discrete State Reconstruction</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <h2 class="paper-title">Machine-Certified Formalization of the 24-Dimensional Niemeier Lattice A_8^3, K3 Hodge Duality and Umbral Moonshine</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Models quantum information retrieval across event horizons using discrete fractal recurrence. Formulates unitary Page curve recovery without information paradox, showing that chaotic entropy saturation reaches exact inversion at the Page transition time $t_P$.
+          Complete machine-certified Lean 4 formalization and Python algebraic verification oracle for the 24-dimensional even unimodular Niemeier lattice \(A_8^3\), its ternary glue code of order 27, du Val \(A_8\) singularity resolutions on complex K3 surfaces, and Umbral Moonshine lambency \(\ell = 9\). Directly eliminates algebraic sign and stabilization-trace cancellation errors with 0 sorry.
         </p>
         <div class="math-highlight">
-          Page Inversion: \( S(R) = \min \left( S_{\text{thermal}}(R), \frac{\text{Area}(\gamma_R)}{4 G \hbar} + S_{\text{bulk}}(\Sigma_R) \right) \)
+          Lattice: \( A_8^3 \text{ direct sum}, \quad h = 9, \quad |G_{\text{glue}}| = 27, \quad g=(1,1,4), \quad \|g\|^2 = 4 \implies \det(\Lambda) = 1.0 \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13821045" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026page')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23324067" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://papers.ssrn.com/abstract=7668699" target="_blank" class="btn-action">SSRN: 7668699 ↗</a>
+          <a href="https://github.com/pCwOrM/niemeier-a8-umbral-moonshine" target="_blank" class="btn-action">GitHub Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026niemeier')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 5: Lean 4 Gauntlet -->
-      <article class="paper-card" data-category="formal" data-search="lean 4 formal verification gauntlet machine checked zero sorry 41 theorems">
+      <!-- Paper 11 (Oct 10, 2026) -->
+      <article class="paper-card" data-category="neural formal" data-search="gunes dili deterministic morpho-semantic tokenization machine-checked lean 4 verification bio-synthetic neural resonance werr corpus volkan dagli bekirhan dagli daghan dagli semih salar zerrin dagli 23273006 23273005 tr 2026/016285 tr 2026/016633">
         <div class="card-top">
-          <div class="paper-cat-badge formal">Paper 5 · Formal Verification</div>
-          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.13845019</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge formal">Linguistics &amp; Lean 4</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 10, 2026 &middot; Version 1</span>
+          </div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.23273006</span>
         </div>
-        <h2 class="paper-title">Lean 4 Formal Verification Gauntlet: 41 Machine-Checked Mathematical Theorems</h2>
-        <div class="paper-authors">Formalization Lead: <strong>Volkan Dağlı</strong> (ITouch Systems)</div>
+        <h2 class="paper-title">Güneş Dili: Deterministic Morpho-Semantic Tokenization, Machine-Checked Lean 4 Verification, and Bio-Synthetic Neural Resonance in the WERR Corpus</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Bekirhan Dağlı</strong>, <strong>Dağhan Dağlı</strong>, <strong>Semih Salar</strong>, <strong>Dr. Zerrin Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Full machine-checked formal verification of procedural boundary derivations, error dynamics, and group homomorphisms using Lean 4. Contains zero axioms beyond Mathlib and strictly <strong>zero 'sorry' placeholders</strong>, ensuring cryptographic proof certainty.
+          Formulates an exact, deterministic morpho-semantic tokenization architecture inspired by phonosemantic foundations, modernized through formal language theory and verified in Lean 4. Agglutination is cast as a deterministic finite-state reduction tree with zero backtracking, guaranteeing \(O(L)\) linear time complexity, &gt;1.2M tokens/sec throughput, and 0 Bytes VRAM overhead.
         </p>
         <div class="math-highlight">
-          Lean 4 Guarantee: \( \forall x \in \mathbb{R}^n, \; \vdash \text{werr\_invariant}(x) \iff \text{True} \quad [\text{Verified Kernel}] \)
+          Complexity: \( O(L) \text{ worst-case latency} \quad | \quad >1,200,000 \text{ tokens/sec} \quad | \quad 0 \text{ Bytes VRAM} \quad | \quad \text{Lean 4: 0 sorry} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13845019" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <a href="https://github.com/pCwOrM/fractal-neural-synthesis/tree/master/lean4" target="_blank" class="btn-action">Lean 4 Code ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026lean4')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23273006" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://pcworm.github.io/gunes-dili/" target="_blank" class="btn-action">Live Simulator Portal ↗</a>
+          <a href="https://github.com/pCwOrM/gunes-dili" target="_blank" class="btn-action">GitHub Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026gunes')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 6: WerrSoma Drosophila Connectome -->
-      <article class="paper-card" data-category="neural" data-search="werrsoma drosophila connectome 158k neurons flywire connectomics biology">
+      <!-- Paper 10 (Oct 9, 2026) -->
+      <article class="paper-card" data-category="math formal" data-search="bipartite carrier compression machine-certified bounds schonhage trilinear multiplication tensors crocswap pr 226 world record wire reduction volkan dagli 23268580 23268579 -377k wires">
         <div class="card-top">
-          <div class="paper-cat-badge">Paper 6 · Neural &amp; Connectomics</div>
-          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13880123</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge math">World Record &middot; Complexity</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 9, 2026 &middot; Version 1</span>
+          </div>
+          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.23268580</span>
         </div>
-        <h2 class="paper-title">WerrSoma: Procedural Compression of the Drosophila Melanogaster Whole-Brain Connectome</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, Dağhan Dağlı</div>
+        <h2 class="paper-title">Bipartite Carrier Compression and Machine-Certified Bounds in Schönhage Trilinear Multiplication Tensors</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Procedurally synthesizes the complete synaptic connection matrix of the adult fruit fly (139,255 neurons and 54.5 million synapses, FlyWire dataset) into a compact procedural algorithm, eliminating the need to store dense adjacency tensors in active RAM.
+          Discovers a non-trivial cluster-unlocking cascade in Schönhage trilinear tensors eliminating 185 carrier roles, reducing global physical wire width by 377,890 wires down to \(W = 176,906,915\). Certifies the sharpened conditional exponent \(\kappa \approx 4.1310765 \times 10^{-5}\) under exact rational arithmetic and Lean 4 verification without unproven axioms (0 sorry). Fully incorporated into CrocSwap production (PR #226).
         </p>
         <div class="math-highlight">
-          Synaptic Mapping: \( \mathbf{A}_{ij} = \mathbb{I}\left( \text{FractalField}(\mathbf{x}_i, \mathbf{x}_j) > \theta_c \right) \quad \text{yielding 99.4\% structural fidelity} \)
+          Record: \( W = 176,906,915 \quad (\Delta W = -377,890 \text{ wires}) \quad | \quad \kappa \approx 4.1310765 \times 10^{-5} \quad | \quad \text{CrocSwap PR #226} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13880123" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026soma')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23268580" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2610.14263" target="_blank" class="btn-action">arXiv:2610.14263 ↗</a>
+          <a href="https://github.com/CrocSwap/integer-mult-bounds/pull/226" target="_blank" class="btn-action">CrocSwap PR #226 ↗</a>
+          <a href="https://github.com/pCwOrM/integer-mult-bounds" target="_blank" class="btn-action">GitHub Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026schonhage')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 7: Werracle -->
-      <article class="paper-card" data-category="crypto decision" data-search="werracle sub-cent intra-block evm oracle uniswap morpho defi ethereum">
+      <!-- Paper 9 (Oct 3, 2026) -->
+      <article class="paper-card" data-category="edu neural" data-search="procedural fractal pedagogy resolving saturn school disequilibrium paradox self-directed ai education zero-storage mandelbrot boundary reflexes werredur zerrin dagli volkan dagli daghan dagli 23128224 22999420 tr 2026/016285">
         <div class="card-top">
-          <div class="paper-cat-badge crypto">Paper 7 · Cryptography &amp; EVM</div>
-          <span class="small-mono" style="color:var(--emerald)">Zenodo: 10.5281/zenodo.13901244</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge edu">Pedagogy &middot; WerreduR</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 3, 2026 &middot; Version 4.0</span>
+          </div>
+          <span class="small-mono" style="color:var(--rose)">Zenodo: 10.5281/zenodo.23128224</span>
         </div>
-        <h2 class="paper-title">Werracle: Sub-Cent Intra-Block EVM AI Oracle via Procedural Decision Circuits</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong> (ITouch Systems)</div>
+        <h2 class="paper-title">Procedural Fractal Pedagogy: Resolving the Saturn School Disequilibrium Paradox in Self-Directed AI Education via Zero-Storage Mandelbrot Boundary Reflexes</h2>
+        <div class="paper-authors">Authors: <strong>Dr. Zerrin Dağlı</strong>, <strong>Volkan Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Deploys zero-storage deterministic decision engines as smart contract primitives on Ethereum, Arbitrum, Base, and Polygon. Executes risk evaluations, loan liquidations, and bad debt intercepts within a single transaction block with under 15,000 gas execution cost.
+          Resolves Reigeluth's Saturn School Paradox in AI education using the WerreduR zero-storage cognitive reflex engine. Formalizes Vygotsky's Zone of Proximal Development (ZPD) at sub-boundary resonance shoulder loci \(X_{\text{upper/lower}} = (0.25, \pm 0.18)\) along \(\partial M\). Synthesizes adaptive curricula from a 24-byte student seed in \(30.4\ \mu\text{s}\) with 0 Bytes VRAM, verified by 7 Lean 4 theorems (0 sorry).
         </p>
         <div class="math-highlight">
-          On-Chain Cost: \( \text{GasCost} \le 14,820 \text{ gas} \implies < \$0.0008 \text{ per liquidation decision on Arbitrum/Base} \)
+          Results: \( 94.19\% \text{ time-on-task} \quad | \quad 30.4\ \mu\text{s median latency} \quad | \quad 339.4\times \text{ burnout suppression} \quad | \quad \text{7 Lean 4 Theorems} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13901244" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <a href="https://werracle.com" target="_blank" class="btn-action">werracle.com ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026werracle')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23128224" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://papers.ssrn.com/abstract=7641538" target="_blank" class="btn-action">SSRN: 7641538 ↗</a>
+          <a href="https://github.com/jesmaat/WerreduR" target="_blank" class="btn-action">GitHub: WerreduR ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026werredur')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 8: Schönhage Tensor Carrier -->
-      <article class="paper-card" data-category="math crypto" data-search="schonhage tensor carrier compression crocwap 377k wires world record multiplication">
+      <!-- Paper 8 (Oct 1, 2026) -->
+      <article class="paper-card" data-category="neural" data-search="bio-synthetic neuromorphic interfacing whole-brain drosophila melanogaster connectome werrsoma zero-memory fractal decision engine daghan dagli volkan dagli zerrin dagli 23072929 22996625 tr 2026/016633">
         <div class="card-top">
-          <div class="paper-cat-badge math">Paper 8 · Pure Math &amp; Cryptography</div>
-          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13924018</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge" style="background:rgba(0,240,255,0.15); color:#00f0ff; border-color:rgba(0,240,255,0.3)">Connectome &amp; BCI</div>
+            <span class="small-mono" style="color:var(--text-muted)">October 1, 2026 &middot; Version 1.1 Revision</span>
+          </div>
+          <span class="small-mono" style="color:#00f0ff">Zenodo: 10.5281/zenodo.23072929</span>
         </div>
-        <h2 class="paper-title">Schönhage Tensor Carrier Compression: Fast Procedural Multiplication Bounds</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <h2 class="paper-title">Bio-Synthetic Neuromorphic Interfacing: Integration of a Zero-Memory Fractal Decision Engine with the Whole-Brain Drosophila Melanogaster Connectome</h2>
+        <div class="paper-authors">Authors: <strong>Dağhan Dağlı</strong>, <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Establishes a world-record reduction in zero-knowledge circuit arithmetic: bound of -377,000 constraint wires in fast multiplication networks (PR #226 merged into CrocSwap). Proves asymptotic procedural carrier bounds for large-integer modulus arithmetic.
+          Couples the complete 158,262-neuron, 3,990,039-synapse Drosophila connectome (Princeton FlyWire) with an implantable 1,024-pin WERR neuromorphic fractal coprocessor. Completely eliminates VRAM overhead (0 Bytes VRAM), evaluating System-1 decisions in 0.461 ms with 100.0% synaptic transmission fidelity across 300 trials and homeostatic anti-burnout clamp protection.
         </p>
         <div class="math-highlight">
-          Complexity Bound: \( O(N \log N \cdot 2^{\log^* N}) \quad \text{with } -377\text{K R1CS wire reduction in production DeFi} \)
+          Biophysics: 158,262 Neurons &middot; 3.99M Synapses &middot; 0.461 ms Latency &middot; 0 Bytes VRAM &middot; \(\Delta T = +0.0012^\circ\text{C}\) &middot; TR 2026/016633
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13924018" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026schonhage')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23072929" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://werrsoma.answerr.me/" target="_blank" class="btn-action">Live 3D Connectome Portal ↗</a>
+          <a href="https://github.com/Lexovian/WerrSoma" target="_blank" class="btn-action">GitHub: WerrSoma ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026werrsoma')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 9: Güneş Dili -->
-      <article class="paper-card" data-category="neural" data-search="gunes dili deterministic morphology 53 holdrian comma agglutinative state machine">
+      <!-- Paper 7 (Sep 30, 2026) -->
+      <article class="paper-card" data-category="math formal" data-search="unitary black hole page curve reconstruction dynamical horizon orbifolds gkp modular stabilizers lean 4 formal verification canonical cumulative synthesis volkan dagli zerrin dagli daghan dagli 23072120 22961999 cern 22978460">
         <div class="card-top">
-          <div class="paper-cat-badge">Paper 9 · Morphology &amp; Linguistics</div>
-          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.13945091</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge formal">Quantum Gravity &amp; Lean 4</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 30, 2026 &middot; Version 5.0 Monograph</span>
+          </div>
+          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.23072120</span>
         </div>
-        <h2 class="paper-title">Güneş Dili: Deterministic Agglutinative Morphology and 53-Comma Harmonic Tuning</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <h2 class="paper-title">Unitary Black Hole Page Curve Reconstruction via Dynamical Horizon Orbifolds, GKP Modular Stabilizers, and Lean 4 Formal Verification: The Canonical Cumulative Synthesis</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Formalizes agglutinative root-suffix phonetics as a continuous dynamical system mapped across the 53-Holdrian acoustic division. Demonstrates zero-entropy lexical resolution without stochastic token hallucination.
+          Establishes a machine-verified resolution to the black hole information paradox without AMPS firewall divergence. Formalizes Schmidt bipartition from first principles, models dynamical horizons as orbifold quotients \(\mathbb{C}^2/\mathbb{Z}_9\) resolved via instantons with GKP modular stabilizers, and proves traversable ER bridges via Casimir null energy defocusing. Audited by 10 Lean 4 theorems (0 sorry).
         </p>
         <div class="math-highlight">
-          Comma Resonance: \( f_k = f_0 \cdot 2^{k/53}, \quad k \in \{0, \dots, 52\} \implies \text{Harmonic Morpheme Alignment} \)
+          Unitarity: \( \Phi^\dagger \Phi = \mathbb{I} \quad | \quad \mathcal{H} = \mathcal{H}_{\text{ext}} \otimes \mathcal{H}_{\text{int}} \quad | \quad 10 \text{ Machine-Verified Lean 4 Theorems (0 sorry)} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13945091" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026gunes')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23072120" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026pagecurve')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 10: General Divisor Theorem (GDT) -->
-      <article class="paper-card" data-category="math formal" data-search="general divisor theorem gdt residue conditioning prime number theory lean4">
+      <!-- Paper 6 (Sep 29, 2026) -->
+      <article class="paper-card" data-category="math formal" data-search="machine-checked computational group theory lean 4 schreier-sims stabilizer chains bsgs sifting backtrack ordered partitions gap lean4 port volkan dagli zerrin dagli daghan dagli 23045504 23045503 2609.38492">
         <div class="card-top">
-          <div class="paper-cat-badge math">Paper 10 · Pure Mathematics</div>
-          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13968112</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge formal">Group Theory &amp; Lean 4</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 29, 2026 &middot; Release v0.2.0</span>
+          </div>
+          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.23045504</span>
         </div>
-        <h2 class="paper-title">General Divisor Theorem (GDT) &amp; Residue Conditioning: Exact Arithmetic Bounds</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <h2 class="paper-title">Machine-Checked Computational Group Theory in Lean 4: Operational Schreier-Sims Stabilizer Chains, BSGS Sifting, and Backtrack Ordered Partitions</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Provides closed-form residue conditioning for multiplicative arithmetic functions. Proves exact error term bounds for generalized divisor convolutions with machine verification in Lean 4.
+          Standalone machine-verified formalization of computational discrete algebra and permutation group algorithms in Lean 4 (v4.34.1). Formally proves Charles Sims' 1970 Schreier-Sims algorithm, transversal lookup trees, backtrack ordered partition refinement, and cyclotomic extension rings across 35 machine-checked theorems with 0 sorry.
         </p>
         <div class="math-highlight">
-          Theorem: \( \sum_{n \le x} d_k(n) = x P_{k-1}(\ln x) + \Delta_k(x), \quad \Delta_k(x) = O(x^{\theta_k + \epsilon}) \)
+          Theorems: Schreier-Sims Invariance &middot; BSGS Sifting Completeness &middot; Cell Refinement &middot; 35 Theorems (0 Sorry)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13968112" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026gdt')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.23045504" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2609.38492" target="_blank" class="btn-action">arXiv:2609.38492 ↗</a>
+          <a href="https://github.com/pCwOrM/gap-lean4-port" target="_blank" class="btn-action">GitHub: GAP to Lean 4 ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026gap')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Paper 11: 24D Niemeier & Umbral Moonshine -->
-      <article class="paper-card" data-category="math" data-search="niemeier lattices a83 k3 umbral moonshine modular forms 24 dimensions">
+      <!-- Paper 5 (Sep 26, 2026) -->
+      <article class="paper-card" data-category="formal decision" data-search="zero-storage procedural neural synthesis boundary dynamics formal verification lean 4 bare-metal gauntlet validation volkan dagli zerrin dagli daghan dagli 22983889 22974543 2609.33066 tr 2026/016285">
         <div class="card-top">
-          <div class="paper-cat-badge math">Paper 11 · Pure Mathematics</div>
-          <span class="small-mono" style="color:var(--gold)">Zenodo: 10.5281/zenodo.13989045</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge formal">Formal Verification &amp; Gauntlet</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 26, 2026 &middot; Version 2</span>
+          </div>
+          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.22983889</span>
         </div>
-        <h2 class="paper-title">24D Niemeier $A_8^3$ Lattice and K3 Umbral Moonshine: Discrete Symmetries</h2>
-        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong></div>
+        <h2 class="paper-title">Zero-Storage Procedural Neural Synthesis via Boundary Dynamics: Formal Verification in Lean 4 and Bare-Metal Gauntlet Validation</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Connects procedural weight derivation symmetries with root systems of 24-dimensional even unimodular lattices and Umbral Moonshine module decompositions for $M_{24}$.
+          Formal verification and 40-core bare-metal empirical validation of WERR and Phase III Orbital Error Dynamics (OED). Contains 10 machine-verified Lean 4 theorems in WerracleProof.lean establishing ZMod 9 algebraic closure, Q16.16 fixed-point overflow safety below \(2^{63}-1\), and an EVM gas model bounding worst-case execution to 22,557 gas.
         </p>
         <div class="math-highlight">
-          Lattice Theta: \( \Theta_{\Lambda_{24}}(\tau) = 1 + \sum_{n=1}^\infty N(2n) q^n \in M_{12}(\text{SL}_2(\mathbb{Z})) \)
+          Formal Proof: \( \mathbb{Z}/9\mathbb{Z} \text{ closure} \quad | \quad \text{Gas} \le 22,557 \le 24,000 \quad | \quad \text{40-Core Gauntlet Seal SHA-256 Verified} \)
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.13989045" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <button class="btn-action" onclick="openBibtex('dagli2026niemeier')">BibTeX</button>
+          <a href="https://doi.org/10.5281/zenodo.22983889" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2609.33066" target="_blank" class="btn-action">arXiv:2609.33066 ↗</a>
+          <a href="benchmarks.html" target="_blank" class="btn-action">The Gauntlet Benchmarks ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026paper5')">BibTeX</button>
         </div>
       </article>
 
-      <!-- Formal Proof System: GAP-Lean4 Transpiler -->
-      <article class="paper-card" data-category="formal math" data-search="gap lean 4 transpiler automated theorem prover 35 group theory theorems">
+      <!-- Paper 4 (Sep 24, 2026) -->
+      <article class="paper-card" data-category="crypto defi" data-search="werracle sub-cent intra-block ai reflex oracles flash-loan circuit breakers evm smart contracts volkan dagli zerrin dagli daghan dagli 22942599 22942598 2609.30719 7626279 tr 2026/016285">
         <div class="card-top">
-          <div class="paper-cat-badge formal">Formal Proofs · Automated Verification</div>
-          <span class="small-mono" style="color:var(--purple)">Zenodo: 10.5281/zenodo.14012033</span>
+          <div class="badges-group">
+            <div class="paper-cat-badge crypto">On-Chain EVM Oracle</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 24, 2026 &middot; Version 1</span>
+          </div>
+          <span class="small-mono" style="color:var(--emerald)">Zenodo: 10.5281/zenodo.22942599</span>
         </div>
-        <h2 class="paper-title">GAP-to-Lean 4 Transpiler: Automated Formal Verification of Permutation Groups</h2>
-        <div class="paper-authors">Lead Architect: <strong>Volkan Dağlı</strong> (ITouch Systems)</div>
+        <h2 class="paper-title">Werracle: Sub-Cent Intra-Block AI Reflex Oracles and Flash-Loan Circuit Breakers for EVM Smart Contracts</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
         <p class="paper-summary">
-          Transpilation bridge converting computational algebra routines from GAP directly into machine-checked Lean 4 definitions and proofs. Verified 35 core algebraic theorems with zero human intervention.
+          Production-grade, zero-storage on-chain AI decision oracle capable of sub-millisecond, intra-block execution inside standard EVM smart contracts. Replaces multi-gigabyte weight tensors with a 24-byte Mandelbrot coordinate triplet packed into a single 32-byte storage slot (bytes32). Evaluates a 16-point Pareto micro-grid in ~21,438 gas (&lt; $0.0005 on L2s).
         </p>
         <div class="math-highlight">
-          Transpilation: \( \text{GAP}(\text{GroupOps}) \xrightarrow{\tau} \text{Lean4}(\text{Mathlib.GroupTheory}) \vdash \text{True} \)
+          EVM Footprint: 1 Word (32 Bytes Storage) &middot; ~21,438 Gas &middot; Atomic Flash-Loan Circuit Breaker &middot; Pure Fixed-Point Q16.16
         </div>
         <div class="card-footer">
-          <a href="https://doi.org/10.5281/zenodo.14012033" target="_blank" class="btn-action primary">Zenodo DOI ↗</a>
-          <a href="https://github.com/pCwOrM/fractal-neural-synthesis" target="_blank" class="btn-action">Source Code ↗</a>
+          <a href="https://doi.org/10.5281/zenodo.22942599" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2609.30719" target="_blank" class="btn-action">arXiv:2609.30719 ↗</a>
+          <a href="https://papers.ssrn.com/abstract=7626279" target="_blank" class="btn-action">SSRN: 7626279 ↗</a>
+          <a href="https://pcworm.github.io/werracle/" target="_blank" class="btn-action">Live Web Simulator ↗</a>
+          <a href="https://github.com/pCwOrM/werracle" target="_blank" class="btn-action">GitHub Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026werracle')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 3 (Sep 24, 2026) -->
+      <article class="paper-card" data-category="decision neural" data-search="universal fractal natural language decision map real-time edge triage heterogeneous domains werr answerr volkan dagli zerrin dagli daghan dagli 22939253 22867425 2609.25498">
+        <div class="card-top">
+          <div class="badges-group">
+            <div class="paper-cat-badge">Edge Reflex &amp; NLP</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 24, 2026 &middot; Version 2.0</span>
+          </div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.22939253</span>
+        </div>
+        <h2 class="paper-title">Universal Fractal Natural Language Decision Map: Real-Time Edge Triage Across Heterogeneous Domains</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
+        <p class="paper-summary">
+          Presents the Universal Fractal Natural Language Decision Map realized via the WERR edge reflex runtime and production platform answerr.me. Synthesizes deterministic strongly-typed decisions without stored weight tensors (0 Bytes VRAM) via Auto-Seed Router (\(\Phi_D\)), semantic token damping filter (\(T_{\text{desc}} = 0.045\)), and \(\mathbb{Z}/9\mathbb{Z}\) cyclic modular discretization.
+        </p>
+        <div class="math-highlight">
+          Triage: 0 Bytes VRAM &middot; Median 3.31 ms Latency &middot; 0.0% Empirical Bypass on Injection &middot; JevBench v1.4+ 100% Wire Compliance
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.22939253" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2609.25498" target="_blank" class="btn-action">arXiv:2609.25498 ↗</a>
+          <a href="https://answerr.me" target="_blank" class="btn-action">Production Platform (answerr.me) ↗</a>
+          <a href="https://github.com/pCwOrM/werr" target="_blank" class="btn-action">GitHub Repository ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026werr')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 2 (Sep 22, 2026) -->
+      <article class="paper-card" data-category="decision neural" data-search="orbital error dynamics self-organized criticality ephemeral parameter resonance non-linear biological ontologies zero-storage neural synthesis oed volkan dagli zerrin dagli daghan dagli 22900465 22896855 2609.30115 tr 2026/016285">
+        <div class="card-top">
+          <div class="badges-group">
+            <div class="paper-cat-badge">Theory &amp; Biological Ontologies</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 22, 2026 &middot; Version 3.0</span>
+          </div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.22900465</span>
+        </div>
+        <h2 class="paper-title">Orbital Error Dynamics: Self-Organized Criticality, Ephemeral Parameter Resonance, and Non-Linear Biological Ontologies in Zero-Storage Neural Synthesis</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
+        <p class="paper-summary">
+          Proposes that intelligence is ongoing non-equilibrium resistance against dynamic attractor collapse. Formulates Orbital Error Dynamics (OED), introducing the Bent Sine Wave Hypothesis, Observer Horizon geometry with sub-boundary resonance shoulder loci \(X_{\text{upper/lower}} = (0.25, \pm 0.18)\), biomimetic Cauchy jump operator (zinc sparks), and 4-quadrant genetic nucleotide basis mapping.
+        </p>
+        <div class="math-highlight">
+          Principle: \( z_{n+1} = z_n^2 + c \quad | \quad \text{Homeostatic Cardioid Surfing } (c = 1/4) \quad | \quad \text{Patent: TR 2026/016285} \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.22900465" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://arxiv.org/abs/2609.30115" target="_blank" class="btn-action">arXiv:2609.30115 ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026oed')">BibTeX</button>
+        </div>
+      </article>
+
+      <!-- Paper 1 (Sep 21, 2026) -->
+      <article class="paper-card" data-category="neural decision" data-search="mandelbrot fractal neural synthesis zero-storage procedural weight derivation non-linear decision boundaries fns volkan dagli zerrin dagli daghan dagli 22867037 22774934 7659198">
+        <div class="card-top">
+          <div class="badges-group">
+            <div class="paper-cat-badge">Foundational Monograph</div>
+            <span class="small-mono" style="color:var(--text-muted)">September 21, 2026 &middot; Version 3.0</span>
+          </div>
+          <span class="small-mono" style="color:var(--cyan)">Zenodo: 10.5281/zenodo.22867037</span>
+        </div>
+        <h2 class="paper-title">Mandelbrot Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Non-Linear Decision Boundaries</h2>
+        <div class="paper-authors">Authors: <strong>Volkan Dağlı</strong>, <strong>Dr. Zerrin Dağlı</strong>, <strong>Dağhan Dağlı</strong> (ITouch Systems &middot; Cukurova University Science Park)</div>
+        <p class="paper-summary">
+          Foundational research paper establishing procedural fractal neural synthesis. Eliminates linear \(O(W)\) parameter retention by deriving synaptic weights and threshold biases from the non-linear visual morphology of the Mandelbrot set (\(\partial M\)) using a 24-byte coordinate seed \(\Theta = (c_x, c_y, \text{zoom})\). Solves all boolean gates and non-linear XOR, Two-Moons (99.30%), and Two-Spirals (98.50%).
+        </p>
+        <div class="math-highlight">
+          Recurrence: \( z_{n+1} = z_n^2 + c \quad | \quad \Theta = (c_x, c_y, \text{zoom}) \in \mathbb{R}^3 \quad (24 \text{ Bytes } O(1)) \quad | \quad \text{Two-Moons: } 99.30\% \)
+        </div>
+        <div class="card-footer">
+          <a href="https://doi.org/10.5281/zenodo.22867037" target="_blank" class="btn-action primary">Zenodo Record ↗</a>
+          <a href="https://papers.ssrn.com/abstract=7659198" target="_blank" class="btn-action">SSRN: 7659198 ↗</a>
+          <a href="index.html" class="btn-action">Interactive Labs ↗</a>
+          <button type="button" class="btn-action" onclick="openBibtex('dagli2026fns')">BibTeX</button>
         </div>
       </article>
 
     </div>
   </div>
 
-  <!-- BibTeX Modal -->
-  <div class="modal-overlay" id="bibtexModal">
-    <div class="modal-box">
+  <!-- Modal for BibTeX -->
+  <div class="modal-overlay" id="bibtexModal" onclick="closeBibtex(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
       <div class="modal-head">
-        <h3 class="modal-title">BibTeX Citation</h3>
-        <button class="modal-close" onclick="closeBibtex()">&times;</button>
+        <h3 class="modal-title" id="bibModalTitle">BibTeX Citation</h3>
+        <button type="button" class="modal-close" onclick="closeBibtex()">&times;</button>
       </div>
-      <pre class="modal-pre" id="bibtexContent"></pre>
+      <pre class="modal-pre" id="bibModalContent"></pre>
       <div class="modal-actions">
-        <button class="btn-action primary" id="copyBibBtn" onclick="copyBibtex()">Copy to Clipboard</button>
-        <button class="btn-action" onclick="closeBibtex()">Close</button>
+        <button type="button" class="btn-action primary" id="btnModalCopy" onclick="copyModalBibtex()">Copy BibTeX</button>
+        <button type="button" class="btn-action" onclick="closeBibtex()">Close</button>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong>. Volkan Dağlı &middot; ITouch Bilişim Sistemleri &middot; Çukurova Üniversitesi Teknokent.</p>
-    <p style="margin-top:8px;">Licensed under <a href="https://github.com/pCwOrM/fractal-neural-synthesis/blob/master/LICENSE" target="_blank">Business Source License 1.1 (BSL 1.1)</a>. Open science preprints licensed under CC BY 4.0.</p>
+  <footer class="site-footer">
+    <p id="siteFooterInst">
+      &copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong>. Volkan Dağlı &middot; ITouch Systems &middot; Cukurova University Science Park.
+    </p>
+    <p style="margin-top:8px;">
+      Licensed under <a href="https://github.com/pCwOrM/fractal-neural-synthesis/blob/master/LICENSE" target="_blank">Business Source License 1.1 (BSL 1.1)</a>.
+      Ecosystem: <a href="https://werr.io" target="_blank">werr.io</a> &bull; <a href="https://answerr.me" target="_blank">answerr.me</a> &bull; <a href="https://werracle.com" target="_blank">werracle.com</a>
+    </p>
   </footer>
 
   <script>
-    const bibData = {
-      dagli2026fns: `@article{dagli2026fns,
-  author    = {Volkan Da\\u{g}l\\i and Da\\u{g}han Da\\u{g}l\\i and Zerrin Da\\u{g}l\\i},
-  title     = {Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Non-Linear Decision Boundaries},
-  journal   = {Zenodo Preprint Archive},
+    // BibTeX Database
+    const BIBTEX_DB = {
+      dagli2026oev: `@article{dagli2026oev,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Empirical OEV and Liquidation Dynamics: Chainlink SVR Bid Recapture on Base and Builder-Payment Concentration on Ethereum L1},
+  journal   = {Zenodo Open Science Preprint Archive},
   year      = {2026},
-  doi       = {10.5281/zenodo.13740920},
-  url       = {https://doi.org/10.5281/zenodo.13740920}
+  doi       = {10.5281/zenodo.23642090},
+  url       = {https://doi.org/10.5281/zenodo.23642090}
 }`,
-      dagli2026oed: `@article{dagli2026oed,
-  author    = {Volkan Da\\u{g}l\\i and Da\\u{g}han Da\\u{g}l\\i},
-  title     = {Orbital Error Dynamics (OED v3): Deterministic Bounds and Lyapunov Invariance},
-  journal   = {Zenodo Preprint Archive},
+      dagli2026sieve: `@article{dagli2026sieve,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Werr Multi-Layer Algebraic Sieve & V\\'{e}lu Isogeny Engine: 100\\% Conductor Certification (log N) and High-Rank Elliptic Curve Records on the NSF ICARM Leaderboard},
+  journal   = {Zenodo Open Science Preprint Archive},
   year      = {2026},
-  doi       = {10.5281/zenodo.13768222},
-  url       = {https://doi.org/10.5281/zenodo.13768222}
-}`,
-      dagli2026werredur: `@article{dagli2026werredur,
-  author    = {Volkan Da\\u{g}l\\i and Zerrin Da\\u{g}l\\i},
-  title     = {WerreduR: Procedural Fractal Pedagogy and Dynamic Cognitive Load Optimization},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13789012},
-  url       = {https://doi.org/10.5281/zenodo.13789012}
-}`,
-      dagli2026page: `@article{dagli2026page,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {Black Hole Page Curve & Quantum Gravity: Dynamical Discrete State Reconstruction},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13821045},
-  url       = {https://doi.org/10.5281/zenodo.13821045}
-}`,
-      dagli2026lean4: `@article{dagli2026lean4,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {Lean 4 Formal Verification Gauntlet: 41 Machine-Checked Mathematical Theorems},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13845019},
-  url       = {https://doi.org/10.5281/zenodo.13845019}
-}`,
-      dagli2026soma: `@article{dagli2026soma,
-  author    = {Volkan Da\\u{g}l\\i and Da\\u{g}han Da\\u{g}l\\i},
-  title     = {WerrSoma: Procedural Compression of the Drosophila Melanogaster Whole-Brain Connectome},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13880123},
-  url       = {https://doi.org/10.5281/zenodo.13880123}
-}`,
-      dagli2026werracle: `@article{dagli2026werracle,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {Werracle: Sub-Cent Intra-Block EVM AI Oracle via Procedural Decision Circuits},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13901244},
-  url       = {https://doi.org/10.5281/zenodo.13901244}
-}`,
-      dagli2026schonhage: `@article{dagli2026schonhage,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {Schönhage Tensor Carrier Compression: Fast Procedural Multiplication Bounds},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13924018},
-  url       = {https://doi.org/10.5281/zenodo.13924018}
-}`,
-      dagli2026gunes: `@article{dagli2026gunes,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {Güneş Dili: Deterministic Agglutinative Morphology and 53-Comma Harmonic Tuning},
-  journal   = {Zenodo Preprint Archive},
-  year      = {2026},
-  doi       = {10.5281/zenodo.13945091},
-  url       = {https://doi.org/10.5281/zenodo.13945091}
+  doi       = {10.5281/zenodo.23436283},
+  url       = {https://doi.org/10.5281/zenodo.23436283}
 }`,
       dagli2026gdt: `@article{dagli2026gdt,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {General Divisor Theorem (GDT) and Residue Conditioning: Exact Arithmetic Bounds},
-  journal   = {Zenodo Preprint Archive},
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Machine-Certified Lean 4 Formalization of the General Divisor Theorem: Unified Density, Arbitrary-Bound Counting, and Finite Error Bounds},
+  journal   = {Zenodo Open Science Preprint Archive},
   year      = {2026},
-  doi       = {10.5281/zenodo.13968112},
-  url       = {https://doi.org/10.5281/zenodo.13968112}
+  doi       = {10.5281/zenodo.23425590},
+  url       = {https://doi.org/10.5281/zenodo.23425590}
 }`,
       dagli2026niemeier: `@article{dagli2026niemeier,
-  author    = {Volkan Da\\u{g}l\\i},
-  title     = {24D Niemeier A_8^3 Lattice and K3 Umbral Moonshine: Discrete Symmetries},
-  journal   = {Zenodo Preprint Archive},
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Machine-Certified Formalization of the 24-Dimensional Niemeier Lattice A_8^3, K3 Hodge Duality and Umbral Moonshine},
+  journal   = {Zenodo Open Science Preprint Archive},
   year      = {2026},
-  doi       = {10.5281/zenodo.13989045},
-  url       = {https://doi.org/10.5281/zenodo.13989045}
+  doi       = {10.5281/zenodo.23324067},
+  url       = {https://doi.org/10.5281/zenodo.23324067}
+}`,
+      dagli2026gunes: `@article{dagli2026gunes,
+  author    = {Volkan Da\u{g}l\i and Bekirhan Da\u{g}l\i and Da\u{g}han Da\u{g}l\i and Semih Salar and Zerrin Da\u{g}l\i},
+  title     = {G\\"{u}ne\\c{s} Dili: Deterministic Morpho-Semantic Tokenization, Machine-Checked Lean 4 Verification, and Bio-Synthetic Neural Resonance in the WERR Corpus},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23273006},
+  url       = {https://doi.org/10.5281/zenodo.23273006}
+}`,
+      dagli2026schonhage: `@article{dagli2026schonhage,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Bipartite Carrier Compression and Machine-Certified Bounds in Sch\\"{o}nhage Trilinear Multiplication Tensors},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23268580},
+  url       = {https://doi.org/10.5281/zenodo.23268580}
+}`,
+      dagli2026werredur: `@article{dagli2026werredur,
+  author    = {Zerrin Da\u{g}l\i and Volkan Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Procedural Fractal Pedagogy: Resolving the Saturn School Disequilibrium Paradox in Self-Directed AI Education via Zero-Storage Mandelbrot Boundary Reflexes},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23128224},
+  url       = {https://doi.org/10.5281/zenodo.23128224}
+}`,
+      dagli2026werrsoma: `@article{dagli2026werrsoma,
+  author    = {Da\u{g}han Da\u{g}l\i and Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i},
+  title     = {Bio-Synthetic Neuromorphic Interfacing: Integration of a Zero-Memory Fractal Decision Engine with the Whole-Brain Drosophila Melanogaster Connectome},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23072929},
+  url       = {https://doi.org/10.5281/zenodo.23072929}
+}`,
+      dagli2026pagecurve: `@article{dagli2026pagecurve,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Unitary Black Hole Page Curve Reconstruction via Dynamical Horizon Orbifolds, GKP Modular Stabilizers, and Lean 4 Formal Verification: The Canonical Cumulative Synthesis},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23072120},
+  url       = {https://doi.org/10.5281/zenodo.23072120}
+}`,
+      dagli2026gap: `@article{dagli2026gap,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Machine-Checked Computational Group Theory in Lean 4: Operational Schreier-Sims Stabilizer Chains, BSGS Sifting, and Backtrack Ordered Partitions},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23045504},
+  url       = {https://doi.org/10.5281/zenodo.23045504}
+}`,
+      dagli2026paper5: `@article{dagli2026paper5,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Zero-Storage Procedural Neural Synthesis via Boundary Dynamics: Formal Verification in Lean 4 and Bare-Metal Gauntlet Validation},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.22983889},
+  url       = {https://doi.org/10.5281/zenodo.22983889}
+}`,
+      dagli2026werracle: `@article{dagli2026werracle,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Werracle: Sub-Cent Intra-Block AI Reflex Oracles and Flash-Loan Circuit Breakers for EVM Smart Contracts},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.22942599},
+  url       = {https://doi.org/10.5281/zenodo.22942599}
+}`,
+      dagli2026werr: `@article{dagli2026werr,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Universal Fractal Natural Language Decision Map: Real-Time Edge Triage Across Heterogeneous Domains},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.22939253},
+  url       = {https://doi.org/10.5281/zenodo.22939253}
+}`,
+      dagli2026oed: `@article{dagli2026oed,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Orbital Error Dynamics: Self-Organized Criticality, Ephemeral Parameter Resonance, and Non-Linear Biological Ontologies in Zero-Storage Neural Synthesis},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.22900465},
+  url       = {https://doi.org/10.5281/zenodo.22900465}
+}`,
+      dagli2026fns: `@article{dagli2026fns,
+  author    = {Volkan Da\u{g}l\i and Zerrin Da\u{g}l\i and Da\u{g}han Da\u{g}l\i},
+  title     = {Mandelbrot Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Non-Linear Decision Boundaries},
+  journal   = {Zenodo Open Science Preprint Archive},
+  year      = {2026},
+  doi       = {10.5281/zenodo.22867037},
+  url       = {https://doi.org/10.5281/zenodo.22867037}
 }`
     };
 
-    let currentCategory = 'all';
+    let currentLang = 'en';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'tr' : 'en';
+      document.getElementById('langLabel').innerText = currentLang === 'en' ? 'Türkçe' : 'English';
+
+      if (currentLang === 'tr') {
+        document.getElementById('instBadge').innerHTML = '🏛️ ÇUKUROVA ÜNİVERSİTESİ TEKNOKENT &middot; ITOUCH BİLİŞİM SİSTEMLERİ &middot; MERKEZİ AKADEMİK PORTAL';
+        document.getElementById('heroTitle').innerText = 'Büyük Bilimsel Külliyat & Açık Arşiv';
+        document.getElementById('heroDesc').innerText = '15 hakemli ön baskı ve monograf, kalıcı Zenodo açık bilim kayıtları, Lean 4 biçimsel ispatları ve dünya rekoru sıkıştırma kıyaslamalarının resmi tescil kataloğu.';
+        document.getElementById('statPapersLbl').innerText = 'Hakemli Yayın / Monograf';
+        document.getElementById('statLeanLbl').innerText = 'Lean 4 Teoremi (0 sorry)';
+        document.getElementById('statCurvesLbl').innerText = 'NSF ICARM Kalbur Eğrisi';
+        document.getElementById('statNeuronsLbl').innerText = 'Drosophila Konnektomu';
+        document.getElementById('navHome').innerText = 'Ana Sayfa & Laboratuvar';
+        document.getElementById('navCorpus').innerText = 'Büyük Külliyat (15)';
+        document.getElementById('wrEyebrow').innerText = 'KANITLANMIŞ DENEYSEL VE BİÇİMSEL KİLOMETRE TAŞLARI';
+        document.getElementById('wrTitle').innerText = 'Dünya Rekorları & Bilimsel Başarılar';
+        document.getElementById('wrDesc').innerText = 'Deneysel kıyaslamalar ve makine doğrulamalı matematiksel kilometre taşları';
+        document.getElementById('corpusSearch').placeholder = '🔍 Makale başlığı, yazar, anahtar kelime, DOI, arXiv no veya teorem ara...';
+        document.getElementById('siteFooterInst').innerHTML = '&copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong>. Volkan Dağlı &middot; ITouch Bilişim Sistemleri &middot; Çukurova Üniversitesi Teknokent.';
+      } else {
+        document.getElementById('instBadge').innerHTML = '🏛️ CUKUROVA UNIVERSITY SCIENCE PARK &middot; ITOUCH SYSTEMS &middot; CENTRAL ACADEMIC PORTAL';
+        document.getElementById('heroTitle').innerText = 'The Grand Research Corpus';
+        document.getElementById('heroDesc').innerText = 'Comprehensive registry of 15 peer-reviewed preprints, permanent Zenodo open-science archives, machine-verified Lean 4 formal proofs, and world-record compression benchmarks.';
+        document.getElementById('statPapersLbl').innerText = 'Academic Publications';
+        document.getElementById('statLeanLbl').innerText = 'Lean 4 Theorems (0 sorry)';
+        document.getElementById('statCurvesLbl').innerText = 'NSF ICARM Sieve Curves';
+        document.getElementById('statNeuronsLbl').innerText = 'Drosophila Connectome';
+        document.getElementById('navHome').innerText = 'Home & Labs';
+        document.getElementById('navCorpus').innerText = 'Grand Corpus (15)';
+        document.getElementById('wrEyebrow').innerText = 'PROVEN EMPIRICAL & FORMAL MILESTONES';
+        document.getElementById('wrTitle').innerText = 'World Records & Scientific Breakthroughs';
+        document.getElementById('wrDesc').innerText = 'Empirical benchmarks and machine-certified mathematical milestones';
+        document.getElementById('corpusSearch').placeholder = '🔍 Search publications by title, author, keyword, DOI, arXiv ID, or Lean 4 theorem...';
+        document.getElementById('siteFooterInst').innerHTML = '&copy; 2026 <strong>Fractal Neural Synthesis (FNS)</strong>. Volkan Dağlı &middot; ITouch Systems &middot; Cukurova University Science Park.';
+      }
+    }
 
     function selectCategory(cat, btn) {
-      currentCategory = cat;
       document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       filterCorpus();
@@ -917,46 +1153,42 @@
 
     function filterCorpus() {
       const q = document.getElementById('corpusSearch').value.toLowerCase().trim();
-      const cards = document.querySelectorAll('.paper-card');
-      
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-category') || '';
-        const searchData = (card.getAttribute('data-search') || '') + ' ' + card.innerText.toLowerCase();
-        
-        const matchesCategory = (currentCategory === 'all') || cat.includes(currentCategory);
-        const matchesSearch = !q || searchData.includes(q);
+      const activeBtn = document.querySelector('.cat-btn.active');
+      const cat = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
 
-        if (matchesCategory && matchesSearch) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+      const cards = document.querySelectorAll('.paper-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category') || '';
+        const searchData = (card.getAttribute('data-search') || '') + ' ' + card.innerText.toLowerCase();
+
+        const matchCat = (cat === 'all') || cardCat.split(' ').includes(cat);
+        const matchSearch = (!q) || searchData.includes(q);
+
+        card.style.display = (matchCat && matchSearch) ? 'block' : 'none';
       });
     }
 
-    function openBibtex(id) {
-      const text = bibData[id] || 'Citation data not found.';
-      document.getElementById('bibtexContent').innerText = text;
+    function openBibtex(key) {
+      const bib = BIBTEX_DB[key] || '% Citation not found';
+      document.getElementById('bibModalContent').innerText = bib;
       document.getElementById('bibtexModal').classList.add('open');
-      document.getElementById('copyBibBtn').innerText = 'Copy to Clipboard';
     }
 
-    function closeBibtex() {
+    function closeBibtex(e) {
       document.getElementById('bibtexModal').classList.remove('open');
     }
 
-    function copyBibtex() {
-      const text = document.getElementById('bibtexContent').innerText;
+    function copyModalBibtex() {
+      const text = document.getElementById('bibModalContent').innerText;
       navigator.clipboard.writeText(text).then(() => {
-        document.getElementById('copyBibBtn').innerText = 'Copied!';
-        setTimeout(() => {
-          document.getElementById('copyBibBtn').innerText = 'Copy to Clipboard';
-        }, 2000);
+        const btn = document.getElementById('btnModalCopy');
+        btn.innerText = currentLang === 'tr' ? 'Kopyalandı!' : 'Copied!';
+        setTimeout(() => { btn.innerText = currentLang === 'tr' ? 'BibTeX Kopyala' : 'Copy BibTeX'; }, 2000);
       });
     }
 
-    // Interactive 5-Second Procedural Orbit Simulator
-    (function initOrbitCanvas() {
+    // Interactive 5-Second Canvas Simulation
+    function runOrbitCanvas() {
       const canvas = document.getElementById('orbitCanvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
@@ -964,46 +1196,48 @@
       const h = canvas.height;
 
       let t = 0;
-      function renderOrbit() {
-        t += 0.02;
-        ctx.fillStyle = 'rgba(2, 3, 6, 0.2)';
+      function draw() {
+        ctx.fillStyle = '#020306';
         ctx.fillRect(0, 0, w, h);
 
-        const count = 8;
-        const spacing = w / count;
+        const cx = -0.75 + Math.sin(t * 0.02) * 0.15;
+        const cy = 0.1 + Math.cos(t * 0.02) * 0.15;
 
-        for (let k = 0; k < count; k++) {
-          const cx = -0.75 + Math.sin(t * 0.5 + k) * 0.1;
-          const cy = 0.1 + Math.cos(t * 0.4 + k) * 0.15;
-
-          let z_re = 0, z_im = 0;
-          const startX = k * spacing + spacing / 2;
-          const startY = h / 2;
-
+        // Draw multiple procedural orbit tracks
+        const numTracks = 7;
+        for (let tr = 0; tr < numTracks; tr++) {
+          let zx = (tr / numTracks) * 0.6 - 0.3;
+          let zy = 0.0;
           ctx.beginPath();
-          ctx.strokeStyle = k % 2 === 0 ? '#38bdf8' : '#a855f7';
-          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = `hsl(${(tr * 45 + t * 2) % 360}, 85%, 60%)`;
+          ctx.lineWidth = 1.2;
 
-          for (let step = 0; step < 24; step++) {
-            const new_re = z_re * z_re - z_im * z_im + cx;
-            const new_im = 2 * z_re * z_im + cy;
-            z_re = new_re;
-            z_im = new_im;
-
-            const px = startX + z_re * 35;
-            const py = startY + z_im * 35;
+          for (let step = 0; step < 40; step++) {
+            const px = ((zx + 1.8) / 2.8) * w;
+            const py = ((zy + 1.2) / 2.4) * h;
 
             if (step === 0) ctx.moveTo(px, py);
             else ctx.lineTo(px, py);
+
+            const nzx = zx * zx - zy * zy + cx;
+            const nzy = 2 * zx * zy + cy;
+            zx = nzx;
+            zy = nzy;
+
+            if (zx * zx + zy * zy > 4.0) break;
           }
           ctx.stroke();
         }
 
-        requestAnimationFrame(renderOrbit);
+        t += 1;
+        requestAnimationFrame(draw);
       }
-      renderOrbit();
-    })();
+      draw();
+    }
 
+    window.addEventListener('DOMContentLoaded', () => {
+      runOrbitCanvas();
+    });
   </script>
 </body>
 </html>
