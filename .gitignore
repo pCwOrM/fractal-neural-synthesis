@@ -98,3 +98,15 @@ id_ed25519*
 *credentials*.json
 *credentials*.py
 *.secret*
+
+# Internal notes and sealed vaults
+OKU_BENI_CLAUDE.md
+INTERNAL_CORPORATE_AND_ACCOUNTING_NOTES.md
+SEALED_LOCAL_VAULT*
+sealed_*
+*vault*
+turkpatent_oed_duzeltme*
+arxiv_*_package/
+zenodo_*_package/
+blackhole_v*_package/
+ssrn_submission_package/
