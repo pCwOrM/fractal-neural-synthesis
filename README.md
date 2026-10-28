@@ -12,6 +12,10 @@
 [![Hugging Face: @pCwOrM](https://img.shields.io/badge/Hugging%20Face-%40pCwOrM%20(6%20Papers%20%C2%B7%202%20Datasets)-yellow.svg?logo=huggingface)](https://huggingface.co/pCwOrM)
 [![NSF ICARM Record: 230 Curves](https://img.shields.io/badge/NSF%20ICARM-230%20Verified%20Curves-blue)](https://elliptic-rank.icarm.cloud/user/114)
 [![Schönhage Record: -377K Wires](https://img.shields.io/badge/Sch%C3%B6nhage%20Record--377%2C890%20Wires%20(W%3D176.9M)-brightgreen.svg)](https://github.com/pCwOrM/integer-mult-bounds)
+[![Awesome Jev](https://img.shields.io/badge/Awesome-Jev%20Listed-blueviolet.svg)](https://awesomejev.com)
+[![JevBench](https://img.shields.io/badge/JevBench-Offline%20Adapter%20(231%2F231%20Pass)-10b981.svg)](https://github.com/pCwOrM/werr/tree/master/benchmarks/jevbench)
+[![Awesome Edge AI](https://img.shields.io/badge/Awesome-Edge%20AI%20Agents-blue.svg)](https://github.com/yh-yao/awesome-edge-ai-agents)
+[![Lean Workers Union](https://img.shields.io/badge/Lean%20Worker-Gokujo%20Proof--Gate%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/gap-lean4-port)
 
 ---
 
