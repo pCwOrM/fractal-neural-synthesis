@@ -114,3 +114,9 @@ ssrn_submission_package/
 # Archive directories (excluded from Pages)
 archive/
 _archive/
+
+# Sensitive infrastructure and internal notes
+claude/
+scripts/answerr-api.service
+scripts/radar_*.py
+scripts/deploy_*.py

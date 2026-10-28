@@ -1,6 +1,18 @@
 /* FNS shared navigation behaviour: hamburger, "More" dropdown, current page, TR/EN labels. */
 (function () {
   'use strict';
+  /* Frame-ancestors / Clickjacking defense for static hosting */
+  if (window.top !== window.self) {
+    try {
+      if (window.top.location.host !== window.self.location.host) {
+        window.top.location = window.self.location;
+      }
+    } catch (e) {
+      window.top.location = window.self.location;
+    }
+  }
+
+
   var nav = document.querySelector('.site-nav');
   if (!nav) return;
   var toggle = nav.querySelector('.site-nav__toggle');
