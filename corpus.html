@@ -34,6 +34,7 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
+      overflow-x: hidden;
       background-color: var(--bg-dark);
       background-image: 
         radial-gradient(ellipse at 20% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
@@ -411,6 +412,64 @@
       color: var(--text-muted);
       font-size: 0.85rem;
     }
+  
+    /* Mobile Responsiveness Overhaul */
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px 14px;
+      }
+      .brand {
+        font-size: 1rem;
+        justify-content: space-between;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: flex-start;
+      }
+      .btn-nav {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+      }
+      .container {
+        padding: 20px 14px 60px;
+      }
+      .hero {
+        padding: 20px 0 16px;
+      }
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .hero-desc {
+        font-size: 0.95rem;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .paper-card {
+        padding: 16px;
+      }
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-action {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -460,7 +519,7 @@
           <div class="stat-lbl" id="statPapersLbl">Academic Publications</div>
         </div>
         <div class="stat-card">
-          <div class="stat-val" style="color:var(--purple)">81+</div>
+          <div class="stat-val" style="color:var(--purple)">120+</div>
           <div class="stat-lbl" id="statLeanLbl">Lean 4 Theorems (0 sorry)</div>
         </div>
         <div class="stat-card">
@@ -541,6 +600,54 @@
               81 machine-verified Lean 4 theorems and lemmas, 0 project axioms, 0 sorry. Exact residue density correction and counting.
             </p>
             <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--emerald);">Kernel: Lean 4 Verified Pass</div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 12px; padding: 18px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:1.3rem;">📐</span>
+              <span style="font-size:0.75rem; font-family:var(--font-mono); color:var(--purple); background:rgba(168,85,247,0.15); padding:2px 8px; border-radius:4px;">GROUP THEORY</span>
+            </div>
+            <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">GAP &rarr; Lean 4 (35 Theorems)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
+              Operational Schreier-Sims stabilizer chains, BSGS sifting, and backtrack ordered partitions verified in Lean 4 with 0 axioms.
+            </p>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--purple);">Repo: pCwOrM/gap-lean4-port</div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 18px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:1.3rem;">🔮</span>
+              <span style="font-size:0.75rem; font-family:var(--font-mono); color:var(--cyan); background:rgba(56,189,248,0.15); padding:2px 8px; border-radius:4px;">MOONSHINE</span>
+            </div>
+            <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">Niemeier A₈³ &amp; Umbral Moonshine</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
+              24-dimensional Niemeier lattice \( A_8^3 \), K3 Hodge duality, and Umbral Moonshine conductor synthesis machine-certified in Lean 4.
+            </p>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--cyan);">SSRN: 7668699 &middot; Lean 4 (0 sorry)</div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 12px; padding: 18px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:1.3rem;">🌌</span>
+              <span style="font-size:0.75rem; font-family:var(--font-mono); color:var(--purple); background:rgba(168,85,247,0.15); padding:2px 8px; border-radius:4px;">QUANTUM GRAVITY</span>
+            </div>
+            <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">Unitary Black Hole Page Curve</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
+              Resolution of Hawking paradox via wormhole error-kernel invariants. Unitary Page curve without firewall on 40-core Xeon telemetry.
+            </p>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--purple);">Zenodo: 10.5281/zenodo.23072120</div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(246, 183, 60, 0.3); border-radius: 12px; padding: 18px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:1.3rem;">🛡️</span>
+              <span style="font-size:0.75rem; font-family:var(--font-mono); color:var(--gold); background:rgba(246,183,60,0.15); padding:2px 8px; border-radius:4px;">OEV RECAPTURE</span>
+            </div>
+            <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 6px;">98.10% Chainlink SVR Recapture</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
+              Empirical analysis of 1,157 liquidations. Demonstrating 98.10% protocol value recapture via Bertrand price competition on Base.
+            </p>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; color:var(--gold);">arXiv:2609.30719 &middot; HF Dataset</div>
           </div>
 
         </div>

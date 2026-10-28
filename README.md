@@ -103,11 +103,21 @@ All papers in the Fractal Neural Synthesis corpus are permanently cataloged with
 ## 🏆 World Records & Verified Milestones
 
 1. **Schönhage Tensor Multiplication Bound (-377,890 Wires):**  
-   World record reduction in boolean circuit complexity for Schönhage integer multiplication tensor ($W = 176,906,915$). Formally incorporated into CrocSwap / integer-mult-bounds ([PR #226](https://github.com/CrocSwap/integer-mult-bounds/pull/226), commit `50d76881`, [arXiv: 2610.14263](https://arxiv.org/abs/2610.14263) • [🤗 HF Paper](https://huggingface.co/papers/2610.14263)).
-2. **NSF ICARM Elliptic Curve Rank Records:**  
-   230 globally verified elliptic curve ranks submitted and confirmed under user record #114 on the [NSF ICARM National Elliptic Curve Registry](https://elliptic-rank.icarm.cloud/user/114).
-3. **GAP to Lean 4 Transpiler Milestone:**  
-   Automated algebraic group-theoretic verification suite bridging computational discrete algebra (GAP) to interactive theorem proving in Lean 4 ([pCwOrM/gap-lean4-port](https://github.com/pCwOrM/gap-lean4-port), arXiv: 2609.38492).
+   World record reduction in boolean circuit complexity for Schönhage integer multiplication tensor ($W = 176,906,915$, $\kappa \approx 4.131 \times 10^{-5}$). Formally incorporated into CrocSwap / integer-mult-bounds ([PR #226](https://github.com/CrocSwap/integer-mult-bounds/pull/226), commit `50d76881`, [arXiv: 2610.14263](https://arxiv.org/abs/2610.14263) • [🤗 HF Paper](https://huggingface.co/papers/2610.14263) • [Zenodo: 10.5281/zenodo.23268580](https://doi.org/10.5281/zenodo.23268580)).
+2. **NSF ICARM National Elliptic Curve Registry (230 Verified Curves):**  
+   230 globally verified elliptic curve ranks submitted and confirmed under user record #114 on the [NSF ICARM National Elliptic Curve Registry](https://elliptic-rank.icarm.cloud/user/114) via the Werr Multi-Layer Algebraic Sieve & Vélu Isogeny Engine with 100% Conductor Certification ($\log N$), 30 Gold #1 rank records, and 80 podium placements ([Zenodo: 10.5281/zenodo.23436283](https://doi.org/10.5281/zenodo.23436283)).
+3. **GAP to Lean 4 Computational Group Theory Milestone (35 Theorems, 0 Sorry):**  
+   Automated algebraic group-theoretic verification suite bridging computational discrete algebra (GAP) to interactive theorem proving in Lean 4. Operational Schreier-Sims stabilizer chains, BSGS sifting, and backtrack ordered partitions ([pCwOrM/gap-lean4-port](https://github.com/pCwOrM/gap-lean4-port), [arXiv: 2609.38492](https://arxiv.org/abs/2609.38492) • [🤗 HF Paper](https://huggingface.co/papers/2609.38492) • [Zenodo: 10.5281/zenodo.23045504](https://doi.org/10.5281/zenodo.23045504)).
+4. **24-Dimensional Niemeier Lattice $A_8^3$ & Umbral Moonshine Machine-Certified Proof:**  
+   First machine-certified formalization of the 24-dimensional Niemeier lattice $A_8^3$, K3 Hodge duality, and Umbral Moonshine conductor synthesis in Lean 4 with 0 sorry and 0 project axioms ([SSRN: 7668699](https://papers.ssrn.com/abstract=7668699) • [Zenodo: 10.5281/zenodo.23324067](https://doi.org/10.5281/zenodo.23324067) • [pCwOrM/niemeier-a8-umbral-moonshine](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)).
+5. **General Divisor Theorem (GDT v3.0) Formal Verification (81 Theorems, 0 Sorry):**  
+   Complete machine verification of divisor distributions, unified residue density, arbitrary-bound counting, and finite error bounds with applied sieve acceleration ([Zenodo: 10.5281/zenodo.23425590](https://doi.org/10.5281/zenodo.23425590) • [pCwOrM/general-divisor-theorem](https://github.com/pCwOrM/general-divisor-theorem)).
+6. **Unitary Black Hole Page Curve Reconstruction & Information Paradox Resolution:**  
+   Unitary recovery of the Page curve via wormhole error-kernel invariants and procedural boundary recurrence without AMPS horizon firewalls; verified on dedicated 40-core bare-metal Xeon telemetry ([Zenodo: 10.5281/zenodo.23072120](https://doi.org/10.5281/zenodo.23072120)).
+7. **WerrSoma Whole-Brain Connectomics (158K Neurons & 54M Synapses):**  
+   Procedural in-silico synthesis and real-time steering of the complete Drosophila melanogaster FlyWire connectome (158,262 neurons, 54,000,000 synapses) with 0 static memory footprint under Patent TR 2026/016633 ([Live 3D Portal](https://werrsoma.answerr.me/) • [Zenodo: 10.5281/zenodo.23072929](https://doi.org/10.5281/zenodo.23072929)).
+8. **Empirical OEV Recapture on Base & Ethereum L1 (98.10% Protocol Recapture):**  
+   Analysis of 1,157 liquidations documenting 98.10% protocol value recapture across 105 Chainlink SVR liquidations ($186,889.85 USD) via Bertrand solver competition without monopolistic capture ([Zenodo: 10.5281/zenodo.23642090](https://doi.org/10.5281/zenodo.23642090) • [arXiv: 2609.30719](https://arxiv.org/abs/2609.30719) • [SSRN: 7626279](https://papers.ssrn.com/abstract=7626279) • [🤗 HF Dataset](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)).
 
 ---
 
