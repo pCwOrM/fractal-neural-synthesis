@@ -1050,7 +1050,7 @@
       <div>
         <span class="hub-badge badge-test">TOPOLOGY TEST</span>
         <h3>2. Two Moons & Two Spirals Non-Linear Testi</h3>
-        <p>Hiçbir tensör eğitimi yapmadan, doğrudan fraktal karmaşık kaçış dinamiğiyle doğrusal olmayan iki iç içe geçmiş spiral ve ay verisetini sınıflandırma testi.</p>
+        <p>Hiçbir tensör eğitimi yapmadan, doğrudan prosedürel sınır dinamikleri ve polinomiyal kaçış analiziyle doğrusal olmayan iki iç içe geçmiş spiral ve ay verisetini sınıflandırma testi.</p>
         <div class="code-box">python src/two_moons_spirals_benchmark.py</div>
       </div>
       <div class="hub-footer-links">
@@ -1237,7 +1237,7 @@
   const base_cx = -0.7436438870371587;
   const base_cy = 0.1318259042053119;
 
-  // WERR Brain (Mandelbrot Boundary Escape)
+  // WERR Brain (Procedural Boundary Dynamics & Polynomial Escape)
   function evaluateWerrBrain(head, targetFood, myBody, oppBody, currentDir) {
     const t0 = performance.now();
     const moves = {
@@ -1270,7 +1270,7 @@
         continue;
       }
 
-      // Procedural Mandelbrot escape calculation
+      // Procedural polynomial escape calculation
       const cx = base_cx + (dx_target * 0.0006);
       const cy = base_cy + (dy_target * 0.0006);
       let zx = cx, zy = cy, iters = 0;

@@ -105,7 +105,7 @@ class FractalZeroStorageBrain:
                         queue.append((nox, noy))
             free_cells = len(visited)
 
-            # Procedural fractal escape modulation
+            # Procedural polynomial escape modulation (boundary reflex)
             zx = self.cx + (dx_target * 0.0006) + (i * 0.0002)
             zy = self.cy + (dy_target * 0.0006) + (i * 0.0002)
             iters = 0

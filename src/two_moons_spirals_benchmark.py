@@ -80,7 +80,7 @@ def make_two_spirals(n_samples=200, noise=0.04, random_state=42):
 class FractalNeuralClassifier:
     """
     Continuous Non-Linear Classifier with Procedural Fractal Parameterization.
-    Derives hidden layer projection matrices directly from Mandelbrot escape dynamics.
+    Derives hidden layer projection matrices directly from polynomial escape dynamics and procedural boundary geometry.
     """
     def __init__(self, mode="moons", grid_size=8, res=128):
         self.mode = mode

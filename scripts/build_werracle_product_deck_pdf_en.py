@@ -336,7 +336,7 @@ html_content = """<!DOCTYPE html>
     <div class="content-area">
       <div class="cover-title">Sub-Cent Intra-Block Reflex Intelligence & Real-Time Risk Defense for Web3</div>
       <div class="cover-sub">
-        The first production-grade On-Chain AI Oracle executing directly inside EVM and Starknet smart contracts at ~20.7k gas with zero neural storage footprints, powered by Lean 4 machine-verified procedural escape dynamics.
+        The first production-grade On-Chain AI Oracle executing directly inside EVM and Starknet smart contracts at ~20.7k gas with zero neural storage footprints, powered by Lean 4 machine-verified procedural boundary dynamics.
       </div>
 
       <div class="grid-4" style="margin-top: 20px;">
@@ -462,7 +462,7 @@ html_content = """<!DOCTYPE html>
     </div>
 
     <div class="content-area">
-      <div class="slide-title">Procedural Escape Dynamics: AI Reflex Without Heavy Weights</div>
+      <div class="slide-title">Procedural Boundary Dynamics: AI Reflex Without Heavy Weights</div>
       <div class="slide-subtitle">
         Eliminating the Von Neumann storage bottleneck: synthesizing real-time decision surfaces from deterministic polynomial trajectories (<span style="font-family:'JetBrains Mono';">z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c</span>) in a single storage slot.
       </div>
@@ -472,7 +472,7 @@ html_content = """<!DOCTYPE html>
           <div class="card card-highlight">
             <div class="card-title color-cyan">Zero-Storage Synaptic Synthesis</div>
             <div class="card-desc">
-              Instead of loading megabytes of static weight matrices into memory, Werracle dynamically computes high-dimensional decision boundaries using procedural Mandelbrot escape velocities. Decision model footprint is strictly <b>0 Bytes on-chain</b>.
+              Instead of loading megabytes of static weight matrices into memory, Werracle dynamically computes high-dimensional decision boundaries using procedural polynomial escape velocities. Decision model footprint is strictly <b>0 Bytes on-chain</b>.
             </div>
           </div>
 
@@ -529,7 +529,7 @@ html_content = """<!DOCTYPE html>
     </div>
 
     <div class="footer-bar">
-      <span>Werracle Core Engine: Procedural Escape Dynamics</span>
+      <span>Werracle Core Engine: Procedural Boundary Dynamics</span>
       <span>Confidential &bull; Seed Investment Pitch Deck</span>
       <span>Slide 03 / 14</span>
     </div>
@@ -882,7 +882,7 @@ html_content = """<!DOCTYPE html>
     <div class="content-area">
       <div class="slide-title">Mathematically Proven Safety: Eliminating Smart Contract Liability</div>
       <div class="slide-subtitle">
-        Unlike probabilistic deep neural networks that hallucinate, Werracle’s procedural escape dynamics are formally machine-verified in Lean 4.
+        Unlike probabilistic deep neural networks that hallucinate, Werracle’s procedural boundary dynamics are formally machine-verified in Lean 4.
       </div>
 
       <div class="grid-3">

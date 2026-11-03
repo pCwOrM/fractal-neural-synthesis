@@ -208,7 +208,7 @@ Bu projede temelleri atılan sıfır-bellekli fraktal parametre türetme mimaris
 > *Platform & Çalışma Alanı:* [github.com/pCwOrM/answerr](https://github.com/pCwOrM/answerr) &bull; *Üretim Portalı:* [answerr.me](https://answerr.me)
 
 ### Temel Sinerjiler ve Alanlar Arası Geçiş
-1. **Geometrik Sınırlardan Doğal Dil Refleks Triyajına:** Bu kuramsal çalışma $128 \times 128$ Mandelbrot kaçış yamalarından yapay zeka ağırlıkları türetirken; [werr](https://github.com/pCwOrM/werr) fraktal sınır dinamiklerini ultra-hızlı, tensörsüz semantik triyaja (Sistem-1 refleks arkı) dönüştürür.
+1. **Geometrik Sınırlardan Doğal Dil Refleks Triyajına:** Bu kuramsal çalışma $128 \times 128$ polinomiyal kaçış yamalarından ve prosedürel sınır sentezinden yapay zeka ağırlıkları türetirken; [werr](https://github.com/pCwOrM/werr) fraktal sınır dinamiklerini ultra-hızlı, tensörsüz semantik triyaja (Sistem-1 refleks arkı) dönüştürür.
 2. **İkili Bilişsel Çalışma Alanı Entegrasyonu:** [answerr](https://github.com/pCwOrM/answerr), mikrosaniyelik `werr` reflekslerini bulut LLM (Google Gemini) müzakeresiyle birleştirerek `api.answerr.me:4431` üzerinde üretim REST API'si ve cam efektli çalışma alanı sunar.
 3. **Ampirik Dünya Rekorları ve Kıyaslama Başarıları:** Bu temel araştırmanın sıfır-depolamalı fraktal türetim teorisi, `werr`'in bağımsız uluslararası kıyaslama paketlerindeki dünya derecelerine güç verir:
    * **WindTunnel WebMCP:** 8 gerçek dünya web uygulamasında 49 görevin tamamını (%100) 3.35 ms gecikme, 0 Bayt VRAM ve $0.0000 model maliyetiyle çözme başarısı ([nekuda-ai/WindTunnel#25](https://github.com/nekuda-ai/WindTunnel/issues/25)).
