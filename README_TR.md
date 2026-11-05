@@ -51,7 +51,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 
 | Platform / Belge | Tür | Hedef Kitle | Doğrudan Canlı Bağlantı |
 | :--- | :--- | :--- | :--- |
-| 🌌 **Paper 11: 24D Niemeier Kafesi $A_8^3$, K3 Hodge Dualitesi & Umbral Moonshine** | Makine Onaylı Kafes Biçimselleştirmesi, $\mathbb{Z}/9\mathbb{Z}$ Şasisi, Coxeter $h=9$, Üçlü Yapıştırıcı $\|g\|^2=4$, Sahte Modüler Form & Gölge | Cebirsel Geometrisyenler, Sicim Teorisyenleri & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23324066**](https://doi.org/10.5281/zenodo.23324066) (Kayıt: [`23324067`](https://zenodo.org/records/23324067)) &bull; [**GitHub: pCwOrM/niemeier-a8-umbral-moonshine**](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine) &bull; **Lean 4 Onaylı (0 sorry, 0 aksiyom)** |
+| 🌌 **Paper 11: 24D Niemeier Kafesi $A_8^3$, K3 Hodge Dualitesi & Umbral Moonshine** | Makine Onaylı Kafes Biçimselleştirmesi, $\mathbb{Z}/9\mathbb{Z}$ Şasisi, Coxeter $h=9$, Üçlü Yapıştırıcı `‖g‖² = 4`, Sahte Modüler Form & Gölge | Cebirsel Geometrisyenler, Sicim Teorisyenleri & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23324066**](https://doi.org/10.5281/zenodo.23324066) (Kayıt: [`23324067`](https://zenodo.org/records/23324067)) &bull; [**GitHub: pCwOrM/niemeier-a8-umbral-moonshine**](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine) &bull; **Lean 4 Onaylı (0 sorry, 0 aksiyom)** |
 | 🔢 **Paper 10: Genel Bölen Teoremi (GDT) Lean 4 Formelleştirmesi** | Kalan Koşullandırması Altında Kesin Yoğunluk Düzeltmesi, Minimal Periyodiklik $T_{\min} = \mathrm{lcm}(m, \mathrm{rad}(N))$, VolkanBridge Çift Yönlü Doğrulama | Analitik Sayılar Teorisyenleri, Elek Teorisyenleri & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23316070**](https://doi.org/10.5281/zenodo.23316070) &bull; [**GitHub: pCwOrM/general-divisor-theorem**](https://github.com/pCwOrM/general-divisor-theorem) &bull; **2.287 Denetim GEÇTİ &bull; Lean 4 Onaylı** |
 | ☀️ **Paper 9: Güneş Dili (Deterministik Morfoloji & Lean 4)** | Formel Dil Teorisi, 53 Hölder Komması & Biyo-Sentetik Rezonans | Hesaplamalı Dilbilimciler, NLP Mühendisleri & Nörobilimciler | [**Zenodo: 10.5281/zenodo.23273006**](https://doi.org/10.5281/zenodo.23273006) (Konsept: [10.5281/zenodo.23273005](https://doi.org/10.5281/zenodo.23273005)) &bull; [**Canlı Simülatör Portalı**](https://pcworm.github.io/gunes-dili/) &bull; [**GitHub: pCwOrM/gunes-dili**](https://github.com/pCwOrM/gunes-dili) &bull; **TÜRKPATENT Öncelik: TR 2026/016285 & TR 2026/016633** &bull; **Lean 4 Onaylı (0 sorry)** |
 | 🏆 **Paper 8: Schönhage Tensör Taşıyıcı Sıkıştırma (Dünya Rekoru)** | Makine Onaylı Tamsayı Çarpımı Sınırları ($W = 176.906.915$, $\kappa \approx 4,1310765 \times 10^{-5}$) | Karmaşıklık Teorisyenleri, Ayrık Matematikçiler & Mantıkçılar | [**Zenodo: 10.5281/zenodo.23268580**](https://doi.org/10.5281/zenodo.23268580) (Konsept: [10.5281/zenodo.23268579](https://doi.org/10.5281/zenodo.23268579)) &bull; [**arXiv: submit/8207241**](https://arxiv.org/submit/8207241) &bull; [**CrocSwap PR #226**](https://github.com/CrocSwap/integer-mult-bounds/pull/226) &bull; [**Çatallama: pCwOrM/integer-mult-bounds**](https://github.com/pCwOrM/integer-mult-bounds) &bull; **Lean 4 Doğrulanmış (0 sorry)** |
@@ -81,13 +81,13 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 ## 👥 Yazarlar ve Akademik Kurumlar
 
 * **Volkan Dağlı** *(Sorumlu Yazar / Corresponding Author)*  
-  Anadolu Üniversitesi, Eskişehir, Türkiye & ITouch Systems, Çukurova Teknokent, Mersin, Türkiye &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
+  Anadolu Üniversitesi, Eskişehir, Türkiye & ITouch Systems, Çukurova Üniversitesi Teknokent, Mersin, Türkiye &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
 * **Dr. Zerrin Dağlı**  
   Mersin Üniversitesi, Mersin, Türkiye &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
 
 * **Dağhan Dağlı**  
-  Toros Fen Lisesi, MEV (Toros Üniversitesi), Mersin, Türkiye &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
+  Toros Üniversitesi, Mersin, Türkiye &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
 *Yazışma & İletişim:* Volkan Dağlı ([GitHub Araştırma Deposu](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis) / [Zenodo Çatı](https://doi.org/10.5281/zenodo.22774934)).
 
@@ -632,7 +632,7 @@ Sıfır-Bellekli Fraktal Nöron Sentezi ve Yörünge Hata Dinamikleri (OED) ara�
 | Kanal / Platform | Ağ (Network) | Alıcı Cüzdan Adresi |
 | :--- | :--- | :--- |
 | **Resmi Cüzdan (Binance)** | TRC20 (TRON) | `TLMhaDJTVYBHBSGJ9nCQGLvqnYFPSBgLJu` |
-| **Resmi Tüzel Kişilik** | Teknokent | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. (Çukurova Teknokent) |
+| **Resmi Tüzel Kişilik** | Teknokent | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. (Çukurova Üniversitesi Teknokent) |
 
 * **Resmi İletişim Kanalları:** `info@itouch.com.tr` (Kurumsal) | `pcworm@pcworm.net` (Baş Araştırmacı) | `ask@answerr.me` (Otonom Ajan) | Web: `https://answerr.me`
 

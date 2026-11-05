@@ -53,15 +53,15 @@ flowchart LR
 ## 👥 Authors & Affiliations
 
 * **Volkan Dağlı** *(Corresponding Author & Primary Architect)*  
-  Anadolu University, Eskişehir, Türkiye & ITouch Systems, Çukurova University Science Park, Adana/Mersin, Türkiye  
+  Anadolu University, Eskişehir, Türkiye & ITouch Systems, Cukurova University Science Park, Adana/Mersin, Türkiye  
   ORCID: [`0009-0000-1587-8703`](https://orcid.org/0009-0000-1587-8703) • GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
 * **Dağhan Dağlı** *(Co-Author: Neuromorphic Connectomics & Formal Proofs)*  
-  Toros Science High School, MEV (Toros University), Mersin, Türkiye  
+  Toros University, Mersin, Türkiye  
   ORCID: [`0009-0003-2492-8313`](https://orcid.org/0009-0003-2492-8313) • GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
 * **Dr. Zerrin Dağlı** *(Co-Author: Procedural Pedagogy & Computational Learning Dynamics)*  
-  Mersin University & Yusuf Kalkavan Anatolian High School, Mersin, Türkiye  
+  Mersin University, Mersin, Türkiye  
   ORCID: [`0000-0001-9490-6425`](https://orcid.org/0000-0001-9490-6425)
 
 ---
@@ -165,5 +165,5 @@ All monographs, formal Lean 4 specifications, and empirical datasets across the 
 
 ---
 
-*© 2026 ITouch Bilişim Sistemleri Ltd. Şti. · Çukurova University Science Park · Mersin / Adana, Türkiye.*  
+*© 2026 ITouch Bilişim Sistemleri Ltd. Şti. · Cukurova University Science Park · Mersin / Adana, Türkiye.*  
 *Institutional Inquiries: `ask@answerr.me` • Research Desk: `contact@werracle.com`*
