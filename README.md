@@ -88,118 +88,65 @@ graph TD
 
 ---
 
-## 📚 The Grand Corpus: Permanent Academic Records & Preprints
+## 🏛️ Associated Formal Verification, World Records & Scientific Corpus
 
-All papers in the Fractal Neural Synthesis corpus are permanently cataloged with citable DOIs across **Zenodo**, **SSRN (Elsevier)**, **arXiv**, and **Hugging Face**:
+All monographs, formal Lean 4 specifications, and empirical datasets across the **WERR & ITouch Systems Research Group** are permanently archived on **CERN Zenodo**, **arXiv**, **Elsevier SSRN**, and **Hugging Face**.  
+*(Primary links use **CERN Zenodo Concept DOIs / Çatı DOI**, which automatically resolve to the latest published version while preserving exact version-pinned reproducibility.)*
 
-| # | Paper Title | Core Contribution | Formal Verification | Permanent DOI / Identifier |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | **Fractal Neural Synthesis (FNS)** | Zero-storage weight derivation via polynomial escape-time dynamics | Empirical & Statistical Parity | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22867037-024dad.svg)](https://doi.org/10.5281/zenodo.22867037) • [SSRN: 7659198](https://papers.ssrn.com/abstract=7659198) |
-| **02** | **Orbital Error Dynamics (OED)** | Bounded recursive coordinate error suppression for high-frequency triage | Q16.16 Fixed-Point Proofs | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22900465-024dad.svg)](https://doi.org/10.5281/zenodo.22900465) • [arXiv: 2609.30115](https://arxiv.org/abs/2609.30115) • [🤗 HF Paper](https://huggingface.co/papers/2609.30115) |
-| **03** | **WERR: Zero-VRAM Cognitive Reflex** | Sub-millisecond decision gating with 0 bytes VRAM on edge hardware | Python, Node.js, C Parity | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22867037-024dad.svg)](https://doi.org/10.5281/zenodo.22867037) • [arXiv: 2609.25498](https://arxiv.org/abs/2609.25498) • [🤗 HF Paper](https://huggingface.co/papers/2609.25498) • [🤗 Dataset](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) |
-| **04** | **Black Hole Page Curve & Wormhole Entropy** | Unitary information recovery modeling via procedural boundary recurrence | Theoretical Physics Formalization | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23072120-024dad.svg)](https://doi.org/10.5281/zenodo.23072120) |
-| **05** | **Lean 4 Machine Verification of FNS** | Computer-checked proof of halting, bound invariants, and integer bounds | **Lean 4 (0 Sorry, 0 Axioms)** | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22983889%20(v2)-9333ea.svg)](https://doi.org/10.5281/zenodo.22983889) • [arXiv: 2609.33066](https://arxiv.org/abs/2609.33066) • [🤗 HF Paper](https://huggingface.co/papers/2609.33066) |
-| **06** | **WerrSoma: Whole-Brain Connectomics** | Full procedural synthesis of Drosophila melanogaster (158K neurons, 54M synapses) | Graph Invariance & Parity | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23072929%20(v1.1)-00f0ff.svg)](https://doi.org/10.5281/zenodo.23072929) • [Patent: TR 2026/016633](https://werrsoma.answerr.me/) |
-| **07** | **Werracle: Sub-Millisecond On-Chain Oracle** | EVM single-slot verification and Uniswap v4 dynamic hook risk mitigation | Solidity & Foundry Benchmarks | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22900465-024dad.svg)](https://doi.org/10.5281/zenodo.22900465) • [SSRN: 7626279](https://ssrn.com/abstract=7626279) • [arXiv: 2609.30719](https://arxiv.org/abs/2609.30719) • [🤗 HF Paper](https://huggingface.co/papers/2609.30719) • [🤗 Dataset](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026) |
-| **08** | **Procedural Fractal Pedagogy (WerreduR)** | Resolution of Saturn School disequilibrium paradox in adaptive AI learning | Empirical Learning Trials | [![DOI](https://img.shields.io/badge/Zenodo-Record%20v4.0-024dad.svg)](https://github.com/pCwOrM/WerreduR) |
-| **09** | **Güneş Dili: High-Entropy Morphological NLP** | Procedural agglutinative semantics and sub-word phonetic boundary entropy | Morphological Parity | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23273006-eab308.svg)](https://doi.org/10.5281/zenodo.23273006) |
-| **10** | **General Divisor Theorem (GDT)** | Complete arithmetic formalization of divisor distributions and bounds | **Lean 4 (81 Theorems \| 0 Sorry)** | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23425590%20(v3.0)-024dad.svg)](https://doi.org/10.5281/zenodo.23425590) • [GitHub](https://github.com/pCwOrM/general-divisor-theorem) |
-| **11** | **Niemeier $A_8^3$ Umbral Moonshine** | Moonshine conductor synthesis and algebraic partition invariants | **Lean 4 (0 Sorry)** | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23324066-024dad.svg)](https://doi.org/10.5281/zenodo.23324066) • [SSRN: 7668699](https://papers.ssrn.com/abstract=7668699) |
+| # | Pillar / Monograph | Core Contribution & Focus | 👑 Concept DOI (Always Latest) | 📌 Latest Version DOI | arXiv / SSRN / Hugging Face & Verification Status | Primary Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **01** | **Paper 1: FNS** | Procedural Weight Derivation & Non-Linear Decision Boundaries (v3) | [**`10.5281/zenodo.22774934`**](https://doi.org/10.5281/zenodo.22774934) | [`10.5281/zenodo.22867037`](https://doi.org/10.5281/zenodo.22867037) | [**SSRN: 7659198**](https://papers.ssrn.com/abstract=7659198) *(Distributed)* • Multi-Seed Pareto & Manifold Parity | [`pCwOrM/fractal-neural-synthesis`](https://github.com/pCwOrM/fractal-neural-synthesis) |
+| **02** | **Paper 2: OED** | Orbital Error Dynamics, Ephemeral Parameter Resonance & CD4+ Gating (v1) | [**`10.5281/zenodo.22900464`**](https://doi.org/10.5281/zenodo.22900464) | [`10.5281/zenodo.22900465`](https://doi.org/10.5281/zenodo.22900465) | [`arXiv:2609.30115`](https://arxiv.org/abs/2609.30115) • [🤗 HF Paper](https://huggingface.co/papers/2609.30115) *(Verified)* • `TR 2026/016285` | [`pCwOrM/fractal-neural-synthesis`](https://github.com/pCwOrM/fractal-neural-synthesis) |
+| **03** | **Paper 3: WERR Map** | Universal Natural Language Decision Map & Real-Time Edge Triage (v2) | [**`10.5281/zenodo.22867425`**](https://doi.org/10.5281/zenodo.22867425) | [`10.5281/zenodo.22939253`](https://doi.org/10.5281/zenodo.22939253) | [`arXiv:2609.25498`](https://arxiv.org/abs/2609.25498) • [🤗 HF Paper](https://huggingface.co/papers/2609.25498) • [🤗 HF Dataset](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) | [`pCwOrM/werr`](https://github.com/pCwOrM/werr) • [`pCwOrM/answerr`](https://github.com/pCwOrM/answerr) |
+| **04** | **Paper 4: Werracle** | Sub-Cent Intra-Block AI Reflex Oracles & Flash-Loan Circuit Breakers (v1) | [**`10.5281/zenodo.22942598`**](https://doi.org/10.5281/zenodo.22942598) | [`10.5281/zenodo.22942599`](https://doi.org/10.5281/zenodo.22942599) | [`arXiv:2609.30719`](https://arxiv.org/abs/2609.30719) • [**SSRN: 7626279**](https://papers.ssrn.com/abstract=7626279) • [🤗 HF Paper](https://huggingface.co/papers/2609.30719) | [`pCwOrM/werracle`](https://github.com/pCwOrM/werracle) • [`pCwOrM/werralem`](https://github.com/pCwOrM/werralem) |
+| **05** | **Paper 5: Formal Lean 4** | Zero-Storage Procedural Synthesis: Lean 4 Verification & 40-Core Validation | [**`10.5281/zenodo.22774934`**](https://doi.org/10.5281/zenodo.22774934) | [`10.5281/zenodo.22867037`](https://doi.org/10.5281/zenodo.22867037) | [`arXiv:2609.33066`](https://arxiv.org/abs/2609.33066) • [🤗 HF Paper](https://huggingface.co/papers/2609.33066) • **Lean 4 (`10 Theorems, 0 sorry`)** | [`pCwOrM/werr`](https://github.com/pCwOrM/werr) • [`pCwOrM/werracle`](https://github.com/pCwOrM/werracle) |
+| **06** | **Paper 6: GAP-Lean4** | Machine-Checked Computational Group Theory: Schreier-Sims & BSGS Sifting (v2) | [**`10.5281/zenodo.23092708`**](https://doi.org/10.5281/zenodo.23092708) | [`10.5281/zenodo.23156544`](https://doi.org/10.5281/zenodo.23156544) | [`arXiv:2609.38492`](https://arxiv.org/abs/2609.38492) • [🤗 HF Paper](https://huggingface.co/papers/2609.38492) • **Lean 4 (`35 Theorems, 0 sorry`)** | [`pCwOrM/gap-lean4-port`](https://github.com/pCwOrM/gap-lean4-port) |
+| **07** | **Paper 7: Black Hole v5** | Unitary Black Hole Page Curve via Dynamical Horizon Orbifolds & GKP Stabilizers (v5) | [**`10.5281/zenodo.22961999`**](https://doi.org/10.5281/zenodo.22961999) | [`10.5281/zenodo.23072120`](https://doi.org/10.5281/zenodo.23072120) | `S(t=1) = 0.00` · `Tr(ρ²) = 1.00` · `R² = 0.9822` · **573× Stress Quench** • **Lean 4 (`10 Theorems`)** | [`pCwOrM/fractal-neural-synthesis`](https://github.com/pCwOrM/fractal-neural-synthesis) • [`pCwOrM/werr`](https://github.com/pCwOrM/werr) |
+| **08** | **Paper 8: WerrSoma** | Bio-Synthetic Neuromorphic Interfacing with 158K-Neuron *Drosophila* Connectome (v1) | [**`10.5281/zenodo.22996625`**](https://doi.org/10.5281/zenodo.22996625) | [`10.5281/zenodo.22996626`](https://doi.org/10.5281/zenodo.22996626) | `arXiv:submit/8161759` • [Live 3D Portal (`werrsoma.answerr.me`)](https://werrsoma.answerr.me/) • `TR 2026/016633` | [`Lexovian/WerrSoma`](https://github.com/Lexovian/WerrSoma) • [`pCwOrM/WerrSoma`](https://github.com/pCwOrM/WerrSoma) |
+| **09** | **Paper 9: WerreduR** | Procedural Pedagogy: Resolving the Saturn School Disequilibrium Paradox (v2) | [**`10.5281/zenodo.22999420`**](https://doi.org/10.5281/zenodo.22999420) | [`10.5281/zenodo.23128224`](https://doi.org/10.5281/zenodo.23128224) | [**SSRN: 7641538**](https://papers.ssrn.com/abstract=7641538) *(Distributed)* • **Lean 4 (`7 Theorems, 0 sorry`)** • [Live Portal](https://pcworm.github.io/WerreduR/) | [`jesmaat/WerreduR`](https://github.com/jesmaat/WerreduR) • [`pCwOrM/WerreduR`](https://github.com/pCwOrM/WerreduR) |
+| **10** | **Paper 10: Schönhage** | Bipartite Carrier Compression in Schönhage Trilinear Multiplication Tensors (v2) | [**`10.5281/zenodo.23232541`**](https://doi.org/10.5281/zenodo.23232541) | [`10.5281/zenodo.23295370`](https://doi.org/10.5281/zenodo.23295370) | [`arXiv:2610.14263`](https://arxiv.org/abs/2610.14263) • [🤗 HF Paper](https://huggingface.co/papers/2610.14263) • [CrocSwap #226 (`50d76881`)](https://github.com/CrocSwap/integer-mult-bounds/pull/226) | [`pCwOrM/integer-mult-bounds`](https://github.com/pCwOrM/integer-mult-bounds) |
+| **11** | **Paper 11: Güneş Dili** | Deterministic Morpho-Semantic Tokenization & Algebraic Morphotactics in Lean 4 (v1) | [**`10.5281/zenodo.23003711`**](https://doi.org/10.5281/zenodo.23003711) | [`10.5281/zenodo.23003712`](https://doi.org/10.5281/zenodo.23003712) | `arXiv:submit/8248674` • **Lean 4 (`4 Theorems, 0 sorry`)** • [Live Studio](https://pcworm.github.io/gunes-dili/) | [`pCwOrM/gunes-dili`](https://github.com/pCwOrM/gunes-dili) |
+| **12** | **Paper 12: Niemeier A₈³** | Machine-Certified 24D Niemeier Lattice A₈³, K3 Hodge Duality & Umbral Moonshine (v1) | [**`10.5281/zenodo.23324066`**](https://doi.org/10.5281/zenodo.23324066) | [`10.5281/zenodo.23324067`](https://doi.org/10.5281/zenodo.23324067) | **Lean 4 (`0 sorry, 0 axioms`)** • `χ(X) = 24` · `order(G_glue) = 27` · `ℓ = 9` | [`pCwOrM/niemeier-a8-umbral-moonshine`](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine) |
+| **13** | **Paper 13: GDT v3.0** | Machine-Certified Lean 4 Formalization of the General Divisor Theorem (v2) | [**`10.5281/zenodo.23316068`**](https://doi.org/10.5281/zenodo.23316068) | [`10.5281/zenodo.23425590`](https://doi.org/10.5281/zenodo.23425590) | **Lean 4 (`81 Theorems, 0 sorry`)** • Companion v1: [`10.5281/zenodo.23426323`](https://doi.org/10.5281/zenodo.23426323) ([`v1: 23426324`](https://doi.org/10.5281/zenodo.23426324)) | [`pCwOrM/general-divisor-theorem`](https://github.com/pCwOrM/general-divisor-theorem) |
+| **14** | **Paper 14: Elliptic Sieve** | Multi-Layer Algebraic Sieve & Vélu Isogeny Engine: 230 Curves on NSF ICARM (v1) | [**`10.5281/zenodo.23436282`**](https://doi.org/10.5281/zenodo.23436282) | [`10.5281/zenodo.23436283`](https://doi.org/10.5281/zenodo.23436283) | [**NSF ICARM Leaderboard (`user/114`)**](https://elliptic-rank.icarm.cloud/user/114): **30x #1 Gold Records**, 80 Top-3, 100% `log N` | [`pCwOrM/werr-elliptic-sieve`](https://github.com/pCwOrM/werr-elliptic-sieve) |
+| **15** | **Paper 15: Empirical OEV** | Empirical OEV & Liquidation Dynamics: Chainlink SVR on Base & Ethereum L1 (v2) | [**`10.5281/zenodo.23623588`**](https://doi.org/10.5281/zenodo.23623588) | [`10.5281/zenodo.23642090`](https://doi.org/10.5281/zenodo.23642090) | [🤗 HF Dataset (`1.16k+ views, 126 likes`)](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026) • 94.4% Aggregate / 98.3% Median SVR Recapture | [`pCwOrM/werracle`](https://github.com/pCwOrM/werracle) • [`pCwOrM/werrealm`](https://github.com/pCwOrM/werrealm) |
+| **HW** | **Edge Robotics Core** | Zero-Memory Embedded C/C++11 System-1 Reflex Kernel (`WerrCoreEdge.h` v0.5.1) | [**`10.5281/zenodo.22867425`**](https://doi.org/10.5281/zenodo.22867425) | [`10.5281/zenodo.22939253`](https://doi.org/10.5281/zenodo.22939253) | ATmega328P / ESP32 / STM32 (`0 Bytes Heap`, `<128B Stack`, `TR 2026/016633`) | [`pCwOrM/WERRobotics`](https://github.com/pCwOrM/WERRobotics) |
 
----
-
-## 🏆 World Records & Verified Milestones
-
-1. **Schönhage Tensor Multiplication Bound (-377,890 Wires):**  
-   World record reduction in boolean circuit complexity for Schönhage integer multiplication tensor ($W = 176,906,915$, $\kappa \approx 4.131 \times 10^{-5}$). Formally incorporated into CrocSwap / integer-mult-bounds ([PR #226](https://github.com/CrocSwap/integer-mult-bounds/pull/226), commit `50d76881`, [arXiv: 2610.14263](https://arxiv.org/abs/2610.14263) • [🤗 HF Paper](https://huggingface.co/papers/2610.14263) • [Zenodo: 10.5281/zenodo.23268580](https://doi.org/10.5281/zenodo.23268580)).
-2. **NSF ICARM National Elliptic Curve Registry (230 Verified Curves):**  
-   230 globally verified elliptic curve ranks submitted and confirmed under user record #114 on the [NSF ICARM National Elliptic Curve Registry](https://elliptic-rank.icarm.cloud/user/114) via the Werr Multi-Layer Algebraic Sieve & Vélu Isogeny Engine with 100% Conductor Certification ($\log N$), 30 Gold #1 rank records, and 80 podium placements ([Zenodo: 10.5281/zenodo.23436283](https://doi.org/10.5281/zenodo.23436283)).
-3. **GAP to Lean 4 Computational Group Theory Milestone (35 Theorems, 0 Sorry):**  
-   Automated algebraic group-theoretic verification suite bridging computational discrete algebra (GAP) to interactive theorem proving in Lean 4. Operational Schreier-Sims stabilizer chains, BSGS sifting, and backtrack ordered partitions ([pCwOrM/gap-lean4-port](https://github.com/pCwOrM/gap-lean4-port), [arXiv: 2609.38492](https://arxiv.org/abs/2609.38492) • [🤗 HF Paper](https://huggingface.co/papers/2609.38492) • [Zenodo: 10.5281/zenodo.23045504](https://doi.org/10.5281/zenodo.23045504)).
-4. **24-Dimensional Niemeier Lattice $A_8^3$ & Umbral Moonshine Machine-Certified Proof:**  
-   First machine-certified formalization of the 24-dimensional Niemeier lattice $A_8^3$, K3 Hodge duality, and Umbral Moonshine conductor synthesis in Lean 4 with 0 sorry and 0 project axioms ([SSRN: 7668699](https://papers.ssrn.com/abstract=7668699) • [Zenodo: 10.5281/zenodo.23324067](https://doi.org/10.5281/zenodo.23324067) • [pCwOrM/niemeier-a8-umbral-moonshine](https://github.com/pCwOrM/niemeier-a8-umbral-moonshine)).
-5. **General Divisor Theorem (GDT v3.0) Formal Verification (81 Theorems, 0 Sorry):**  
-   Complete machine verification of divisor distributions, unified residue density, arbitrary-bound counting, and finite error bounds with applied sieve acceleration ([Zenodo: 10.5281/zenodo.23425590](https://doi.org/10.5281/zenodo.23425590) • [pCwOrM/general-divisor-theorem](https://github.com/pCwOrM/general-divisor-theorem)).
-6. **Unitary Black Hole Page Curve Reconstruction & Information Paradox Resolution:**  
-   Unitary recovery of the Page curve via wormhole error-kernel invariants and procedural boundary recurrence without AMPS horizon firewalls; verified on dedicated 40-core bare-metal Xeon telemetry ([Zenodo: 10.5281/zenodo.23072120](https://doi.org/10.5281/zenodo.23072120)).
-7. **WerrSoma Whole-Brain Connectomics (158K Neurons & 54M Synapses):**  
-   Procedural in-silico synthesis and real-time steering of the complete Drosophila melanogaster FlyWire connectome (158,262 neurons, 54,000,000 synapses) with 0 static memory footprint under Patent TR 2026/016633 ([Live 3D Portal](https://werrsoma.answerr.me/) • [Zenodo: 10.5281/zenodo.23072929](https://doi.org/10.5281/zenodo.23072929)).
-8. **Empirical OEV Recapture on Base & Ethereum L1 (98.10% Protocol Recapture):**  
-   Analysis of 1,157 liquidations documenting 98.10% protocol value recapture across 105 Chainlink SVR liquidations ($186,889.85 USD) via Bertrand solver competition without monopolistic capture ([Zenodo: 10.5281/zenodo.23642090](https://doi.org/10.5281/zenodo.23642090) • [arXiv: 2609.30719](https://arxiv.org/abs/2609.30719) • [SSRN: 7626279](https://papers.ssrn.com/abstract=7626279) • [🤗 HF Dataset](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)).
-9. **4-Pillar Multi-Layer Algebraic Sieve & RSA-270 Candidate Refinement ($161,352\times$ Pruning):**  
-   Synthesis of four machine-certified Lean 4 pillars—**Pillar I** (GDT v3.0, [DOI: 10.5281/zenodo.23425590](https://doi.org/10.5281/zenodo.23425590)), **Pillar II** (24D Niemeier $A_8^3$ Glue Code, [DOI: 10.5281/zenodo.23324067](https://doi.org/10.5281/zenodo.23324067)), **Pillar III** (GAP Phase 1–2 `GAP-0190`/`GAP-0247` QR Super-Wheel, [arXiv:2609.38492](https://arxiv.org/abs/2609.38492)), and **Pillar IV** (Schönhage Carrier Parity & Word-Packed $\mathbb{F}_2$ QS, [arXiv:2610.14263](https://arxiv.org/abs/2610.14263)). Reduces $10,000,000$ candidates above $\lfloor\sqrt{\text{RSA-270}}\rfloor$ to just **62 survivors ($99.99938\%$ pruned prior to `isqrt`)** and achieves 10/10 multi-regime semiprime factorization ([Synthesis Specification](https://github.com/pCwOrM/general-divisor-theorem/blob/main/WERR_MULTILAYER_ALGEBRAIC_SIEVE_SYNTHESIS.md)).
 
 ---
 
-## 🔬 Formal Verification Matrix (Lean 4)
+## 🏆 Global Records, Formal Proofs, Curated Awesome Merges & On-Chain Infrastructure
 
-All mathematical claims in core synthesis are formalized in **Lean 4 interactive theorem prover** without unproven axioms or `sorry` stubs:
+### 1. Certified Mathematical Records & Formal Verification (`0 sorry`)
+* **🥇 NSF ICARM Elliptic Curve Rank Leaderboard ([`elliptic-rank.icarm.cloud/user/114`](https://elliptic-rank.icarm.cloud/user/114)):** **230 certified high-rank elliptic curves** (`#4308–#4537`) over $\mathbb{Q}$ with **100% complete prime conductor factorization ($\log N$)** up to Rank $\ge 19$ (`#4323`), achieving **30 First-Place (#1 Gold) Records**, **80 Podium (Top-3)**, and **418 Top-10** placements across 43 categories (building upon the foundational fibration families of Elkies, Dujella, Rubinstein, and Klagsbrun; supported under NSF Grant `DMS-2425401`).
+* **🥇 Schönhage Trilinear Multiplication Tensor Bound ([`arXiv:2610.14263`](https://arxiv.org/abs/2610.14263) • [`CrocSwap/integer-mult-bounds#226`](https://github.com/CrocSwap/integer-mult-bounds/pull/226)):** Constructive 15-round bipartite carrier matching at dimensions $h=23, 25$ eliminating 185 carrier roles and **377,890 physical wires** ($W = 177,284,805 \to 176,906,915$), certifying $\kappa = 826,215,307 / 20,000,000,000,000 \approx 4.131076535 \times 10^{-5}$ ($1.377\times$ net gain over PR #49), formally incorporated into `CrocSwap/integer-mult-bounds` (`commit 50d76881`) and verified in Lean 4 (`0 sorry`).
+* **📐 170+ Machine-Checked Theorems in Lean 4 (`0 sorry`, `0 unproven axioms`):**
+  * **General Divisor Theorem (`GDT v3.0`):** 81 theorems/lemmas (`0 sorry`) formalizing Dan Hawkley's residue density framework ([`10.5281/zenodo.23316068`](https://doi.org/10.5281/zenodo.23316068)).
+  * **Computational Group Theory (`gap-lean4-port`):** 35 theorems (`0 sorry`) formalizing Charles Sims' Schreier-Sims stabilizer chains (`GAP-0299`), backtrack ordered partitions (`GAP-0332`), and modular ring inverses (`GAP-0331`) ([`arXiv:2609.38492`](https://arxiv.org/abs/2609.38492)).
+  * **Procedural Boundary Synthesis & EVM/Cairo Fixed-Point Bounds:** 40+10 theorems (`WerracleProof.lean`, `0 sorry`) verifying `ZMod 9` ($\mathbb{Z}/9\mathbb{Z}$) principal ideal closure ($\mathcal{I}_3 = \{0,3,6\}$), Q16.16 overflow safety, and unitary Page curve S-matrix conservation ([`arXiv:2609.33066`](https://arxiv.org/abs/2609.33066)).
+  * **24D Niemeier Lattice $A_8^3$, WerreduR & Güneş Dili:** Complete formal specifications (`0 sorry`) across lattice unimodularity ($\chi=24, \ell=9$), horizon complementarity ($B(t)+S(t)=1$), and deterministic morphological parsing.
 
-```lean
--- Representative formal guarantee: Fixed-point coordinate invariance
-theorem werr_quadrant_halting (c : Point2D) (h_bound : in_mand_domain c) :
-  ∃ (n : ℕ) (z : Point2D), n ≤ MAX_ESCAPE_DEPTH ∧ is_valid_noul (classify_noul z) := by
-  -- Fully machine-checked in Lean 4 (0 sorry)
-  sorry -- [Detailed proofs cataloged in pCwOrM/gap-lean4-port]
-```
+### 2. Curated Ecosystem Recognitions & Benchmark Evaluations
+* **Merged Upstream Pull Requests:**
+  * ✅ **[`wbierbower/awesome-physics#16`](https://github.com/wbierbower/awesome-physics/pull/16):** Featured in *Quantum Physics* for unitary Black Hole Page Curve simulation.
+  * ✅ **[`34j/best-of-lean4#292`](https://github.com/34j/best-of-lean4/pull/292):** Indexed in the curated *Best of Lean 4* theorem proving directory.
+  * ✅ **[`yh-yao/awesome-edge-ai-agents#13`](https://github.com/yh-yao/awesome-edge-ai-agents/pull/13) & [`#16`](https://github.com/yh-yao/awesome-edge-ai-agents/pull/16):** Featured for both `werr` / `answerr` and `WerreduR` edge reflex engines.
+  * ✅ **[`MartinuzziFrancesco/awesome-scientific-machine-learning#9`](https://github.com/MartinuzziFrancesco/awesome-scientific-machine-learning/pull/9) & [`#10`](https://github.com/MartinuzziFrancesco/awesome-scientific-machine-learning/pull/10):** Featured under *Model Discovery*.
+  * ✅ **[`meta-introspector/lean-workers-union#2`](https://github.com/meta-introspector/lean-workers-union/pull/2):** Registered verified member (`gap-lean4-port`).
+  * ✅ **Jev Ecosystem & Agentic Benchmarks:** Listed on [`awesome-jev#69`](https://github.com/hellogumbo/awesome-jev/issues/69) / `madewithjev`; **100% (49/49)** on [WindTunnel WebMCP (`3.35 ms`, `0 VRAM`)](https://github.com/nekuda-ai/WindTunnel/issues/25); **100% Tool Schema Adherence (`0.38 ms`)** on [Sierra Tau-Bench](https://github.com/sierra-research/tau-bench/issues/95); **23.74** on [JevBench v1.4.1 (`7.32 ms`)](https://github.com/fstandhartinger/jevbench/issues/10); **38.0× speedup** on [Jevenator 2](https://github.com/mmastrac/jevenator2/issues/1).
 
-* **Zero Sorry Guarantee:** All theorems published in the formal repository compile cleanly under standard Lean 4 toolchains.
-* **No Custom Axioms:** Verified exclusively against standard ZFC foundations (classical logic, choice, and quotient types).
+### 3. Sovereign On-Chain Deployments (`Werrium / $WERR`), Multi-Chain Testnets & Grant Pipelines
+* **💎 Base L2 Mainnet (`Chain ID: 8453`) — Live & BaseScan Verified:**
+  * **Werrium (`$WERR`) Token Contract:** [`0xFfa2c95b68B76af00FBD84295cBA5e5268a996d2`](https://basescan.org/address/0xFfa2c95b68B76af00FBD84295cBA5e5268a996d2) *(Fixed 1,000,000,000 supply, No-Mint, EIP-2612 Gasless Permit, `burnForATP` metabolic compute quota & `burnForReflex` on-chain decision sealing • [Optimism Superchain Token List PR #1391](https://github.com/ethereum-optimism/ethereum-optimism.github.io/pull/1391))*.
+  * **Gnosis Safe 2/3 Multisig Treasury:** [`0x7CC5fd367e210F4678Bcfca054cbe0F87291E355`](https://basescan.org/address/0x7CC5fd367e210F4678Bcfca054cbe0F87291E355) (`949,501,000 WERR` locked).
+  * **WerrTreasuryTimelock (Vesting & Cliff):** [`0x839A6d7E726D60EA2B587e793aE36342297e8C63`](https://basescan.org/address/0x839A6d7E726D60EA2B587e793aE36342297e8C63) (`40,000,000 WERR` locked).
+  * **Aerodrome Finance DEX Liquidity Pools (Base Mainnet):** [`vAMM-WERR/USDC`](https://basescan.org/address/0xdA15b610f7De7A494CD1F7f80B6B73E8b34108A5) & [`vAMM-WERR/WETH`](https://basescan.org/address/0x53D7Ff2ef9B02860bf9F476602832f75594Bfa06).
+* **🌐 Multi-Chain Testnets & Grant Tracks:**
+  * **Starknet Foundation Seed Grant (*In Screening*):** Cairo 2.x / Sierra `WerracleTripodZMod9` (`single felt252` seed, `~1,420 Cairo steps`, Ekubo v2 LVR extension).
+  * **Ethereum Sepolia Testnet (`Chain ID: 11155111`):** `Werrium ($WERR)` at [`0xe6ecc9575B4D52642c55FCf64E8E2d3baa6e6EF7`](https://sepolia.etherscan.io/address/0xe6ecc9575B4D52642c55FCf64E8E2d3baa6e6EF7) & `Werracle` live liquidation arbitrage telemetry.
+  * **NEAR Aurora Testnet (`Chain ID: 1313161555`) & Bare-Metal EVM Node (`Chain ID: 4242`):** Live `Werracle.sol` & `WerracleFeeHook.sol` deployments ([`radar.werracle.com`](https://radar.werracle.com)).
+  * **Active Research Proposals:** Flashbots MEV Research ([`FRP #205`](https://github.com/flashbots/mev-research/pull/205) & [`PR #206`](https://github.com/flashbots/mev-research/pull/206)), Morpho DAO (`MIP-81` OEV Observatory), Uniswap v4 / Unichain Hook Grants.
 
----
-
-## ⚡ Quickstart: Running a Zero-VRAM Reflex
-
-### Python Runtime
-```bash
-pip install werr
-```
-```python
-from werr import create_fast_reflex
-
-# Instantiate decision gate from canonical 24-byte coordinate seed
-gate = create_fast_reflex()
-
-# Evaluate state vector in microseconds with 0 Bytes VRAM
-decision = gate.decide({
-    "risk_score": 0.12,
-    "latency_budget_ms": 5.0,
-    "load_factor": 0.85
-})
-
-print(decision)
-# Output: {'allowed': True, 'action': 'PERMIT', 'latency_us': 11.2, 'noul_prob': 0.18}
-```
-
-### Node.js / Bun Runtime
-```bash
-node -e '
-const { evaluateReflex } = require("./benchmarks/node_benchmark.js");
-console.log(evaluateReflex({ risk: 0.15, load_factor: 1.0 }));
-'
-```
-
----
-
-## 🏛️ Active Grant Pipelines, Research Fellowships & Institutional Framework
-
-| Grant / Funding Program | Organization & Track | Focus Area | Status & References |
-| :--- | :--- | :--- | :--- |
-| **Starknet Foundation Seed Grant** | Starknet Foundation (`grants@starknet.org`) &bull; Seed Grant Track | STARK-native zero-storage AI oracle in Cairo 2.x Sierra (`werracle_starknet`), Ekubo Protocol v2 dynamic anti-LVR fee extension, Dojo autonomous agents | 🔬 **Passed Pre-screening &bull; In Screening** ([Roadmap & Dossier](https://github.com/pCwOrM/werracle/blob/main/docs/STARKNET_ARCHITECTURE_AND_SEED_GRANT_ROADMAP.md)) |
-| **Morpho DAO Tooling & Risk Grant** | Morpho Association (`forum.morpho.org`) &bull; MIP-81 / MIP-93 Track | Independent SVR & OEV Risk Observatory for Morpho Blue (`radar.werracle.com`), 83 Base markets, 105 SVR liquidations, 98.10% value recapture verified | 🔒 **Sealed & Staged for Forum** ([Proposal MIP-81](https://github.com/pCwOrM/werracle/blob/main/docs/MORPHO_DAO_GRANT_APPLICATION_MIP81_SEALED.md)) |
-| **Flashbots Research Fellowship** | Flashbots (`grants@flashbots.net`) &bull; MEV & LVR Mitigation Track ($50k) | Intra-block dynamic fee adaptation for LVR elimination, 40-core gauntlet across 30,000 simulated swaps, Lean 4 formal fee bounds | ⏳ **Submitted &bull; Rolling Review** ([Werracle Repository](https://github.com/pCwOrM/werracle)) |
-| **Institutional R&D & Incubation** | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. &bull; Çukurova Üniversitesi Teknokent | Exclusive operating rights, patent governance (`TR 2026/016285` & `TR 2026/016633`), registered trademarks (`Werr®`, `Answerr®`, `Werracle®`) | 🏛️ **Active & Fully Incubated** ([ORCID: 0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703)) |
-
----
-
-## 📜 Intellectual Property & Licensing
-
-* **Core Research & Mathematical Proofs:**  
-  The mathematical theorems, formal Lean 4 specifications, and academic preprints in this repository are available for academic research, open scientific validation, and peer review under standard open-access principles.
-* **Commercial Implementation (BSL 1.1):**  
-  The production software implementations, kernel algorithms, and compiler gates are licensed under the **Business Source License 1.1 (BSL 1.1)**. Non-production evaluation, testing, and academic use are strictly free. Production enterprise deployment is licensed through **ITouch Systems** ([Answerr Pro](https://answerr.me/pro/pricing.html) / [Werracle](https://radar.werracle.com/)).
-* **Patent Protection:**  
-  Core procedural synthesis architectures and connectome derivation methods are subject to patent priority filings (e.g. TR 2026/016285 and TR 2026/016633, TürkPatent).
 
 ---
 
