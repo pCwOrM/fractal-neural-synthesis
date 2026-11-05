@@ -1,11 +1,11 @@
 # Elsevier SSRN Yayın Başvuru & Kayıt Rehberi (SSRN Submission Package)
 ## Empirical OEV & Liquidation Dynamics: Protocol Value Recapture in Chainlink SVR and Structural Centralization on Ethereum L1
 
-> **🎉 BAŞVURU TAMAMLANDI & TESCİLLENDİ!**  
-> **SSRN Abstract ID:** [7668638](https://papers.ssrn.com/abstract=7668638)  
-> **SSRN Yayın Linki:** [https://papers.ssrn.com/abstract=7668638](https://papers.ssrn.com/abstract=7668638)  
-> **Lisans:** Creative Commons Attribution (CC-BY 4.0)  
-> **Tarih:** 25 Ekim 2026
+> [!NOTE]
+> **BAŞVURU DURUMU (GÜNCEL):**  
+> **SSRN Abstract ID:** 7668638 (Başvuru yapıldı: 25.10.2026, Ön İnceleme: 30.10.2026 `REMOVED - Out of scope / submission type criteria`, İtiraz/Açıklama İletildi: 01.11.2026).  
+> **Strateji:** Şimdilik yayın **yalnızca CERN Zenodo (`10.5281/zenodo.23623588` / `23642090`)** ve Hugging Face üzerinde aktiftir. Araya başka tam teşekküllü akademik yayınlar alındıktan sonra, bu çalışma 8–10 sayfalık klasik working paper formatına genişletilerek SSRN'e yeniden sunulacaktır.
+
 
 **Belge Kimliği:** `WERRACLE-RES-2026-001-REV2`  
 **Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
