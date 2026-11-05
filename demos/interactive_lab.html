@@ -3,11 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fraktal Nöron: Matematikten Zihin Çıkarmak | Halk Laboratuvarı</title>
-  <meta name="description" content="Fraktal Sinirsel Sentez interaktif halk laboratuvarı. Geleneksel yapay zeka ile prosedürel fraktal karar motoru arasındaki farkları doğrudan tarayıcınızda deneyimleyin.">
+  <!-- Primary SEO & Metadata -->
+  <title>Fraktal Beyin Laboratuvarı · FNS — Sıfır Ağırlıklı Yapay Zeka Canlı Deney Alanı</title>
+  <meta name="description" content="Fraktal Sinirsel Sentez (FNS) interaktif halk laboratuvarı. Geleneksel derin öğrenme modelleri ile 24 baytlık sıfır ağırlıklı prosedürel karar motoru arasındaki farkları tarayıcınızda canlı deneyimleyin.">
+  <meta name="keywords" content="Fraktal Beyin Laboratuvarı, Fraktal Nöron, FNS İnteraktif Lab, Sıfır Ağırlıklı Yapay Zeka, Polinom Kaçış Dinamikleri">
+  <meta name="author" content="Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı — ITouch Systems">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://pcworm.github.io/fractal-neural-synthesis/demos/interactive_lab.html">
 
-  <!-- Favicon & Icons -->
+  <!-- Open Graph / WhatsApp / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/demos/interactive_lab.html">
+  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS) · WERR">
+  <meta property="og:title" content="🔬 Fraktal Beyin Laboratuvarı (FNS) — 24 Baytlık Tohumdan Canlı Karar Sentezi">
+  <meta property="og:description" content="Sıfır ağırlıklı prosedürel yapay zeka (0-Byte VRAM) ile geleneksel derin öğrenme modellerini Akıllı Kapı, Banka Kasası ve Yangın Alarmı senaryolarında canlı test edin.">
+  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:secure_url" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="🔬 Fraktal Beyin Laboratuvarı (FNS) — 24 Baytlık Tohumdan Canlı Karar Sentezi">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pcworm">
+  <meta name="twitter:creator" content="@pcworm">
+  <meta name="twitter:url" content="https://pcworm.github.io/fractal-neural-synthesis/demos/interactive_lab.html">
+  <meta name="twitter:title" content="🔬 Fraktal Beyin Laboratuvarı | Sıfır Ağırlıklı Prosedürel Yapay Zeka">
+  <meta name="twitter:description" content="24 baytlık matematiksel tohumdan sıfır bellekle canlı yapay nöron karar sentezi laboratuvarı.">
+  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta name="twitter:image:alt" content="🔬 Fraktal Beyin Laboratuvarı (FNS) — 24 Baytlık Tohumdan Canlı Karar Sentezi">
+<!-- Favicon & Icons -->
   <link rel="icon" type="image/svg+xml" href="../assets/fns_logo_nav.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
@@ -15,22 +43,7 @@
   <link rel="shortcut icon" href="../favicon.ico">
   <meta name="theme-color" content="#06080e">
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/demos/interactive_lab.html">
-  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS)">
-  <meta property="og:title" content="Fraktal Nöron: İnteraktif Halk Laboratuvarı">
-  <meta property="og:description" content="Sıfır ağırlıklı prosedürel yapay zeka ile geleneksel derin öğrenme modellerini canlı test edin.">
-  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
-
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@pcworm">
-  <meta name="twitter:title" content="Fraktal Nöron: Canlı Halk Laboratuvarı">
-  <meta name="twitter:description" content="0-Ağırlıklı fraktal sinirsel sentez canlı deney alanı.">
-  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
-  
-  <style>
+<style>
     /* ☀️ Açık Tema (Varsayılan) */
     :root {
       --bg-page: #f8fafc;

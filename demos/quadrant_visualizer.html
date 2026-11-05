@@ -3,11 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>128x128 4-Quadrant Fraktal Nöron Deney Laboratuvarı</title>
-  <meta name="description" content="128x128 4-kuadranlı fraktal nöron karar uzayı görselleştirici ve interaktif telemetri haritası.">
+  <!-- Primary SEO & Metadata -->
+  <title>128×128 4-Quadrant Visualizer · FNS — Prosedürel Karar Yüzeyi &amp; Telemetri Labı</title>
+  <meta name="description" content="128×128 4-kuadranlı polinom kaçış karar uzayı görselleştirici, prosedürel sinaptik ağırlık (w1, w2, bias) türetimi ve gerçek zamanlı doğruluk tablosu telemetri laboratuvarı.">
+  <meta name="keywords" content="4-Quadrant Visualizer, 128x128 Fractal Neuron, Procedural Weight Derivation, Polynomial Escape Surface, FNS Telemetry">
+  <meta name="author" content="Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı — ITouch Systems">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://pcworm.github.io/fractal-neural-synthesis/demos/quadrant_visualizer.html">
 
-  <!-- Favicon & Icons -->
+  <!-- Open Graph / WhatsApp / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/demos/quadrant_visualizer.html">
+  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS) · WERR">
+  <meta property="og:title" content="🎛️ 128×128 4-Quadrant Fraktal Nöron — Prosedürel Sinaptik Ağırlık &amp; Eşik Sentezi">
+  <meta property="og:description" content="Polinom kaçış yüzeylerinden (128×128) prosedürel sinaptik ağırlık, eşik (bias) ve mantık kapısı (OR, AND, NAND, NOR) sentezi simülasyonu.">
+  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:secure_url" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="🎛️ 128×128 4-Quadrant Fraktal Nöron — Prosedürel Sinaptik Ağırlık &amp; Eşik Sentezi">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pcworm">
+  <meta name="twitter:creator" content="@pcworm">
+  <meta name="twitter:url" content="https://pcworm.github.io/fractal-neural-synthesis/demos/quadrant_visualizer.html">
+  <meta name="twitter:title" content="🎛️ 128×128 4-Quadrant Visualizer | FNS Procedural Decision Surface Lab">
+  <meta name="twitter:description" content="128×128 4-kuadranlı prosedürel karar yüzeyleri ve gerçek zamanlı sinaptik ağırlık telemetrisi.">
+  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta name="twitter:image:alt" content="🎛️ 128×128 4-Quadrant Fraktal Nöron — Prosedürel Sinaptik Ağırlık &amp; Eşik Sentezi">
+<!-- Favicon & Icons -->
   <link rel="icon" type="image/svg+xml" href="../assets/fns_logo_nav.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
@@ -15,21 +43,7 @@
   <link rel="shortcut icon" href="../favicon.ico">
   <meta name="theme-color" content="#06080e">
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/demos/quadrant_visualizer.html">
-  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS)">
-  <meta property="og:title" content="128x128 4-Quadrant Fraktal Nöron Görselleştirici">
-  <meta property="og:description" content="Fraktal karar yüzeyleri ve kuadran kutuplaşma simülasyonu.">
-  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
-
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@pcworm">
-  <meta name="twitter:title" content="128x128 4-Quadrant Fraktal Nöron Görselleştirici">
-  <meta name="twitter:description" content="Fraktal karar yüzeyleri ve kuadran kutuplaşma simülasyonu.">
-  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
-  <style>
+<style>
     /* =========================================================
        THEME VARIABLES
        ========================================================= */

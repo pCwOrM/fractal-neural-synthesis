@@ -5,11 +5,54 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Zero-VRAM Gauntlet | Fractal Neural Synthesis (FNS) &amp; WERR Benchmarks</title>
-  <meta name="description" content="The unchallengeable benchmark wall: Zero-VRAM, 24-byte fractal seed, sub-2ms deterministic System-1 decision supremacy across WindTunnel WebMCP, JevBench, Tau-Bench, and Gymnasium RL.">
+  <!-- Primary SEO & Metadata -->
+  <title>The Zero-VRAM Gauntlet · FNS &amp; WERR Benchmarks — 0-Byte VRAM vs LLM &amp; RL</title>
+  <meta name="description" content="The unchallengeable benchmark wall: Zero-VRAM, 24-byte coordinate seed, sub-2ms deterministic System-1 decision supremacy across WindTunnel WebMCP, JevBench, Tau-Bench, and Gymnasium RL.">
+  <meta name="keywords" content="Zero-VRAM Gauntlet, FNS Benchmarks, WERR Benchmarks, WindTunnel WebMCP, JevBench, Tau-Bench, Gymnasium RL, 0-Byte VRAM AI, Polynomial Escape Dynamics">
+  <meta name="author" content="Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı — ITouch Systems">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html">
-  
-  <!-- Favicon & Icons -->
+
+  <!-- Open Graph / WhatsApp / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html">
+  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS) · WERR">
+  <meta property="og:title" content="⚔️ The Zero-VRAM Gauntlet — FNS &amp; WERR 0.04ms Deterministic Supremacy Benchmarks">
+  <meta property="og:description" content="0 Bytes VRAM, 24-byte coordinate seed, sub-2ms deterministic System-1 decision supremacy across WindTunnel WebMCP (0.04ms), JevBench (231/231), Tau-Bench, and Gymnasium RL.">
+  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:secure_url" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="⚔️ The Zero-VRAM Gauntlet — FNS &amp; WERR 0.04ms Deterministic Supremacy Benchmarks">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="tr_TR">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pcworm">
+  <meta name="twitter:creator" content="@pcworm">
+  <meta name="twitter:url" content="https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html">
+  <meta name="twitter:title" content="⚔️ The Zero-VRAM Gauntlet | FNS &amp; WERR Deterministic AI Benchmarks">
+  <meta name="twitter:description" content="Zero-VRAM, 24-byte coordinate seed, sub-2ms System-1 reflex benchmarks vs LLMs and RL agents via Polynomial Escape Dynamics.">
+  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
+  <meta name="twitter:image:alt" content="⚔️ The Zero-VRAM Gauntlet — FNS &amp; WERR 0.04ms Deterministic Supremacy Benchmarks">
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "The Zero-VRAM Gauntlet — FNS & WERR Benchmark Suite",
+    "description": "Empirical benchmark telemetry comparing 0-Byte VRAM procedural reflex models (24-byte seed, 0.04ms latency) against LLM and RL baselines across WindTunnel WebMCP, JevBench, Tau-Bench, and Gymnasium.",
+    "url": "https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html",
+    "creator": {
+      "@type": "Organization",
+      "name": "ITouch Systems · Fractal Neural Synthesis"
+    },
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+<!-- Favicon & Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/fns_logo_nav.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -18,26 +61,7 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#07090e">
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pcworm.github.io/fractal-neural-synthesis/benchmarks.html">
-  <meta property="og:site_name" content="Fractal Neural Synthesis (FNS)">
-  <meta property="og:title" content="The Zero-VRAM Gauntlet | FNS &amp; WERR Benchmarks">
-  <meta property="og:description" content="Zero-VRAM, 24-byte fractal seed, sub-2ms deterministic System-1 decision supremacy across WindTunnel WebMCP, JevBench, Tau-Bench, and Gymnasium RL.">
-  <meta property="og:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Zero-VRAM Gauntlet Benchmark Wall">
-
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@pcworm">
-  <meta name="twitter:creator" content="@pcworm">
-  <meta name="twitter:title" content="The Zero-VRAM Gauntlet | FNS Deterministic Supremacy">
-  <meta name="twitter:description" content="Zero-VRAM, 24-byte fractal seed, sub-2ms System-1 reflex benchmarks vs LLMs and RL agents.">
-  <meta name="twitter:image" content="https://pcworm.github.io/fractal-neural-synthesis/assets/og-image.png">
-
-  <style>
+<style>
     :root {
       --bg-page: #07090e;
       --bg-card: #0e131f;
@@ -1547,6 +1571,7 @@ const setTxt = (id, val) => { const el = document.getElementById(id); if (el && 
     setTxt('sec4Desc', t.sec4Desc);
     setTxt('sec5Title', t.sec5Title);
     document.getElementById('sec5Desc').innerHTML = t.sec5Desc;
+    document.title = lang === 'tr' ? 'Sıfır-VRAM Meydan Okuması (The Gauntlet) · FNS & WERR Kıyaslamaları' : 'The Zero-VRAM Gauntlet · FNS & WERR Benchmarks — 0-Byte VRAM vs LLM & RL';
     localStorage.setItem('gauntlet_lang', lang);
   }
 
