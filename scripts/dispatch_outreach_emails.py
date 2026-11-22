@@ -49,7 +49,7 @@ Dr. Zerrin Dagli (Academic Advisor, Mersin University)
 Daghan Dagli (Student Researcher, Toros University / Toros Science High School)
 and the ITouch Systems Core Engineering Team
 
-ITouch Systems (Çukurova Teknokent, Adana / Turkey)
+ITouch Systems (Çukurova Üniversitesi Teknokent, Adana / Turkey)
 ORCID: 0009-0000-1587-8703
 Direct Email: ask@answerr.me / pcworm@pcworm.net
 Observatory: https://radar.werracle.com
@@ -88,7 +88,7 @@ Dr. Zerrin Dagli (Academic Advisor, Mersin University)
 Daghan Dagli (Student Researcher, Toros University / Toros Science High School)
 and the ITouch Systems Core Engineering Team
 
-ITouch Systems (Çukurova Teknokent, Adana / Turkey)
+ITouch Systems (Çukurova Üniversitesi Teknokent, Adana / Turkey)
 Direct Email: ask@answerr.me / pcworm@pcworm.net
 https://werracle.com | https://radar.werracle.com
 """
@@ -120,7 +120,7 @@ Dr. Zerrin Dagli (Academic Advisor, Mersin University)
 Daghan Dagli (Student Researcher, Toros University / Toros Science High School)
 and the ITouch Systems Core Engineering Team
 
-ITouch Systems (Çukurova Teknokent, Adana / Turkey)
+ITouch Systems (Çukurova Üniversitesi Teknokent, Adana / Turkey)
 Direct Email: ask@answerr.me / pcworm@pcworm.net
 https://werracle.com | https://radar.werracle.com
 """

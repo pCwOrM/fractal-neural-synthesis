@@ -5,7 +5,7 @@
 **Date Sealed:** October 23, 2026  
 **Status:** SEALED & ARCHIVED FOR SCHEDULED SUBMISSION  
 **Applicant:** ITouch Systems / Werracle Research & Security Desk  
-**Contact:** `pcworm@pcworm.net` | Adana Çukurova Teknokent, Turkey  
+**Contact:** `pcworm@pcworm.net` | Adana Cukurova University Technopark, Turkey  
 
 ---
 

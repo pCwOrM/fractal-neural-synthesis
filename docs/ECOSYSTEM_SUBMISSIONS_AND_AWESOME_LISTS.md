@@ -175,7 +175,7 @@ GitHub: https://github.com/pCwOrM/werr
 
 Sincerely,
 Volkan Dağlı
-ITouch Systems / Çukurova Teknokent
+ITouch Systems / Cukurova University Technopark
 Contact: ask@answerr.me / vdagli@itouch.com.tr
 ```
 

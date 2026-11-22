@@ -97,7 +97,7 @@ Explore the procedural fractal neural synthesis paradigm directly inside your we
 ## 👥 Authors & Affiliations
 
 * **Volkan Dağlı** *(Corresponding Author)*  
-  Anadolu University, Eskişehir, Turkey & ITouch Systems, Çukurova Teknokent, Mersin, Turkey &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
+  Anadolu University, Eskişehir, Turkey & ITouch Systems, Cukurova University Technopark, Mersin, Turkey &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
 * **Dr. Zerrin Dağlı**  
   Mersin University, Mersin, Turkey &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
@@ -636,7 +636,7 @@ This research into Zero-Storage Fractal Neural Synthesis and Orbital Error Dynam
 | Channel / Platform | Network | Receiving Address |
 | :--- | :--- | :--- |
 | **Official Wallet (Binance)** | TRC20 (TRON) | `TLMhaDJTVYBHBSGJ9nCQGLvqnYFPSBgLJu` |
-| **Official Corporate Entity** | Teknokent | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. (Çukurova Teknokent) |
+| **Official Corporate Entity** | Teknokent | ITOUCH BİLİŞİM SİSTEMLERİ LTD. ŞTİ. (Cukurova University Technopark) |
 
 * **Official Contacts:** `ask@answerr.me` (Official Inquiries & AI Agent) | `info@itouch.com.tr` (Corporate) | Web: `https://answerr.me`
 

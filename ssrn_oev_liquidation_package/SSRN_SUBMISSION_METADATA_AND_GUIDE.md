@@ -9,7 +9,7 @@
 
 **Belge Kimliği:** `WERRACLE-RES-2026-001-REV2`  
 **Yazarlar:** Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı  
-**Altyapı Sponsoru:** Bekirhan Dağlı (ITouch Systems, Adana Çukurova Teknokent)  
+**Altyapı Sponsoru:** Bekirhan Dağlı (ITouch Systems, Adana Cukurova University Technopark)  
 **CERN Zenodo DOI:** [`10.5281/zenodo.23623588`](https://doi.org/10.5281/zenodo.23623588) (Kayıt No: `23623589`)  
 **Hugging Face Veri Seti:** [`pCwOrM/werracle-oev-liquidation-dataset-2026`](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
 **Canlı Gözlemevi:** [https://radar.werracle.com](https://radar.werracle.com) | [https://werracle.io/radar.html](https://werracle.io/radar.html)

@@ -105,7 +105,7 @@ It accompanies the academic research monograph:
 - **Volkan Dağlı** (Anadolu University & ITouch Systems Research Desk, ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703))
 - **Zerrin Dağlı** (Mersin University & Yusuf Kalkavan Anadolu Lisesi, ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425))
 - **Dağhan Dağlı** (Toros Science High School, MEV / Toros University, ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313))
-- **Contributor / Infrastructure Attribution:** Bekirhan Dağlı (ITouch Systems, Adana Çukurova Teknokent)
+- **Contributor / Infrastructure Attribution:** Bekirhan Dağlı (ITouch Systems, Adana Çukurova Üniversitesi Teknokent)
 
 ---
 

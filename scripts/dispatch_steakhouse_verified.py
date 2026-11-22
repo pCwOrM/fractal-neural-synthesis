@@ -26,7 +26,7 @@ Authors:
 - Volkan Dağlı (Co-Founder & CTO, ITouch Systems & Anadolu University; ORCID: 0009-0000-1587-8703)
 - Dr. Zerrin Dağlı (Academic Advisor, Mersin University; ORCID: 0000-0001-9490-6425)
 - Dağhan Dağlı (Student Researcher, Toros University / Toros Science High School; ORCID: 0009-0003-2492-8313)
-Infrastructure: ITouch Systems Engineering Team (Çukurova Teknokent)
+Infrastructure: ITouch Systems Engineering Team (Çukurova Üniversitesi Teknokent)
 
 Key Vault Stress Telemetry:
 - Monitored Exposure: 38 verified active Morpho markets ($2.20B total debt), filtering out 45 uncollateralized or zero-liquidity spam markets.

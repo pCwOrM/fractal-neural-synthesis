@@ -12,7 +12,7 @@
 
 ````markdown
 **Authors:** Volkan Dağlı, Dr. Zerrin Dağlı, Dağhan Dağlı  
-**Engineering & Infrastructure:** ITouch Systems · Cukurova University Science Park ([werracle.com](https://werracle.com) · [werracle.io](https://werracle.io))  
+**Engineering & Infrastructure:** ITouch Systems · Cukurova University Technopark ([werracle.com](https://werracle.com) · [werracle.io](https://werracle.io))  
 **Paper and data (open, CC BY 4.0):** [https://doi.org/10.5281/zenodo.23642090](https://doi.org/10.5281/zenodo.23642090) · [https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026](https://huggingface.co/datasets/pCwOrM/werracle-oev-liquidation-dataset-2026)  
 **Live Interactive Radar & API:** [https://radar.werracle.com](https://radar.werracle.com) · [https://radar.werracle.com/docs](https://radar.werracle.com/docs)
 

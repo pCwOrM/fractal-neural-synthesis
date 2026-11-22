@@ -30,7 +30,7 @@ Authors:
 - Volkan Dagli (Co-Founder & CTO, ITouch Systems & Anadolu University; ORCID: 0009-0000-1587-8703)
 - Dr. Zerrin Dagli (Academic Advisor, Mersin University; ORCID: 0000-0001-9490-6425)
 - Daghan Dagli (Student Researcher, Toros University / Toros Science High School; ORCID: 0009-0003-2492-8313)
-Infrastructure & Attribution: ITouch Systems Engineering Team (Cukurova Teknokent)
+Infrastructure & Attribution: ITouch Systems Engineering Team (Cukurova University Technopark)
 
 Summary of Empirical Findings:
 1. Base L2 (Chainlink SVR & Atlas): Across 105 multi-call verified SVR liquidation transactions ($190,506.31 gross value), competitive solver bidding redirected $186,889.85 (98.10%) directly back to lending protocols and depositors as bids.
@@ -66,7 +66,7 @@ Authors:
 - Volkan Dagli (Co-Founder & CTO, ITouch Systems & Anadolu University; ORCID: 0009-0000-1587-8703)
 - Dr. Zerrin Dagli (Academic Advisor, Mersin University; ORCID: 0000-0001-9490-6425)
 - Daghan Dagli (Student Researcher, Toros University / Toros Science High School; ORCID: 0009-0003-2492-8313)
-Infrastructure & Attribution: ITouch Systems Engineering Team (Cukurova Teknokent)
+Infrastructure & Attribution: ITouch Systems Engineering Team (Cukurova University Technopark)
 
 Key Research Highlights:
 1. Base L2 SVR Bidding: 105 multi-call SVR liquidations totaling $190,506.31 gross value demonstrated a 98.10% protocol bid recapture rate ($186,889.85), compressing solver margins to a median of -1.55%.
@@ -102,7 +102,7 @@ Authors:
 - Volkan Dagli (Co-Founder & CTO, ITouch Systems & Anadolu University; ORCID: 0009-0000-1587-8703)
 - Dr. Zerrin Dagli (Academic Advisor, Mersin University; ORCID: 0000-0001-9490-6425)
 - Daghan Dagli (Student Researcher, Toros University / Toros Science High School; ORCID: 0009-0003-2492-8313)
-Infrastructure & Attribution: ITouch Systems Engineering Team (Cukurova Teknokent)
+Infrastructure & Attribution: ITouch Systems Engineering Team (Cukurova University Technopark)
 
 Key Vault Stress Telemetry:
 - Monitored Exposure: 38 verified active Morpho markets ($2.20B total debt), filtering out 45 uncollateralized or zero-liquidity spam markets.

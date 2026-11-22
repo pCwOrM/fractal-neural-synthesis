@@ -56,7 +56,7 @@ flowchart LR
 ## 👥 Authors & Affiliations
 
 * **Volkan Dağlı** *(Corresponding Author & Primary Architect)*  
-  Anadolu University, Eskişehir, Türkiye & ITouch Systems, Cukurova University Science Park, Adana/Mersin, Türkiye  
+  Anadolu University, Eskişehir, Türkiye & ITouch Systems, Cukurova University Technopark, Adana/Mersin, Türkiye  
   ORCID: [`0009-0000-1587-8703`](https://orcid.org/0009-0000-1587-8703) • GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
 * **Dağhan Dağlı** *(Co-Author: Neuromorphic Connectomics & Formal Proofs)*  
@@ -170,5 +170,5 @@ All monographs, formal Lean 4 specifications, and empirical datasets across the 
 
 ---
 
-*© 2026 ITouch Bilişim Sistemleri Ltd. Şti. · Cukurova University Science Park · Mersin / Adana, Türkiye.*  
+*© 2026 ITouch Bilişim Sistemleri Ltd. Şti. · Cukurova University Technopark · Mersin / Adana, Türkiye.*  
 *Institutional Inquiries: `ask@answerr.me` • Research Desk: `contact@werracle.com`*

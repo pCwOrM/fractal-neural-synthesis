@@ -2,7 +2,7 @@
 Werracle & Werr Technology — Official Commercial Invoice PDF Generator
 Issued by: ITOUCH BİLİŞİM SİSTEMLERİ MÜHENDİSLİK DANIŞMANLIK SANAYİ VE TİCARET LİMİTED ŞİRKETİ
 Tax Office: Yüreğir V.D. | Tax ID (VKN): 4690944558 | MERSİS: 0469094455800001
-Address: Balcalı Mah. Güney Kampüs/5 Sk. No: 4/1 İç Kapı No: 26 (Çukurova Teknokent), 01330 Sarıçam / Adana, Türkiye
+Address: Balcalı Mah. Güney Kampüs/5 Sk. No: 4/1 İç Kapı No: 26 (Cukurova University Technopark), 01330 Sarıçam / Adana, Türkiye
 Bank: TEB (Türk Ekonomi Bankası A.Ş.) — Adana Toros Şubesi (446) | SWIFT: TEBUTRIS
   • TRY IBAN: TR920003200000000070575465
   • USD IBAN: TR830003200000000088946748
@@ -148,7 +148,7 @@ def generate_commercial_invoice_pdf(payment: Dict[str, Any]) -> bytes:
     seller_lines = [
         "Operating Brand: Werracle® & Werr® & Answerr® (ITouch Systems)",
         "Address: Balcalı Mah. Güney Kampüs/5 Sk. No: 4/1 İç Kapı No: 26",
-        "Çukurova Teknokent, 01330 Sarıçam / Adana, Türkiye",
+        "Cukurova University Technopark, 01330 Sarıçam / Adana, Türkiye",
         "Tax Office & ID (VKN): Yüreğir V.D. — 4690944558  |  MERSİS: 0469094455800001",
         "KEP: itouchbilisim@hs01.kep.tr  |  Tel: +90 850 311 52 03",
         "Web: https://werracle.com • https://werr.io • https://answerr.me",

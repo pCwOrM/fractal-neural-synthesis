@@ -617,7 +617,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="card" style="padding: 16px 20px;">
         <div class="card-title"><span style="color:#38bdf8;">●</span> Tax Advantage: 100% Export Exemption</div>
         <div class="card-desc">
-          Headquartered in Cukurova University Science Park: Software exports to foreign institutions qualify for <strong>100% Corporate Tax exemption</strong> (Pres. Decree 11257).
+          Headquartered in Cukurova University Technopark: Software exports to foreign institutions qualify for <strong>100% Corporate Tax exemption</strong> (Pres. Decree 11257).
         </div>
       </div>
     </div>
@@ -823,7 +823,7 @@ html_content = f"""<!DOCTYPE html>
   </div>
   <div class="content">
     <h1 class="slide-title">Executive Leadership, Engineering Force & Academic Rigor</h1>
-    <h2 class="slide-sub">Operated commercially by ITouch Bilişim Sistemleri Ltd. Şti. (Cukurova University Science Park) alongside an independent academic research layer.</h2>
+    <h2 class="slide-sub">Operated commercially by ITouch Bilişim Sistemleri Ltd. Şti. (Cukurova University Technopark) alongside an independent academic research layer.</h2>
     <div class="grid-3" style="margin-bottom: 22px;">
       <div class="card card-highlight">
         <div class="card-title">Leadership & Partners</div>
@@ -856,7 +856,7 @@ html_content = f"""<!DOCTYPE html>
     </div>
     <div class="grid-3">
       <div class="card" style="padding: 16px;">
-        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Cukurova University Science Park</div>
+        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">Cukurova University Technopark</div>
         <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">ITouch Systems R&D HQ.</div>
       </div>
       <div class="card" style="padding: 16px;">

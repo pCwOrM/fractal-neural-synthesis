@@ -224,7 +224,7 @@ def build_pdf(filename):
         "<sup>3</sup>Mersin University, Mersin, Türkiye (ORCID: 0000-0001-9490-6425) &nbsp;&nbsp; "
         "<sup>4</sup>Yusuf Kalkavan Anadolu Lisesi, Mersin, Türkiye<br/>"
         "<sup>5</sup>Toros Science High School, MEV (Toros University), Mersin, Türkiye (ORCID: 0009-0003-2492-8313)<br/>"
-        "<b>Infrastructure & Contributor Attribution:</b> Bekirhan Dağlı (ITouch Systems, Adana Çukurova Teknokent, Türkiye)"
+        "<b>Infrastructure & Contributor Attribution:</b> Bekirhan Dağlı (ITouch Systems, Adana Çukurova Üniversitesi Teknokent, Türkiye)"
     )
     story.append(Paragraph(affils_text, affil_style))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#cbd5e1"), spaceAfter=5))
@@ -407,7 +407,7 @@ def build_pdf(filename):
     # Acknowledgments
     story.append(Spacer(1, 4))
     story.append(HRFlowable(width="100%", thickness=0.5, color=colors.HexColor("#cbd5e1"), spaceAfter=4))
-    story.append(Paragraph("<b>Acknowledgments & Infrastructure Support:</b> High-throughput Bare-metal execution nodes, archival RPC connections, and 24/7 autonomous monitoring daemons were sponsored and maintained by <b>Bekirhan Dağlı</b> (Managing Partner) and <b>ITouch Systems Research & Development Desk</b> (Adana Çukurova Teknokent, Türkiye).", affil_style))
+    story.append(Paragraph("<b>Acknowledgments & Infrastructure Support:</b> High-throughput Bare-metal execution nodes, archival RPC connections, and 24/7 autonomous monitoring daemons were sponsored and maintained by <b>Bekirhan Dağlı</b> (Managing Partner) and <b>ITouch Systems Research & Development Desk</b> (Adana Çukurova Üniversitesi Teknokent, Türkiye).", affil_style))
 
     doc.build(story, canvasmaker=NumberedCanvas)
     print(f"Successfully built camera-ready PDF: {filename}")

@@ -26,7 +26,7 @@ Authors:
 - Volkan Dağlı (Co-Founder & CTO, ITouch Systems & Anadolu University; ORCID: 0009-0000-1587-8703)
 - Dr. Zerrin Dağlı (Academic Advisor, Mersin University; ORCID: 0000-0001-9490-6425)
 - Dağhan Dağlı (Student Researcher, Toros University / Toros Science High School; ORCID: 0009-0003-2492-8313)
-Infrastructure: ITouch Systems Engineering Team (Çukurova Teknokent)
+Infrastructure: ITouch Systems Engineering Team (Çukurova Üniversitesi Teknokent)
 
 Summary of Empirical Findings:
 1. Base L2 (Chainlink SVR & Atlas): Across 105 multi-call verified SVR liquidation transactions ($190,506.31 gross value), competitive solver bidding redirected $186,889.85 (98.10%) directly back to lending protocols and depositors as bids.

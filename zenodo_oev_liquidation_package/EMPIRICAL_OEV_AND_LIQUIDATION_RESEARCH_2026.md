@@ -5,7 +5,7 @@
 - **Zerrin Dağlı** (Mersin University & Yusuf Kalkavan Anadolu Lisesi, ORCID: `0000-0001-9490-6425`)  
 - **Dağhan Dağlı** (Toros Science High School, MEV / Toros University, ORCID: `0009-0003-2492-8313`)  
 
-**Infrastructure & Contributor Attribution:** Bekirhan Dağlı (ITouch Systems, Adana Çukurova Teknokent)  
+**Infrastructure & Contributor Attribution:** Bekirhan Dağlı (ITouch Systems, Adana Cukurova University Technopark)  
 **Publication Date:** October 24, 2026  
 **Document ID:** `WERRACLE-RES-2026-001-REV2`  
 **Permanent DOI:** [https://doi.org/10.5281/zenodo.23623588](https://doi.org/10.5281/zenodo.23623588) (Zenodo Archive: [https://zenodo.org/records/23623589](https://zenodo.org/records/23623589))  

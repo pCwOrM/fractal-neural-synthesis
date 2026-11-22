@@ -20,7 +20,7 @@ ax.text(5.5, 93.2, "ITOUCH SYSTEMS | RESMI DUYURU & AR-GE BILDIRISI",
         ha='left', va='center', color='#ffc857', fontsize=11, weight='bold', fontfamily='sans-serif')
 ax.text(5.5, 88.5, "Werracle: EVM Icin Sifir Depolamali Yapay Zeka Kahini ve OEV Risk Radar",
         ha='left', va='center', color='#ffffff', fontsize=15, weight='bold', fontfamily='sans-serif')
-ax.text(94.5, 90.8, "Adana Cukurova Teknokent\narXiv: 2609.30719",
+ax.text(94.5, 90.8, "Adana Cukurova University Technopark\narXiv: 2609.30719",
         ha='right', va='center', color='#9fe8ff', fontsize=10, weight='semibold', fontfamily='monospace')
 
 # 2. Left Column: Brand Emblem & Core Concept
@@ -112,7 +112,7 @@ ax.add_patch(footer_box)
 
 ax.text(5.5, 5.2, "ITOUCH SYSTEMS BILISIM VE ILETISIM SAN. TIC. LTD. STI.",
         ha='left', va='center', color='#ffffff', fontsize=9.5, weight='bold', fontfamily='sans-serif')
-ax.text(5.5, 3.2, "Cukurova Teknokent, Saricam / Adana | itouch.com.tr | werracle.com | werr.io",
+ax.text(5.5, 3.2, "Cukurova University Technopark, Saricam / Adana | itouch.com.tr | werracle.com | werr.io",
         ha='left', va='center', color='#a7a2cf', fontsize=8.5, fontfamily='sans-serif')
 ax.text(94.5, 4.2, "GitHub: pCwOrM/werracle | Lean 4 | EVM | Base L2 | Arbitrum",
         ha='right', va='center', color='#7cf5c4', fontsize=9, weight='semibold', fontfamily='monospace')

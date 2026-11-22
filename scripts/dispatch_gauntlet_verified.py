@@ -26,7 +26,7 @@ Authors:
 - Volkan Dağlı (Co-Founder & CTO, ITouch Systems & Anadolu University; ORCID: 0009-0000-1587-8703)
 - Dr. Zerrin Dağlı (Academic Advisor, Mersin University; ORCID: 0000-0001-9490-6425)
 - Dağhan Dağlı (Student Researcher, Toros University / Toros Science High School; ORCID: 0009-0003-2492-8313)
-Infrastructure: ITouch Systems Engineering Team (Çukurova Teknokent)
+Infrastructure: ITouch Systems Engineering Team (Çukurova Üniversitesi Teknokent)
 
 Key Research Highlights:
 1. Base L2 SVR Bidding: 105 multi-call SVR liquidations totaling $190,506.31 gross value demonstrated a 98.10% protocol bid recapture rate ($186,889.85), compressing solver margins to a median of -1.55%.

@@ -133,6 +133,6 @@ Bu dinamikleri canlı izlemek için Werracle Radar'ı kurduk:
 📜 Zenodo: https://doi.org/10.5281/zenodo.22942598
 📑 Makale: arXiv:2609.30719 & SSRN: 7626279
 
-@base üzerinde Çukurova Teknokent, Mersin & Toros Üniv. ortaklığıyla geliştirildi. [5/5]
+@base üzerinde Cukurova University Technopark, Mersin & Toros Üniv. ortaklığıyla geliştirildi. [5/5]
 ```
 **Karakter sayısı:** 258 / 280 ✅ PASS

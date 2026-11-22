@@ -710,7 +710,7 @@ def init_iyzico_card_checkout(tier: str, billing: Dict[str, Any], client_ip: str
     legal_name = (billing.get("company") or billing.get("legal_name") or "").strip()
     contact_name = (billing.get("contact_name") or legal_name).strip()
     tax_id = (billing.get("tax_id") or "11111111111").strip()
-    address = (billing.get("address") or "Çukurova Teknokent").strip()
+    address = (billing.get("address") or "Cukurova University Technopark").strip()
     city = (billing.get("city") or "Adana").strip()
     country = (billing.get("country") or "Türkiye").strip()
     phone = "".join(ch for ch in (billing.get("phone") or "+908503115203") if ch.isdigit() or ch == "+")

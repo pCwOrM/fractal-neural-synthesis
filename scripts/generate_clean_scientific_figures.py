@@ -296,60 +296,60 @@ def generate_fig4():
 # FIGURE 5: DUAL-BRAIN CYBERNETICS & ADAPTIVE CD4+ IMMUNE GATING
 # ==============================================================================
 def generate_fig5():
-    fig, ax = plt.subplots(figsize=(10, 5.5), dpi=300)
+    fig, ax = plt.subplots(figsize=(11.2, 5.8), dpi=300)
     ax.set_xlim(0, 10)
     ax.set_ylim(0, 6)
     ax.axis('off')
     
-    # 1. Central / Cranial Brain Block
-    cranial_box = patches.FancyBboxPatch((0.6, 3.2), 3.2, 2.2, boxstyle="round,pad=0.2", 
+    # 1. Central / Cranial Brain Block (x: 0.35..3.75 with pad=0.2)
+    cranial_box = patches.FancyBboxPatch((0.55, 3.2), 3.0, 2.2, boxstyle="round,pad=0.2", 
                                         fc="#ebf5fb", ec="#2980b9", lw=2)
     ax.add_patch(cranial_box)
-    ax.text(2.2, 5.0, "CENTRAL / CRANIAL BRAIN", ha='center', fontsize=11, fontweight='bold', color='#1b4f72')
-    ax.text(2.2, 4.4, "Seed Parameter: $\\Theta = (c_x, c_y, \\zeta)$\n" +
-                      "Memory Footprint: $O(1) = 24$ Bytes\n" +
-                      "Dynamics: Mandelbrot Sampler", ha='center', fontsize=9.2, color='#2c3e50')
-    ax.text(2.2, 3.6, "Perturbed Jump: $\\Omega_{\\mathrm{tunneling}}$", ha='center', fontsize=9, fontweight='bold', color='#8e44ad')
+    ax.text(2.05, 5.05, "CENTRAL / CRANIAL BRAIN", ha='center', fontsize=10.5, fontweight='bold', color='#1b4f72')
+    ax.text(2.05, 4.4, "Seed Parameter: $\\Theta = (c_x, c_y, \\zeta)$\n" +
+                       "Memory Footprint: $O(1) = 24$ Bytes\n" +
+                       "Dynamics: Mandelbrot Sampler", ha='center', fontsize=9.0, color='#2c3e50')
+    ax.text(2.05, 3.55, "Perturbed Jump: $\\Omega_{\\mathrm{tunneling}}$", ha='center', fontsize=8.8, fontweight='bold', color='#8e44ad')
 
-    # 2. Enteric / Visceral Brain Block
-    enteric_box = patches.FancyBboxPatch((6.2, 3.2), 3.2, 2.2, boxstyle="round,pad=0.2", 
+    # 2. Enteric / Visceral Brain Block (x: 6.25..9.65 with pad=0.2)
+    enteric_box = patches.FancyBboxPatch((6.45, 3.2), 3.0, 2.2, boxstyle="round,pad=0.2", 
                                         fc="#fef9e7", ec="#f39c12", lw=2)
     ax.add_patch(enteric_box)
-    ax.text(7.8, 5.0, "ENTERIC / VISCERAL BRAIN", ha='center', fontsize=11, fontweight='bold', color='#7d6608')
-    ax.text(7.8, 4.4, "Real-Time Sensory Input $X_{visc}$\n" +
-                      "Local Fast Adaptation: $\\nabla_W \\mathcal{L}_{task}$\n" +
-                      "High-Frequency Environmental Stream", ha='center', fontsize=9.2, color='#2c3e50')
-    ax.text(7.8, 3.6, "Dynamic Error Flow: $\\mathcal{L}_{task}$", ha='center', fontsize=9, fontweight='bold', color='#d35400')
+    ax.text(7.95, 5.05, "ENTERIC / VISCERAL BRAIN", ha='center', fontsize=10.5, fontweight='bold', color='#7d6608')
+    ax.text(7.95, 4.4, "Real-Time Sensory Input $X_{visc}$\n" +
+                       "Local Fast Adaptation: $\\nabla_W \\mathcal{L}_{task}$\n" +
+                       "High-Frequency Environmental Stream", ha='center', fontsize=9.0, color='#2c3e50')
+    ax.text(7.95, 3.55, "Dynamic Error Flow: $\\mathcal{L}_{task}$", ha='center', fontsize=8.8, fontweight='bold', color='#d35400')
 
-    # 3. Operational Weight Synthesis Arrow
-    ax.annotate("", xy=(6.2, 4.5), xytext=(3.8, 4.5),
+    # 3. Operational Weight Synthesis Arrow (cleanly inside x: 3.78..6.22)
+    ax.annotate("", xy=(6.22, 4.35), xytext=(3.78, 4.35),
                 arrowprops=dict(arrowstyle="->", color='#2980b9', lw=2.5))
-    ax.text(5.0, 4.75, "Operational Weight Projection\n" + r"$W_t = \Phi(\Theta_t) \in \mathbb{R}^4$", 
-            ha='center', fontsize=9.5, fontweight='bold', color='#1b4f72')
+    ax.text(5.0, 4.55, "Operational Weight\nProjection\n" + r"$W_t = \Phi(\Theta_t) \in \mathbb{R}^4$", 
+            ha='center', va='bottom', fontsize=9.0, fontweight='bold', color='#1b4f72', linespacing=1.25)
 
     # 4. CD4+ Adaptive Immune Gating Filter Block (Bottom Middle)
-    cd4_box = patches.FancyBboxPatch((3.4, 0.6), 3.2, 1.8, boxstyle="round,pad=0.2", 
+    cd4_box = patches.FancyBboxPatch((3.4, 0.55), 3.2, 1.8, boxstyle="round,pad=0.2", 
                                     fc="#fdf2e9", ec="#c0392b", lw=2)
     ax.add_patch(cd4_box)
-    ax.text(5.0, 2.05, "ADAPTIVE CD4+ IMMUNE GATING", ha='center', fontsize=10.5, fontweight='bold', color='#922b21')
-    ax.text(5.0, 1.4, r"Mask: $M_{CD4} = \sigma(-\alpha(\|\nabla\| - \tau))$" + "\n" +
-                      "Adversarial / Toxin Attenuation\n" +
-                      "Biological Vagus Filter", ha='center', fontsize=9, color='#641e16')
+    ax.text(5.0, 2.0, "ADAPTIVE CD4+ IMMUNE GATING", ha='center', fontsize=10.2, fontweight='bold', color='#922b21')
+    ax.text(5.0, 1.35, r"Mask: $M_{CD4} = \sigma(-\alpha(\|\nabla\| - \tau))$" + "\n" +
+                       "Adversarial / Toxin Attenuation\n" +
+                       "Biological Vagus Filter", ha='center', fontsize=8.8, color='#641e16')
 
     # 5. Feedback Paths (Vagus Nerve Loop)
     # Down from Enteric to CD4+
-    ax.annotate("", xy=(6.6, 1.5), xytext=(7.8, 3.2),
+    ax.annotate("", xy=(6.82, 1.45), xytext=(7.95, 2.98),
                 arrowprops=dict(arrowstyle="->", color='#c0392b', lw=2, linestyle='--'))
-    ax.text(7.7, 2.2, "Raw Visceral\nGradient $\\nabla_{visc}$", ha='center', fontsize=8.5, color='#922b21')
+    ax.text(7.65, 2.15, "Raw Visceral\nGradient $\\nabla_{visc}$", ha='left', va='center', fontsize=8.5, color='#922b21')
 
     # From CD4+ back to Cranial Brain
-    ax.annotate("", xy=(2.2, 3.2), xytext=(3.4, 1.5),
+    ax.annotate("", xy=(2.05, 2.98), xytext=(3.18, 1.45),
                 arrowprops=dict(arrowstyle="->", color='#27ae60', lw=2.5))
-    ax.text(2.3, 2.1, "Shielded Homeostatic\nModulation $\\Delta\\Theta$", ha='center', fontsize=8.8, fontweight='bold', color='#196f3d')
+    ax.text(2.35, 2.15, "Shielded Homeostatic\nModulation $\\Delta\\Theta$", ha='right', va='center', fontsize=8.6, fontweight='bold', color='#196f3d')
 
     ax.set_title("Figure 5: Cybernetic Dual-Brain Architecture & Adaptive Immune Filter Flow\n" + 
                  "(Coupling O(1) Central Parameter Manifolds with High-Frequency Shielded Visceral Adaptation)",
-                 fontsize=12, fontweight='bold', pad=14, color='#1a252f')
+                 fontsize=11.5, fontweight='bold', pad=12, color='#1a252f')
                  
     save_fig(fig, "fig5_dual_brain_cybernetics.png")
 

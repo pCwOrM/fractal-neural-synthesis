@@ -163,7 +163,7 @@ for c in cards:
 
 # Footer bar across bottom
 draw.line((30, 608, 1170, 608), fill="#1f1c48", width=1)
-draw.text((35, 614), "ITOUCH SYSTEMS BILISIM VE ILETISIM SAN. TIC. LTD. STI. • Çukurova Teknokent, Adana", fill="#6b7280", font=font_tag)
+draw.text((35, 614), "ITOUCH SYSTEMS BILISIM VE ILETISIM SAN. TIC. LTD. STI. • Çukurova Üniversitesi Teknokent, Adana", fill="#6b7280", font=font_tag)
 draw.text((1165, 614), "Open Infrastructure • Verified Metrics • Production Ready", fill="#10b981", font=font_tag, anchor="ra")
 
 out_file = "itouch_linkedin_werracle_clean_en.png"
