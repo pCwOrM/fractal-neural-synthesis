@@ -24,6 +24,28 @@
 [![Awesome Edge AI](https://img.shields.io/badge/Awesome-Edge%20AI%20Agents-blue.svg)](https://github.com/yh-yao/awesome-edge-ai-agents)
 [![Lean Workers Union](https://img.shields.io/badge/Lean%20Worker-Gokujo%20Proof--Gate%20(0%20Sorry)-brightgreen.svg)](https://github.com/pCwOrM/gap-lean4-port)
 
+<p align="center">
+  <img src="assets/demo.gif" alt="Fractal Neural Synthesis Live Demo" width="820" />
+</p>
+
+## ⚡ 30-Second Quick Start
+
+```bash
+git clone https://github.com/pCwOrM/fractal-neural-synthesis.git && cd fractal-neural-synthesis
+python src/xor_composite_network.py
+python -m pytest tests -q
+```
+
+**Observed Output:**
+```text
+128x128 FRAKTAL NÖRAL AĞ İLE TAM (%100) XOR ÇÖZÜMÜ
+  - Nöron 1 (OR)   : cx=-0.055780, cy=0.806329, zoom=110.1x
+  - Nöron 2 (NAND) : cx=-0.740191, cy=0.174654, zoom=3417.7x
+  - Nöron 3 (AND)  : cx=-0.144732, cy=0.758854, zoom=4.5x
+Girdi: (0, 0) -> Hedef: 0 | Tahmin: 0 [BAŞARILI]
+3 passed in 4.69s
+```
+
 ---
 
 ## 🏛️ Executive Summary: The Non-Tensor Paradigm
