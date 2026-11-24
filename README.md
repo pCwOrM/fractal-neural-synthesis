@@ -56,15 +56,15 @@ flowchart LR
 ## 👥 Authors & Institutional Governance
 
 ### 🎓 Academic Authorship & Research Affiliations
-* **Volkan Dağlı** *(Corresponding Author, Lead Architect & IP Representative)*  
+* **Volkan Dagli** *(Corresponding Author, Lead Architect & IP Representative)*  
   Anadolu University, Eskişehir, Türkiye  
   ORCID: [`0009-0000-1587-8703`](https://orcid.org/0009-0000-1587-8703) • GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
-* **Dr. Zerrin Dağlı** *(Co-Author: Procedural Pedagogy & Computational Learning Dynamics)*  
+* **Dr. Zerrin Dagli** *(Co-Author: Procedural Pedagogy & Computational Learning Dynamics)*  
   Mersin University, Mersin, Türkiye  
   ORCID: [`0000-0001-9490-6425`](https://orcid.org/0000-0001-9490-6425)
 
-* **Dağhan Dağlı** *(Co-Author: Neuromorphic Connectomics & Formal Proofs)*  
+* **Daghan Dagli** *(Co-Author: Neuromorphic Connectomics & Formal Proofs)*  
   Toros University, Mersin, Türkiye  
   ORCID: [`0009-0003-2492-8313`](https://orcid.org/0009-0003-2492-8313) • GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
@@ -72,11 +72,11 @@ flowchart LR
 
 ### 🏛️ Corporate, Governance & Intellectual Property Structure
 1. **Invention & Academic Ownership Layer:** All foundational theories, algorithms, preprints, and patents (`TÜRKPATENT TR 2026/016285`, `TR 2026/016633` & `TR 2026/020266`) are registered as personal joint inventions and academic works of the authors.
-2. **IP Administration & Power of Attorney:** Co-authors and co-inventors formally vest full power of attorney, representation, and intellectual property administration in Lead Inventor **Volkan Dağlı**.
-3. **Exclusive Commercial Licensing & Operation:** By formal authorization of Volkan Dağlı, all worldwide enterprise licensing, commercialization, and operational rights are exclusively granted to **ITouch Systems** (*ITouch Bilişim Sistemleri Ltd. Şti.*, Cukurova University Technopark / Çukurova Üniversitesi Teknokent, Adana/Mersin, Türkiye).
+2. **IP Administration & Power of Attorney:** Co-authors and co-inventors formally vest full power of attorney, representation, and intellectual property administration in Lead Inventor **Volkan Dagli**.
+3. **Exclusive Commercial Licensing & Operation:** By formal authorization of Volkan Dagli, all worldwide enterprise licensing, commercialization, and operational rights are exclusively granted to **ITouch Systems** (*ITouch Bilişim Sistemleri Ltd. Şti.*, Cukurova University Technopark / Çukurova Üniversitesi Teknokent, Adana/Mersin, Türkiye).
 4. **Corporate Leadership:**
-   * **Volkan Dağlı** — Partner & Chief Technology Officer (CTO)
-   * **Bekirhan Dağlı** — Managing Partner & Chief Executive Officer (CEO)
+   * **Volkan Dagli** — Partner & Chief Technology Officer (CTO)
+   * **Bekirhan Dagli** — Managing Partner & Chief Executive Officer (CEO)
    * Registered Trademarks: **Werr®**, **Answerr®**, **Werracle®** are exclusive properties of ITouch Bilişim Sistemleri Ltd. Şti.
 
 ---
