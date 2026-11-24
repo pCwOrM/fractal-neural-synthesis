@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" modified="2026-11-24T06:05:00.000Z" agent="WERR-Paper1-v4" version="24.7.17" type="device">
+  <diagram id="fns-v4-arch" name="FNS v4.0 End-to-End Architecture">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Banner -->
+        <mxCell id="title" value="Fractal Neural Synthesis (FNS) — End-to-End Procedural Weight Derivation &amp; Verification Pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontStyle=1;fontSize=15;fontColor=#1B263B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="80" y="10" width="1120" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Stage 1: Persistent O(1) Flash Seed -->
+        <mxCell id="s1_group" value="1. O(1) Persistent Seed (Flash ROM)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#EBF5FB;strokeColor=#2874A6;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#1B4F72;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="210" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_seed" value="Coordinate Seed Tuple&#xa;Θ = (c_x, c_y, log10 z)&#xa;3 × IEEE-754 Float64&#xa;= 24 Bytes (192 bits)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2874A6;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="95" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_rec" value="Multi-Layer Recurrence&#xa;Θ_ℓ = Θ_0 + ℓ·Δδ (mod Ω)&#xa;48 Bytes Total for L Layers&#xa;0-Byte Hidden Tensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9F9;strokeColor=#5D6D7E;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="35" y="205" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_es" value="Backprop-Free Search&#xa;Coordinate / Low-Rank ES&#xa;(EGGROLL-Inspired)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#B7950B;strokeWidth=1.5;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="305" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Stage 2: Complex Quadratic Boundary Kernel -->
+        <mxCell id="s2_group" value="2. Procedural Boundary Kernel" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#F4ECF7;strokeColor=#7D3C98;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#4A235A;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="260" y="55" width="220" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_eq" value="Complex Quadratic Map&#xa;z_{n+1} = z_n^2 + c,  z_0 = 0&#xa;Escape Criterion: |z_n| &gt; 2.0&#xa;Cutoff: M_max = 70" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7D3C98;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="95" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_prop" value="Bifurcation Horizon ∂M&#xa;• Hausdorff Dim = 2 (Shishikura)&#xa;• Scale-Free across 10^0–10^8&#xa;• Smooth Potential ν(c) ∈ [0,1]&#xa;• Zero Lookup Tables (LUT-Free)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A569BD;strokeWidth=1;align=left;spacingLeft=8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="275" y="205" width="190" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_lean" value="Formal Verification Gate&#xa;Lean 4 Machine-Checked Bounds&#xa;0 sorry / 0 custom axioms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F8F5;strokeColor=#148F77;strokeWidth=1.5;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="325" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Stage 3: Four Geometric Apertures -->
+        <mxCell id="s3_group" value="3. Four Geometric Sampling Apertures" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#FEF5E7;strokeColor=#CA6F1E;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#7E5109;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="510" y="55" width="230" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_a1" value="(A) Cartesian Quadtree (2^p × 2^p)&#xa;Baseline spatial sub-tile blocks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CA6F1E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="525" y="95" width="200" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_a2" value="(B) 3×3 Rule-of-Thirds Nodal Grid&#xa;Z/9Z modular residue indexing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CA6F1E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="525" y="165" width="200" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_a3" value="(C) Golden-Ratio (φ) Fibonacci Spiral&#xa;Irrational angle 2π/φ² decorrelation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CA6F1E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="525" y="235" width="200" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_a4" value="(D) Multi-Scale Harmonic Tripod&#xa;{0.60, 1.00, 1.60} zoom cascade" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E7;strokeColor=#BA4A00;strokeWidth=1.8;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="525" y="305" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Stage 4: Ephemeral SRAM & Dual Readout -->
+        <mxCell id="s4_group" value="4. Boot-Time SRAM &amp; Inference" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#EAFAF1;strokeColor=#1E8449;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#145A32;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="770" y="55" width="225" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_sram" value="Volatile SRAM Scratchpad&#xa;W ∈ R^{d×H}, b ∈ R^H&#xa;Synthesized Once at Boot&#xa;(Standardized: 0 Extra Bytes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E8449;strokeWidth=1.5;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="785" y="95" width="195" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_m1" value="Mode I: 0-Byte Readout&#xa;Fully Procedural Gates &amp; Reflexes&#xa;(24–72 B Total Persistent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#239B56;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="785" y="198" width="195" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_m2" value="Mode II: Compact Ridge Readout&#xa;FP32 or INT8 Quantized Head&#xa;Sub-10 μs SRAM Forward Pass" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#239B56;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="785" y="290" width="195" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- Stage 5: Verified Deployment Stack -->
+        <mxCell id="s5_group" value="5. Verified Deployment Targets" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#F2F4F4;strokeColor=#34495E;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#1B263B;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="55" width="230" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_d1" value="TinyML / Edge Microcontrollers&#xa;STM32 Cortex-M4 (&lt;1 μW SRAM ret.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="95" width="200" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_d2" value="Multi-Core NUMA Bare-Metal&#xa;40-Core Gauntlet Verification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="165" width="200" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_d3" value="Deterministic On-Chain Reflexes&#xa;EVM Intra-Block Circuit Breakers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="235" width="200" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_d4" value="Hybrid System-1 / System-2 AI&#xa;Deterministic Guardrails &amp; Memory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="305" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Bottom Capacity Note -->
+        <mxCell id="footer" value="Information-Theoretic Scope: Bounded Kolmogorov Complexity K(W) ≤ 192 + O(1) bits per seed — optimal for deterministic System-1 decision boundaries &amp; O(1)-Flash edge controllers, complementary to high-entropy System-2 LLMs." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#ABB2B9;strokeWidth=1;fontSize=10;fontStyle=2;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="20" y="425" width="1235" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;strokeColor=#2874A6;endArrow=block;endFill=1;" edge="1" parent="1" source="s1_group" target="s2_group"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;strokeColor=#7D3C98;endArrow=block;endFill=1;" edge="1" parent="1" source="s2_group" target="s3_group"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;strokeColor=#CA6F1E;endArrow=block;endFill=1;" edge="1" parent="1" source="s3_group" target="s4_group"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;strokeColor=#1E8449;endArrow=block;endFill=1;" edge="1" parent="1" source="s4_group" target="s5_group"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

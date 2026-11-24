@@ -1,0 +1,64 @@
+% arXiv Preprint Wrapper for Fractal Neural Synthesis (FNS)
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=18mm,bottom=19mm,left=17mm,right=17mm,columnsep=6mm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\graphicspath{{../figures/}{./figures/}{./}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black,
+    pdftitle={Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics},
+    pdfauthor={Volkan Dagli, Zerrin Dagli, Daghan Dagli}
+}
+
+\title{\textbf{\Large Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics}}
+
+\author{
+    \textbf{Volkan Da\u{g}l\i}\textsuperscript{1,2,*}\quad
+    \textbf{Zerrin Da\u{g}l\i}\textsuperscript{3,4}\quad
+    \textbf{Da\u{g}han Da\u{g}l\i}\textsuperscript{5} \\[5pt]
+    \footnotesize\textsuperscript{1}\textit{Anadolu University, Eski\c{s}ehir, T\"{u}rkiye} \;\textbullet\;
+    \textsuperscript{2}\textit{ITouch Systems, Cukurova University Technopark, Adana, T\"{u}rkiye} \\
+    \footnotesize\textsuperscript{3}\textit{Mersin University, Mersin, T\"{u}rkiye} \;\textbullet\;
+    \textsuperscript{4}\textit{Yusuf Kalkavan Anatolian High School, Ministry of National Education, Mersin, T\"{u}rkiye} \\
+    \footnotesize\textsuperscript{5}\textit{Toros Science High School, MEV (Toros University), Mersin, T\"{u}rkiye} \\[3pt]
+    \footnotesize ORCID: V.~Da\u{g}l\i\ 0009-0000-1587-8703 \;\textbullet\;
+    Z.~Da\u{g}l\i\ 0000-0001-9490-6425 \;\textbullet\;
+    D.~Da\u{g}l\i\ 0009-0003-2492-8313 \\
+    \footnotesize\textsuperscript{*}Corresponding author: \texttt{ask@answerr.me} \;\textbullet\;
+    Code \& Data Archive: \url{https://doi.org/10.5281/zenodo.22774934}
+}
+
+\date{November 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Conventional neural networks store synaptic parameters as explicit tensors whose persistent Flash footprint scales linearly ($O(W)$) with parameter count, constraining resource-limited edge microcontrollers. We formulate and systematically evaluate \textbf{Fractal Neural Synthesis (FNS)}, a procedural weight derivation architecture that replaces hidden-layer matrices with a constant $24\text{-byte}$ coordinate seed $\Theta = (c_x, c_y, \ell) \in \mathbb{F}_{64}^3$ anchored near the complex quadratic bifurcation boundary $\partial\mathcal{M}$ of $f_c(z)=z^2+c$. We introduce a large-bailout ($R=256$) smooth escape kernel, four zero-overhead geometric sampling apertures---Cartesian Grid, coprime $3\times 3$ Rule-of-Thirds ($\mathbb{Z}/9\mathbb{Z}$), $\phi$-Vogel spiral, and multi-scale Harmonic Tripod---and prove conditional Kolmogorov ($K_{\mathrm{Kolm}} \le 192+c_0$ bits) and Shannon entropy bounds. Across magnifications $\zeta\in[10^0,10^8]$, $C^1$ Fourier and lattice-noise bases collapse to post-standardization rank $\approx 2.25$ and SHA-256 PRNG exhibits avalanche discontinuity ($\rho\approx 0.019$, $50.6\%$ micro-step retention), whereas $\partial\mathcal{M}$ uniquely sustains both rank ($\approx 10.0$) and local continuity ($\rho\in[0.81,0.97]$, $89.2\%$ retention). Under leak-free 10-fold CV across four zero-scaler-byte non-linear benchmarks, FNS with an INT8 readout surpasses $0\text{-hidden}$ Linear-INT8 by $+3.6$ to $+10.8$ pp while delivering $10.7\times$--$129\times$ total Flash reduction ($725\times$--$2{,}773\times$ hidden reduction) relative to converged Float32 MLPs ($90.30\%$ Ionosphere in $285\text{ B}$; $97.22\%$ Optical Digits in $2{,}598\text{ B}$; $97.90\%$ PenDigits in $2{,}598\text{ B}$; $87.00\%$ Satimage in $1{,}570\text{ B}$).
+\end{abstract}
+
+\vspace{0.15cm}
+\noindent\textbf{Keywords:} Fractal Neural Synthesis, Procedural Weight Generation, Complex Quadratic Boundary Dynamics, TinyML, Model Compression, Random Features, Evolution Strategies.
+
+\input{body}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

@@ -53,19 +53,31 @@ flowchart LR
 
 ---
 
-## 👥 Authors & Affiliations
+## 👥 Authors & Institutional Governance
 
-* **Volkan Dağlı** *(Corresponding Author & Primary Architect)*  
-  Anadolu University, Eskişehir, Türkiye & ITouch Systems, Cukurova University Technopark, Adana/Mersin, Türkiye  
+### 🎓 Academic Authorship & Research Affiliations
+* **Volkan Dağlı** *(Corresponding Author, Lead Architect & IP Representative)*  
+  Anadolu University, Eskişehir, Türkiye  
   ORCID: [`0009-0000-1587-8703`](https://orcid.org/0009-0000-1587-8703) • GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
+
+* **Dr. Zerrin Dağlı** *(Co-Author: Procedural Pedagogy & Computational Learning Dynamics)*  
+  Mersin University, Mersin, Türkiye  
+  ORCID: [`0000-0001-9490-6425`](https://orcid.org/0000-0001-9490-6425)
 
 * **Dağhan Dağlı** *(Co-Author: Neuromorphic Connectomics & Formal Proofs)*  
   Toros University, Mersin, Türkiye  
   ORCID: [`0009-0003-2492-8313`](https://orcid.org/0009-0003-2492-8313) • GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
-* **Dr. Zerrin Dağlı** *(Co-Author: Procedural Pedagogy & Computational Learning Dynamics)*  
-  Mersin University, Mersin, Türkiye  
-  ORCID: [`0000-0001-9490-6425`](https://orcid.org/0000-0001-9490-6425)
+---
+
+### 🏛️ Corporate, Governance & Intellectual Property Structure
+1. **Invention & Academic Ownership Layer:** All foundational theories, algorithms, preprints, and patents (`TÜRKPATENT TR 2026/016285`, `TR 2026/016633` & `TR 2026/020266`) are registered as personal joint inventions and academic works of the authors.
+2. **IP Administration & Power of Attorney:** Co-authors and co-inventors formally vest full power of attorney, representation, and intellectual property administration in Lead Inventor **Volkan Dağlı**.
+3. **Exclusive Commercial Licensing & Operation:** By formal authorization of Volkan Dağlı, all worldwide enterprise licensing, commercialization, and operational rights are exclusively granted to **ITouch Systems** (*ITouch Bilişim Sistemleri Ltd. Şti.*, Cukurova University Technopark / Çukurova Üniversitesi Teknokent, Adana/Mersin, Türkiye).
+4. **Corporate Leadership:**
+   * **Volkan Dağlı** — Partner & Chief Technology Officer (CTO)
+   * **Bekirhan Dağlı** — Managing Partner & Chief Executive Officer (CEO)
+   * Registered Trademarks: **Werr®**, **Answerr®**, **Werracle®** are exclusive properties of ITouch Bilişim Sistemleri Ltd. Şti.
 
 ---
 
@@ -98,7 +110,7 @@ All monographs, formal Lean 4 specifications, and empirical datasets across the 
 
 | # | Pillar / Monograph | Core Contribution & Focus | 👑 Concept DOI (Always Latest) | 📌 Latest Version DOI | arXiv / SSRN / Hugging Face & Verification Status | Primary Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Paper 1: FNS** | Procedural Weight Derivation & Non-Linear Decision Boundaries (v3) | [**`10.5281/zenodo.22774934`**](https://doi.org/10.5281/zenodo.22774934) | [`10.5281/zenodo.22867037`](https://doi.org/10.5281/zenodo.22867037) | [**SSRN: 7659198**](https://papers.ssrn.com/abstract=7659198) *(Distributed)* • Multi-Seed Pareto & Manifold Parity | [`pCwOrM/fractal-neural-synthesis`](https://github.com/pCwOrM/fractal-neural-synthesis) |
+| **01** | **Paper 1: FNS** | Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics (v4.0) | [**`10.5281/zenodo.22774934`**](https://doi.org/10.5281/zenodo.22774934) | [`10.5281/zenodo.24495977`](https://doi.org/10.5281/zenodo.24495977) | `arXiv:submit/8419869 [cs.LG]` • [**SSRN: 7659198**](https://papers.ssrn.com/abstract=7659198) • 4 Apertures, 10-Fold CV (`10.7x–129x` Flash) | [`pCwOrM/fractal-neural-synthesis`](https://github.com/pCwOrM/fractal-neural-synthesis) |
 | **02** | **Paper 2: OED** | Orbital Error Dynamics, Ephemeral Parameter Resonance & CD4+ Gating (v1) | [**`10.5281/zenodo.22900464`**](https://doi.org/10.5281/zenodo.22900464) | [`10.5281/zenodo.22900465`](https://doi.org/10.5281/zenodo.22900465) | [`arXiv:2609.30115`](https://arxiv.org/abs/2609.30115) • [🤗 HF Paper](https://huggingface.co/papers/2609.30115) *(Verified)* • `TR 2026/016285` | [`pCwOrM/fractal-neural-synthesis`](https://github.com/pCwOrM/fractal-neural-synthesis) |
 | **03** | **Paper 3: WERR Map** | Universal Natural Language Decision Map & Real-Time Edge Triage (v2) | [**`10.5281/zenodo.22867425`**](https://doi.org/10.5281/zenodo.22867425) | [`10.5281/zenodo.22939253`](https://doi.org/10.5281/zenodo.22939253) | [`arXiv:2609.25498`](https://arxiv.org/abs/2609.25498) • [🤗 HF Paper](https://huggingface.co/papers/2609.25498) • [🤗 HF Dataset](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) | [`pCwOrM/werr`](https://github.com/pCwOrM/werr) • [`pCwOrM/answerr`](https://github.com/pCwOrM/answerr) |
 | **04** | **Paper 4: Werracle** | Sub-Cent Intra-Block AI Reflex Oracles & Flash-Loan Circuit Breakers (v1) | [**`10.5281/zenodo.22942598`**](https://doi.org/10.5281/zenodo.22942598) | [`10.5281/zenodo.22942599`](https://doi.org/10.5281/zenodo.22942599) | [`arXiv:2609.30719`](https://arxiv.org/abs/2609.30719) • [**SSRN: 7626279**](https://papers.ssrn.com/abstract=7626279) • [🤗 HF Paper](https://huggingface.co/papers/2609.30719) | [`pCwOrM/werracle`](https://github.com/pCwOrM/werracle) • [`pCwOrM/werralem`](https://github.com/pCwOrM/werralem) |
@@ -158,13 +170,13 @@ All monographs, formal Lean 4 specifications, and empirical datasets across the 
 ## 📖 Citation (BibTeX)
 
 ```bibtex
-@article{dagli2026fractal,
-  title={Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Formal Deterministic Reflexes},
-  author={Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Da{\u{g}}han and Da{\u{g}}l{\i}, Zerrin},
-  journal={SSRN Electronic Journal},
+@misc{dagli2026fractal,
+  title={Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics},
+  author={Da{\u{g}}l{\i}, Volkan and Da{\u{g}}l{\i}, Zerrin and Da{\u{g}}l{\i}, Da{\u{g}}han},
   year={2026},
-  publisher={Elsevier},
-  doi={10.5281/zenodo.22867037}
+  publisher={CERN Zenodo},
+  doi={10.5281/zenodo.22774934},
+  note={Version v4.0: https://doi.org/10.5281/zenodo.24495977; SSRN: 10.2139/ssrn.7659198}
 }
 ```
 

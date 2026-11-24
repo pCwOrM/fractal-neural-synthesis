@@ -70,7 +70,7 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 | 🔬 **128×128 4-Quadrant Araştırma Laboratuvarı** | Matematiksel Deney | Araştırmacılar & Mühendisler | [**Araştırma Laboratuvarını Aç**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/demos/quadrant_visualizer.html) |
 | 🐍 **İnteraktif Yılan Yapay Zekası & 1v1 Arena** | Gerçek Zamanlı Refleks & Otopilot | Oyuncular, Mühendisler & Mobil | [**Yılan Arenasını Başlat**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/demos/snake.html) |
 | 🗣️ **Halka Sunum ve Teorik Rehber** | Çift Katmanlı Kılavuz | Konuşmacılar & Eğitimciler | [**Sunum Rehberini Aç (HTML)**](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/docs/Halka_Sunum_ve_Teorik_Rehber.html) |
-| 🏛️ **Paper 1: Fraktal Nöron Sentezi** | Açık Bilim Ön-Baskı | Açık Bilim | [**SSRN: 7659198**](https://papers.ssrn.com/abstract=7659198) &bull; [**Zenodo: 10.5281/zenodo.22867037**](https://zenodo.org/records/22867037) (Çatı: [`10.5281/zenodo.22774934`](https://doi.org/10.5281/zenodo.22774934)) &bull; *Elsevier SSRN Çalışma Metni Serisi* |
+| 🏛️ **Paper 1: Fraktal Nöron Sentezi (v4.0)** | Açık Bilim Ön-Baskı | Açık Bilim | [**Zenodo Çatı: 10.5281/zenodo.22774934**](https://doi.org/10.5281/zenodo.22774934) ([v4.0: `24495977`](https://doi.org/10.5281/zenodo.24495977)) &bull; `arXiv:submit/8419869 [cs.LG]` &bull; [**SSRN: 7659198**](https://papers.ssrn.com/abstract=7659198) |
 | ⚡ **Kardeş Makale: WERR (Uç Triyaj)** | Uç Doğal Dil & Görsel İşleme | Küresel / Uygulamalı Yapay Zeka | [**Zenodo: 10.5281/zenodo.22939253**](https://doi.org/10.5281/zenodo.22939253) &bull; [**arXiv: 2609.25498**](https://arxiv.org/abs/2609.25498) &bull; [**GitHub: pCwOrM/werr**](https://github.com/pCwOrM/werr) |
 | 🤗 **Evrensel Fraktal Karar Veri Seti** | Dünyanın İlk Fraktal Doğal Dil Karar Haritası | Yapay Zekâ / ML Kıyaslama Araştırmacıları | [**Hugging Face: pCwOrM/werr_open_decisions**](https://huggingface.co/datasets/pCwOrM/werr_open_decisions) |
 | 🧠 **Canlı İkili Bilişsel Platform (answerr)** | Üretim Platformu & API | Geliştiriciler & Son Kullanıcılar | [**answerr.me**](https://answerr.me) &bull; [**GitHub: pCwOrM/answerr**](https://github.com/pCwOrM/answerr) |
@@ -80,18 +80,33 @@ Prosedürel fraktal yapay sinir ağı sentezi paradigmasını doğrudan web tara
 
 ---
 
-## 👥 Yazarlar ve Akademik Kurumlar
+## 👥 Yazarlar, Akademik Kurumlar ve Kurumsal Yapılanma
 
-* **Volkan Dağlı** *(Sorumlu Yazar / Corresponding Author)*  
-  Anadolu Üniversitesi, Eskişehir, Türkiye & ITouch Systems, Çukurova Üniversitesi Teknokent, Mersin, Türkiye &bull; ORCID: [0009-0000-1587-8703](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
+### 🎓 Akademik Yazarlık & Araştırma Bağlılıkları
+* **Volkan Dağlı** *(Sorumlu Yazar, Baş Mimar ve Fikrî Mülkiyet Temsilcisi)*  
+  Anadolu Üniversitesi, Eskişehir, Türkiye  
+  ORCID: [`0009-0000-1587-8703`](https://orcid.org/0009-0000-1587-8703) &bull; GitHub: [`@pCwOrM`](https://github.com/pCwOrM)
 
-* **Dr. Zerrin Dağlı**  
-  Mersin Üniversitesi, Mersin, Türkiye &bull; ORCID: [0000-0001-9490-6425](https://orcid.org/0000-0001-9490-6425)
+* **Dr. Zerrin Dağlı** *(Ortak Yazar: Prosedürel Pedagoji & Hesaplamalı Öğrenme Dinamikleri)*  
+  Mersin Üniversitesi, Mersin, Türkiye  
+  ORCID: [`0000-0001-9490-6425`](https://orcid.org/0000-0001-9490-6425)
 
-* **Dağhan Dağlı**  
-  Toros Üniversitesi, Mersin, Türkiye &bull; ORCID: [0009-0003-2492-8313](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
+* **Dağhan Dağlı** *(Ortak Yazar: Nöromorfik Konnektom & Biçimsel İspatlar)*  
+  Toros Üniversitesi, Mersin, Türkiye  
+  ORCID: [`0009-0003-2492-8313`](https://orcid.org/0009-0003-2492-8313) &bull; GitHub: [`@Lexovian`](https://github.com/Lexovian)
 
-*Yazışma & İletişim:* Volkan Dağlı ([GitHub Araştırma Deposu](https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis) / [Zenodo Çatı](https://doi.org/10.5281/zenodo.22774934)).
+---
+
+### 🏛️ Şirket, Yönetişim ve Fikrî Mülkiyet (IP) Yapılanması
+1. **Şahsi Buluş & Akademik Mülkiyet Katmanı:** Tüm kuramsal algoritmalar, bilimsel yayınlar ve patentler (`TÜRKPATENT TR 2026/016285`, `TR 2026/016633` ve `TR 2026/020266`), yazarların şahsi ortak buluş ve akademik eseri olarak tescillidir.
+2. **Temsil, İdare ve Vekâlet:** Yazarlar ve buluş sahipleri; fikrî mülkiyete dair tüm sevk, idare, temsil ve lisanslama yetkilerini oy birliğiyle Baş Mimar **Volkan Dağlı**'ya devretmiştir.
+3. **Münhasır Ticari İşletme & Lisanslama:** Volkan Dağlı tarafından; tüm teknolojilerin, patent haklarının, yazılımların ve modellerin küresel ticari işletme, lisanslama ve dağıtım hakları münhasıran **ITouch Systems**'e (*ITouch Bilişim Sistemleri Ltd. Şti.*, Çukurova Üniversitesi Teknokent, Adana/Mersin, Türkiye) verilmiştir.
+4. **Şirket Yönetimi (Leadership):**
+   * **Volkan Dağlı** — Kurucu Ortak & Chief Technology Officer (CTO)
+   * **Bekirhan Dağlı** — Yönetici Ortak & Chief Executive Officer (CEO)
+   * Tescilli Markalar: **Werr®**, **Answerr®**, **Werracle®** markaları ITouch Bilişim Sistemleri Ltd. Şti.'nin tescilli ticari markalarıdır.
+
+*Yazışma & İletişim:* Volkan Dağlı ([GitHub Araştırma Deposu](https://github.com/pCwOrM/fractal-neural-synthesis) / [Zenodo Çatı](https://doi.org/10.5281/zenodo.22774934)).
 
 ---
 
@@ -186,9 +201,9 @@ Sinaptik Ağırlıklar (w1, w2, w3, b)   ──► Doğrusal Olmayan Karar Yüze
 | **Bellek Alanı Tasarrufu** | Referans Tabanı (%0) | **>%99.99999998 Bellek Tasarrufu** |
 | **Donanım Ufku** | Bellek bant genişliğine bağımlı GPU'lar | **Fotonik / Optik Eş-İşlemciler ($<1$ ns, sıfır elektrik direnci)** |
 
-### 🏛️ Genişletilmiş Dergi Araştırma Kapsamı (*Chaos, Solitons & Fractals*, Elsevier)
+### 🏛️ Sürüm v4.0 Ön-Baskı ve Genişletilmiş Q1 Dergi Sürümü
 
-> **Yayın Durumu:** *Chaos, Solitons & Fractals* (Elsevier) dergisinde hakem değerlendirme sürecindedir. Yazar ön-baskısı ve tam replikasyon paketi kalıcı Concept DOI [10.5281/zenodo.22774934](https://doi.org/10.5281/zenodo.22774934) ([v3.0 Kaydı](https://zenodo.org/records/22867037)) ile açık bilim arşivinde tescillenmiştir.
+> **Yayın Durumu:** Güncellenmiş v4.0 ön-baskısı ve tam replikasyon paketi kalıcı Concept DOI [10.5281/zenodo.22774934](https://doi.org/10.5281/zenodo.22774934) ([v4.0 Kaydı: `10.5281/zenodo.24495977`](https://doi.org/10.5281/zenodo.24495977)) üzerinden yayınlanmış ve arXiv (`submit/8419869 [cs.LG]`) gönderimi tamamlanmıştır. Genişletilmiş Q1 dergi sürümü (*Neurocomputing* hedefi) hazırlanmış olup ön-baskı ilanı sonrası gönderilecektir.
 
 Dergi makalesi, temel paradigmayı sürekli manifoldlara ve standart yapay sinir ağlarıyla (MLP) kıyaslamaya genişletmektedir:
 * **Sürekli Topolojik Manifoldlar:** Dışbükey olmayan, sürekli ve kıvrımlı veri dağılımlarına (**Two-Moons** ve **Two-Spirals**) Quadtree ayrıştırması ve analitik özyineleme ofsetleri ile genelleme.

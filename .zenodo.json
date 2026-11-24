@@ -1,53 +1,44 @@
 {
-  "title": "Mandelbrot Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation and Non-Linear Decision Boundaries",
-  "description": "Procedural parameter generation engine deriving neural weights dynamically from Mandelbrot fractal dynamics with zero persistent tensor storage.",
+  "title": "Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics",
+  "description": "Constant-storage (24-byte) procedural hidden-layer weight derivation architecture anchored near the complex quadratic bifurcation boundary of f_c(z) = z^2 + c, with large-bailout smooth escape kernels, four geometric sampling apertures, information-theoretic capacity bounds, and reproducible 10-fold CV benchmarks.",
   "creators": [
     {
-      "name": "Dağlı, Volkan",
-      "affiliation": "Anadolu University & ITouch Systems, Turkey",
+      "name": "Dagli, Volkan",
+      "affiliation": "Anadolu University; ITouch Systems, Cukurova University Technopark",
       "orcid": "0009-0000-1587-8703"
     },
     {
-      "name": "Dağlı, Zerrin",
-      "affiliation": "Mersin University, Mersin, Turkey",
+      "name": "Dagli, Zerrin",
+      "affiliation": "Mersin University",
       "orcid": "0000-0001-9490-6425"
     },
     {
-      "name": "Dağlı, Dağhan",
-      "affiliation": "Toros Science College, Mersin, Turkey",
+      "name": "Dagli, Daghan",
+      "affiliation": "Toros University",
       "orcid": "0009-0003-2492-8313"
     }
   ],
   "access_right": "open",
-  "license": "MIT",
+  "license": "CC-BY-4.0",
   "keywords": [
-    "fractal neural synthesis",
-    "mandelbrot set",
-    "procedural weight generation",
-    "zero-storage ai",
-    "non-linear decision boundaries",
-    "escape horizon",
-    "edge ai",
-    "ephemeral buffer",
-    "orbital error dynamics",
-    "self-organized criticality"
+    "Fractal Neural Synthesis",
+    "Procedural Weight Generation",
+    "Complex Quadratic Boundary Dynamics",
+    "TinyML",
+    "Model Compression",
+    "Random Features",
+    "Evolution Strategies"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/pCwOrM/mandelbrot-fractal-neural-synthesis",
+      "identifier": "https://github.com/pCwOrM/fractal-neural-synthesis",
       "relation": "isSupplementTo",
       "resource_type": "software",
       "scheme": "url"
     },
     {
-      "identifier": "https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/",
-      "relation": "isDocumentedBy",
-      "resource_type": "interactive-resource",
-      "scheme": "url"
-    },
-    {
-      "identifier": "10.5281/zenodo.22896856",
-      "relation": "hasPart",
+      "identifier": "10.2139/ssrn.7659198",
+      "relation": "isSupplementedBy",
       "resource_type": "publication-preprint",
       "scheme": "doi"
     },
@@ -68,18 +59,6 @@
       "relation": "isDocumentedBy",
       "resource_type": "interactive-resource",
       "scheme": "url"
-    },
-    {
-      "identifier": "10.5281/zenodo.22961999",
-      "relation": "hasPart",
-      "resource_type": "publication-preprint",
-      "scheme": "doi"
-    },
-    {
-      "identifier": "10.5281/zenodo.22974544",
-      "relation": "hasPart",
-      "resource_type": "publication-preprint",
-      "scheme": "doi"
     }
   ]
 }
