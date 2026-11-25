@@ -207,7 +207,7 @@ Sinaptik Ağırlıklar (w1, w2, w3, b)   ──► Doğrusal Olmayan Karar Yüze
 
 ### 🏛️ Sürüm v4.0 Ön-Baskı ve Genişletilmiş Q1 Dergi Sürümü
 
-> **Yayın Durumu:** Güncellenmiş v4.0 ön-baskısı ve tam replikasyon paketi kalıcı Concept DOI [10.5281/zenodo.22774934](https://doi.org/10.5281/zenodo.22774934) ([v4.0 Kaydı: `10.5281/zenodo.24495977`](https://doi.org/10.5281/zenodo.24495977)) üzerinden yayınlanmış ve arXiv (`submit/8419869 [cs.LG]`) gönderimi tamamlanmıştır. Genişletilmiş Q1 dergi sürümü (*Neurocomputing* hedefi) hazırlanmış olup ön-baskı ilanı sonrası gönderilecektir.
+> **Yayın Durumu:** Güncellenmiş v4.0 ön-baskısı ve tam replikasyon paketi kalıcı Concept DOI [10.5281/zenodo.22774934](https://doi.org/10.5281/zenodo.22774934) ([v4.0 Kaydı: `10.5281/zenodo.24495977`](https://doi.org/10.5281/zenodo.24495977)) ve [`arXiv:2611.32393 [cs.LG]`](https://arxiv.org/abs/2611.32393) üzerinden yayınlanmıştır. Genişletilmiş Q1 dergi sürümü (*Neurocomputing* hedefi) gönderime hazırdır.
 
 Dergi makalesi, temel paradigmayı sürekli manifoldlara ve standart yapay sinir ağlarıyla (MLP) kıyaslamaya genişletmektedir:
 * **Sürekli Topolojik Manifoldlar:** Dışbükey olmayan, sürekli ve kıvrımlı veri dağılımlarına (**Two-Moons** ve **Two-Spirals**) Quadtree ayrıştırması ve analitik özyineleme ofsetleri ile genelleme.
