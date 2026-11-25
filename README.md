@@ -2,10 +2,15 @@
   <img src="assets/fns_logo_banner.svg" alt="Fractal Neural Synthesis - WERR Resonance Architecture" width="100%">
 </p>
 
-# Fractal Neural Synthesis: Zero-Storage Procedural Weight Derivation & Formal Reflexes
+# Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics
 
-### *A Formal Mathematical, Algorithmic, and Empirical Corpus for Non-Tensor Edge Intelligence*
+### *A Formal Mathematical, Algorithmic, and Empirical Corpus for Constant-Storage ($O(1)$ / 24-Byte) Non-Tensor Edge Intelligence*
 
+[![arXiv: 2611.32393](https://img.shields.io/badge/arXiv-2611.32393%20%5Bcs.LG%5D-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.32393)
+[![alphaXiv: 2611.32393](https://img.shields.io/badge/alphaXiv-2611.32393%20(Poster%20v2)-6d28d9.svg)](https://www.alphaxiv.org/abs/2611.32393)
+[![SSRN: 7659198 (v4.0)](https://img.shields.io/badge/SSRN-7659198%20(v4.0)-005a9c.svg?logo=elsevier&logoColor=white)](https://papers.ssrn.com/abstract=7659198)
+[![Zenodo Concept DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.22774934%20(v4.0)-024dad.svg?logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.22774934)
+[![Hugging Face: WERR Lab](https://img.shields.io/badge/Hugging%20Face-WERR%20Lab%20(8%20Papers%20%C2%B7%202%20Models%20%C2%B7%202%20Datasets%20%C2%B7%201%20Space)-FFD21E.svg?logo=huggingface&logoColor=black)](https://huggingface.co/werr-lab)
 [![Live Research Portal](https://img.shields.io/badge/Live%20Research%20Portal-GitHub%20Pages-10b981.svg?logo=github)](https://pcworm.github.io/fractal-neural-synthesis/)
 [![Academic: werr.io](https://img.shields.io/badge/Core%20Engine-werr.io-0284c7.svg?logo=cloudflare&logoColor=white)](https://werr.io/)
 [![SaaS Gate: answerr.me](https://img.shields.io/badge/Decision%20Gate%20SaaS-answerr.me-ea580c.svg)](https://answerr.me/)
@@ -16,7 +21,6 @@
 [![Patent: TR 2026/016285](https://img.shields.io/badge/Patent-TR%202026%2F016285-red.svg)](https://epats.turkpatent.gov.tr)
 [![Formal Verification: Lean 4](https://img.shields.io/badge/Formal%20Verification-Lean%204%20(0%20Sorry)-brightgreen.svg?logo=lean)](https://doi.org/10.5281/zenodo.22983889)
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red.svg)](./LICENSE)
-[![Hugging Face: WERR Lab](https://img.shields.io/badge/Hugging%20Face-WERR%20Lab%20(8%20Papers%20%C2%B7%202%20Models%20%C2%B7%202%20Datasets%20%C2%B7%201%20Space)-yellow.svg?logo=huggingface)](https://huggingface.co/werr-lab)
 [![NSF ICARM Record: 230 Curves](https://img.shields.io/badge/NSF%20ICARM-230%20Verified%20Curves-blue)](https://elliptic-rank.icarm.cloud/user/114)
 [![Schönhage Record: -377K Wires](https://img.shields.io/badge/Sch%C3%B6nhage%20Record--377%2C890%20Wires%20(W%3D176.9M)-brightgreen.svg)](https://github.com/pCwOrM/integer-mult-bounds)
 [![Awesome Jev](https://img.shields.io/badge/Awesome-Jev%20Listed-blueviolet.svg)](https://awesomejev.com)

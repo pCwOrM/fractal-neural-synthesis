@@ -1,7 +1,12 @@
-# Fraktal Nöron Sentezi: Mandelbrot Geometrisinden Sıfır-Bellekli Ağırlık ve Karar Türetimi
+# Fraktal Nöral Sentez: Karmaşık Kuadratik Sınır Dinamikleriyle Sabit-Depolamalı (24-Bayt) Prosedürel Ağırlık Türetimi
 
-[![Canlı Web Portalı](https://img.shields.io/badge/Canlı%20Portal-GitHub%20Pages-10b981.svg?logo=github)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/)
-[![İnteraktif Laboratuvarlar](https://img.shields.io/badge/İnteraktif%20Laboratuvarlar-%25100%20Tarayıcıda%20Çalışır-818cf8.svg)](https://pcworm.github.io/mandelbrot-fractal-neural-synthesis/#labsTitle)
+[![arXiv: 2611.32393](https://img.shields.io/badge/arXiv-2611.32393%20%5Bcs.LG%5D-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.32393)
+[![alphaXiv: 2611.32393](https://img.shields.io/badge/alphaXiv-2611.32393%20(Poster%20v2)-6d28d9.svg)](https://www.alphaxiv.org/abs/2611.32393)
+[![Paper 1: SSRN 7659198 (v4.0)](https://img.shields.io/badge/SSRN-7659198%20(v4.0)-005a9c.svg?logo=elsevier&logoColor=white)](https://papers.ssrn.com/abstract=7659198)
+[![Paper 1: Zenodo Çatı DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.22774934%20(v4.0)-024dad.svg)](https://doi.org/10.5281/zenodo.22774934)
+[![Hugging Face: WERR Lab](https://img.shields.io/badge/Hugging%20Face-WERR%20Lab%20(8%20Papers%20%C2%B7%202%20Models%20%C2%B7%202%20Datasets%20%C2%B7%201%20Space)-FFD21E.svg?logo=huggingface&logoColor=black)](https://huggingface.co/werr-lab)
+[![Canlı Web Portalı](https://img.shields.io/badge/Canlı%20Portal-GitHub%20Pages-10b981.svg?logo=github)](https://pcworm.github.io/fractal-neural-synthesis/)
+[![İnteraktif Laboratuvarlar](https://img.shields.io/badge/İnteraktif%20Laboratuvarlar-%25100%20Tarayıcıda%20Çalışır-818cf8.svg)](https://pcworm.github.io/fractal-neural-synthesis/#labsTitle)
 [![Paper 2: OED Zenodo DOI](https://img.shields.io/badge/Paper%202%20DOI-10.5281%2Fzenodo.22896856-024dad.svg)](https://doi.org/10.5281/zenodo.22896856)
 [![arXiv: 2609.38492](https://img.shields.io/badge/arXiv-2609.38492%20(GAP%20Lean4)-b31b1b.svg)](https://arxiv.org/abs/2609.38492)
 [![arXiv: 2609.30115](https://img.shields.io/badge/arXiv-2609.30115%20(OED)-b31b1b.svg)](https://arxiv.org/abs/2609.30115)
@@ -29,7 +34,7 @@
 [![Schönhage Tensör Dünya Rekoru: Zenodo](https://img.shields.io/badge/Tensör%20Rekoru%20DOI-10.5281%2Fzenodo.23268580-024dad.svg)](https://doi.org/10.5281/zenodo.23268580)
 [![Paper 9: Güneş Dili Zenodo DOI](https://img.shields.io/badge/Paper%209%20DOI-10.5281%2Fzenodo.23273006-eab308.svg)](https://doi.org/10.5281/zenodo.23273006)
 [![Güneş Dili Portalı](https://img.shields.io/badge/Güneş%20Dili-pcworm.github.io%2Fgunes--dili-eab308.svg)](https://pcworm.github.io/gunes-dili/)
-[![arXiv: submit/8207241](https://img.shields.io/badge/arXiv-submit%2F8207241%20(Tensör%20Sınırı)-b31b1b.svg)](https://arxiv.org/submit/8207241)
+[![arXiv: 2610.14263](https://img.shields.io/badge/arXiv-2610.14263%20(Tensör%20Sınırı)-b31b1b.svg)](https://arxiv.org/abs/2610.14263)
 [![Tamsayı Çarpım Sınırları: PR 226](https://img.shields.io/badge/CrocSwap%20PR%20%23226-W%3D176%2C906%2C915-brightgreen.svg)](https://github.com/CrocSwap/integer-mult-bounds/pull/226)
 [![Paper 10: GDT Lean 4 DOI](https://img.shields.io/badge/Paper%2010%20DOI-10.5281%2Fzenodo.23316070-024dad.svg)](https://doi.org/10.5281/zenodo.23316070)
 [![GDT: Lean 4 Formel](https://img.shields.io/badge/GDT-Lean%204%20(2%2C287%20Denetim%20GE%C3%87T%C4%B0)-brightgreen.svg)](https://github.com/pCwOrM/general-divisor-theorem)

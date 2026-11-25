@@ -31,6 +31,12 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "arXiv:2611.32393",
+      "relation": "isIdenticalTo",
+      "resource_type": "publication-preprint",
+      "scheme": "arxiv"
+    },
+    {
       "identifier": "https://github.com/pCwOrM/fractal-neural-synthesis",
       "relation": "isSupplementTo",
       "resource_type": "software",
@@ -38,9 +44,15 @@
     },
     {
       "identifier": "10.2139/ssrn.7659198",
-      "relation": "isSupplementedBy",
+      "relation": "isIdenticalTo",
       "resource_type": "publication-preprint",
       "scheme": "doi"
+    },
+    {
+      "identifier": "https://huggingface.co/werr-lab",
+      "relation": "isSupplementedBy",
+      "resource_type": "other",
+      "scheme": "url"
     },
     {
       "identifier": "10.5281/zenodo.22867425",

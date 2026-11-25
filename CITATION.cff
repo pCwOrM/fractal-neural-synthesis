@@ -20,9 +20,12 @@ repository-code: "https://github.com/pCwOrM/fractal-neural-synthesis"
 url: "https://werr.io"
 doi: "10.5281/zenodo.22774934"
 version: "4.0.0"
-date-released: "2026-11-24"
+date-released: "2026-11-25"
 license: "LicenseRef-BSL-1.1"
 identifiers:
+  - type: other
+    value: "arXiv:2611.32393"
+    description: "arXiv Preprint [cs.LG] — Version 4.0 Flagship Paper (https://arxiv.org/abs/2611.32393)"
   - type: doi
     value: "10.5281/zenodo.22774934"
     description: "CERN Zenodo Concept DOI (Always resolves to the latest version)"
@@ -31,7 +34,7 @@ identifiers:
     description: "CERN Zenodo Version v4.0 DOI (November 24, 2026)"
   - type: doi
     value: "10.2139/ssrn.7659198"
-    description: "Elsevier SSRN Abstract 7659198"
+    description: "Elsevier SSRN Abstract 7659198 (v4.0 Revised November 25, 2026)"
   - type: other
     value: "TR 2026/016285"
     description: "TÜRKPATENT National Priority Application (Procedural Weight & On-Chain Decision Synthesis)"

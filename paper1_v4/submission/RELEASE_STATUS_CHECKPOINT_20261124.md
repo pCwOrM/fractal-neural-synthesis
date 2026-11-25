@@ -13,10 +13,10 @@
 
 | Stage | Platform | Identifier / Link | Status |
 | :--- | :--- | :--- | :--- |
-| **Tier-1 (Step 1)** | **CERN Zenodo (v4.0)** | Concept DOI: `10.5281/zenodo.22774934` • v4.0 DOI: `10.5281/zenodo.24495977` | **LIVE & VERIFIED** (`OpenAIRE` indexed; MD5 bit-exact match; 4-version chain intact) |
-| **Tier-1 (Step 2)** | **arXiv (`cs.LG` + `cs.NE`)** | `arXiv:submit/8419869` (`arXiv.org perpetual, non-exclusive license`) | **SUBMITTED** (AutoTeX compiled 14p cleanly, 0 errors — awaiting `arXiv:2611.XXXXX` announcement) |
-| **Tier-1 (Step 3)** | **Elsevier SSRN** | `https://papers.ssrn.com/abstract=7659198` (DOI: `10.2139/ssrn.7659198`) | **PENDING** (Revise immediately after arXiv ID announces) |
-| **Tier-2 (Q1)** | **Elsevier *Neurocomputing*** | **Subscription ($0 APC)** — 18-page extended journal edition | **SEALED & READY** (`paper1_v4/q1_extended/Paper1_v4_Elsevier_Q1_Extended.pdf` + `Q1_SUBMISSION_BUNDLE.zip`) |
+| **Tier-1 (Step 1)** | **CERN Zenodo (v4.0)** | Concept DOI: `10.5281/zenodo.22774934` • v4.0 DOI: `10.5281/zenodo.24495977` | **LIVE & BIT-EXACT VERIFIED** (`OpenAIRE` indexed; `arXiv:2611.32393` linked `IsIdenticalTo`; MD5 `8f9c657f658f3b806bbe79b32b34a3ae`) |
+| **Tier-1 (Step 2)** | **arXiv (`cs.LG` + `cs.NE`)** | `arXiv:2611.32393` (`https://arxiv.org/abs/2611.32393`, non-exclusive license) | **LIVE & VERIFIED** (Announced 2026-11-25; propagated across GitHub, HF, ORCID, RG, Academia, LinkedIn, alphaXiv + v2 poster) |
+| **Tier-1 (Step 3)** | **Elsevier SSRN** | `https://papers.ssrn.com/abstract=7659198` (DOI: `10.2139/ssrn.7659198`) | **LIVE & BIT-EXACT VERIFIED** (Revised 2026-11-25; 14 pages; live PDF MD5 `8f9c657f658f3b806bbe79b32b34a3ae` matches v4.0 byte-for-byte) |
+| **Tier-2 (Q1)** | **Elsevier *Neurocomputing*** | **Subscription ($0 APC)** — 18-page extended journal edition | **SEALED & READY FOR SUBMISSION** (`Paper1_v4_Elsevier_Q1_Extended.pdf` + `Q1_SUBMISSION_BUNDLE.zip` + updated `COVER_LETTER_NEUROCOMPUTING_Q1.md` + `HIGHLIGHTS_Q1.md`) |
 
 ---
 
