@@ -46,6 +46,14 @@ Girdi: (0, 0) -> Hedef: 0 | Tahmin: 0 [BAŞARILI]
 3 passed in 4.69s
 ```
 
+## 🧠 Codebase Knowledge Graph & Call-Flow
+
+<p align="center">
+  <img src="assets/architecture_graph.svg" alt="Fractal Neural Synthesis Codebase Knowledge Graph" width="860" />
+</p>
+
+> Explore the interactive AST dependency graph ([`docs/architecture/graph.html`](docs/architecture/graph.html)) or the Mermaid call-flow explorer ([`docs/architecture/callflow.html`](docs/architecture/callflow.html)), generated deterministically via `graphify`.
+
 ---
 
 ## 🏛️ Executive Summary: The Non-Tensor Paradigm
